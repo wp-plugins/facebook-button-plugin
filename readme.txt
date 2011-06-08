@@ -15,7 +15,7 @@ Facebook Button Plugin allows you to add follow button in the most easiest and f
 
 == Installation ==
 
-1. Upload `facebook_button_plugin` folder to the `/wp-content/plugins/` directory.
+1. Upload `facebook-button-plugin` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in your WordPress admin panel.
 3. You can adjust necessary settings through your WordPress admin pane in "Settings" > "FaceBook Button".
 
