@@ -1,8 +1,8 @@
-﻿=== Facebook Button Plugin ===
+﻿=== Facebook Like Button Plugin ===
 Contributors: bestwebsoft
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/
-Tags: Facebook, Facebook Button
+Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
 Requires at least: 3.1
 Tested up to: 3.1
 Stable tag: 2011.06.07
