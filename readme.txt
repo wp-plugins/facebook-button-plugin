@@ -70,7 +70,7 @@ Facebook Button Plugin allows you to add follow button in the most easiest and f
 == Upgrade Notice ==
 
 = 2.02 =
-*The bug of the setting page link is fixed in this version. Please upgrade the plugin immediately. Thank you
+The bug of the setting page link is fixed in this version. Please upgrade the plugin immediately. Thank you
 
 = 2.01 =
 Usability at the settings page of plugin was improved.
