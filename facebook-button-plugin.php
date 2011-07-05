@@ -4,7 +4,7 @@ Plugin Name: Facebook Button Plugin
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.01
+Version: 2.02
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -72,7 +72,7 @@ if( ! function_exists( 'fcbk_bttn_plgn_add_pages' ) ) {
 	function fcbk_bttn_plgn_add_pages() {
 		//add_options_page ( 'FaceBook Button', 'FaceBook Button', 0, 'FaceBookButton', 'fcbk_bttn_plgn_settings_page' );
 	add_menu_page(__('BWS Plugins'), __('BWS Plugins'), 'edit_themes', 'my_new_menu', 'bws_add_menu_render', " ", 90); 
-		add_submenu_page('my_new_menu', 'FaceBook Button Options', 'FaceBook Button', 'edit_themes', __FILE__, 'fcbk_bttn_plgn_settings_page');
+		add_submenu_page('my_new_menu', 'FaceBook Button Options', 'FaceBook Button', 'edit_themes', "facebook-button-plugin.php", 'fcbk_bttn_plgn_settings_page');
 
 		//call register settings function
 		add_action( 'admin_init', 'fcbk_bttn_plgn_settings' );
@@ -185,7 +185,7 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 		<div class="updated fade" <?php if( ! isset( $_REQUEST['fcbk_bttn_plgn_form_submit'] ) || $error != "" ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
 		<div class="error" <?php if( "" == $error ) echo "style=\"display:none\""; ?>><p><strong><?php echo $error; ?></strong></p></div>
 		<div>
-			<form name="form1" method="post" action="admin.php?page=facebook-button-plugin/facebook-button-plugin.php" enctype="multipart/form-data" >
+			<form name="form1" method="post" action="admin.php?page=facebook-button-plugin.php" enctype="multipart/form-data" >
 				<table class="form-table">
 					<tr valign="top">
 						<th scope="row"><?php _e( "Your's FaceBook Login:" ); ?></th>
@@ -339,7 +339,7 @@ function fcbk_bttn_plgn_action_links( $links, $file ) {
 	if ( ! $this_plugin ) $this_plugin = plugin_basename(__FILE__);
 
 	if ( $file == $this_plugin ){
-			 $settings_link = '<a href="admin.php?page=facebook-button-plugin/facebook-button-plugin.php">' . __('Settings', 'facebook-button-plugin') . '</a>';
+			 $settings_link = '<a href="admin.php?page=facebook-button-plugin.php">' . __('Settings', 'facebook-button-plugin') . '</a>';
 			 array_unshift( $links, $settings_link );
 		}
 	return $links;
@@ -348,7 +348,7 @@ function fcbk_bttn_plgn_action_links( $links, $file ) {
 function fcbk_bttn_plgn_links($links, $file) {
 	$base = plugin_basename(__FILE__);
 	if ($file == $base) {
-		$links[] = '<a href="admin.php?page=facebook-button-plugin/facebook-button-plugin.php">' . __('Settings','facebook-button-plugin') . '</a>';
+		$links[] = '<a href="admin.php?page=facebook-button-plugin.php">' . __('Settings','facebook-button-plugin') . '</a>';
 		$links[] = '<a href="http://wordpress.org/extend/plugins/facebook-button-plugin/faq/" target="_blank">' . __('FAQ','facebook-button-plugin') . '</a>';
 		$links[] = '<a href="Mailto:plugin@bestwebsoft.com">' . __('Support','facebook-button-plugin') . '</a>';
 	}
