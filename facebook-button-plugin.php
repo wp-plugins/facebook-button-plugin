@@ -113,7 +113,7 @@ add_action('admin_head', 'bws_plugin_header');
 
 if( ! function_exists( 'fcbk_bttn_plgn_add_pages' ) ) {
 	function fcbk_bttn_plgn_add_pages() {
-		add_menu_page(__('BWS Plugins'), __('BWS Plugins'), 'manage_options', 'my_new_menu', 'bws_add_menu_render', WP_CONTENT_URL."/plugins/twitter-plugin/images/px.png", 100); 
+		add_menu_page(__('BWS Plugins'), __('BWS Plugins'), 'manage_options', 'my_new_menu', 'bws_add_menu_render', WP_CONTENT_URL."/plugins/facebook-button-plugin/img/px.png", 100); 
 		add_submenu_page('my_new_menu', 'FaceBook Button Options', 'FaceBook Button', 'manage_options', "facebook-button-plugin.php", 'fcbk_bttn_plgn_settings_page');
 
 		//call register settings function
