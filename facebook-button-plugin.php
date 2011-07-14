@@ -4,7 +4,7 @@ Plugin Name: Facebook Button Plugin
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.02
+Version: 2.03
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -28,16 +28,55 @@ License: GPLv2 or later
 if( ! function_exists( 'bws_add_menu_render' ) ) {
 	function bws_add_menu_render() {
 		global $title;
+		$active_plugins = get_option('active_plugins');
+		$array_install = array();
+		$array_recomend = array();
+		$count_install = $count_recomend = 0;
+		$array_plugins = array(
+			array( 'captcha\/captcha.php', 'Captcha', 'http://wordpress.org/extend/plugins/captcha/', 'http://bestwebsoft.com/plugin/captcha-plugin/' ), 
+			array( 'contact-form-plugin\/contact_form.php', 'Contact Form', 'http://wordpress.org/extend/plugins/contact-form-plugin/', 'http://bestwebsoft.com/plugin/contact-form/' ), 
+			array( 'facebook-button-plugin\/facebook-button-plugin.php', 'Facebook Like Button Plugin', 'http://wordpress.org/extend/plugins/facebook-button-plugin/', 'http://bestwebsoft.com/plugin/facebook-like-button-plugin/' ), 
+			array( 'twitter-plugin\/twitter.php', 'Twitter Plugin', 'http://wordpress.org/extend/plugins/twitter-plugin/', 'http://bestwebsoft.com/plugin/twitter-plugin/' ), 
+			array( 'portfolio\/portfolio.php', 'Portfolio', 'http://wordpress.org/extend/plugins/portfolio/', 'http://bestwebsoft.com/plugin/portfolio-plugin/' )
+		);
+		foreach($array_plugins as $plugins)
+		{
+			if( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) )
+			{
+				$array_install[$count_install]['title'] = $plugins[1];
+				$array_install[$count_install]['link'] = $plugins[2];
+				$array_install[$count_install]['href'] = $plugins[3];
+				$count_install++;
+			}
+			else
+			{
+				$array_recomend[$count_recomend]['title'] = $plugins[1];
+				$array_recomend[$count_recomend]['link'] = $plugins[2];
+				$array_recomend[$count_recomend]['href'] = $plugins[3];
+				$count_recomend++;
+			}
+		}		
 		?>
 		<div class="wrap">
 			<div class="icon32 icon32-bws" id="icon-options-general"></div>
 			<h2><?php echo $title;?></h2>
-			<p><a href="http://wordpress.org/extend/plugins/captcha/">Captcha</a></p>
-			<p><a href="http://wordpress.org/extend/plugins/contact-form-plugin/">Contact Form</a></p>
-			<p><a href="http://wordpress.org/extend/plugins/facebook-button-plugin/">Facebook Like Button Plugin</a></p>
-			<p><a href="http://wordpress.org/extend/plugins/twitter-plugin/">Twitter Plugin</a></p>
-			<p><a href="http://wordpress.org/extend/plugins/portfolio/">Portfolio</a></p>
-			<span style="color: rgb(136, 136, 136); font-size: 10px;">If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site <a href="http://bestwebsoft.com/contact/">http://bestwebsoft.com/contact/</a></span>
+			<?php if($count_install > 0) { ?>
+			<div>
+				<h3>Installed plugins</h3>
+				<?php foreach($array_install as $install_plugin) { ?>
+				<div style="float:left; width:200px;"><?php echo $install_plugin['title']; ?></div> <p><a href="<?php echo $install_plugin['link']; ?>">Read more</a></p>
+				<?php } ?>
+			</div>
+			<?php } ?>
+			<?php if($count_recomend > 0) { ?>
+			<div>
+				<h3>Recommended plugins</h3>
+				<?php foreach($array_recomend as $recomend_plugin) { ?>
+				<div style="float:left; width:200px;"><?php echo $recomend_plugin['title']; ?></div> <p><a href="<?php echo $recomend_plugin['link']; ?>">Read more</a> <a href="<?php echo $recomend_plugin['href']; ?>">Download</a></p>
+				<?php } ?>
+				<span style="color: rgb(136, 136, 136); font-size: 10px;">If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site <a href="http://bestwebsoft.com/contact/">http://bestwebsoft.com/contact/</a></span>
+			</div>
+			<?php } ?>
 		</div>
 		<?php
 	}
@@ -60,6 +99,10 @@ if( ! function_exists( 'bws_plugin_header' ) ) {
 		{
 			background: url("<?php echo get_bloginfo('url');?>/wp-content/plugins/facebook-button-plugin/img/icon_36.png") no-repeat scroll left top transparent;
 		}
+		#toplevel_page_my_new_menu .wp-submenu .wp-first-item
+		{
+			display:none;
+		}
 		</style>
 		<?php
 	}
@@ -70,9 +113,8 @@ add_action('admin_head', 'bws_plugin_header');
 
 if( ! function_exists( 'fcbk_bttn_plgn_add_pages' ) ) {
 	function fcbk_bttn_plgn_add_pages() {
-		//add_options_page ( 'FaceBook Button', 'FaceBook Button', 0, 'FaceBookButton', 'fcbk_bttn_plgn_settings_page' );
-	add_menu_page(__('BWS Plugins'), __('BWS Plugins'), 'edit_themes', 'my_new_menu', 'bws_add_menu_render', " ", 90); 
-		add_submenu_page('my_new_menu', 'FaceBook Button Options', 'FaceBook Button', 'edit_themes', "facebook-button-plugin.php", 'fcbk_bttn_plgn_settings_page');
+		add_menu_page(__('BWS Plugins'), __('BWS Plugins'), 'manage_options', 'my_new_menu', 'bws_add_menu_render', WP_CONTENT_URL."/plugins/twitter-plugin/images/px.png", 100); 
+		add_submenu_page('my_new_menu', 'FaceBook Button Options', 'FaceBook Button', 'manage_options', "facebook-button-plugin.php", 'fcbk_bttn_plgn_settings_page');
 
 		//call register settings function
 		add_action( 'admin_init', 'fcbk_bttn_plgn_settings' );

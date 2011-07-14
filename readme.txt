@@ -3,9 +3,9 @@ Contributors: bestwebsoft
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/
 Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
-Requires at least: 3.1
-Tested up to: 3.1
-Stable tag: 2011.2.02
+Requires at least: 2.9
+Tested up to: 3.2
+Stable tag: 2011.2.03
 
 Add Facebook button to your WordPress website
 
@@ -58,6 +58,9 @@ Facebook Button Plugin allows you to add follow button in the most easiest and f
 
 == Changelog ==
 
+= 2.03 =
+*BWS Plugins sections was fixed and right now it is consisted with 2 parts: installed and recommended plugins. Icons displaying is fixed.
+
 = 2.02 =
 *The bug of the setting page link is fixed in this version. Please upgrade the plugin immediately. Thank you
 
@@ -68,6 +71,9 @@ Facebook Button Plugin allows you to add follow button in the most easiest and f
 *Ability to install Facebook Button icon wth link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= 2.03 =
+BWS Plugins sections was fixed and right now it is consisted with 2 parts: installed and recommended plugins. Icons displaying is fixed.
 
 = 2.02 =
 The bug of the setting page link is fixed in this version. Please upgrade the plugin immediately. Thank you
