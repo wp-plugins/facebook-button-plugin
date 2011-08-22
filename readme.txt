@@ -5,7 +5,7 @@ Donate link: http://bestwebsoft.com/
 Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
 Requires at least: 2.9
 Tested up to: 3.2
-Stable tag: 2011.2.03
+Stable tag: 2011.2.04
 
 Add Facebook button to your WordPress website
 
@@ -58,6 +58,9 @@ Facebook Button Plugin allows you to add follow button in the most easiest and f
 
 == Changelog ==
 
+= 2.04 =
+*BWS Plugins sections was fixed and right now it is consisted with 3 parts: activated, installed and recommended plugins. The bug of position in the admin menu is fixed. Facebook button plugin functionality was changed in connection with the change of Facebook API.
+
 = 2.03 =
 *BWS Plugins sections was fixed and right now it is consisted with 2 parts: installed and recommended plugins. Icons displaying is fixed.
 
@@ -68,9 +71,12 @@ Facebook Button Plugin allows you to add follow button in the most easiest and f
 *Usability at the settings page of plugin was improved.
 
 = 1 =
-*Ability to install Facebook Button icon wth link to the account page, including settings adjustment functionality via WordPress admin panel.
+*Ability to install Facebook Button icon with link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= 2.04 =
+BWS Plugins sections was fixed and right now it is consisted with 3 parts: activated, installed and recommended plugins. The bug of position in the admin menu is fixed. Facebook button plugin functionality was changed in connection with the change of Facebook API. 
 
 = 2.03 =
 BWS Plugins sections was fixed and right now it is consisted with 2 parts: installed and recommended plugins. Icons displaying is fixed.
@@ -82,4 +88,4 @@ The bug of the setting page link is fixed in this version. Please upgrade the pl
 Usability at the settings page of plugin was improved.
 
 = 1 =
-Ability to install Facebook Button icon wth link to the account page, including settings adjustment functionality via WordPress admin panel.
+Ability to install Facebook Button icon with link to the account page, including settings adjustment functionality via WordPress admin panel.
