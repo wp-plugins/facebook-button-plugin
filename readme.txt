@@ -58,6 +58,9 @@ Facebook Button Plugin allows you to add follow button in the most easiest and f
 
 == Changelog ==
 
+= 2.05 =
+*The bug of redirect to profile page is fixed.
+
 = 2.04 =
 *BWS Plugins sections was fixed and right now it is consisted with 3 parts: activated, installed and recommended plugins. The bug of position in the admin menu is fixed. Facebook button plugin functionality was changed in connection with the change of Facebook API.
 
@@ -74,6 +77,9 @@ Facebook Button Plugin allows you to add follow button in the most easiest and f
 *Ability to install Facebook Button icon with link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= 2.05 =
+The bug of redirect to profile page is fixed.
 
 = 2.04 =
 BWS Plugins sections was fixed and right now it is consisted with 3 parts: activated, installed and recommended plugins. The bug of position in the admin menu is fixed. Facebook button plugin functionality was changed in connection with the change of Facebook API. 

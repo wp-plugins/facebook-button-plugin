@@ -4,7 +4,7 @@ Plugin Name: Facebook Button Plugin
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.04
+Version: 2.05
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -340,7 +340,7 @@ if( ! function_exists( 'fcbk_bttn_plgn_display_button' ) ) {
 		$fcbk_bttn_plgn_options_array	=	get_option ( 'fcbk_bttn_plgn_options_array' );
 		$fcbk_bttn_plgn_where			=	$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_where' ];
 		$img				=	home_url( '/' ).$fcbk_bttn_plgn_options_array [ 'fb_img_link' ];
-		$url				=	"profile.php?id=".$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_link' ];	
+		$url				=	$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_link' ];	
 		$permalink_post		=	get_permalink ( $post_ID );
 		//Button
 		$button				=	'<div id="fb_share">
@@ -376,7 +376,7 @@ if( ! function_exists( 'fcbk_bttn_plgn_shortcode' ) ) {
 		$fcbk_bttn_plgn_options_array	=	get_option ( 'fcbk_bttn_plgn_options_array' );
 		$fcbk_bttn_plgn_where			=	$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_where' ];	
 		$img				=	home_url( '/' ). $fcbk_bttn_plgn_options_array [ 'fb_img_link' ];
-		$url				=	"profile.php?id=".$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_link' ];	
+		$url				=	$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_link' ];	
 		$permalink_post		=	get_permalink ( $post_ID );
 		$button				= 	'<div id="fb_share" >
 									<div style="float:left;margin-right:10px;" >
