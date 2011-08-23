@@ -5,7 +5,7 @@ Donate link: http://bestwebsoft.com/
 Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
 Requires at least: 2.9
 Tested up to: 3.2
-Stable tag: 2011.2.04
+Stable tag: 2011.2.05
 
 Add Facebook button to your WordPress website
 
