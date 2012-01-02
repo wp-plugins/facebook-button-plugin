@@ -5,13 +5,27 @@ Donate link: http://bestwebsoft.com/
 Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
 Requires at least: 2.9
 Tested up to: 3.3
-Stable tag: 2011.2.06
+Stable tag: 2.07
 
 Add Facebook button to your WordPress website
 
 == Description ==
 
 Facebook Button Plugin allows you to add follow button in the most easiest and flexible way.
+
+<a href="http://wordpress.org/extend/plugins/facebook-button-plugin/faq/" target="_blank">FAQ</a>
+<a href="http://bestwebsoft.com/plugin/facebook-like-button-plugin/" target="_blank">Support</a>
+
+= Features =
+
+* Actions: Ability to add follow button in the most easiest and flexible way.
+* Actions: Ability to add facebook like button in the most easiest and flexible way.
+* Display: This plugin allows you to select the position for the button: before, after, before and after or using shortcode.
+* Display: There is a possibility use a standard image or replace it with another image.
+
+= Translate =
+
+* Russian (ru_RU)
 
 == Installation ==
 
@@ -58,46 +72,56 @@ Facebook Button Plugin allows you to add follow button in the most easiest and f
 
 == Changelog ==
 
-= 2.06 =
-* Added language files for plugin.  Added style for facebook button block.
+= V2.07 - 02.01.2012 =
+* Changed : BWS plugins section.
 
-= 2.05 =
-* The bug of redirect to profile page is fixed.
+= V2.06 - 27.12.2011 =
+* NEW : Added language files for plugin. 
+* NEW : Added style for facebook button block.
 
-= 2.04 =
-* BWS Plugins sections was fixed and right now it is consisted with 3 parts: activated, installed and recommended plugins. The bug of position in the admin menu is fixed. Facebook button plugin functionality was changed in connection with the change of Facebook API.
+= V2.05 - 23.08.2011 =
+* Bugfix : The bug of redirect to profile page is fixed.
 
-= 2.03 =
-* BWS Plugins sections was fixed and right now it is consisted with 2 parts: installed and recommended plugins. Icons displaying is fixed.
+= V2.04 - 22.08.2011 =
+* Bugfix : BWS Plugins sections was fixed and right now it is consisted with 3 parts: activated, installed and recommended plugins.
+* Bugfix : The bug of position in the admin menu is fixed. 
+* Changed : Facebook button plugin functionality was changed in connection with the change of Facebook API.
 
-= 2.02 =
-* The bug of the setting page link is fixed in this version. Please upgrade the plugin immediately. Thank you
+= V2.03 - 14.07.2011 =
+* Changed : BWS Plugins sections was fixed and right now it is consisted with 2 parts: installed and recommended plugins. 
+* Bugfix : Icons displaying is fixed.
 
-= 2.01 =
+= V2.02 =
+* The bug of the setting page link is fixed in this version.
+
+= V2.01 =
 * Usability at the settings page of plugin was improved.
 
-= 1 =
+= V1 =
 * Ability to install Facebook Button icon with link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
 
-= 2.06 =
+= V2.07 - 02.01.2012 =
+BWS plugins section was changes.
+
+= V2.06 =
 Added language files for plugin. Added style for facebook button block.
 
-= 2.05 =
+= V2.05 =
 The bug of redirect to profile page is fixed.
 
-= 2.04 =
+= V2.04 =
 BWS Plugins sections was fixed and right now it is consisted with 3 parts: activated, installed and recommended plugins. The bug of position in the admin menu is fixed. Facebook button plugin functionality was changed in connection with the change of Facebook API. 
 
-= 2.03 =
+= V2.03 =
 BWS Plugins sections was fixed and right now it is consisted with 2 parts: installed and recommended plugins. Icons displaying is fixed.
 
-= 2.02 =
+= V2.02 =
 The bug of the setting page link is fixed in this version. Please upgrade the plugin immediately. Thank you
 
-= 2.01 =
+= V2.01 =
 Usability at the settings page of plugin was improved.
 
-= 1 =
+= V1 =
 Ability to install Facebook Button icon with link to the account page, including settings adjustment functionality via WordPress admin panel.
