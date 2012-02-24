@@ -25,6 +25,7 @@ Facebook Button Plugin allows you to add follow button in the most easiest and f
 = Translate =
 
 * Russian (ru_RU)
+* Spanish (es_ES) (thanks Jesús Parra)
 
 == Installation ==
 
@@ -72,6 +73,7 @@ Facebook Button Plugin allows you to add follow button in the most easiest and f
 == Changelog ==
 
 = V2.08 - 24.02.2012 =
+* NEW : Added Spanish language file for plugin.
 * Change : Code to include styles and scripts in a plug for the correct SSL verification
 
 = V2.07 - 02.01.2012 =
@@ -105,7 +107,7 @@ Facebook Button Plugin allows you to add follow button in the most easiest and f
 == Upgrade Notice ==
 
 = V2.08 =
-Changed code to include styles and scripts in a plug for the correct SSL verification.
+Added Spanish language file for plugin. Changed code to include styles and scripts in a plug for the correct SSL verification.
 
 = V2.07 =
 BWS plugins section was changes.
