@@ -4,7 +4,7 @@ Plugin Name: Facebook Button Plugin
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.07
+Version: 2.08
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -29,10 +29,10 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 	function bws_add_menu_render() {
 		global $title;
 		$active_plugins = get_option('active_plugins');
-		$all_plugins = get_plugins();
+		$all_plugins		= get_plugins();
 
 		$array_activate = array();
-		$array_install = array();
+		$array_install	= array();
 		$array_recomend = array();
 		$count_activate = $count_install = $count_recomend = 0;
 		$array_plugins	= array(
@@ -42,27 +42,24 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 			array( 'twitter-plugin\/twitter.php', 'Twitter Plugin', 'http://wordpress.org/extend/plugins/twitter-plugin/', 'http://bestwebsoft.com/plugin/twitter-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Twitter+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=twitter.php' ), 
 			array( 'portfolio\/portfolio.php', 'Portfolio', 'http://wordpress.org/extend/plugins/portfolio/', 'http://bestwebsoft.com/plugin/portfolio-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Portfolio+bestwebsoft&plugin-search-input=Search+Plugins', '' ),
 			array( 'gallery-plugin\/gallery-plugin.php', 'Gallery', 'http://wordpress.org/extend/plugins/gallery-plugin/', 'http://bestwebsoft.com/plugin/gallery-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Gallery+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', '' ),
-			array( 'adsense-plugin\/adsense-plugin.php', 'Google AdSense Plugin', 'http://wordpress.org/extend/plugins/adsense-plugin/', 'http://bestwebsoft.com/plugin/google-adsense-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Adsense+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=adsense-plugin.php' )
+			array( 'adsense-plugin\/adsense-plugin.php', 'Google AdSense Plugin', 'http://wordpress.org/extend/plugins/adsense-plugin/', 'http://bestwebsoft.com/plugin/google-adsense-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Adsense+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=adsense-plugin.php' ),
+			array( 'custom-search-plugin\/custom-search-plugin.php', 'Custom Search Plugin', 'http://wordpress.org/extend/plugins/custom-search-plugin/', 'http://bestwebsoft.com/plugin/custom-search-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Custom+Search+plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=custom_search.php' )
 		);
-		foreach($array_plugins as $plugins)
-		{
-			if( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) )
-			{
+		foreach($array_plugins as $plugins) {
+			if( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) ) {
 				$array_activate[$count_activate]['title'] = $plugins[1];
 				$array_activate[$count_activate]['link']	= $plugins[2];
 				$array_activate[$count_activate]['href']	= $plugins[3];
 				$array_activate[$count_activate]['url']	= $plugins[5];
 				$count_activate++;
 			}
-			else if( array_key_exists(str_replace("\\", "", $plugins[0]), $all_plugins) )
-			{
+			else if( array_key_exists(str_replace("\\", "", $plugins[0]), $all_plugins) ) {
 				$array_install[$count_install]['title'] = $plugins[1];
 				$array_install[$count_install]['link']	= $plugins[2];
 				$array_install[$count_install]['href']	= $plugins[3];
 				$count_install++;
 			}
-			else
-			{
+			else {
 				$array_recomend[$count_recomend]['title'] = $plugins[1];
 				$array_recomend[$count_recomend]['link']	= $plugins[2];
 				$array_recomend[$count_recomend]['href']	= $plugins[3];
@@ -76,56 +73,30 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 			<h2><?php echo $title;?></h2>
 			<?php if( 0 < $count_activate ) { ?>
 			<div>
-				<h3><?php _e( 'Activated plugins', 'facebook' ); ?></h3>
+				<h3><?php _e( 'Activated plugins', 'captcha' ); ?></h3>
 				<?php foreach( $array_activate as $activate_plugin ) { ?>
-				<div style="float:left; width:200px;"><?php echo $activate_plugin['title']; ?></div> <p><a href="<?php echo $activate_plugin['link']; ?>" target="_blank"><?php echo __( "Read more", 'facebook'); ?></a> <a href="<?php echo $activate_plugin['url']; ?>"><?php echo __( "Settings", 'facebook'); ?></a></p>
+				<div style="float:left; width:200px;"><?php echo $activate_plugin['title']; ?></div> <p><a href="<?php echo $activate_plugin['link']; ?>" target="_blank"><?php echo __( "Read more", 'captcha'); ?></a> <a href="<?php echo $activate_plugin['url']; ?>"><?php echo __( "Settings", 'captcha'); ?></a></p>
 				<?php } ?>
 			</div>
 			<?php } ?>
 			<?php if( 0 < $count_install ) { ?>
 			<div>
-				<h3><?php _e( 'Installed plugins', 'facebook' ); ?></h3>
+				<h3><?php _e( 'Installed plugins', 'captcha' ); ?></h3>
 				<?php foreach($array_install as $install_plugin) { ?>
-				<div style="float:left; width:200px;"><?php echo $install_plugin['title']; ?></div> <p><a href="<?php echo $install_plugin['link']; ?>" target="_blank"><?php echo __( "Read more", 'facebook'); ?></a></p>
+				<div style="float:left; width:200px;"><?php echo $install_plugin['title']; ?></div> <p><a href="<?php echo $install_plugin['link']; ?>" target="_blank"><?php echo __( "Read more", 'captcha'); ?></a></p>
 				<?php } ?>
 			</div>
 			<?php } ?>
 			<?php if( 0 < $count_recomend ) { ?>
 			<div>
-				<h3><?php _e( 'Recommended plugins', 'facebook' ); ?></h3>
+				<h3><?php _e( 'Recommended plugins', 'captcha' ); ?></h3>
 				<?php foreach( $array_recomend as $recomend_plugin ) { ?>
-				<div style="float:left; width:200px;"><?php echo $recomend_plugin['title']; ?></div> <p><a href="<?php echo $recomend_plugin['link']; ?>" target="_blank"><?php echo __( "Read more", 'facebook'); ?></a> <a href="<?php echo $recomend_plugin['href']; ?>" target="_blank"><?php echo __( "Download", 'facebook'); ?></a> <a class="install-now" href="<?php echo get_bloginfo( "url" ) . $recomend_plugin['slug']; ?>" title="<?php esc_attr( sprintf( __( 'Install %s' ), $recomend_plugin['title'] ) ) ?>"><?php echo __( 'Install now from wordpress.org', 'facebook' ) ?></a></p>
+				<div style="float:left; width:200px;"><?php echo $recomend_plugin['title']; ?></div> <p><a href="<?php echo $recomend_plugin['link']; ?>" target="_blank"><?php echo __( "Read more", 'captcha'); ?></a> <a href="<?php echo $recomend_plugin['href']; ?>" target="_blank"><?php echo __( "Download", 'captcha'); ?></a> <a class="install-now" href="<?php echo get_bloginfo( "url" ) . $recomend_plugin['slug']; ?>" title="<?php esc_attr( sprintf( __( 'Install %s' ), $recomend_plugin['title'] ) ) ?>" target="_blank"><?php echo __( 'Install now from wordpress.org', 'captcha' ) ?></a></p>
 				<?php } ?>
-				<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php _e( 'If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site', 'facebook' ); ?> <a href="http://bestwebsoft.com/contact/">http://bestwebsoft.com/contact/</a></span>
+				<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php _e( 'If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site', 'captcha' ); ?> <a href="http://bestwebsoft.com/contact/">http://bestwebsoft.com/contact/</a></span>
 			</div>
 			<?php } ?>
 		</div>
-		<?php
-	}
-}
-
-if( ! function_exists( 'bws_plugin_header' ) ) {
-	function bws_plugin_header() {
-		global $post_type;
-		?>
-		<style>
-		#adminmenu #toplevel_page_bws_plugins div.wp-menu-image
-		{
-			background: url("<?php echo get_bloginfo('url');?>/wp-content/plugins/facebook-button-plugin/img/icon_16.png") no-repeat scroll center center transparent;
-		}
-		#adminmenu #toplevel_page_bws_plugins:hover div.wp-menu-image,#adminmenu #toplevel_page_bws_plugins.wp-has-current-submenu div.wp-menu-image
-		{
-			background: url("<?php echo get_bloginfo('url');?>/wp-content/plugins/facebook-button-plugin/img/icon_16_c.png") no-repeat scroll center center transparent;
-		}	
-		.wrap #icon-options-general.icon32-bws
-		{
-			background: url("<?php echo get_bloginfo('url');?>/wp-content/plugins/facebook-button-plugin/img/icon_36.png") no-repeat scroll left top transparent;
-		}
-		#toplevel_page_bws_plugins .wp-submenu .wp-first-item
-		{
-			display:none;
-		}
-		</style>
 		<?php
 	}
 }
@@ -439,15 +410,13 @@ if ( ! function_exists ( 'fcbk_admin_head' ) ) {
 //Add language files
 add_action( 'init', 'fcbk_plugin_init' );
 
-add_action( 'admin_head', 'bws_plugin_header');
-
 add_action( 'init', 'fcbk_admin_head' );
 
 // adds "Settings" link to the plugin action page
-add_filter( 'plugin_action_links', 'fcbk_bttn_plgn_action_links',10,2);
+add_filter( 'plugin_action_links', 'fcbk_bttn_plgn_action_links', 10, 2 );
 
 //Additional links on the plugin page
-add_filter( 'plugin_row_meta', 'fcbk_bttn_plgn_links',10,2);
+add_filter( 'plugin_row_meta', 'fcbk_bttn_plgn_links', 10, 2 );
 
 //Calling a function add administrative menu.
 add_action( 'admin_menu', 'fcbk_bttn_plgn_add_pages' );
