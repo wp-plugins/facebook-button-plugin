@@ -306,12 +306,13 @@ if( ! function_exists( 'fcbk_bttn_plgn_update_option' ) ) {
 //Function 'facebook_button' taking from array 'fcbk_bttn_plgn_options_array' necessary information to create FaceBook Button and reacting to your choise in plugin menu - points where it appears.
 if( ! function_exists( 'fcbk_bttn_plgn_display_button' ) ) {
 	function fcbk_bttn_plgn_display_button ( $content ) {
+		global $post;
 		//Query the database to receive array 'fcbk_bttn_plgn_options_array' and receiving necessary information to create button
 		$fcbk_bttn_plgn_options_array	=	get_option ( 'fcbk_bttn_plgn_options_array' );
 		$fcbk_bttn_plgn_where			=	$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_where' ];
 		$img				=	$fcbk_bttn_plgn_options_array [ 'fb_img_link' ];
 		$url				=	$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_link' ];	
-		$permalink_post		=	get_permalink ( $post_ID );
+		$permalink_post		=	get_permalink ( $post->ID );
 		//Button
 		$button				=	'<div id="fcbk_share">
 									<div class="fcbk_button">
