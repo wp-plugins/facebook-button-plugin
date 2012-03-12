@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=13
 Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
 Requires at least: 2.9
-Tested up to: 3.3
-Stable tag: 2.08
+Tested up to: 3.3.1
+Stable tag: 2.09
 
 Add Facebook button to your WordPress website
 
@@ -20,47 +20,47 @@ Facebook Button Plugin allows you to add follow button in the most easiest and f
 * Actions: Ability to add follow button in the most easiest and flexible way.
 * Actions: Ability to add facebook like button in the most easiest and flexible way.
 * Display: This plugin allows you to select the position for the button: before, after, before and after or using shortcode.
-* Display: There is a possibility use a standard image or replace it with another image.
+* Display: There is a possibility to use a standard image or replace it with another image.
 
-= Translate =
+= Translation =
 
 * Russian (ru_RU)
-* Spanish (es_ES) (thanks Jesús Parra)
+* Spanish (es_ES) (thanks to Jesús Parra)
 
 == Installation ==
 
 1. Upload `facebook-button-plugin` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in your WordPress admin panel.
-3. You can adjust necessary settings through your WordPress admin pane in "Settings" > "FaceBook Button".
+3. You can adjust necessary settings through your WordPress admin panel in "Settings" > "FaceBook Button".
 
 == Frequently Asked Questions ==
 
 = I cannot see Facebook Button icon in the post after plugin installation =
 
-1. In the WordPress admin panel go to "Plugins", find "Facebook Button Plugin" plugin and press "Activate".
+1. In WordPress admin panel go to "Plugins", find "Facebook Button Plugin" and press "Activate".
 
 = How I can deactivate the plugin =
 
-1. In the WordPress admin panel go to "Plugins", find "Facebook Button Plugin" plugin and press "Deactivate".
+1. In WordPress admin panel go to "Plugins", find "Facebook Button Plugin" and press "Deactivate".
 
 = After clicking on the the Facebook Button icon I got Facebook home page instead of necessary account page =
 
-1. In the WordPress admin panel go to "Settings", find "Facebook Button" plugin settings page and enter login of your Facebook account. Then press "Update Changes" button.
-2. If you do not have Facebook account yet you need to create it using this link: http://www.facebook.com . After that go through instructions from the 1st point.
+1. In WordPress admin panel go to "Settings", find "Facebook Button" plugin’s settings page and enter login of your Facebook account. Then press "Update Changes" button.
+2. If you do not have Facebook account yet you will need to create it using this link: http://www.facebook.com . After account is created go through instructions from the 1st point.
 
 = How to adjust Facebook Button icon position on the page =
 
-1. In the WordPress admin panel go to "Settings", find "Facebook Button" plugin settings page and choose one from listed positions: Before, After, Before and After or Shortcode. Then press "Update Changes" button.
+1. In WordPress admin panel go to "Settings", find "Facebook Button" plugin settings page and choose one from listed positions: Before, After, Before and After or Shortcode. Then press "Update Changes" button.
 
 = How to change Facebook Button icon picture =
 
-1. In the WordPress admin panel go to "Settings", find "Facebook Button" plugin settings page and choose one from listed positions: Standart FaceBook image or Custom FaceBook image. Then press "Update Changes" button.
-2. If you choose Custom FaceBook image, you can upload yor's oun picture. To uload you must press "Choose file" button and chose yor image in to you folder. Then press "Update Changes" button.
+1. In WordPress admin panel go to "Settings", find "Facebook Button" plugin’s settings page and choose one from listed positions: Standart FaceBook image or Custom FaceBook image. Then press "Update Changes" button.
+2. If you choose Custom FaceBook image, you can upload your own picture. To make an upload you must press "Choose file" button and choose your image from to you folder. Then press "Update Changes" button.
 
-= After installation and setting adjustment in plugin settings it is still not working =
+= After installation and setting the plugin at the settings page it is still not working =
 
-1. You need to press "Update Changes" button to update all changes. Make sure that you got "Options Saved" message after saving action.
-2. After saving your settings you need to refresh your web page where Facebook Button icon should be located.
+1. You need to press "Update Changes" button to update all the changes. Make sure that you got "Options Saved" message after saving action.
+2. After saving your settings you will need to refresh your web page where Facebook Button icon should be located.
 
 == Screenshots ==
 
@@ -72,63 +72,69 @@ Facebook Button Plugin allows you to add follow button in the most easiest and f
 
 == Changelog ==
 
+= V2.09 - 12.03.2012 =
+* Changed : BWS plugins section. 
+
 = V2.08 - 24.02.2012 =
-* NEW : Added Spanish language file for plugin.
-* Change : Code to include styles and scripts in a plug for the correct SSL verification
+* NEW : Spanish language file is added to the plugin.
+* Change : Code that is used to connect styles and scripts is added to the plugin for correct SSL verification.
 
 = V2.07 - 02.01.2012 =
 * Changed : BWS plugins section.
 
 = V2.06 - 27.12.2011 =
-* NEW : Added language files for plugin. 
-* NEW : Added style for facebook button block.
+* NEW : Language files are added to the plugin. 
+* NEW : Style for facebook button block is added.
 
 = V2.05 - 23.08.2011 =
-* Bugfix : The bug of redirect to profile page is fixed.
+* Bugfix : Redirect to profile page bug is fixed.
 
 = V2.04 - 22.08.2011 =
-* Bugfix : BWS Plugins sections was fixed and right now it is consisted with 3 parts: activated, installed and recommended plugins.
-* Bugfix : The bug of position in the admin menu is fixed. 
+* Bugfix : BWS Plugin's menu section was fixed and right now it is consisted of 3 parts: activated, installed and recommended plugins. 
+* Bugfix : The bug of positioning in admin menu is fixed. 
 * Changed : Facebook button plugin functionality was changed in connection with the change of Facebook API.
 
 = V2.03 - 14.07.2011 =
-* Changed : BWS Plugins sections was fixed and right now it is consisted with 2 parts: installed and recommended plugins. 
-* Bugfix : Icons displaying is fixed.
+* Changed : BWS Plugin's menu sections was fixed and right now it is consisted of 2 parts: installed and recommended plugins. 
+* Bugfix : Displaying of the icons is fixed.
 
 = V2.02 =
-* The bug of the setting page link is fixed in this version.
+* The bug with the link to the settings page is fixed in this version.
 
 = V2.01 =
-* Usability at the settings page of plugin was improved.
+* Usability at the settings page of the plugin was improved.
 
 = V1 =
-* Ability to install Facebook Button icon with link to the account page, including settings adjustment functionality via WordPress admin panel.
+* Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
 
+= V2.09 =
+BWS plugins section has been changed. 
+
 = V2.08 =
-Added Spanish language file for plugin. Changed code to include styles and scripts in a plug for the correct SSL verification.
+Spanish language file is added to the plugin. Code that is used to connect styles and scripts is added to the plugin for correct SSL verification.
 
 = V2.07 =
-BWS plugins section was changes.
+BWS plugin's section was changes.
 
 = V2.06 =
-Added language files for plugin. Added style for facebook button block.
+Language files were added to the plugin. Style for facebook button block was added.
 
 = V2.05 =
-The bug of redirect to profile page is fixed.
+Redirect to profile page bug is fixed.
 
 = V2.04 =
-BWS Plugins sections was fixed and right now it is consisted with 3 parts: activated, installed and recommended plugins. The bug of position in the admin menu is fixed. Facebook button plugin functionality was changed in connection with the change of Facebook API. 
+BWS Plugins sections was fixed and right now it is consisted of 3 parts: activated, installed and recommended plugins. The bug of positioning in admin menu is fixed. Facebook button plugin functionality was changed in connection with the change of Facebook API. 
 
 = V2.03 =
-BWS Plugins sections was fixed and right now it is consisted with 2 parts: installed and recommended plugins. Icons displaying is fixed.
+BWS Plugins sections was fixed and right now it is consisted of 2 parts: installed and recommended plugins. Icons displaying is fixed.
 
 = V2.02 =
-The bug of the setting page link is fixed in this version. Please upgrade the plugin immediately. Thank you
+The bug of adjustment the link to the page is fixed in this version. Please upgrade the plugin immediately. Thank you
 
 = V2.01 =
-Usability at the settings page of plugin was improved.
+Usability at the settings page of the plugin was improved.
 
 = V1 =
-Ability to install Facebook Button icon with link to the account page, including settings adjustment functionality via WordPress admin panel.
+Ability to install Facebook Button icon with a link to the account page is created, including settings adjustment functionality via WordPress admin panel.
