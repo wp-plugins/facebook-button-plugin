@@ -1,6 +1,6 @@
 ﻿=== Facebook Like Button Plugin ===
 Contributors: bestwebsoft
-Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=13
+Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
 Requires at least: 2.9
 Tested up to: 3.3.1
