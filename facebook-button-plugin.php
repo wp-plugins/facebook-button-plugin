@@ -4,7 +4,7 @@ Plugin Name: Facebook Button Plugin
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.09
+Version: 2.10
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -44,7 +44,8 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 			array( 'gallery-plugin\/gallery-plugin.php', 'Gallery', 'http://wordpress.org/extend/plugins/gallery-plugin/', 'http://bestwebsoft.com/plugin/gallery-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Gallery+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', '' ),
 			array( 'adsense-plugin\/adsense-plugin.php', 'Google AdSense Plugin', 'http://wordpress.org/extend/plugins/adsense-plugin/', 'http://bestwebsoft.com/plugin/google-adsense-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Adsense+Plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=adsense-plugin.php' ),
 			array( 'custom-search-plugin\/custom-search-plugin.php', 'Custom Search Plugin', 'http://wordpress.org/extend/plugins/custom-search-plugin/', 'http://bestwebsoft.com/plugin/custom-search-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Custom+Search+plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=custom_search.php' ),
-			array( 'quotes_and_tips\/quotes-and-tips.php', 'Quotes and Tips', 'http://wordpress.org/extend/plugins/quotes-and-tips/', 'http://bestwebsoft.com/plugin/quotes-and-tips/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Quotes+and+Tips+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=quotes-and-tips.php' )
+			array( 'quotes-and-tips\/quotes-and-tips.php', 'Quotes and Tips', 'http://wordpress.org/extend/plugins/quotes-and-tips/', 'http://bestwebsoft.com/plugin/quotes-and-tips/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Quotes+and+Tips+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=quotes-and-tips.php' ),
+			array( 'google-sitemap-plugin\/google-sitemap-plugin.php', 'Google sitemap plugin', 'http://wordpress.org/extend/plugins/google-sitemap-plugin/', 'http://bestwebsoft.com/plugin/google-sitemap-plugin/', '/wp-admin/plugin-install.php?tab=search&type=term&s=Google+sitemap+plugin+bestwebsoft&plugin-search-input=Search+Plugins', 'admin.php?page=google-sitemap-plugin.php' )
 		);
 		foreach($array_plugins as $plugins) {
 			if( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) ) {
@@ -118,6 +119,8 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings' ) ) {
 
 		$fcbk_bttn_plgn_options_array_default = array(
 			'fcbk_bttn_plgn_link'						=> '',
+			'fcbk_bttn_plgn_my_page'				=> 1,
+			'fcbk_bttn_plgn_like'						=> 1,
 			'fcbk_bttn_plgn_where'					=> '',
 			'fcbk_bttn_plgn_display_option' => '',
 			'fcbk_bttn_plgn_count_icon'			=> 1,
@@ -130,6 +133,7 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings' ) ) {
 		$fcbk_bttn_plgn_options_array = get_option( 'fcbk_bttn_plgn_options_array' );
 
 		$fcbk_bttn_plgn_options_array = array_merge( $fcbk_bttn_plgn_options_array_default, $fcbk_bttn_plgn_options_array );
+		update_option( 'fcbk_bttn_plgn_options_array', $fcbk_bttn_plgn_options_array );
 	}
 }
 
@@ -138,6 +142,10 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 	function fcbk_bttn_plgn_settings_page() 
 	{
 		global $fcbk_bttn_plgn_options_array;
+		$copy = false;
+		
+		if( @copy( plugin_dir_path( __FILE__ )."img/facebook-ico.jpg", plugin_dir_path( __FILE__ )."img/facebook-ico3.jpg" ) !== false )
+			$copy = true;
 
 		$message = "";
 		$error = "";
@@ -147,6 +155,8 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 				$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_link' ]			=	$_REQUEST [ 'fcbk_bttn_plgn_link' ];
 				$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_where' ]		=	$_REQUEST [ 'fcbk_bttn_plgn_where' ];
 				$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_display_option' ]	=	$_REQUEST [ 'fcbk_bttn_plgn_display_option' ];
+				$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_my_page' ]	=	isset( $_REQUEST [ 'fcbk_bttn_plgn_my_page' ] ) ? 1 : 0 ;
+				$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_like' ]			=	isset( $_REQUEST [ 'fcbk_bttn_plgn_like' ] ) ? 1 : 0 ;
 				if ( isset ( $_FILES [ 'uploadfile' ] [ 'tmp_name' ] ) &&  $_FILES [ 'uploadfile' ] [ 'tmp_name' ] != "" ) {		
 					$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_count_icon' ]	=	$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_count_icon' ] + 1;
 				}
@@ -206,12 +216,6 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 		} 
 		?>
 	<div class="wrap">
-		<style>
-		.wrap #icon-options-general.icon32-bws
-		{
-			 background: url("../wp-content/plugins/facebook-button-plugin/img/icon_36.png") no-repeat scroll left top transparent;
-		}
-		</style>
 		<div class="icon32 icon32-bws" id="icon-options-general"></div>
 		<h2><?php echo __( "FaceBook Button Options", 'facebook' ); ?></h2>
 		<div class="updated fade" <?php if( ! isset( $_REQUEST['fcbk_bttn_plgn_form_submit'] ) || $error != "" ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
@@ -225,6 +229,13 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 							<input name='fcbk_bttn_plgn_link' type='text' value='<?php echo $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_link' ] ?>' style="width:200px;" />		
 						</td>
 					</tr>
+					<tr valign="top">
+						<th scope="row"><?php _e( "Display button:", 'facebook' ); ?></th>
+						<td>
+							<input name='fcbk_bttn_plgn_my_page' type='checkbox' value='1' <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_my_page' ] == 1 ) echo 'checked="checked "'; ?>/> <label for="fcbk_bttn_plgn_my_page"><?php echo __( "My Page", 'captcha' ); ?></label><br />
+							<input name='fcbk_bttn_plgn_like' type='checkbox' value='1' <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_like' ] == 1 ) echo 'checked="checked "'; ?>/> <label for="fcbk_bttn_plgn_like"><?php echo __( "Like", 'captcha' ); ?></label><br />
+						</td>
+					</tr>
 					<tr>
 						<th>
 							<?php echo __( "Choose display option:", 'facebook' ); ?>
@@ -232,7 +243,9 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 						<td>
 							<select name="fcbk_bttn_plgn_display_option" onchange="if ( this . value == 'custom' ) { getElementById ( 'fcbk_bttn_plgn_display_option_custom' ) . style.display = 'block'; } else { getElementById ( 'fcbk_bttn_plgn_display_option_custom' ) . style.display = 'none'; }" style="width:200px;" >
 								<option <?php if ( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_display_option' ] == 'standart' ) echo 'selected="selected"'; ?> value="standart"><?php echo __( "Standart FaceBook image", 'facebook' ); ?></option>
+								<?php if( $copy || $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_display_option' ] == 'custom' ) { ?>
 								<option <?php if ( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_display_option' ] == 'custom' ) echo 'selected="selected"'; ?> value="custom"><?php echo __( "Custom FaceBook image", 'facebook' ); ?></option>
+								<?php } ?>
 							</select>
 						</td>
 					</tr>
@@ -315,18 +328,23 @@ if( ! function_exists( 'fcbk_bttn_plgn_display_button' ) ) {
 		$url				=	$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_link' ];	
 		$permalink_post		=	get_permalink ( $post->ID );
 		//Button
-		$button				=	'<div id="fcbk_share">
-									<div class="fcbk_button">
+		$button				=	'<div id="fcbk_share">';
+		if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_my_page' ] == 1 ) {
+			$button .=	'<div class="fcbk_button">
 										<a name="fcbk_share"	href="http://www.facebook.com/' . $url . '"	target="blank">
 											<img src="' . $img . '" alt="Fb-Button" />
 										</a>	
-									</div>
-									<div class="fcbk_like">
+									</div>';
+		}
+		if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_like' ] == 1 ) {
+			$button .=	'<div class="fcbk_like">
 										<div id="fb-root"></div>
 										<script src="http://connect.facebook.net/en_US/all.js#appId=224313110927811&amp;xfbml=1"></script>
 										<fb:like href="' . $permalink_post . '" send="false" layout="button_count" width="450" show_faces="false" font=""></fb:like>
-									</div>					 
-								</div>';
+									</div>';
+		}				
+		
+		$button .= '</div>';
 		//Indication where show FaceBook Button depending on selected item in admin page.
 		if ( $fcbk_bttn_plgn_where == 'before' ) {
 			return $button . $content; 
@@ -350,18 +368,23 @@ if( ! function_exists( 'fcbk_bttn_plgn_shortcode' ) ) {
 		$img				=	$fcbk_bttn_plgn_options_array [ 'fb_img_link' ];
 		$url				=	$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_link' ];	
 		$permalink_post		=	get_permalink ( $post_ID );
-		$button				= 	'<div id="fb_share" >
-									<div style="float:left;margin-right:10px;" >
-										<a name="fb_share"	href="http://www.facebook.com/'.$url.'"	target="blank">
-											<img src="'.$img.'" alt="Fb-Button" />
-										</a>
-									</div>
-									<div>
+		$button				=	'<div id="fcbk_share">';
+		if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_my_page' ] == 1 ) {
+			$button .=	'<div class="fcbk_button">
+										<a name="fcbk_share"	href="http://www.facebook.com/' . $url . '"	target="blank">
+											<img src="' . $img . '" alt="Fb-Button" />
+										</a>	
+									</div>';
+		}
+		if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_like' ] == 1 ) {
+			$button .=	'<div class="fcbk_like">
 										<div id="fb-root"></div>
 										<script src="http://connect.facebook.net/en_US/all.js#appId=224313110927811&amp;xfbml=1"></script>
-										<fb:like href="'.$permalink_post.'" send="false" layout="button_count" width="400" show_faces="false" font=""></fb:like>
-									</div>					 
-								</div>';	
+										<fb:like href="' . $permalink_post . '" send="false" layout="button_count" width="450" show_faces="false" font=""></fb:like>
+									</div>';
+		}				
+		
+		$button .= '</div>';		 
 		return $button;	
 	}
 }

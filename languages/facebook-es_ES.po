@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: facebook\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-12 19:33+0200\n"
-"PO-Revision-Date: 2012-03-12 19:33+0200\n"
+"POT-Creation-Date: 2012-04-04 20:15+0200\n"
+"PO-Revision-Date: 2012-04-04 20:15+0200\n"
 "Last-Translator: BWS <zos@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "MIME-Version: 1.0\n"
@@ -16,89 +16,89 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: facebook-button-plugin.php:77
+#: facebook-button-plugin.php:78
 msgid "Activated plugins"
 msgstr "Plugins activados"
 
-#: facebook-button-plugin.php:79
-#: facebook-button-plugin.php:87
-#: facebook-button-plugin.php:95
+#: facebook-button-plugin.php:80
+#: facebook-button-plugin.php:88
+#: facebook-button-plugin.php:96
 msgid "Read more"
 msgstr "Leer mas"
 
-#: facebook-button-plugin.php:79
-#: facebook-button-plugin.php:377
-#: facebook-button-plugin.php:389
+#: facebook-button-plugin.php:80
+#: facebook-button-plugin.php:378
+#: facebook-button-plugin.php:390
 msgid "Settings"
 msgstr "Opciones"
 
-#: facebook-button-plugin.php:85
+#: facebook-button-plugin.php:86
 msgid "Installed plugins"
 msgstr "Plugins instalados"
 
-#: facebook-button-plugin.php:93
+#: facebook-button-plugin.php:94
 msgid "Recommended plugins"
 msgstr "Plugins recomendados"
 
-#: facebook-button-plugin.php:95
+#: facebook-button-plugin.php:96
 msgid "Download"
 msgstr "Descargar"
 
-#: facebook-button-plugin.php:95
+#: facebook-button-plugin.php:96
 #, php-format
 msgid "Install %s"
 msgstr "Instalar %s"
 
-#: facebook-button-plugin.php:95
+#: facebook-button-plugin.php:96
 msgid "Install now from wordpress.org"
 msgstr "Instalar ahora desde wordpress.org"
 
-#: facebook-button-plugin.php:97
+#: facebook-button-plugin.php:98
 msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site"
 msgstr "Si tiene alguna pregunta, por favor contacte con nosotros via plugin@bestwebsoft.com o rellenando el formulariod e contacto de nuestra web"
 
-#: facebook-button-plugin.php:108
-#: facebook-button-plugin.php:216
+#: facebook-button-plugin.php:109
+#: facebook-button-plugin.php:215
 msgid "FaceBook Button Options"
 msgstr "Opciones del botón de Facebook"
 
-#: facebook-button-plugin.php:108
+#: facebook-button-plugin.php:109
 msgid "FaceBook Button"
 msgstr "Botón FaceBook"
 
-#: facebook-button-plugin.php:156
+#: facebook-button-plugin.php:161
 msgid "Options saved."
 msgstr "Opciones guardadas"
 
-#: facebook-button-plugin.php:179
+#: facebook-button-plugin.php:184
 msgid "Error: File size > 32K"
 msgstr "Error: Archivo > 32К"
 
-#: facebook-button-plugin.php:182
+#: facebook-button-plugin.php:187
 msgid "Error: Invalid file type"
 msgstr "error: Tipo de archivo no válido"
 
-#: facebook-button-plugin.php:192
+#: facebook-button-plugin.php:197
 msgid "Error: moving file failed"
 msgstr "Error: Fallo moviendo el archivo"
 
-#: facebook-button-plugin.php:196
+#: facebook-button-plugin.php:201
 msgid "Error: check image width or height"
 msgstr "Error: Revisa el alto o ancho de la imagen"
 
-#: facebook-button-plugin.php:201
+#: facebook-button-plugin.php:206
 msgid "Uploading Error: check image properties"
 msgstr "Error de subida: Revisa las propiedades de la imagen"
 
-#: facebook-button-plugin.php:223
+#: facebook-button-plugin.php:222
 msgid "Your's FaceBook Id:"
 msgstr "Su FaceBook Id:"
 
-#: facebook-button-plugin.php:230
+#: facebook-button-plugin.php:229
 msgid "Choose display option:"
 msgstr "Seleccione opciones de visualización:"
 
-#: facebook-button-plugin.php:234
+#: facebook-button-plugin.php:233
 msgid "Standart FaceBook image"
 msgstr "Imagen estandar de FaceBook"
 
@@ -106,51 +106,51 @@ msgstr "Imagen estandar de FaceBook"
 msgid "Custom FaceBook image"
 msgstr "Imagen personalizada de FaceBook"
 
-#: facebook-button-plugin.php:241
+#: facebook-button-plugin.php:242
 msgid "Current image:"
 msgstr "Imagen actual:"
 
-#: facebook-button-plugin.php:254
+#: facebook-button-plugin.php:255
 msgid "FaceBook image:"
 msgstr "Imagen de FaceBook:"
 
-#: facebook-button-plugin.php:258
+#: facebook-button-plugin.php:259
 msgid "Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:\"jpg\", \"jpeg\"."
 msgstr "Propiedades de la imagen: Ancho máx.: 100px; Alto máx.: 40px; Tamaño máx: 32Kb; Tipo de imagen: \"jpg\", \"jpeg\"."
 
-#: facebook-button-plugin.php:266
+#: facebook-button-plugin.php:267
 msgid "FaceBook Button Position:"
 msgstr "Posición del botón Facebook:"
 
-#: facebook-button-plugin.php:270
+#: facebook-button-plugin.php:271
 msgid "Before"
 msgstr "Antes"
 
-#: facebook-button-plugin.php:271
+#: facebook-button-plugin.php:272
 msgid "After"
 msgstr "Después"
 
-#: facebook-button-plugin.php:272
+#: facebook-button-plugin.php:273
 msgid "Before and After"
 msgstr "Antes y después"
 
-#: facebook-button-plugin.php:273
+#: facebook-button-plugin.php:274
 msgid "Shortcode"
 msgstr "Shortcode"
 
-#: facebook-button-plugin.php:275
+#: facebook-button-plugin.php:276
 msgid "If you would like to add a FaceBook button to your website, just copy and put this shortcode onto your post or page:"
 msgstr "Si desea agregar un botón de Facebook para su sitio web, sólo tiene que copiar y pegar el código en su web o la página:"
 
-#: facebook-button-plugin.php:281
+#: facebook-button-plugin.php:282
 msgid "Save Changes"
 msgstr ""
 
-#: facebook-button-plugin.php:390
+#: facebook-button-plugin.php:391
 msgid "FAQ"
 msgstr "FAQ"
 
-#: facebook-button-plugin.php:391
+#: facebook-button-plugin.php:392
 msgid "Support"
 msgstr "Soporte"
 
