@@ -4,7 +4,7 @@ Plugin Name: Facebook Button Plugin
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.10
+Version: 2.11
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -124,7 +124,8 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings' ) ) {
 			'fcbk_bttn_plgn_where'					=> '',
 			'fcbk_bttn_plgn_display_option' => '',
 			'fcbk_bttn_plgn_count_icon'			=> 1,
-			'fb_img_link'										=>  plugins_url( "img/standart-facebook-ico.jpg", __FILE__ )
+			'fb_img_link'										=>  plugins_url( "img/standart-facebook-ico.jpg", __FILE__ ),
+			'fcbk_bttn_plgn_locale' => 'en_US'
 		);
 
 		if( ! get_option( 'fcbk_bttn_plgn_options_array' ) )
@@ -160,6 +161,8 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 				if ( isset ( $_FILES [ 'uploadfile' ] [ 'tmp_name' ] ) &&  $_FILES [ 'uploadfile' ] [ 'tmp_name' ] != "" ) {		
 					$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_count_icon' ]	=	$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_count_icon' ] + 1;
 				}
+				$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ]		=	$_REQUEST [ 'fcbk_bttn_plgn_locale' ];
+
 				if($fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_count_icon' ] > 2)
 					$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_count_icon' ] = 1;
 				update_option	( 'fcbk_bttn_plgn_options_array', $fcbk_bttn_plgn_options_array );
@@ -171,7 +174,6 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 				$max_image_height	=	40;
 				$max_image_size		=	32 * 1024;
 				$valid_types 		=	array( 'jpg', 'jpeg' );
-				
 				// Construction to rename downloading file
 				$new_name			=	'facebook-ico'.$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_count_icon' ]; 
 				$new_ext			=	'.jpg';
@@ -211,9 +213,9 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 						$error = __( "Uploading Error: check image properties", 'facebook' );
 					}	
 				}
-				fcbk_bttn_plgn_update_option();
 			}
-		} 
+			fcbk_bttn_plgn_update_option();
+	} 
 		?>
 	<div class="wrap">
 		<div class="icon32 icon32-bws" id="icon-options-general"></div>
@@ -267,7 +269,7 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 										<?php echo __( "FaceBook image:", 'facebook' ); ?>
 									</th>
 									<td>
-										<input name="uploadfile" type="file" style="width:196px;" />
+										<input name="uploadfile" type="file" style="width:196px;" /><br />
 										<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php echo __( 'Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:"jpg", "jpeg".', 'facebook' ); ?></span>	
 									</td>
 								</table>											
@@ -286,6 +288,122 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 								<option <?php if ( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_where' ] == 'shortcode ') echo 'selected="selected"'; ?> value="shortcode"><?php echo __( "Shortcode", 'facebook' ); ?></option>
 							</select>
 							<span id="shortcode" style="color: rgb(136, 136, 136); font-size: 10px; <?php if ( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_where' ] == 'shortcode' ) { echo ( 'display:inline' ); } else { echo ( 'display:none' ); }?>"><?php echo __( "If you would like to add a FaceBook button to your website, just copy and put this shortcode onto your post or page:", 'facebook' ); ?> [fb_button].</span>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<?php echo __( "FaceBook Button language:", 'facebook' ); ?>
+						</th>
+						<td>
+							<select name="fcbk_bttn_plgn_locale">
+								<option value="af_ZA" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "af_ZA" ) echo 'selected="selected"'; ?>>Afrikaans</option>
+								<option value="ar_AR" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "ar_AR" ) echo 'selected="selected"'; ?>>العربية</option>
+								<option value="ay_BO" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "ay_BO" ) echo 'selected="selected"'; ?>>Aymar aru</option>
+								<option value="az_AZ" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "az_AZ" ) echo 'selected="selected"'; ?>>Azərbaycan dili</option>
+								<option value="be_BY" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "be_BY" ) echo 'selected="selected"'; ?>>Беларуская</option>
+								<option value="bg_BG" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "bg_BG" ) echo 'selected="selected"'; ?>>Български</option>
+								<option value="bn_IN" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "bn_IN" ) echo 'selected="selected"'; ?>>বাংলা</option>
+								<option value="bs_BA" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "bs_BA" ) echo 'selected="selected"'; ?>>Bosanski</option>
+								<option value="ca_ES" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "ca_ES" ) echo 'selected="selected"'; ?>>Català</option>
+								<option value="ck_US" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "ck_US" ) echo 'selected="selected"'; ?>>Cherokee</option>
+								<option value="cs_CZ" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "cs_CZ" ) echo 'selected="selected"'; ?>>Čeština</option>
+								<option value="cy_GB" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "cy_GB" ) echo 'selected="selected"'; ?>>Cymraeg</option>
+								<option value="da_DK" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "da_DK" ) echo 'selected="selected"'; ?>>Dansk</option>
+								<option value="de_DE" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "de_DE" ) echo 'selected="selected"'; ?>>Deutsch</option>
+								<option value="el_GR" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "el_GR" ) echo 'selected="selected"'; ?>>Ελληνικά</option>
+								<option value="en_US" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "en_US" ) echo 'selected="selected"'; ?>>English</option>
+								<option value="en_PI" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "en_PI" ) echo 'selected="selected"'; ?>>English (Pirate)</option>
+								<option value="eo_EO" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "eo_EO" ) echo 'selected="selected"'; ?>>Esperanto</option>
+								<option value="es_CL" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "es_CL" ) echo 'selected="selected"'; ?>>Español (Chile)</option>
+								<option value="es_CO" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "es_CO" ) echo 'selected="selected"'; ?>>Español (Colombia)</option>
+								<option value="es_ES" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "es_ES" ) echo 'selected="selected"'; ?>>Español (España)</option>
+								<option value="es_LA" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "es_LA" ) echo 'selected="selected"'; ?>>Español</option>
+								<option value="es_MX" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "es_MX" ) echo 'selected="selected"'; ?>>Español (México)</option>
+								<option value="es_VE" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "es_VE" ) echo 'selected="selected"'; ?>>Español (Venezuela)</option>
+								<option value="et_EE" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "et_EE" ) echo 'selected="selected"'; ?>>Eesti</option>
+								<option value="eu_ES" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "eu_ES" ) echo 'selected="selected"'; ?>>Euskara</option>
+								<option value="fa_IR" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "fa_IR" ) echo 'selected="selected"'; ?>>فارسی</option>
+								<option value="fb_LT" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "fb_LT" ) echo 'selected="selected"'; ?>>Leet Speak</option>
+								<option value="fi_FI" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "fi_FI" ) echo 'selected="selected"'; ?>>Suomi</option>
+								<option value="fo_FO" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "fo_FO" ) echo 'selected="selected"'; ?>>Føroyskt</option>
+								<option value="fr_CA" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "fr_CA" ) echo 'selected="selected"'; ?>>Français (Canada)</option>
+								<option value="fr_FR" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "fr_FR" ) echo 'selected="selected"'; ?>>Français (France)</option>
+								<option value="fy_NL" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "fy_NL" ) echo 'selected="selected"'; ?>>Frysk</option>
+								<option value="ga_IE" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "ga_IE" ) echo 'selected="selected"'; ?>>Gaeilge</option>
+								<option value="gl_ES" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "gl_ES" ) echo 'selected="selected"'; ?>>Galego</option>
+								<option value="gn_PY" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "gn_PY" ) echo 'selected="selected"'; ?>>Avañe'ẽ</option>
+								<option value="gu_IN" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "gu_IN" ) echo 'selected="selected"'; ?>>ગુજરાતી</option>
+								<option value="gx_GR" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "gx_GR" ) echo 'selected="selected"'; ?>>Ἑλληνική ἀρχαία</option>
+								<option value="he_IL" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "he_IL" ) echo 'selected="selected"'; ?>>עברית</option>
+								<option value="hi_IN" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "hi_IN" ) echo 'selected="selected"'; ?>>हिन्दी</option>
+								<option value="hr_HR" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "hr_HR" ) echo 'selected="selected"'; ?>>Hrvatski</option>
+								<option value="hu_HU" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "hu_HU" ) echo 'selected="selected"'; ?>>Magyar</option>
+								<option value="hy_AM" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "hy_AM" ) echo 'selected="selected"'; ?>>Հայերեն</option>
+								<option value="id_ID" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "id_ID" ) echo 'selected="selected"'; ?>>Bahasa Indonesia</option>
+								<option value="is_IS" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "is_IS" ) echo 'selected="selected"'; ?>>Íslenska</option>
+								<option value="it_IT" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "it_IT" ) echo 'selected="selected"'; ?>>Italiano</option>
+								<option value="ja_JP" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "ja_JP" ) echo 'selected="selected"'; ?>>日本語</option>
+								<option value="jv_ID" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "jv_ID" ) echo 'selected="selected"'; ?>>Basa Jawa</option>
+								<option value="ka_GE" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "ka_GE" ) echo 'selected="selected"'; ?>>ქართული</option>
+								<option value="kk_KZ" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "kk_KZ" ) echo 'selected="selected"'; ?>>Қазақша</option>
+								<option value="km_KH" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "km_KH" ) echo 'selected="selected"'; ?>>ភាសាខ្មែរ</option>
+								<option value="kn_IN" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "kn_IN" ) echo 'selected="selected"'; ?>>ಕನ್ನಡ</option>
+								<option value="ko_KR" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "ko_KR" ) echo 'selected="selected"'; ?>>한국어</option>
+								<option value="ku_TR" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "ku_TR" ) echo 'selected="selected"'; ?>>Kurdî</option>
+								<option value="la_VA" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "la_VA" ) echo 'selected="selected"'; ?>>lingua latina</option>
+								<option value="li_NL" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "li_NL" ) echo 'selected="selected"'; ?>>Limburgs</option>
+								<option value="lt_LT" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "lt_LT" ) echo 'selected="selected"'; ?>>Lietuvių</option>
+								<option value="lv_LV" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "lv_LV" ) echo 'selected="selected"'; ?>>Latviešu</option>
+								<option value="mg_MG" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "mg_MG" ) echo 'selected="selected"'; ?>>Malagasy</option>
+								<option value="mk_MK" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "mk_MK" ) echo 'selected="selected"'; ?>>Македонски</option>
+								<option value="ml_IN" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "ml_IN" ) echo 'selected="selected"'; ?>>മലയാളം</option>
+								<option value="mn_MN" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "mn_MN" ) echo 'selected="selected"'; ?>>Монгол</option>
+								<option value="mr_IN" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "mr_IN" ) echo 'selected="selected"'; ?>>मराठी</option>
+								<option value="ms_MY" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "ms_MY" ) echo 'selected="selected"'; ?>>Bahasa Melayu</option>
+								<option value="mt_MT" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "mt_MT" ) echo 'selected="selected"'; ?>>Malti</option>
+								<option value="nb_NO" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "nb_NO" ) echo 'selected="selected"'; ?>>Norsk (bokmål)</option>
+								<option value="ne_NP" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "ne_NP" ) echo 'selected="selected"'; ?>>नेपाली</option>
+								<option value="nl_BE" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "nl_BE" ) echo 'selected="selected"'; ?>>Nederlands (België)</option>
+								<option value="nl_NL" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "nl_NL" ) echo 'selected="selected"'; ?>>Nederlands</option>
+								<option value="nn_NO" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "nn_NO" ) echo 'selected="selected"'; ?>>Norsk (nynorsk)</option>
+								<option value="pa_IN" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "pa_IN" ) echo 'selected="selected"'; ?>>ਪੰਜਾਬੀ</option>
+								<option value="pl_PL" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "pl_PL" ) echo 'selected="selected"'; ?>>Polski</option>
+								<option value="ps_AF" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "ps_AF" ) echo 'selected="selected"'; ?>>پښتو</option>
+								<option value="pt_BR" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "pt_BR" ) echo 'selected="selected"'; ?>>Português (Brasil)</option>
+								<option value="pt_PT" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "pt_PT" ) echo 'selected="selected"'; ?>>Português (Portugal)</option>
+								<option value="qu_PE" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "qu_PE" ) echo 'selected="selected"'; ?>>Qhichwa</option>
+								<option value="rm_CH" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "rm_CH" ) echo 'selected="selected"'; ?>>Rumantsch</option>
+								<option value="ro_RO" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "ro_RO" ) echo 'selected="selected"'; ?>>Română</option>
+								<option value="ru_RU" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "ru_RU" ) echo 'selected="selected"'; ?>>Русский</option>
+								<option value="sa_IN" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "sa_IN" ) echo 'selected="selected"'; ?>>संस्कृतम्</option>
+								<option value="se_NO" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "se_NO" ) echo 'selected="selected"'; ?>>Davvisámegiella</option>
+								<option value="sk_SK" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "sk_SK" ) echo 'selected="selected"'; ?>>Slovenčina</option>
+								<option value="sl_SI" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "sl_SI" ) echo 'selected="selected"'; ?>>Slovenščina</option>
+								<option value="so_SO" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "so_SO" ) echo 'selected="selected"'; ?>>Soomaaliga</option>
+								<option value="sq_AL" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "sq_AL" ) echo 'selected="selected"'; ?>>Shqip</option>
+								<option value="sr_RS" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "sr_RS" ) echo 'selected="selected"'; ?>>Српски</option>
+								<option value="sv_SE" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "sv_SE" ) echo 'selected="selected"'; ?>>Svenska</option>
+								<option value="sw_KE" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "sw_KE" ) echo 'selected="selected"'; ?>>Kiswahili</option>
+								<option value="sy_SY" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "sy_SY" ) echo 'selected="selected"'; ?>>ܐܪܡܝܐ</option>
+								<option value="ta_IN" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "ta_IN" ) echo 'selected="selected"'; ?>>தமிழ்</option>
+								<option value="te_IN" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "te_IN" ) echo 'selected="selected"'; ?>>తెలుగు</option>
+								<option value="tg_TJ" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "tg_TJ" ) echo 'selected="selected"'; ?>>тоҷикӣ</option>
+								<option value="th_TH" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "th_TH" ) echo 'selected="selected"'; ?>>ภาษาไทย</option>
+								<option value="tl_PH" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "tl_PH" ) echo 'selected="selected"'; ?>>Filipino</option>
+								<option value="tl_ST" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "tl_ST" ) echo 'selected="selected"'; ?>>tlhIngan-Hol</option>
+								<option value="tr_TR" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "tr_TR" ) echo 'selected="selected"'; ?>>Türkçe</option>
+								<option value="tt_RU" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "tt_RU" ) echo 'selected="selected"'; ?>>Татарча</option>
+								<option value="uk_UA" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "uk_UA" ) echo 'selected="selected"'; ?>>Українська</option>
+								<option value="ur_PK" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "ur_PK" ) echo 'selected="selected"'; ?>>اردو</option>
+								<option value="uz_UZ" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "uz_UZ" ) echo 'selected="selected"'; ?>>O'zbek</option>
+								<option value="vi_VN" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "vi_VN" ) echo 'selected="selected"'; ?>>Tiếng Việt</option>
+								<option value="yi_DE" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "yi_DE" ) echo 'selected="selected"'; ?>>ייִדיש</option>
+								<option value="zh_CN" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "zh_CN" ) echo 'selected="selected"'; ?>>中文(简体)</option>
+								<option value="zh_HK" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "zh_HK" ) echo 'selected="selected"'; ?>>中文(香港)</option>
+								<option value="zh_TW" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "zh_TW" ) echo 'selected="selected"'; ?>>中文(台灣)</option>
+								<option value="zu_ZA" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "zu_ZA" ) echo 'selected="selected"'; ?>>isiZulu</option>
+								</select>
+								<span id="shortcode" style="color: rgb(136, 136, 136); font-size: 10px; display:inline"><?php echo __( "Select language for Like button", 'facebook' ); ?></span>
 						</td>
 					</tr>
 					<tr>
@@ -339,7 +457,7 @@ if( ! function_exists( 'fcbk_bttn_plgn_display_button' ) ) {
 		if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_like' ] == 1 ) {
 			$button .=	'<div class="fcbk_like">
 										<div id="fb-root"></div>
-										<script src="http://connect.facebook.net/en_US/all.js#appId=224313110927811&amp;xfbml=1"></script>
+										<script src="http://connect.facebook.net/'.$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ].'/all.js#appId=224313110927811&amp;xfbml=1"></script>
 										<fb:like href="' . $permalink_post . '" send="false" layout="button_count" width="450" show_faces="false" font=""></fb:like>
 									</div>';
 		}				

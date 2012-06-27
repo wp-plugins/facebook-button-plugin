@@ -1,5 +1,6 @@
 #fcbk_share {
 	clear:both;
+	height: 40px;
 }
 
 .fcbk_button {
@@ -7,8 +8,14 @@
 	margin-right:10px;
 }
 
+.fcbk_button a{
+	height: 40px;
+    display: block;
+}
 .fcbk_like {
-
+	float: left;
+    position: relative;
+    top: -3px;
 }
 
 #fb-root {
