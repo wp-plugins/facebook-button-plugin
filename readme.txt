@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
 Requires at least: 2.9
-Tested up to: 3.4
-Stable tag: 2.12
+Tested up to: 3.4.1
+Stable tag: 2.13
 
 Add Facebook button to your WordPress website
 
@@ -24,6 +24,7 @@ Facebook Button Plugin allows you to add follow button in the most easiest and f
 
 = Translation =
 
+* Hebrew (he_IL) (thanks to Sagive SEO)
 * Russian (ru_RU)
 * Spanish (es_ES) (thanks to Jesús Parra)
 * Turkish (tr_TR) (thanks to Can Atasever, <a href="http://www.candanblog.com">www.candanblog.com</a>)
@@ -79,6 +80,10 @@ Dear users, if you have any questions or propositions regarding our plugins (cur
 
 == Changelog ==
 
+= V2.13 - 10.07.2012 =
+* NEW : Hebrew language file is added to the plugin.
+* Update : We updated all functionality for wordpress 3.4.1.
+
 = V2.12 - 29.06.2012 =
 * Bugfix : The bug with saved 'sortcode option is fixed.
 
@@ -127,6 +132,9 @@ Dear users, if you have any questions or propositions regarding our plugins (cur
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.13 =
+Hebrew language file is added to the plugin. We updated all functionality for wordpress 3.4.1.
 
 = V2.12 =
 The bug with saved 'sortcode' option is fixed.
