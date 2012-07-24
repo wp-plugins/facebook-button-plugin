@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Facebook Button Plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-10 19:06+0300\n"
-"PO-Revision-Date: 2012-07-10 19:06+0300\n"
+"POT-Creation-Date: 2012-07-24 19:37+0300\n"
+"PO-Revision-Date: 2012-07-24 19:37+0300\n"
 "Last-Translator: zos <zos@bestwebsoft.com>\n"
 "Language-Team: \n"
 "Language: \n"
@@ -33,8 +33,8 @@ msgstr "קרא עוד"
 
 # @ facebook
 #: facebook-button-plugin.php:80
-#: facebook-button-plugin.php:518
-#: facebook-button-plugin.php:530
+#: facebook-button-plugin.php:519
+#: facebook-button-plugin.php:531
 msgid "Settings"
 msgstr "הגדרות"
 
@@ -206,12 +206,12 @@ msgid "Save Changes"
 msgstr "שמור שינויים"
 
 # @ facebook
-#: facebook-button-plugin.php:531
+#: facebook-button-plugin.php:532
 msgid "FAQ"
 msgstr "שאלות ותשובות"
 
 # @ facebook
-#: facebook-button-plugin.php:532
+#: facebook-button-plugin.php:533
 msgid "Support"
 msgstr "תמיכה"
 

@@ -4,7 +4,7 @@ Plugin Name: Facebook Button Plugin
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.13
+Version: 2.14
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -150,7 +150,7 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 
 		$message = "";
 		$error = "";
-		if( isset( $_REQUEST['fcbk_bttn_plgn_form_submit'] ) ) {
+		if( isset( $_REQUEST['fcbk_bttn_plgn_form_submit'] ) && check_admin_referer( plugin_basename(__FILE__), 'fcbk_bttn_plgn_nonce_name' ) ) {
 			// Takes all the changed settings on the plugin's admin page and saves them in array 'fcbk_bttn_plgn_options_array'.
 			if ( isset ( $_REQUEST['fcbk_bttn_plgn_where'] ) && isset ( $_REQUEST['fcbk_bttn_plgn_link'] ) && isset ( $_REQUEST['fcbk_bttn_plgn_display_option'] ) )	{				
 				$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_link' ]			=	$_REQUEST [ 'fcbk_bttn_plgn_link' ];
@@ -412,7 +412,8 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 							<input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
 						</td>
 					</tr>
-				</table>		
+				</table>
+				<?php wp_nonce_field( plugin_basename(__FILE__), 'fcbk_bttn_plgn_nonce_name' ); ?>
 			</form>
 		</div>
 	</div>

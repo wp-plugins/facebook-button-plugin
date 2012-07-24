@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: facebook\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-10 19:07+0300\n"
-"PO-Revision-Date: 2012-07-10 19:07+0300\n"
+"POT-Creation-Date: 2012-07-24 19:37+0300\n"
+"PO-Revision-Date: 2012-07-24 19:37+0300\n"
 "Last-Translator: zos <zos@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language: \n"
@@ -28,8 +28,8 @@ msgid "Read more"
 msgstr "Leer mas"
 
 #: facebook-button-plugin.php:80
-#: facebook-button-plugin.php:518
-#: facebook-button-plugin.php:530
+#: facebook-button-plugin.php:519
+#: facebook-button-plugin.php:531
 msgid "Settings"
 msgstr "Opciones"
 
@@ -168,11 +168,11 @@ msgstr ""
 msgid "Save Changes"
 msgstr ""
 
-#: facebook-button-plugin.php:531
+#: facebook-button-plugin.php:532
 msgid "FAQ"
 msgstr "FAQ"
 
-#: facebook-button-plugin.php:532
+#: facebook-button-plugin.php:533
 msgid "Support"
 msgstr "Soporte"
 
