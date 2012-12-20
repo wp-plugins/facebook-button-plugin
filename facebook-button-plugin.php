@@ -4,7 +4,7 @@ Plugin Name: Facebook Button Plugin
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.14
+Version: 2.15
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */

@@ -2,11 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: facebook\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-20 17:51+0200\n"
-"PO-Revision-Date: 2012-12-20 17:51+0200\n"
-"Last-Translator: zos <zos@bestwebsoft.com>\n"
-"Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
-"Language: ru_RU\n"
+"POT-Creation-Date: 2012-12-20 18:10+0200\n"
+"PO-Revision-Date: 2012-12-20 18:10+0200\n"
+"Last-Translator: Radovan Georgijevic <radovan@georgijevic.info>\n"
+"Language-Team: Georgijevic Team <http://www.georgijevic.info>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,90 +17,90 @@ msgstr ""
 
 #: facebook-button-plugin.php:78
 msgid "Activated plugins"
-msgstr "Активированные плагины"
+msgstr "Aktivni dodaci"
 
 #: facebook-button-plugin.php:80 facebook-button-plugin.php:88
 #: facebook-button-plugin.php:96
 msgid "Read more"
-msgstr "Подробнее..."
+msgstr "Čitaj više..."
 
 #: facebook-button-plugin.php:80 facebook-button-plugin.php:519
 #: facebook-button-plugin.php:531
 msgid "Settings"
-msgstr "Настройки"
+msgstr "Podešavanja"
 
 #: facebook-button-plugin.php:86
 msgid "Installed plugins"
-msgstr "Установленные плагины"
+msgstr "Instalirani dodaci"
 
 #: facebook-button-plugin.php:94
 msgid "Recommended plugins"
-msgstr "Рекомендованные к установке плагины"
+msgstr "Preporučeni dodaci"
 
 #: facebook-button-plugin.php:96
 msgid "Download"
-msgstr "Скачать"
+msgstr "Preuzmi"
 
 #: facebook-button-plugin.php:96
 #, php-format
 msgid "Install %s"
-msgstr "Установлено %s"
+msgstr "Instaliraj %s"
 
 #: facebook-button-plugin.php:96
 msgid "Install now from wordpress.org"
-msgstr "Установить с wordpress.org"
+msgstr "Instaliraj sa wordpress.org"
 
 #: facebook-button-plugin.php:98
 msgid ""
 "If you have any questions, please contact us via plugin@bestwebsoft.com or "
 "fill in our contact form on our site"
 msgstr ""
-"Если у вас есть какие-то впросы, обращайтесь на plugin@bestwebsoft.com или "
-"заполните контактную форму на нашем сайте"
+"Ako imate bilo kakva pitanja, kontaktirajte nas putem maila "
+"plugin@bestwebsoft.com ili popubite kontakt formu na našem sajtu"
 
 #: facebook-button-plugin.php:109 facebook-button-plugin.php:222
 msgid "FaceBook Button Options"
-msgstr "Настройки FaceBook Кнопки"
+msgstr "Taster Facebook Opcija"
 
 #: facebook-button-plugin.php:109
 msgid "FaceBook Button"
-msgstr "FaceBook кнопка"
+msgstr "Facebook taster"
 
 #: facebook-button-plugin.php:169
 msgid "Options saved."
-msgstr "Опции сохранены"
+msgstr "Opcije sačuvane"
 
 #: facebook-button-plugin.php:191
 msgid "Error: File size > 32K"
-msgstr "Ошибка: Размер файла больше 32К"
+msgstr "Greška: Veličina fajla prevazilazi 32К"
 
 #: facebook-button-plugin.php:194
 msgid "Error: Invalid file type"
-msgstr "Ошибка: Некорректный тип файла"
+msgstr "Greška: Neispravan tip fajla"
 
 #: facebook-button-plugin.php:204
 msgid "Error: moving file failed"
-msgstr "Ошибка: При перемещении произошла ошибка"
+msgstr "Greška: premeštanje fajla nije uspelo"
 
 #: facebook-button-plugin.php:208
 msgid "Error: check image width or height"
-msgstr "Ошибка: Проверьте ширину и высоту изображения"
+msgstr "Greška: Proverite širinu i visinu slike"
 
 #: facebook-button-plugin.php:213
 msgid "Uploading Error: check image properties"
-msgstr "Ошибка загрузки: Проверьте опции изображения"
+msgstr "Greška unosa: Proverite svojstva slike"
 
 #: facebook-button-plugin.php:229
 msgid "Your's FaceBook Id:"
-msgstr "Ваш FaceBook Id:"
+msgstr "Vaš Facebook Id:"
 
 #: facebook-button-plugin.php:235
 msgid "Display button:"
-msgstr "Отображение кнопок:"
+msgstr "Prikaži taster:"
 
 #: facebook-button-plugin.php:237
 msgid "My Page"
-msgstr "My Page"
+msgstr "Moja Strana"
 
 #: facebook-button-plugin.php:238
 msgid "Like"
@@ -109,71 +108,71 @@ msgstr "Like"
 
 #: facebook-button-plugin.php:243
 msgid "Choose display option:"
-msgstr "Выбор опций отображения:"
+msgstr "Izaberi opcije prikaza:"
 
 #: facebook-button-plugin.php:247
 msgid "Standart FaceBook image"
-msgstr "Стандартная картинка FaceBook"
+msgstr "Standardna Facebook slika"
 
 #: facebook-button-plugin.php:249
 msgid "Custom FaceBook image"
-msgstr "Пользовательская картинка FaceBook"
+msgstr "Proizvoljna Facebook slika"
 
 #: facebook-button-plugin.php:256
 msgid "Current image:"
-msgstr "Текущее изображение:"
+msgstr "Aktuelna slika:"
 
 #: facebook-button-plugin.php:269
 msgid "FaceBook image:"
-msgstr "FaceBook изображение:"
+msgstr "Facebook slika:"
 
 #: facebook-button-plugin.php:273
 msgid ""
 "Image properties: max image width:100px; max image height:40px; max image "
 "size:32Kb; image types:\"jpg\", \"jpeg\"."
 msgstr ""
-"Опции изображения для загрузки: максимальная ширина:100px; максимальная "
-"высота:40px; максимальный размер:32Kb; тип файла:\"jpg\", \"jpeg\"."
+"Svojstva slike: maksimalna širina:100px; maksimalna visina:40px; maksimalna "
+"veličina:32Kb; tip fajla:\"jpg\", \"jpeg\"."
 
 #: facebook-button-plugin.php:281
 msgid "FaceBook Button Position:"
-msgstr "Позиции FaceBook кнопки:"
+msgstr "Pozicija Facebook Tastera:"
 
 #: facebook-button-plugin.php:285
 msgid "Before"
-msgstr "Перед"
+msgstr "Pre"
 
 #: facebook-button-plugin.php:286
 msgid "After"
-msgstr "После"
+msgstr "Posle"
 
 #: facebook-button-plugin.php:287
 msgid "Before and After"
-msgstr "Перед и после"
+msgstr "Pre i posle"
 
 #: facebook-button-plugin.php:288
 msgid "Shortcode"
-msgstr "Шорткод"
+msgstr "Kratki kod"
 
 #: facebook-button-plugin.php:290
 msgid ""
 "If you would like to add a FaceBook button to your website, just copy and "
 "put this shortcode onto your post or page:"
 msgstr ""
-"Если вы хотите добавить FaceBook кнопку на свой сайт, вам надо только "
-"скопировать и вставить шорткод в контент страницы или поста"
+"Ako želite da dodate Facebook taster na vaš vebsajt, jednostavno iskopirajte "
+"ovaj kratak kod na vašu stranu ili članak:"
 
 #: facebook-button-plugin.php:295
 msgid "FaceBook Button language:"
-msgstr "Язык для FaceBook кнопки"
+msgstr "Jezik Facebook tastera"
 
 #: facebook-button-plugin.php:406
 msgid "Select language for Like button"
-msgstr "Выберите язык для Like кнопки"
+msgstr "Izaberite jezik za Like taster"
 
 #: facebook-button-plugin.php:412
 msgid "Save Changes"
-msgstr ""
+msgstr "Sačuvaj Izmene"
 
 #: facebook-button-plugin.php:532
 msgid "FAQ"
@@ -181,10 +180,10 @@ msgstr "FAQ"
 
 #: facebook-button-plugin.php:533
 msgid "Support"
-msgstr "Поддержка"
+msgstr "Podrška"
 
 #~ msgid "Install Now"
-#~ msgstr "Установить сейчас"
+#~ msgstr "Instaliraj Odmah"
 
 #~ msgid "BWS Plugins"
-#~ msgstr "Плагины BWS"
+#~ msgstr "BWS Dodaci"
