@@ -26,7 +26,7 @@ Facebook Button Plugin allows you to add follow button in the most easiest and f
 
 * Arabic (ar_AR) (thanks to Albayan Design Hani Aladoli)
 * Hebrew (he_IL) (thanks to Sagive SEO)
-* Persian (fa_IR) (thanks to Milad Ahmadipour)
+* Persian (fa_IR) (thanks to Einolah Kiamehr)
 * Russian (ru_RU)
 * Serbian (sr_RS) (thanks to Georgijevic Team, www.georgijevic.info)
 * Spanish (es_ES) (thanks to Jesús Parra)
