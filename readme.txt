@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
 Requires at least: 2.9
-Tested up to: 3.5
-Stable tag: 2.15
+Tested up to: 3.5.1
+Stable tag: 2.16
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -85,6 +85,10 @@ Dear users, if you have any questions or propositions regarding our plugins (cur
 
 == Changelog ==
 
+= V2.16 - 01.03.2013 =
+* Update : We updated CSS file.
+* Update : We updated all functionality for wordpress 3.5.1.
+
 = V2.15 - 20.12.2012 =
 * NEW : Persian and Serbian language files is added to the plugin.
 * Update : We updated all functionality for wordpress 3.5.
@@ -145,6 +149,9 @@ Dear users, if you have any questions or propositions regarding our plugins (cur
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.16 =
+We updated CSS file. We updated all functionality for wordpress 3.5.1.
 
 = V2.15 =
 Persian and Serbian language files is added to the plugin. We updated all functionality for wordpress 3.5.
