@@ -1,0 +1,181 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: facebook\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-04 09:51+0300\n"
+"PO-Revision-Date: 2013-03-04 09:54+0300\n"
+"Last-Translator: \n"
+"Language-Team: Cmd Soft <tmosbyd@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ua_UA\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: facebook-button-plugin.php:79
+msgid "Activated plugins"
+msgstr "Активоване плагіни"
+
+#: facebook-button-plugin.php:81
+#: facebook-button-plugin.php:89
+#: facebook-button-plugin.php:97
+msgid "Read more"
+msgstr "Читати далі"
+
+#: facebook-button-plugin.php:81
+#: facebook-button-plugin.php:520
+#: facebook-button-plugin.php:532
+msgid "Settings"
+msgstr "Налаштування"
+
+#: facebook-button-plugin.php:87
+msgid "Installed plugins"
+msgstr "Встановлені плагіни"
+
+#: facebook-button-plugin.php:95
+msgid "Recommended plugins"
+msgstr "Рекомендовані плагіни"
+
+#: facebook-button-plugin.php:97
+msgid "Download"
+msgstr "Завантажити"
+
+#: facebook-button-plugin.php:97
+#, php-format
+msgid "Install %s"
+msgstr "Встановіть %s"
+
+#: facebook-button-plugin.php:97
+msgid "Install now from wordpress.org"
+msgstr "Встановити зараз від wordpress.org"
+
+#: facebook-button-plugin.php:99
+msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site"
+msgstr "Якщо у Вас виникли питання, будь ласка, зв'яжіться з нами через plugin@bestwebsoft.com або заповнити контактну форму на нашому сайті"
+
+#: facebook-button-plugin.php:110
+#: facebook-button-plugin.php:223
+msgid "FaceBook Button Options"
+msgstr "FaceBook кнопку Параметри"
+
+#: facebook-button-plugin.php:110
+msgid "FaceBook Button"
+msgstr "FaceBook кнопка"
+
+#: facebook-button-plugin.php:170
+msgid "Options saved."
+msgstr "Налаштування збережені."
+
+#: facebook-button-plugin.php:192
+msgid "Error: File size > 32K"
+msgstr "Помилка: Розмір файлу> 32K"
+
+#: facebook-button-plugin.php:195
+msgid "Error: Invalid file type"
+msgstr "Помилка: Невірний тип файлу"
+
+#: facebook-button-plugin.php:205
+msgid "Error: moving file failed"
+msgstr "Помилка: не вдалося Переміщення файлів"
+
+#: facebook-button-plugin.php:209
+msgid "Error: check image width or height"
+msgstr "Помилка: Перевірка ширини або висоти зображень"
+
+#: facebook-button-plugin.php:214
+msgid "Uploading Error: check image properties"
+msgstr "Завантаження Помилка: Перевірка властивостей зображення"
+
+#: facebook-button-plugin.php:230
+msgid "Your's FaceBook Id:"
+msgstr "Ваша автора FaceBook Id:"
+
+#: facebook-button-plugin.php:236
+msgid "Display button:"
+msgstr "Відображення кнопки:"
+
+#: facebook-button-plugin.php:238
+msgid "My Page"
+msgstr "Моя сторінка"
+
+#: facebook-button-plugin.php:239
+msgid "Like"
+msgstr "подобатися "
+
+#: facebook-button-plugin.php:244
+msgid "Choose display option:"
+msgstr "Виберіть опцію відображення:"
+
+#: facebook-button-plugin.php:248
+msgid "Standart FaceBook image"
+msgstr "Стандарт FaceBook зображення"
+
+#: facebook-button-plugin.php:250
+msgid "Custom FaceBook image"
+msgstr "Користувальницькі FaceBook зображення"
+
+#: facebook-button-plugin.php:257
+msgid "Current image:"
+msgstr "Поточне зображення:"
+
+#: facebook-button-plugin.php:270
+msgid "FaceBook image:"
+msgstr "FaceBook зображення:"
+
+#: facebook-button-plugin.php:274
+msgid "Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:\"jpg\", \"jpeg\"."
+msgstr "Властивості: максимальна ширина зображення:100px; Максимальна висота зображення:40px; максимальний розмір зображення:32Kb; Зображення типів:\"jpg\", \"jpeg\"."
+
+#: facebook-button-plugin.php:282
+msgid "FaceBook Button Position:"
+msgstr "Кнопка FaceBook Статус:"
+
+#: facebook-button-plugin.php:286
+msgid "Before"
+msgstr "Перш ніж"
+
+#: facebook-button-plugin.php:287
+msgid "After"
+msgstr "Після того як"
+
+#: facebook-button-plugin.php:288
+msgid "Before and After"
+msgstr "До і після"
+
+#: facebook-button-plugin.php:289
+msgid "Shortcode"
+msgstr "Шорткода"
+
+#: facebook-button-plugin.php:291
+msgid "If you would like to add a FaceBook button to your website, just copy and put this shortcode onto your post or page:"
+msgstr "Якщо ви хочете додати кнопку FaceBook на ваш сайт, просто скопіювати і помістити цей короткий на ваш пост або сторінку:"
+
+#: facebook-button-plugin.php:296
+msgid "FaceBook Button language:"
+msgstr "Кнопка FaceBook мову:"
+
+#: facebook-button-plugin.php:407
+msgid "Select language for Like button"
+msgstr "Виберіть мову для кнопки Like"
+
+#: facebook-button-plugin.php:413
+msgid "Save Changes"
+msgstr "Зберегти зміни"
+
+#: facebook-button-plugin.php:533
+msgid "FAQ"
+msgstr "Часті питання"
+
+#: facebook-button-plugin.php:534
+msgid "Support"
+msgstr "Підтримка"
+
+#~ msgid "Install Now"
+#~ msgstr "Установить сейчас"
+#~ msgid "BWS Plugins"
+#~ msgstr "Плагины BWS"
+
