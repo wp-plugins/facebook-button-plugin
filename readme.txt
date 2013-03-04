@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
 Requires at least: 2.9
 Tested up to: 3.5.1
-Stable tag: 2.16
+Stable tag: 2.17
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,6 +33,7 @@ Facebook Button Plugin allows you to add follow button in the most easiest and f
 * Serbian (sr_RS) (thanks to Georgijevic Team, www.georgijevic.info)
 * Spanish (es_ES) (thanks to Jesús Parra)
 * Turkish (tr_TR) (thanks to Can Atasever, <a href="http://www.candanblog.com">www.candanblog.com</a>)
+* Ukrainian (uk) (thanks to <a herf="mailto:tmosbyd@gmail.com">Cmd Soft</a>)
 
 If you create your own language pack or update an existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank"> text in PO and MO files</a> for <a href="http://bestwebsoft.com/" target="_blank">BWS</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
@@ -84,6 +85,9 @@ Dear users, if you have any questions or propositions regarding our plugins (cur
 5. Displaying FaceBook Button ater your post.
 
 == Changelog ==
+
+= V2.17 - 04.03.2013 =
+* NEW : Ukrainian language file was added to the plugin.
 
 = V2.16 - 01.03.2013 =
 * Update : We updated CSS file.
@@ -149,6 +153,9 @@ Dear users, if you have any questions or propositions regarding our plugins (cur
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.17 =
+Ukrainian language file was added to the plugin.
 
 = V2.16 =
 We updated CSS file. We updated all functionality for wordpress 3.5.1.
