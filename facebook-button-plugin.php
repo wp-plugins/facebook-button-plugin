@@ -4,7 +4,7 @@ Plugin Name: Facebook Button Plugin
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.17
+Version: 2.18
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -552,6 +552,14 @@ if ( ! function_exists ( 'fcbk_admin_head' ) ) {
 	}
 }
 
+// Function for delete options 
+if ( ! function_exists ( 'fcbk_delete_options' ) ) {
+	function fcbk_delete_options() {
+		global $wpdb;
+		delete_option( 'fcbk_bttn_plgn_options_array' );
+	}
+}
+
 //Add language files
 add_action( 'init', 'fcbk_plugin_init' );
 
@@ -573,3 +581,5 @@ add_shortcode( 'fb_button', 'fcbk_bttn_plgn_shortcode' );
 //Add settings links.
 add_filter( 'the_content', 'fcbk_bttn_plgn_display_button' );
 
+register_uninstall_hook( __FILE__, 'fcbk_delete_options' );
+?>
