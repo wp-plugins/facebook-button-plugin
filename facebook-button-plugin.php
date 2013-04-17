@@ -4,7 +4,7 @@ Plugin Name: Facebook Button Plugin
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.18
+Version: 2.19
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -96,7 +96,7 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 				<?php foreach( $array_recomend as $recomend_plugin ) { ?>
 				<div style="float:left; width:200px;"><?php echo $recomend_plugin['title']; ?></div> <p><a href="<?php echo $recomend_plugin['link']; ?>" target="_blank"><?php echo __( "Read more", 'facebook'); ?></a> <a href="<?php echo $recomend_plugin['href']; ?>" target="_blank"><?php echo __( "Download", 'facebook'); ?></a> <a class="install-now" href="<?php echo get_bloginfo( "url" ) . $recomend_plugin['slug']; ?>" title="<?php esc_attr( sprintf( __( 'Install %s' ), $recomend_plugin['title'] ) ) ?>" target="_blank"><?php echo __( 'Install now from wordpress.org', 'facebook' ) ?></a></p>
 				<?php } ?>
-				<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php _e( 'If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site', 'facebook' ); ?> <a href="http://bestwebsoft.com/contact/">http://bestwebsoft.com/contact/</a></span>
+				<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php _e( 'If you have any questions, please contact us via plugin@bestwebsoft.com or fill out the contact form on our website', 'facebook' ); ?> <a href="http://bestwebsoft.com/contact/">http://bestwebsoft.com/contact/</a></span>
 			</div>
 			<?php } ?>
 		</div>
@@ -107,7 +107,7 @@ if( ! function_exists( 'bws_add_menu_render' ) ) {
 if( ! function_exists( 'fcbk_bttn_plgn_add_pages' ) ) {
 	function fcbk_bttn_plgn_add_pages() {
 		add_menu_page( 'BWS Plugins', 'BWS Plugins', 'manage_options', 'bws_plugins', 'bws_add_menu_render', plugins_url( "img/px.png", __FILE__ ), 1001); 
-		add_submenu_page( 'bws_plugins', __( 'FaceBook Button Options', 'facebook' ), __( 'FaceBook Button', 'facebook' ), 'manage_options', "facebook-button-plugin.php", 'fcbk_bttn_plgn_settings_page');
+		add_submenu_page( 'bws_plugins', __( 'Facebook Button Settings', 'facebook' ), __( 'Facebook Button', 'facebook' ), 'manage_options', "facebook-button-plugin.php", 'fcbk_bttn_plgn_settings_page');
 
 		//call register settings function
 		add_action( 'admin_init', 'fcbk_bttn_plgn_settings' );
@@ -167,7 +167,7 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 				if($fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_count_icon' ] > 2)
 					$fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_count_icon' ] = 1;
 				update_option	( 'fcbk_bttn_plgn_options_array', $fcbk_bttn_plgn_options_array );
-				$message = __( "Options saved.", 'facebook' );
+				$message = __( "Settings saved", 'facebook' );
 			}
 			// Form options
 			if ( isset ( $_FILES [ 'uploadfile' ] [ 'tmp_name' ] ) &&  $_FILES [ 'uploadfile' ] [ 'tmp_name' ] != "" ) {		
@@ -220,14 +220,14 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 		?>
 	<div class="wrap">
 		<div class="icon32 icon32-bws" id="icon-options-general"></div>
-		<h2><?php echo __( "FaceBook Button Options", 'facebook' ); ?></h2>
+		<h2><?php echo __( "Facebook Button Settings", 'facebook' ); ?></h2>
 		<div class="updated fade" <?php if( ! isset( $_REQUEST['fcbk_bttn_plgn_form_submit'] ) || $error != "" ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
 		<div class="error" <?php if( "" == $error ) echo "style=\"display:none\""; ?>><p><strong><?php echo $error; ?></strong></p></div>
 		<div>
 			<form name="form1" method="post" action="admin.php?page=facebook-button-plugin.php" enctype="multipart/form-data" >
 				<table class="form-table">
 					<tr valign="top">
-						<th scope="row"><?php _e( "Your's FaceBook Id:", 'facebook' ); ?></th>
+						<th scope="row"><?php _e( "Your Facebook ID:", 'facebook' ); ?></th>
 						<td>
 							<input name='fcbk_bttn_plgn_link' type='text' value='<?php echo $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_link' ] ?>' style="width:200px;" />		
 						</td>
@@ -241,13 +241,13 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 					</tr>
 					<tr>
 						<th>
-							<?php echo __( "Choose display option:", 'facebook' ); ?>
+							<?php echo __( "Choose display settings:", 'facebook' ); ?>
 						</th>
 						<td>
 							<select name="fcbk_bttn_plgn_display_option" onchange="if ( this . value == 'custom' ) { getElementById ( 'fcbk_bttn_plgn_display_option_custom' ) . style.display = 'block'; } else { getElementById ( 'fcbk_bttn_plgn_display_option_custom' ) . style.display = 'none'; }" style="width:200px;" >
-								<option <?php if ( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_display_option' ] == 'standart' ) echo 'selected="selected"'; ?> value="standart"><?php echo __( "Standart FaceBook image", 'facebook' ); ?></option>
+								<option <?php if ( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_display_option' ] == 'standart' ) echo 'selected="selected"'; ?> value="standart"><?php echo __( "Standard Facebook image", 'facebook' ); ?></option>
 								<?php if( $copy || $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_display_option' ] == 'custom' ) { ?>
-								<option <?php if ( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_display_option' ] == 'custom' ) echo 'selected="selected"'; ?> value="custom"><?php echo __( "Custom FaceBook image", 'facebook' ); ?></option>
+								<option <?php if ( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_display_option' ] == 'custom' ) echo 'selected="selected"'; ?> value="custom"><?php echo __( "Custom Facebook image", 'facebook' ); ?></option>
 								<?php } ?>
 							</select>
 						</td>
@@ -267,7 +267,7 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 									<th style="padding-left:0px;font-size:13px;">
 										<input type="hidden" name="MAX_FILE_SIZE" value="64000"/>
 										<input type="hidden" name="home" value="<?php echo ABSPATH ; ?>"/>
-										<?php echo __( "FaceBook image:", 'facebook' ); ?>
+										<?php echo __( "Facebook image:", 'facebook' ); ?>
 									</th>
 									<td>
 										<input name="uploadfile" type="file" style="width:196px;" /><br />
@@ -279,7 +279,7 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 					</tr>
 					<tr>
 						<th>
-							<?php echo __( "FaceBook Button Position:", 'facebook' ); ?>
+							<?php echo __( "Facebook Button Position:", 'facebook' ); ?>
 						</th>
 						<td>
 							<select name="fcbk_bttn_plgn_where" onchange="if ( this . value == 'shortcode' ) { getElementById ( 'shortcode' ) . style.display = 'inline'; } else { getElementById ( 'shortcode' ) . style.display = 'none'; }" style="width:200px;" >
@@ -288,12 +288,12 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 								<option <?php if ( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_where' ] == 'beforeandafter' ) echo 'selected="selected"'; ?> value="beforeandafter"><?php echo __( "Before and After", 'facebook' ); ?></option>
 								<option <?php if ( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_where' ] == 'shortcode') echo 'selected="selected"'; ?> value="shortcode"><?php echo __( "Shortcode", 'facebook' ); ?></option>
 							</select>
-							<span id="shortcode" style="color: rgb(136, 136, 136); font-size: 10px; <?php if ( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_where' ] == 'shortcode' ) { echo ( 'display:inline' ); } else { echo ( 'display:none' ); }?>"><?php echo __( "If you would like to add a FaceBook button to your website, just copy and put this shortcode onto your post or page:", 'facebook' ); ?> [fb_button].</span>
+							<span id="shortcode" style="color: rgb(136, 136, 136); font-size: 10px; <?php if ( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_where' ] == 'shortcode' ) { echo ( 'display:inline' ); } else { echo ( 'display:none' ); }?>"><?php echo __( "If you would like to add a Facebook button to your website, just copy and paste this shortcode into your post or page:", 'facebook' ); ?> [fb_button].</span>
 						</td>
 					</tr>
 					<tr>
 						<th>
-							<?php echo __( "FaceBook Button language:", 'facebook' ); ?>
+							<?php echo __( "Facebook Button language:", 'facebook' ); ?>
 						</th>
 						<td>
 							<select name="fcbk_bttn_plgn_locale">
@@ -404,7 +404,7 @@ if( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 								<option value="zh_TW" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "zh_TW" ) echo 'selected="selected"'; ?>>中文(台灣)</option>
 								<option value="zu_ZA" <?php if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_locale' ] == "zu_ZA" ) echo 'selected="selected"'; ?>>isiZulu</option>
 								</select>
-								<span id="shortcode" style="color: rgb(136, 136, 136); font-size: 10px; display:inline"><?php echo __( "Select language for Like button", 'facebook' ); ?></span>
+								<span id="shortcode" style="color: rgb(136, 136, 136); font-size: 10px; display:inline"><?php echo __( "Change the language of Facebook Like Button", 'facebook' ); ?></span>
 						</td>
 					</tr>
 					<tr>
@@ -437,7 +437,7 @@ if( ! function_exists( 'fcbk_bttn_plgn_update_option' ) ) {
 	}
 }
 
-//Function 'facebook_button' taking from array 'fcbk_bttn_plgn_options_array' necessary information to create FaceBook Button and reacting to your choise in plugin menu - points where it appears.
+//Function 'facebook_button' taking from array 'fcbk_bttn_plgn_options_array' necessary information to create Facebook Button and reacting to your choise in plugin menu - points where it appears.
 if( ! function_exists( 'fcbk_bttn_plgn_display_button' ) ) {
 	function fcbk_bttn_plgn_display_button ( $content ) {
 		global $post;
@@ -465,7 +465,7 @@ if( ! function_exists( 'fcbk_bttn_plgn_display_button' ) ) {
 		}				
 		
 		$button .= '</div>';
-		//Indication where show FaceBook Button depending on selected item in admin page.
+		//Indication where show Facebook Button depending on selected item in admin page.
 		if ( $fcbk_bttn_plgn_where == 'before' ) {
 			return $button . $content; 
 		} else if ( $fcbk_bttn_plgn_where == 'after' ) {		
@@ -480,7 +480,7 @@ if( ! function_exists( 'fcbk_bttn_plgn_display_button' ) ) {
 	}
 }
 
-//Function 'fcbk_bttn_plgn_shortcode' are using to create shortcode by FaceBook Button.
+//Function 'fcbk_bttn_plgn_shortcode' are using to create shortcode by Facebook Button.
 if( ! function_exists( 'fcbk_bttn_plgn_shortcode' ) ) {
 	function fcbk_bttn_plgn_shortcode( $content ) {
 		$fcbk_bttn_plgn_options_array	=	get_option ( 'fcbk_bttn_plgn_options_array' );

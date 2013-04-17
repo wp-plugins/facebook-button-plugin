@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: facebook\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-04 09:51+0300\n"
-"PO-Revision-Date: 2013-03-04 09:54+0300\n"
+"POT-Creation-Date: 2013-04-17 12:23+0300\n"
+"PO-Revision-Date: 2013-04-17 12:23+0300\n"
 "Last-Translator: \n"
 "Language-Team: Cmd Soft <tmosbyd@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -54,21 +54,25 @@ msgid "Install now from wordpress.org"
 msgstr "Встановити зараз від wordpress.org"
 
 #: facebook-button-plugin.php:99
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill in our contact form on our site"
+#, fuzzy
+msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill out the contact form on our website"
 msgstr "Якщо у Вас виникли питання, будь ласка, зв'яжіться з нами через plugin@bestwebsoft.com або заповнити контактну форму на нашому сайті"
 
 #: facebook-button-plugin.php:110
 #: facebook-button-plugin.php:223
-msgid "FaceBook Button Options"
+#, fuzzy
+msgid "Facebook Button Settings"
 msgstr "FaceBook кнопку Параметри"
 
 #: facebook-button-plugin.php:110
-msgid "FaceBook Button"
+#, fuzzy
+msgid "Facebook Button"
 msgstr "FaceBook кнопка"
 
 #: facebook-button-plugin.php:170
-msgid "Options saved."
-msgstr "Налаштування збережені."
+#, fuzzy
+msgid "Settings saved"
+msgstr "Налаштування"
 
 #: facebook-button-plugin.php:192
 msgid "Error: File size > 32K"
@@ -91,7 +95,8 @@ msgid "Uploading Error: check image properties"
 msgstr "Завантаження Помилка: Перевірка властивостей зображення"
 
 #: facebook-button-plugin.php:230
-msgid "Your's FaceBook Id:"
+#, fuzzy
+msgid "Your Facebook ID:"
 msgstr "Ваша автора FaceBook Id:"
 
 #: facebook-button-plugin.php:236
@@ -107,15 +112,18 @@ msgid "Like"
 msgstr "подобатися "
 
 #: facebook-button-plugin.php:244
-msgid "Choose display option:"
+#, fuzzy
+msgid "Choose display settings:"
 msgstr "Виберіть опцію відображення:"
 
 #: facebook-button-plugin.php:248
-msgid "Standart FaceBook image"
+#, fuzzy
+msgid "Standard Facebook image"
 msgstr "Стандарт FaceBook зображення"
 
 #: facebook-button-plugin.php:250
-msgid "Custom FaceBook image"
+#, fuzzy
+msgid "Custom Facebook image"
 msgstr "Користувальницькі FaceBook зображення"
 
 #: facebook-button-plugin.php:257
@@ -123,7 +131,8 @@ msgid "Current image:"
 msgstr "Поточне зображення:"
 
 #: facebook-button-plugin.php:270
-msgid "FaceBook image:"
+#, fuzzy
+msgid "Facebook image:"
 msgstr "FaceBook зображення:"
 
 #: facebook-button-plugin.php:274
@@ -131,7 +140,8 @@ msgid "Image properties: max image width:100px; max image height:40px; max image
 msgstr "Властивості: максимальна ширина зображення:100px; Максимальна висота зображення:40px; максимальний розмір зображення:32Kb; Зображення типів:\"jpg\", \"jpeg\"."
 
 #: facebook-button-plugin.php:282
-msgid "FaceBook Button Position:"
+#, fuzzy
+msgid "Facebook Button Position:"
 msgstr "Кнопка FaceBook Статус:"
 
 #: facebook-button-plugin.php:286
@@ -151,15 +161,18 @@ msgid "Shortcode"
 msgstr "Шорткода"
 
 #: facebook-button-plugin.php:291
-msgid "If you would like to add a FaceBook button to your website, just copy and put this shortcode onto your post or page:"
+#, fuzzy
+msgid "If you would like to add a Facebook button to your website, just copy and paste this shortcode into your post or page:"
 msgstr "Якщо ви хочете додати кнопку FaceBook на ваш сайт, просто скопіювати і помістити цей короткий на ваш пост або сторінку:"
 
 #: facebook-button-plugin.php:296
-msgid "FaceBook Button language:"
+#, fuzzy
+msgid "Facebook Button language:"
 msgstr "Кнопка FaceBook мову:"
 
 #: facebook-button-plugin.php:407
-msgid "Select language for Like button"
+#, fuzzy
+msgid "Change the language of Facebook Like Button"
 msgstr "Виберіть мову для кнопки Like"
 
 #: facebook-button-plugin.php:413
@@ -174,6 +187,8 @@ msgstr "Часті питання"
 msgid "Support"
 msgstr "Підтримка"
 
+#~ msgid "Options saved."
+#~ msgstr "Налаштування збережені."
 #~ msgid "Install Now"
 #~ msgstr "Установить сейчас"
 #~ msgid "BWS Plugins"
