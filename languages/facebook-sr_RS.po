@@ -1,0 +1,195 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: facebook\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-17 12:22+0300\n"
+"PO-Revision-Date: 2013-04-17 12:22+0300\n"
+"Last-Translator: \n"
+"Language-Team: Georgijevic Team <http://www.georgijevic.info>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: facebook-button-plugin.php:79
+msgid "Activated plugins"
+msgstr "Aktivni dodaci"
+
+#: facebook-button-plugin.php:81
+#: facebook-button-plugin.php:89
+#: facebook-button-plugin.php:97
+msgid "Read more"
+msgstr "Čitaj više..."
+
+#: facebook-button-plugin.php:81
+#: facebook-button-plugin.php:520
+#: facebook-button-plugin.php:532
+msgid "Settings"
+msgstr "Podešavanja"
+
+#: facebook-button-plugin.php:87
+msgid "Installed plugins"
+msgstr "Instalirani dodaci"
+
+#: facebook-button-plugin.php:95
+msgid "Recommended plugins"
+msgstr "Preporučeni dodaci"
+
+#: facebook-button-plugin.php:97
+msgid "Download"
+msgstr "Preuzmi"
+
+#: facebook-button-plugin.php:97
+#, php-format
+msgid "Install %s"
+msgstr "Instaliraj %s"
+
+#: facebook-button-plugin.php:97
+msgid "Install now from wordpress.org"
+msgstr "Instaliraj sa wordpress.org"
+
+#: facebook-button-plugin.php:99
+#, fuzzy
+msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill out the contact form on our website"
+msgstr "Ako imate bilo kakva pitanja, kontaktirajte nas putem maila plugin@bestwebsoft.com ili popubite kontakt formu na našem sajtu"
+
+#: facebook-button-plugin.php:110
+#: facebook-button-plugin.php:223
+#, fuzzy
+msgid "Facebook Button Settings"
+msgstr "Taster Facebook Opcija"
+
+#: facebook-button-plugin.php:110
+#, fuzzy
+msgid "Facebook Button"
+msgstr "Facebook taster"
+
+#: facebook-button-plugin.php:170
+#, fuzzy
+msgid "Settings saved"
+msgstr "Podešavanja"
+
+#: facebook-button-plugin.php:192
+msgid "Error: File size > 32K"
+msgstr "Greška: Veličina fajla prevazilazi 32К"
+
+#: facebook-button-plugin.php:195
+msgid "Error: Invalid file type"
+msgstr "Greška: Neispravan tip fajla"
+
+#: facebook-button-plugin.php:205
+msgid "Error: moving file failed"
+msgstr "Greška: premeštanje fajla nije uspelo"
+
+#: facebook-button-plugin.php:209
+msgid "Error: check image width or height"
+msgstr "Greška: Proverite širinu i visinu slike"
+
+#: facebook-button-plugin.php:214
+msgid "Uploading Error: check image properties"
+msgstr "Greška unosa: Proverite svojstva slike"
+
+#: facebook-button-plugin.php:230
+#, fuzzy
+msgid "Your Facebook ID:"
+msgstr "Vaš Facebook Id:"
+
+#: facebook-button-plugin.php:236
+msgid "Display button:"
+msgstr "Prikaži taster:"
+
+#: facebook-button-plugin.php:238
+msgid "My Page"
+msgstr "Moja Strana"
+
+#: facebook-button-plugin.php:239
+msgid "Like"
+msgstr "Like"
+
+#: facebook-button-plugin.php:244
+#, fuzzy
+msgid "Choose display settings:"
+msgstr "Izaberi opcije prikaza:"
+
+#: facebook-button-plugin.php:248
+#, fuzzy
+msgid "Standard Facebook image"
+msgstr "Standardna Facebook slika"
+
+#: facebook-button-plugin.php:250
+#, fuzzy
+msgid "Custom Facebook image"
+msgstr "Proizvoljna Facebook slika"
+
+#: facebook-button-plugin.php:257
+msgid "Current image:"
+msgstr "Aktuelna slika:"
+
+#: facebook-button-plugin.php:270
+#, fuzzy
+msgid "Facebook image:"
+msgstr "Facebook slika:"
+
+#: facebook-button-plugin.php:274
+msgid "Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:\"jpg\", \"jpeg\"."
+msgstr "Svojstva slike: maksimalna širina:100px; maksimalna visina:40px; maksimalna veličina:32Kb; tip fajla:\"jpg\", \"jpeg\"."
+
+#: facebook-button-plugin.php:282
+#, fuzzy
+msgid "Facebook Button Position:"
+msgstr "Pozicija Facebook Tastera:"
+
+#: facebook-button-plugin.php:286
+msgid "Before"
+msgstr "Pre"
+
+#: facebook-button-plugin.php:287
+msgid "After"
+msgstr "Posle"
+
+#: facebook-button-plugin.php:288
+msgid "Before and After"
+msgstr "Pre i posle"
+
+#: facebook-button-plugin.php:289
+msgid "Shortcode"
+msgstr "Kratki kod"
+
+#: facebook-button-plugin.php:291
+#, fuzzy
+msgid "If you would like to add a Facebook button to your website, just copy and paste this shortcode into your post or page:"
+msgstr "Ako želite da dodate Facebook taster na vaš vebsajt, jednostavno iskopirajte ovaj kratak kod na vašu stranu ili članak:"
+
+#: facebook-button-plugin.php:296
+#, fuzzy
+msgid "Facebook Button language:"
+msgstr "Jezik Facebook tastera"
+
+#: facebook-button-plugin.php:407
+#, fuzzy
+msgid "Change the language of Facebook Like Button"
+msgstr "Izaberite jezik za Like taster"
+
+#: facebook-button-plugin.php:413
+msgid "Save Changes"
+msgstr "Sačuvaj Izmene"
+
+#: facebook-button-plugin.php:533
+msgid "FAQ"
+msgstr "FAQ"
+
+#: facebook-button-plugin.php:534
+msgid "Support"
+msgstr "Podrška"
+
+#~ msgid "Options saved."
+#~ msgstr "Opcije sačuvane"
+#~ msgid "Install Now"
+#~ msgstr "Instaliraj Odmah"
+#~ msgid "BWS Plugins"
+#~ msgstr "BWS Dodaci"
+
