@@ -543,7 +543,7 @@ if( ! function_exists( 'fcbk_bttn_plgn_shortcode' ) ) {
 		if( $fcbk_bttn_plgn_options_array [ 'fcbk_bttn_plgn_my_page' ] == 1 ) {
 			$button .=	'<div class="fcbk_button">
 										<a name="fcbk_share"	href="http://www.facebook.com/' . $url . '"	target="blank">
-											<img src="' . get_bloginfo('site_url') . $img . '" alt="Fb-Button" />
+											<img src="' . $img . '" alt="Fb-Button" />
 										</a>	
 									</div>';
 		}
