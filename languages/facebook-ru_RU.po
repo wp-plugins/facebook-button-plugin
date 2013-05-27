@@ -1,0 +1,206 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: facebook\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-27 14:35+0300\n"
+"PO-Revision-Date: 2013-05-27 14:35+0300\n"
+"Last-Translator: \n"
+"Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru_RU\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: facebook-button-plugin.php:101
+msgid "Pro plugins"
+msgstr "Pro плагины"
+
+#: facebook-button-plugin.php:104
+#: facebook-button-plugin.php:130
+msgid "Activated plugins"
+msgstr "Активированные плагины"
+
+#: facebook-button-plugin.php:106
+#: facebook-button-plugin.php:114
+#: facebook-button-plugin.php:122
+#: facebook-button-plugin.php:132
+#: facebook-button-plugin.php:140
+#: facebook-button-plugin.php:148
+msgid "Read more"
+msgstr "Подробнее..."
+
+#: facebook-button-plugin.php:106
+#: facebook-button-plugin.php:132
+#: facebook-button-plugin.php:571
+#: facebook-button-plugin.php:583
+msgid "Settings"
+msgstr "Настройки"
+
+#: facebook-button-plugin.php:112
+#: facebook-button-plugin.php:138
+msgid "Installed plugins"
+msgstr "Установленные плагины"
+
+#: facebook-button-plugin.php:120
+#: facebook-button-plugin.php:146
+msgid "Recommended plugins"
+msgstr "Рекомендованные к установке плагины"
+
+#: facebook-button-plugin.php:122
+msgid "Purchase"
+msgstr "Купить"
+
+#: facebook-button-plugin.php:127
+msgid "Free plugins"
+msgstr "Бесплатные плагины"
+
+#: facebook-button-plugin.php:148
+msgid "Download"
+msgstr "Скачать"
+
+#: facebook-button-plugin.php:148
+#, php-format
+msgid "Install %s"
+msgstr "Установлено %s"
+
+#: facebook-button-plugin.php:148
+msgid "Install now from wordpress.org"
+msgstr "Установить с wordpress.org"
+
+#: facebook-button-plugin.php:153
+msgid "If you have any questions, please contact us via"
+msgstr "Если у вас есть какие-то вопросы, обращайтесь на"
+
+#: facebook-button-plugin.php:161
+#: facebook-button-plugin.php:274
+msgid "Facebook Button Settings"
+msgstr "Настройки Facebook Кнопки"
+
+#: facebook-button-plugin.php:161
+msgid "Facebook Button"
+msgstr "Facebook кнопка"
+
+#: facebook-button-plugin.php:221
+msgid "Settings saved"
+msgstr "Настройки сохранены"
+
+#: facebook-button-plugin.php:243
+msgid "Error: File size > 32K"
+msgstr "Ошибка: Размер файла больше 32К"
+
+#: facebook-button-plugin.php:246
+msgid "Error: Invalid file type"
+msgstr "Ошибка: Некорректный тип файла"
+
+#: facebook-button-plugin.php:256
+msgid "Error: moving file failed"
+msgstr "Ошибка: При перемещении произошла ошибка"
+
+#: facebook-button-plugin.php:260
+msgid "Error: check image width or height"
+msgstr "Ошибка: Проверьте ширину и высоту изображения"
+
+#: facebook-button-plugin.php:265
+msgid "Uploading Error: check image properties"
+msgstr "Ошибка загрузки: Проверьте опции изображения"
+
+#: facebook-button-plugin.php:281
+msgid "Your Facebook ID:"
+msgstr "Ваш Facebook ID:"
+
+#: facebook-button-plugin.php:287
+msgid "Display button:"
+msgstr "Отображение кнопок:"
+
+#: facebook-button-plugin.php:289
+msgid "My Page"
+msgstr "My Page"
+
+#: facebook-button-plugin.php:290
+msgid "Like"
+msgstr "Like"
+
+#: facebook-button-plugin.php:295
+msgid "Choose display settings:"
+msgstr "Выбор опций отображения:"
+
+#: facebook-button-plugin.php:299
+msgid "Standard Facebook image"
+msgstr "Стандартная картинка Facebook"
+
+#: facebook-button-plugin.php:301
+msgid "Custom Facebook image"
+msgstr "Пользовательская картинка Facebook"
+
+#: facebook-button-plugin.php:308
+msgid "Current image:"
+msgstr "Текущее изображение:"
+
+#: facebook-button-plugin.php:321
+msgid "Facebook image:"
+msgstr "Facebook изображение:"
+
+#: facebook-button-plugin.php:325
+msgid "Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:\"jpg\", \"jpeg\"."
+msgstr "Опции изображения для загрузки: максимальная ширина:100px; максимальная высота:40px; максимальный размер:32Kb; тип файла:\"jpg\", \"jpeg\"."
+
+#: facebook-button-plugin.php:333
+msgid "Facebook Button Position:"
+msgstr "Позиции Facebook кнопки:"
+
+#: facebook-button-plugin.php:337
+msgid "Before"
+msgstr "Перед"
+
+#: facebook-button-plugin.php:338
+msgid "After"
+msgstr "После"
+
+#: facebook-button-plugin.php:339
+msgid "Before and After"
+msgstr "Перед и после"
+
+#: facebook-button-plugin.php:340
+msgid "Shortcode"
+msgstr "Шорткод"
+
+#: facebook-button-plugin.php:342
+msgid "If you would like to add a Facebook button to your website, just copy and paste this shortcode into your post or page:"
+msgstr "Если вы хотите добавить Facebook кнопку на свой сайт, вам надо только скопировать и вставить шорткод в контент страницы или поста"
+
+#: facebook-button-plugin.php:347
+msgid "Facebook Button language:"
+msgstr "Язык для Facebook кнопки:"
+
+#: facebook-button-plugin.php:458
+msgid "Change the language of Facebook Like Button"
+msgstr "Выберите язык для Like кнопки"
+
+#: facebook-button-plugin.php:464
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: facebook-button-plugin.php:584
+msgid "FAQ"
+msgstr "FAQ"
+
+#: facebook-button-plugin.php:585
+msgid "Support"
+msgstr "Поддержка"
+
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill out the contact form on our website"
+#~ msgstr ""
+#~ "Если у вас есть какие-то вопросы, обращайтесь на plugin@bestwebsoft.com "
+#~ "или заполните контактную форму на нашем сайте"
+#~ msgid "Options saved."
+#~ msgstr "Опции сохранены"
+#~ msgid "Install Now"
+#~ msgstr "Установить сейчас"
+
