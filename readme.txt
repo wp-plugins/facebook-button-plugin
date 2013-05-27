@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
 Requires at least: 2.9
 Tested up to: 3.5.1
-Stable tag: 2.19
+Stable tag: 2.20
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,7 +15,7 @@ Add Facebook button to your WordPress website.
 Facebook Like Button Plugin allows you to add a Follow button the easiest way.
 
 <a href="http://wordpress.org/extend/plugins/facebook-button-plugin/faq/" target="_blank">FAQ</a>
-<a href="http://bestwebsoft.com/plugin/facebook-like-button-plugin/" target="_blank">Support</a>
+<a href="http://support.bestwebsoft.com" target="_blank">Support</a>
 
 = Features =
 
@@ -35,7 +35,7 @@ Facebook Like Button Plugin allows you to add a Follow button the easiest way.
 * Turkish (tr_TR) (thanks to Can Atasever, www.candanblog.com)
 * Ukrainian (uk) (thanks to Cmd Soft, www.cmd-soft.com)
 
-If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://bestwebsoft.com/" target="_blank">BWS</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BWS</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
 = Technical support =
 
@@ -55,11 +55,11 @@ We can fix some things for free for the users who provide translation of our plu
 
 = I cannot see the Facebook Button icon in the post after the plugin installation =
 
-1. In WordPress admin panel go to "Plugins", find "Facebook Button Plugin" and click "Activate".
+In WordPress admin panel go to "Plugins", find "Facebook Button Plugin" and click "Activate".
 
 = How can I deactivate the plugin? =
 
-1. In WordPress admin panel go to "Plugins", find the Facebook Button Plugin and click "Deactivate".
+In WordPress admin panel go to "Plugins", find the Facebook Button Plugin and click "Deactivate".
 
 =  After clicking the Facebook Button icon I see the Facebook Home page instead of the necessary account page =
 
@@ -68,7 +68,7 @@ We can fix some things for free for the users who provide translation of our plu
 
 = How to adjust Facebook Button position on the page =
 
-1. In WordPress admin panel go to "Settings", find the Facebook Button Plugin settings page and choose one of the listed positions: Before, After, Before and After or Shortcode. Then click "Update Changes".
+In WordPress admin panel go to "Settings", find the Facebook Button Plugin settings page and choose one of the listed positions: Before, After, Before and After or Shortcode. Then click "Update Changes".
 
 = How to change a Facebook Button icon =
 
@@ -89,6 +89,10 @@ We can fix some things for free for the users who provide translation of our plu
 5. Displaying Facebook Button ater your post.
 
 == Changelog ==
+
+= V2.20 - 27.05.2013 =
+* Bugfix : The error related to creation the path to the Facebook button image is fixed. 
+* Update : BWS plugins section is updated.
 
 = V2.19 - 17.04.2013 =
 * NEW : The English language is updated in the plugin.
@@ -163,6 +167,9 @@ We can fix some things for free for the users who provide translation of our plu
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.20 =
+The error related to creation the path to the Facebook button image is fixed. BWS plugins section is updated.
 
 = V2.19 =
 The English language is updated in the plugin.

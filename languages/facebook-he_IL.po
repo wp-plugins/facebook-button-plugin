@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Facebook Button Plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-17 12:22+0300\n"
-"PO-Revision-Date: 2013-04-17 12:22+0300\n"
+"POT-Creation-Date: 2013-05-27 14:34+0300\n"
+"PO-Revision-Date: 2013-05-27 14:35+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -19,211 +19,241 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 # @ facebook
-#: facebook-button-plugin.php:79
+#: facebook-button-plugin.php:101
+#, fuzzy
+msgid "Pro plugins"
+msgstr "תוספים מומלצים"
+
+# @ facebook
+#: facebook-button-plugin.php:104
+#: facebook-button-plugin.php:130
 msgid "Activated plugins"
 msgstr "תוספים פעילים"
 
 # @ facebook
-#: facebook-button-plugin.php:81
-#: facebook-button-plugin.php:89
-#: facebook-button-plugin.php:97
+#: facebook-button-plugin.php:106
+#: facebook-button-plugin.php:114
+#: facebook-button-plugin.php:122
+#: facebook-button-plugin.php:132
+#: facebook-button-plugin.php:140
+#: facebook-button-plugin.php:148
 msgid "Read more"
 msgstr "קרא עוד"
 
 # @ facebook
-#: facebook-button-plugin.php:81
-#: facebook-button-plugin.php:520
-#: facebook-button-plugin.php:532
+#: facebook-button-plugin.php:106
+#: facebook-button-plugin.php:132
+#: facebook-button-plugin.php:571
+#: facebook-button-plugin.php:583
 msgid "Settings"
 msgstr "הגדרות"
 
 # @ facebook
-#: facebook-button-plugin.php:87
+#: facebook-button-plugin.php:112
+#: facebook-button-plugin.php:138
 msgid "Installed plugins"
 msgstr "תוספים מותקנים"
 
 # @ facebook
-#: facebook-button-plugin.php:95
+#: facebook-button-plugin.php:120
+#: facebook-button-plugin.php:146
 msgid "Recommended plugins"
 msgstr "תוספים מומלצים"
 
+#: facebook-button-plugin.php:122
+msgid "Purchase"
+msgstr ""
+
 # @ facebook
-#: facebook-button-plugin.php:97
+#: facebook-button-plugin.php:127
+#, fuzzy
+msgid "Free plugins"
+msgstr "תוספים מומלצים"
+
+# @ facebook
+#: facebook-button-plugin.php:148
 msgid "Download"
 msgstr "הורד"
 
 # @ default
-#: facebook-button-plugin.php:97
+#: facebook-button-plugin.php:148
 #, php-format
 msgid "Install %s"
 msgstr "התקן %s"
 
 # @ facebook
-#: facebook-button-plugin.php:97
+#: facebook-button-plugin.php:148
 msgid "Install now from wordpress.org"
 msgstr "הורד כעת מ wordpress.org"
 
-# @ facebook
-#: facebook-button-plugin.php:99
-#, fuzzy
-msgid "If you have any questions, please contact us via plugin@bestwebsoft.com or fill out the contact form on our website"
-msgstr "אם יש לך שאלות כלשהן, אנא צור עמנו קשר דרך plugin@bestwebsoft.com או שתמלא את טופס יצירת הקשר באתר שלנו"
+#: facebook-button-plugin.php:153
+msgid "If you have any questions, please contact us via"
+msgstr ""
 
 # @ facebook
-#: facebook-button-plugin.php:110
-#: facebook-button-plugin.php:223
+#: facebook-button-plugin.php:161
+#: facebook-button-plugin.php:274
 #, fuzzy
 msgid "Facebook Button Settings"
 msgstr "אפשרויות כפתור פייסבוק"
 
 # @ facebook
-#: facebook-button-plugin.php:110
+#: facebook-button-plugin.php:161
 #, fuzzy
 msgid "Facebook Button"
 msgstr "כפתור פייסבוק"
 
 # @ facebook
-#: facebook-button-plugin.php:170
+#: facebook-button-plugin.php:221
 #, fuzzy
 msgid "Settings saved"
 msgstr "הגדרות"
 
 # @ facebook
-#: facebook-button-plugin.php:192
+#: facebook-button-plugin.php:243
 msgid "Error: File size > 32K"
 msgstr "שגיאה: גודל הקובץ גדול מ 32K"
 
 # @ facebook
-#: facebook-button-plugin.php:195
+#: facebook-button-plugin.php:246
 msgid "Error: Invalid file type"
 msgstr "שגיאה: סוג קובץ שגוי"
 
 # @ facebook
-#: facebook-button-plugin.php:205
+#: facebook-button-plugin.php:256
 msgid "Error: moving file failed"
 msgstr "שגיאה: העברת הקובץ נכשלה"
 
 # @ facebook
-#: facebook-button-plugin.php:209
+#: facebook-button-plugin.php:260
 msgid "Error: check image width or height"
 msgstr "שגיאה: בדוק את רוחב וגובה התמונה"
 
 # @ facebook
-#: facebook-button-plugin.php:214
+#: facebook-button-plugin.php:265
 msgid "Uploading Error: check image properties"
 msgstr "שגיאת טעינה: בדוק את מאפייני התמונה"
 
 # @ facebook
-#: facebook-button-plugin.php:230
+#: facebook-button-plugin.php:281
 #, fuzzy
 msgid "Your Facebook ID:"
 msgstr "מזהה הפייסבוק שלך:"
 
 # @ facebook
-#: facebook-button-plugin.php:236
+#: facebook-button-plugin.php:287
 msgid "Display button:"
 msgstr "הצג כפתור:"
 
 # @ captcha
-#: facebook-button-plugin.php:238
+#: facebook-button-plugin.php:289
 msgid "My Page"
 msgstr "הדף שלי"
 
 # @ captcha
-#: facebook-button-plugin.php:239
+#: facebook-button-plugin.php:290
 msgid "Like"
 msgstr "לייק"
 
 # @ facebook
-#: facebook-button-plugin.php:244
+#: facebook-button-plugin.php:295
 #, fuzzy
 msgid "Choose display settings:"
 msgstr "בחר אפשרות תצוגה:"
 
 # @ facebook
-#: facebook-button-plugin.php:248
+#: facebook-button-plugin.php:299
 #, fuzzy
 msgid "Standard Facebook image"
 msgstr "תמונת פייסבוק רגילה"
 
 # @ facebook
-#: facebook-button-plugin.php:250
+#: facebook-button-plugin.php:301
 #, fuzzy
 msgid "Custom Facebook image"
 msgstr "תמונת פייסבוק מותאמת אישית"
 
 # @ facebook
-#: facebook-button-plugin.php:257
+#: facebook-button-plugin.php:308
 msgid "Current image:"
 msgstr "תמונה נוכחית:"
 
 # @ facebook
-#: facebook-button-plugin.php:270
+#: facebook-button-plugin.php:321
 #, fuzzy
 msgid "Facebook image:"
 msgstr "תמונת פייסבוק:"
 
 # @ facebook
-#: facebook-button-plugin.php:274
+#: facebook-button-plugin.php:325
 msgid "Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:\"jpg\", \"jpeg\"."
 msgstr "מאפייני תמונה: רוחב מירבי: 100 פיקסלים. גובה מירבי: 40 פיקסלים, גודל מירבי: 32KB, סוגי קובץ: \"jpg\", \"jpeg\"."
 
 # @ facebook
-#: facebook-button-plugin.php:282
+#: facebook-button-plugin.php:333
 #, fuzzy
 msgid "Facebook Button Position:"
 msgstr "מיקום כפתור הפייסבוק:"
 
 # @ facebook
-#: facebook-button-plugin.php:286
+#: facebook-button-plugin.php:337
 msgid "Before"
 msgstr "לפני"
 
 # @ facebook
-#: facebook-button-plugin.php:287
+#: facebook-button-plugin.php:338
 msgid "After"
 msgstr "אחרי"
 
 # @ facebook
-#: facebook-button-plugin.php:288
+#: facebook-button-plugin.php:339
 msgid "Before and After"
 msgstr "לפני ואחרי"
 
 # @ facebook
-#: facebook-button-plugin.php:289
+#: facebook-button-plugin.php:340
 msgid "Shortcode"
 msgstr "קיצור קוד"
 
 # @ facebook
-#: facebook-button-plugin.php:291
+#: facebook-button-plugin.php:342
 #, fuzzy
 msgid "If you would like to add a Facebook button to your website, just copy and paste this shortcode into your post or page:"
 msgstr "אם ברצונך להוסיף כפתור פייסבוק לאתר שלך, פשוט העתק את קיצור הקוד שלהלן והדבק אל הפוסט או הדף שלך:"
 
 # @ facebook
-#: facebook-button-plugin.php:296
+#: facebook-button-plugin.php:347
 #, fuzzy
 msgid "Facebook Button language:"
 msgstr "שפת כפתור פייסבוק:"
 
 # @ facebook
-#: facebook-button-plugin.php:407
+#: facebook-button-plugin.php:458
 #, fuzzy
 msgid "Change the language of Facebook Like Button"
 msgstr "בחר שפה לכפתור לייק"
 
 # @ default
-#: facebook-button-plugin.php:413
+#: facebook-button-plugin.php:464
 msgid "Save Changes"
 msgstr "שמור שינויים"
 
 # @ facebook
-#: facebook-button-plugin.php:533
+#: facebook-button-plugin.php:584
 msgid "FAQ"
 msgstr "שאלות ותשובות"
 
 # @ facebook
-#: facebook-button-plugin.php:534
+#: facebook-button-plugin.php:585
 msgid "Support"
 msgstr "תמיכה"
+
+# @ facebook
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill out the contact form on our website"
+#~ msgstr ""
+#~ "אם יש לך שאלות כלשהן, אנא צור עמנו קשר דרך plugin@bestwebsoft.com או "
+#~ "שתמלא את טופס יצירת הקשר באתר שלנו"
 
