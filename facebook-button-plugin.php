@@ -4,7 +4,7 @@ Plugin Name: Facebook Button Plugin
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.20
+Version: 2.21
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -27,10 +27,12 @@ License: GPLv2 or later
 
 if ( ! function_exists( 'bws_add_menu_render' ) ) {
 	function bws_add_menu_render() {
-		global $title;
-
+		global $wpdb, $wp_version, $title;
 		$active_plugins = get_option('active_plugins');
 		$all_plugins = get_plugins();
+		$error = '';
+		$message = '';
+		$bwsmn_form_email = '';
 
 		$array_activate = array();
 		$array_install	= array();
@@ -74,7 +76,8 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 		$array_recomend_pro = array();
 		$count_activate_pro = $count_install_pro = $count_recomend_pro = 0;
 		$array_plugins_pro	= array(
-			array( 'gallery-plugin-pro\/gallery-plugin-pro.php', 'Gallery Pro', 'http://bestwebsoft.com/plugin/gallery-pro/', 'http://bestwebsoft.com/plugin/gallery-pro/#purchase', 'admin.php?page=gallery-plugin-pro.php' )
+			array( 'gallery-plugin-pro\/gallery-plugin-pro.php', 'Gallery Pro', 'http://bestwebsoft.com/plugin/gallery-pro/?k=382e5ce7c96a6391f5ffa5e116b37fe0', 'http://bestwebsoft.com/plugin/gallery-pro/?k=382e5ce7c96a6391f5ffa5e116b37fe0#purchase', 'admin.php?page=gallery-plugin-pro.php' ),
+			array( 'contact-form-pro\/contact_form_pro.php', 'Contact Form Pro', 'http://bestwebsoft.com/plugin/contact-form-pro/?k=773dc97bb3551975db0e32edca1a6d71', 'http://bestwebsoft.com/plugin/contact-form-pro/?k=773dc97bb3551975db0e32edca1a6d71#purchase', 'admin.php?page=contact_form_pro.php' )
 		);
 		foreach ( $array_plugins_pro as $plugins ) {
 			if( 0 < count( preg_grep( "/".$plugins[0]."/", $active_plugins ) ) ) {
@@ -94,11 +97,158 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 				$array_recomend_pro[$count_recomend_pro]["href"] = $plugins[3];
 				$count_recomend_pro++;
 			}
-		} ?>
-		<div class="wrap">
+		}
+		
+		$sql_version = $wpdb->get_var( "SELECT VERSION() AS version" );
+	    $mysql_info = $wpdb->get_results( "SHOW VARIABLES LIKE 'sql_mode'" );
+	    if ( is_array( $mysql_info) )
+	    	$sql_mode = $mysql_info[0]->Value;
+	    if ( empty( $sql_mode ) )
+	    	$sql_mode = __( 'Not set', 'facebook' );
+	    if ( ini_get( 'safe_mode' ) )
+	    	$safe_mode = __( 'On', 'facebook' );
+	    else
+	    	$safe_mode = __( 'Off', 'facebook' );
+	    if ( ini_get( 'allow_url_fopen' ) )
+	    	$allow_url_fopen = __( 'On', 'facebook' );
+	    else
+	    	$allow_url_fopen = __( 'Off', 'facebook' );
+	    if ( ini_get( 'upload_max_filesize' ) )
+	    	$upload_max_filesize = ini_get( 'upload_max_filesize' );
+	    else
+	    	$upload_max_filesize = __( 'N/A', 'facebook' );
+	    if ( ini_get('post_max_size') )
+	    	$post_max_size = ini_get('post_max_size');
+	    else
+	    	$post_max_size = __( 'N/A', 'facebook' );
+	    if ( ini_get( 'max_execution_time' ) )
+	    	$max_execution_time = ini_get( 'max_execution_time' );
+	    else
+	    	$max_execution_time = __( 'N/A', 'facebook' );
+	    if ( ini_get( 'memory_limit' ) )
+	    	$memory_limit = ini_get( 'memory_limit' );
+	    else
+	    	$memory_limit = __( 'N/A', 'facebook' );
+	    if ( function_exists( 'memory_get_usage' ) )
+	    	$memory_usage = round( memory_get_usage() / 1024 / 1024, 2 ) . __(' Mb', 'facebook' );
+	    else
+	    	$memory_usage = __( 'N/A', 'facebook' );
+	    if ( is_callable( 'exif_read_data' ) )
+	    	$exif_read_data = __( 'Yes', 'facebook' ) . " ( V" . substr( phpversion( 'exif' ), 0,4 ) . ")" ;
+	    else
+	    	$exif_read_data = __( 'No', 'facebook' );
+	    if ( is_callable( 'iptcparse' ) )
+	    	$iptcparse = __( 'Yes', 'facebook' );
+	    else
+	    	$iptcparse = __( 'No', 'facebook' );
+	    if ( is_callable( 'xml_parser_create' ) )
+	    	$xml_parser_create = __( 'Yes', 'facebook' );
+	    else
+	    	$xml_parser_create = __( 'No', 'facebook' );
+
+		if ( function_exists( 'wp_get_theme' ) )
+			$theme = wp_get_theme();
+		else
+			$theme = get_theme( get_current_theme() );
+
+		if ( function_exists( 'is_multisite' ) ) {
+			if ( is_multisite() ) {
+				$multisite = __( 'Yes', 'facebook' );
+			} else {
+				$multisite = __( 'No', 'facebook' );
+			}
+		} else
+			$multisite = __( 'N/A', 'facebook' );
+
+		$site_url = get_option( 'siteurl' );
+		$home_url = get_option( 'home' );
+		$db_version = get_option( 'db_version' );
+		$system_info = array(
+			'system_info' => '',
+			'active_plugins' => '',
+			'inactive_plugins' => ''
+		);
+		$system_info['system_info'] = array(
+	        __( 'Operating System', 'facebook' )				=> PHP_OS,
+	        __( 'Server', 'facebook' )						=> $_SERVER["SERVER_SOFTWARE"],
+	        __( 'Memory usage', 'facebook' )					=> $memory_usage,
+	        __( 'MYSQL Version', 'facebook' )				=> $sql_version,
+	        __( 'SQL Mode', 'facebook' )						=> $sql_mode,
+	        __( 'PHP Version', 'facebook' )					=> PHP_VERSION,
+	        __( 'PHP Safe Mode', 'facebook' )				=> $safe_mode,
+	        __( 'PHP Allow URL fopen', 'facebook' )			=> $allow_url_fopen,
+	        __( 'PHP Memory Limit', 'facebook' )				=> $memory_limit,
+	        __( 'PHP Max Upload Size', 'facebook' )			=> $upload_max_filesize,
+	        __( 'PHP Max Post Size', 'facebook' )			=> $post_max_size,
+	        __( 'PHP Max Script Execute Time', 'facebook' )	=> $max_execution_time,
+	        __( 'PHP Exif support', 'facebook' )				=> $exif_read_data,
+	        __( 'PHP IPTC support', 'facebook' )				=> $iptcparse,
+	        __( 'PHP XML support', 'facebook' )				=> $xml_parser_create,
+			__( 'Site URL', 'facebook' )						=> $site_url,
+			__( 'Home URL', 'facebook' )						=> $home_url,
+			__( 'WordPress Version', 'facebook' )			=> $wp_version,
+			__( 'WordPress DB Version', 'facebook' )			=> $db_version,
+			__( 'Multisite', 'facebook' )					=> $multisite,
+			__( 'Active Theme', 'facebook' )					=> $theme['Name'].' '.$theme['Version']
+		);
+		foreach ( $all_plugins as $path => $plugin ) {
+			if ( is_plugin_active( $path ) ) {
+				$system_info['active_plugins'][ $plugin['Name'] ] = $plugin['Version'];
+			} else {
+				$system_info['inactive_plugins'][ $plugin['Name'] ] = $plugin['Version'];
+			}
+		} 
+
+		if ( ( isset( $_REQUEST['bwsmn_form_submit'] ) && check_admin_referer( plugin_basename(__FILE__), 'bwsmn_nonce_submit' ) ) ||
+			 ( isset( $_REQUEST['bwsmn_form_submit_custom_email'] ) && check_admin_referer( plugin_basename(__FILE__), 'bwsmn_nonce_submit_custom_email' ) ) ) {
+			if ( isset( $_REQUEST['bwsmn_form_email'] ) ) {
+				$bwsmn_form_email = trim( $_REQUEST['bwsmn_form_email'] );
+				if( $bwsmn_form_email == "" || !preg_match( "/^((?:[a-z0-9']+(?:[a-z0-9\-_\.']+)?@[a-z0-9]+(?:[a-z0-9\-\.]+)?\.[a-z]{2,5})[, ]*)+$/i", $bwsmn_form_email ) ) {
+					$error = __( "Please enter a valid email address.", 'facebook' );
+				} else {
+					$email = $bwsmn_form_email;
+					$bwsmn_form_email = '';
+					$message = __( 'Email with system info is sent to ', 'facebook' ) . $email;			
+				}
+			} else {
+				$email = 'plugin_system_status@bestwebsoft.com';
+				$message = __( 'Thank you for contacting us.', 'facebook' );
+			}
+
+			if ( $error == '' ) {
+				$headers  = 'MIME-Version: 1.0' . "\n";
+				$headers .= 'Content-type: text/html; charset=utf-8' . "\n";
+				$headers .= 'From: ' . get_option( 'admin_email' );
+				$message_text = '<html><head><title>System Info From ' . $home_url . '</title></head><body>
+				<h4>Environment</h4>
+				<table>';
+				foreach ( $system_info['system_info'] as $key => $value ) {
+					$message_text .= '<tr><td>'. $key .'</td><td>'. $value .'</td></tr>';	
+				}
+				$message_text .= '</table>
+				<h4>Active Plugins</h4>
+				<table>';
+				foreach ( $system_info['active_plugins'] as $key => $value ) {	
+					$message_text .= '<tr><td scope="row">'. $key .'</td><td scope="row">'. $value .'</td></tr>';	
+				}
+				$message_text .= '</table>
+				<h4>Inactive Plugins</h4>
+				<table>';
+				foreach ( $system_info['inactive_plugins'] as $key => $value ) {
+					$message_text .= '<tr><td scope="row">'. $key .'</td><td scope="row">'. $value .'</td></tr>';
+				}
+				$message_text .= '</table></body></html>';
+				$result = wp_mail( $email, 'System Info From ' . $home_url, $message_text, $headers );
+				if ( $result != true )
+					$error = __( "Sorry, email message could not be delivered.", 'facebook' );
+			}
+		}
+		?><div class="wrap">
 			<div class="icon32 icon32-bws" id="icon-options-general"></div>
 			<h2><?php echo $title;?></h2>
-			<h3 style="color: blue"><?php _e( 'Pro plugins', 'facebook' ); ?></h3>
+			<div class="updated fade" <?php if( !( isset( $_REQUEST['bwsmn_form_submit'] ) || isset( $_REQUEST['bwsmn_form_submit_custom_email'] ) ) || $error != "" ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
+			<div class="error" <?php if ( "" == $error ) echo "style=\"display:none\""; ?>><p><strong><?php echo $error; ?></strong></p></div>
+			<h3 style="color: blue;"><?php _e( 'Pro plugins', 'facebook' ); ?></h3>
 			<?php if( 0 < $count_activate_pro ) { ?>
 			<div style="padding-left:15px;">
 				<h4><?php _e( 'Activated plugins', 'facebook' ); ?></h4>
@@ -151,6 +301,67 @@ if ( ! function_exists( 'bws_add_menu_render' ) ) {
 			<?php } ?>	
 			<br />		
 			<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php _e( 'If you have any questions, please contact us via', 'facebook' ); ?> <a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a></span>
+			<div id="poststuff" class="bws_system_info_mata_box">
+				<div class="postbox">
+					<div class="handlediv" title="Click to toggle">
+						<br>
+					</div>
+					<h3 class="hndle">
+						<span><?php _e( 'System status', 'facebook' ); ?></span>
+					</h3>
+					<div class="inside">
+						<table class="bws_system_info">
+							<thead><tr><th><?php _e( 'Environment', 'facebook' ); ?></th><td></td></tr></thead>
+							<tbody>
+							<?php foreach ( $system_info['system_info'] as $key => $value ) { ?>	
+								<tr>
+									<td scope="row"><?php echo $key; ?></td>
+									<td scope="row"><?php echo $value; ?></td>
+								</tr>	
+							<?php } ?>
+							</tbody>
+						</table>
+						<table class="bws_system_info">
+							<thead><tr><th><?php _e( 'Active Plugins', 'facebook' ); ?></th><th></th></tr></thead>
+							<tbody>
+							<?php foreach ( $system_info['active_plugins'] as $key => $value ) { ?>	
+								<tr>
+									<td scope="row"><?php echo $key; ?></td>
+									<td scope="row"><?php echo $value; ?></td>
+								</tr>	
+							<?php } ?>
+							</tbody>
+						</table>
+						<table class="bws_system_info">
+							<thead><tr><th><?php _e( 'Inactive Plugins', 'facebook' ); ?></th><th></th></tr></thead>
+							<tbody>
+							<?php foreach ( $system_info['inactive_plugins'] as $key => $value ) { ?>	
+								<tr>
+									<td scope="row"><?php echo $key; ?></td>
+									<td scope="row"><?php echo $value; ?></td>
+								</tr>	
+							<?php } ?>
+							</tbody>
+						</table>
+						<div class="clear"></div>						
+						<form method="post" action="admin.php?page=bws_plugins">
+							<p>			
+								<input type="hidden" name="bwsmn_form_submit" value="submit" />
+								<input type="submit" class="button-primary" value="<?php _e( 'Send to support', 'facebook' ) ?>" />
+								<?php wp_nonce_field( plugin_basename(__FILE__), 'bwsmn_nonce_submit' ); ?>		
+							</p>		
+						</form>				
+						<form method="post" action="admin.php?page=bws_plugins">	
+							<p>			
+								<input type="hidden" name="bwsmn_form_submit_custom_email" value="submit" />						
+								<input type="submit" class="button" value="<?php _e( 'Send to custom email &#187;', 'facebook' ) ?>" />
+								<input type="text" value="<?php echo $bwsmn_form_email; ?>" name="bwsmn_form_email" />
+								<?php wp_nonce_field( plugin_basename(__FILE__), 'bwsmn_nonce_submit_custom_email' ); ?>
+							</p>				
+						</form>						
+					</div>
+				</div>
+			</div>
 		</div>
 	<?php }
 }
@@ -600,6 +811,9 @@ if ( ! function_exists ( 'fcbk_admin_head' ) ) {
 	function fcbk_admin_head() {
 		wp_register_style( 'fcbkStylesheet', plugins_url( 'css/style.css', __FILE__ ) );
 		wp_enqueue_style( 'fcbkStylesheet' );
+
+		if ( isset( $_GET['page'] ) && $_GET['page'] == "bws_plugins" )
+			wp_enqueue_script( 'bws_menu_script', plugins_url( 'js/bws_menu.js' , __FILE__ ) );
 	}
 }
 
