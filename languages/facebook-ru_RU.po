@@ -1,0 +1,371 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: facebook\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-18 13:29+0300\n"
+"PO-Revision-Date: 2013-07-18 13:32+0300\n"
+"Last-Translator: \n"
+"Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru_RU\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: facebook-button-plugin.php:107
+msgid "Not set"
+msgstr "Не задан"
+
+#: facebook-button-plugin.php:109
+#: facebook-button-plugin.php:113
+msgid "On"
+msgstr "Вкл"
+
+#: facebook-button-plugin.php:111
+#: facebook-button-plugin.php:115
+msgid "Off"
+msgstr "Выкл"
+
+#: facebook-button-plugin.php:119
+#: facebook-button-plugin.php:123
+#: facebook-button-plugin.php:127
+#: facebook-button-plugin.php:131
+#: facebook-button-plugin.php:135
+#: facebook-button-plugin.php:161
+msgid "N/A"
+msgstr "Неизвестно"
+
+#: facebook-button-plugin.php:133
+msgid " Mb"
+msgstr " Mb"
+
+#: facebook-button-plugin.php:137
+#: facebook-button-plugin.php:141
+#: facebook-button-plugin.php:145
+#: facebook-button-plugin.php:156
+msgid "Yes"
+msgstr "Да"
+
+#: facebook-button-plugin.php:139
+#: facebook-button-plugin.php:143
+#: facebook-button-plugin.php:147
+#: facebook-button-plugin.php:158
+msgid "No"
+msgstr "Нет"
+
+#: facebook-button-plugin.php:172
+msgid "Operating System"
+msgstr "Операционная система"
+
+#: facebook-button-plugin.php:173
+msgid "Server"
+msgstr "Тип сервера"
+
+#: facebook-button-plugin.php:174
+msgid "Memory usage"
+msgstr "Памяти использовано"
+
+#: facebook-button-plugin.php:175
+msgid "MYSQL Version"
+msgstr "Версия MYSQL"
+
+#: facebook-button-plugin.php:176
+msgid "SQL Mode"
+msgstr "Режим SQL"
+
+#: facebook-button-plugin.php:177
+msgid "PHP Version"
+msgstr "Версия PHP"
+
+#: facebook-button-plugin.php:178
+msgid "PHP Safe Mode"
+msgstr "PHP Safe Mode"
+
+#: facebook-button-plugin.php:179
+msgid "PHP Allow URL fopen"
+msgstr "PHP Allow URL fopen"
+
+#: facebook-button-plugin.php:180
+msgid "PHP Memory Limit"
+msgstr "Лимит памяти"
+
+#: facebook-button-plugin.php:181
+msgid "PHP Max Upload Size"
+msgstr "Макс. размер загружаемого файла"
+
+#: facebook-button-plugin.php:182
+msgid "PHP Max Post Size"
+msgstr "Макс. размер записи"
+
+#: facebook-button-plugin.php:183
+msgid "PHP Max Script Execute Time"
+msgstr "Макс. время выполнения сценария"
+
+#: facebook-button-plugin.php:184
+msgid "PHP Exif support"
+msgstr "Поддержка PHP Exif"
+
+#: facebook-button-plugin.php:185
+msgid "PHP IPTC support"
+msgstr "Поддержка PHP IPTC"
+
+#: facebook-button-plugin.php:186
+msgid "PHP XML support"
+msgstr "Поддержка PHP XML"
+
+#: facebook-button-plugin.php:187
+msgid "Site URL"
+msgstr "Адрес сайта"
+
+#: facebook-button-plugin.php:188
+msgid "Home URL"
+msgstr "Основной адрес сайта"
+
+#: facebook-button-plugin.php:189
+msgid "WordPress Version"
+msgstr "Версия WordPress"
+
+#: facebook-button-plugin.php:190
+msgid "WordPress DB Version"
+msgstr "Версия базы данных WordPress"
+
+#: facebook-button-plugin.php:191
+msgid "Multisite"
+msgstr "Мультиблог"
+
+#: facebook-button-plugin.php:192
+msgid "Active Theme"
+msgstr "Текущая тема"
+
+#: facebook-button-plugin.php:207
+msgid "Please enter a valid email address."
+msgstr "Пожалуйста, введите валидный емайл."
+
+#: facebook-button-plugin.php:211
+msgid "Email with system info is sent to "
+msgstr "E-mail с системной информацией отправлен на"
+
+#: facebook-button-plugin.php:215
+msgid "Thank you for contacting us."
+msgstr "Спасибо, что связались с нами."
+
+#: facebook-button-plugin.php:243
+msgid "Sorry, email message could not be delivered."
+msgstr "Извините, ваш email не может быть отправлен."
+
+#: facebook-button-plugin.php:251
+msgid "Pro plugins"
+msgstr "Pro плагины"
+
+#: facebook-button-plugin.php:254
+#: facebook-button-plugin.php:280
+msgid "Activated plugins"
+msgstr "Активированные плагины"
+
+#: facebook-button-plugin.php:256
+#: facebook-button-plugin.php:264
+#: facebook-button-plugin.php:272
+#: facebook-button-plugin.php:282
+#: facebook-button-plugin.php:290
+#: facebook-button-plugin.php:298
+msgid "Read more"
+msgstr "Подробнее..."
+
+#: facebook-button-plugin.php:256
+#: facebook-button-plugin.php:282
+#: facebook-button-plugin.php:782
+#: facebook-button-plugin.php:794
+msgid "Settings"
+msgstr "Настройки"
+
+#: facebook-button-plugin.php:262
+#: facebook-button-plugin.php:288
+msgid "Installed plugins"
+msgstr "Установленные плагины"
+
+#: facebook-button-plugin.php:270
+#: facebook-button-plugin.php:296
+msgid "Recommended plugins"
+msgstr "Рекомендованные к установке плагины"
+
+#: facebook-button-plugin.php:272
+msgid "Purchase"
+msgstr "Купить"
+
+#: facebook-button-plugin.php:277
+msgid "Free plugins"
+msgstr "Бесплатные плагины"
+
+#: facebook-button-plugin.php:298
+msgid "Download"
+msgstr "Скачать"
+
+#: facebook-button-plugin.php:298
+#, php-format
+msgid "Install %s"
+msgstr "Установлено %s"
+
+#: facebook-button-plugin.php:298
+msgid "Install now from wordpress.org"
+msgstr "Установить с wordpress.org"
+
+#: facebook-button-plugin.php:303
+msgid "If you have any questions, please contact us via"
+msgstr "Если у вас есть какие-то вопросы, обращайтесь на"
+
+#: facebook-button-plugin.php:310
+msgid "System status"
+msgstr "Системная информация"
+
+#: facebook-button-plugin.php:314
+msgid "Environment"
+msgstr "Системная среда"
+
+#: facebook-button-plugin.php:325
+msgid "Active Plugins"
+msgstr "Активированные плагины"
+
+#: facebook-button-plugin.php:336
+msgid "Inactive Plugins"
+msgstr "Неактивированные плагины"
+
+#: facebook-button-plugin.php:350
+msgid "Send to support"
+msgstr "Отправить в тех.поддержку"
+
+#: facebook-button-plugin.php:357
+msgid "Send to custom email &#187;"
+msgstr "Отправить на емейл &#187;"
+
+#: facebook-button-plugin.php:372
+#: facebook-button-plugin.php:485
+msgid "Facebook Button Settings"
+msgstr "Настройки Facebook Кнопки"
+
+#: facebook-button-plugin.php:372
+msgid "Facebook Button"
+msgstr "Facebook кнопка"
+
+#: facebook-button-plugin.php:432
+msgid "Settings saved"
+msgstr "Настройки сохранены"
+
+#: facebook-button-plugin.php:454
+msgid "Error: File size > 32K"
+msgstr "Ошибка: Размер файла больше 32К"
+
+#: facebook-button-plugin.php:457
+msgid "Error: Invalid file type"
+msgstr "Ошибка: Некорректный тип файла"
+
+#: facebook-button-plugin.php:467
+msgid "Error: moving file failed"
+msgstr "Ошибка: При перемещении произошла ошибка"
+
+#: facebook-button-plugin.php:471
+msgid "Error: check image width or height"
+msgstr "Ошибка: Проверьте ширину и высоту изображения"
+
+#: facebook-button-plugin.php:476
+msgid "Uploading Error: check image properties"
+msgstr "Ошибка загрузки: Проверьте опции изображения"
+
+#: facebook-button-plugin.php:492
+msgid "Your Facebook ID:"
+msgstr "Ваш Facebook ID:"
+
+#: facebook-button-plugin.php:498
+msgid "Display button:"
+msgstr "Отображение кнопок:"
+
+#: facebook-button-plugin.php:500
+msgid "My Page"
+msgstr "My Page"
+
+#: facebook-button-plugin.php:501
+msgid "Like"
+msgstr "Like"
+
+#: facebook-button-plugin.php:506
+msgid "Choose display settings:"
+msgstr "Выбор опций отображения:"
+
+#: facebook-button-plugin.php:510
+msgid "Standard Facebook image"
+msgstr "Стандартная картинка Facebook"
+
+#: facebook-button-plugin.php:512
+msgid "Custom Facebook image"
+msgstr "Пользовательская картинка Facebook"
+
+#: facebook-button-plugin.php:519
+msgid "Current image:"
+msgstr "Текущее изображение:"
+
+#: facebook-button-plugin.php:532
+msgid "Facebook image:"
+msgstr "Facebook изображение:"
+
+#: facebook-button-plugin.php:536
+msgid "Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:\"jpg\", \"jpeg\"."
+msgstr "Опции изображения для загрузки: максимальная ширина:100px; максимальная высота:40px; максимальный размер:32Kb; тип файла:\"jpg\", \"jpeg\"."
+
+#: facebook-button-plugin.php:544
+msgid "Facebook Button Position:"
+msgstr "Позиции Facebook кнопки:"
+
+#: facebook-button-plugin.php:548
+msgid "Before"
+msgstr "Перед"
+
+#: facebook-button-plugin.php:549
+msgid "After"
+msgstr "После"
+
+#: facebook-button-plugin.php:550
+msgid "Before and After"
+msgstr "Перед и после"
+
+#: facebook-button-plugin.php:551
+msgid "Shortcode"
+msgstr "Шорткод"
+
+#: facebook-button-plugin.php:553
+msgid "If you would like to add a Facebook button to your website, just copy and paste this shortcode into your post or page:"
+msgstr "Если вы хотите добавить Facebook кнопку на свой сайт, вам надо только скопировать и вставить шорткод в контент страницы или поста"
+
+#: facebook-button-plugin.php:558
+msgid "Facebook Button language:"
+msgstr "Язык для Facebook кнопки:"
+
+#: facebook-button-plugin.php:669
+msgid "Change the language of Facebook Like Button"
+msgstr "Выберите язык для Like кнопки"
+
+#: facebook-button-plugin.php:675
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: facebook-button-plugin.php:795
+msgid "FAQ"
+msgstr "FAQ"
+
+#: facebook-button-plugin.php:796
+msgid "Support"
+msgstr "Поддержка"
+
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill out the contact form on our website"
+#~ msgstr ""
+#~ "Если у вас есть какие-то вопросы, обращайтесь на plugin@bestwebsoft.com "
+#~ "или заполните контактную форму на нашем сайте"
+#~ msgid "Options saved."
+#~ msgstr "Опции сохранены"
+#~ msgid "Install Now"
+#~ msgstr "Установить сейчас"
+
