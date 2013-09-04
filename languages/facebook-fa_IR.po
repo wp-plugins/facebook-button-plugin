@@ -1,0 +1,202 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: facebook\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-09-04 14:30+0300\n"
+"PO-Revision-Date: 2013-09-04 14:30+0300\n"
+"Last-Translator: \n"
+"Language-Team: Milad Ahmadipour <milad.contact@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fa\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: facebook-button-plugin.php:32
+#: facebook-button-plugin.php:143
+#, fuzzy
+msgid "Facebook Button Settings"
+msgstr "اختیارات دکمه فیسبوک"
+
+#: facebook-button-plugin.php:32
+#, fuzzy
+msgid "Facebook Button"
+msgstr "دکمه فیسبوک"
+
+#: facebook-button-plugin.php:91
+#, fuzzy
+msgid "Settings saved"
+msgstr "تنظیمات "
+
+#: facebook-button-plugin.php:113
+msgid "Error: File size > 32K"
+msgstr "خطا : حجم فایل بیشتر از  : > 32К"
+
+#: facebook-button-plugin.php:116
+msgid "Error: Invalid file type"
+msgstr "خطا : نوع فایل صحیح نیست"
+
+#: facebook-button-plugin.php:126
+msgid "Error: moving file failed"
+msgstr "خطا : حرکت فایل شکست خورد"
+
+#: facebook-button-plugin.php:130
+msgid "Error: check image width or height"
+msgstr "خطا : لطفا طول و عرض تصویر را چک کنید"
+
+#: facebook-button-plugin.php:135
+msgid "Uploading Error: check image properties"
+msgstr "خطای آپلود : لطفا خصوصیات تصویر را چک کنید"
+
+#: facebook-button-plugin.php:150
+#, fuzzy
+msgid "Your Facebook ID:"
+msgstr "نام کاربری فیسبوک شما (کوتاه شده، برای نمونه این را ببینید : http://facebook.com/yourname)"
+
+#: facebook-button-plugin.php:156
+msgid "Display button:"
+msgstr "نمایش دکمه های :"
+
+#: facebook-button-plugin.php:158
+msgid "My Page"
+msgstr "صفحه من"
+
+#: facebook-button-plugin.php:159
+msgid "Like"
+msgstr "پسندیدم "
+
+#: facebook-button-plugin.php:164
+#, fuzzy
+msgid "Choose display settings:"
+msgstr "لطفا نحوه نمایش را انتخاب کنید"
+
+#: facebook-button-plugin.php:168
+#, fuzzy
+msgid "Standard Facebook image"
+msgstr " تصویر استاندارد فیسبوک "
+
+#: facebook-button-plugin.php:170
+#, fuzzy
+msgid "Custom Facebook image"
+msgstr "آپلود از کامپیوتر شما"
+
+#: facebook-button-plugin.php:177
+msgid "Current image:"
+msgstr "تصویر کنونی :"
+
+#: facebook-button-plugin.php:190
+#, fuzzy
+msgid "Facebook image:"
+msgstr "تصویر فیسبوک : "
+
+#: facebook-button-plugin.php:194
+msgid "Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:\"jpg\", \"jpeg\"."
+msgstr "خصوصیات عکس: حداکثر طول عکس:100px; حد اکثر عرض عکس:40px; حد اکثر حجم فایل:32Kb; نوع فایل: \"jpg\", \"jpeg\"."
+
+#: facebook-button-plugin.php:202
+#, fuzzy
+msgid "Facebook Button Position:"
+msgstr "محل دکمه فیسبوک :"
+
+#: facebook-button-plugin.php:206
+msgid "Before"
+msgstr "قبل"
+
+#: facebook-button-plugin.php:207
+msgid "After"
+msgstr "بعد"
+
+#: facebook-button-plugin.php:208
+msgid "Before and After"
+msgstr "قبل و بعد"
+
+#: facebook-button-plugin.php:209
+msgid "Shortcode"
+msgstr "کد کوتاه"
+
+#: facebook-button-plugin.php:211
+#, fuzzy
+msgid "If you would like to add a Facebook button to your website, just copy and paste this shortcode into your post or page:"
+msgstr "در صورتی که میخواهید دکمه لایک به سایت شما اظافه شود، کد کوتاه را در صفحه پست و ... کپی کنید"
+
+#: facebook-button-plugin.php:216
+#, fuzzy
+msgid "Facebook Button language:"
+msgstr "زبان دکمه فیسبوک :"
+
+#: facebook-button-plugin.php:327
+#, fuzzy
+msgid "Change the language of Facebook Like Button"
+msgstr "زبان دکمه فیسبوک را انتخاب کنید"
+
+#: facebook-button-plugin.php:333
+msgid "Save Changes"
+msgstr "ذخیره تغییرات"
+
+#: facebook-button-plugin.php:438
+#: facebook-button-plugin.php:450
+msgid "Settings"
+msgstr "تنظیمات "
+
+#: facebook-button-plugin.php:451
+msgid "FAQ"
+msgstr "سوال و جواب های متداول"
+
+#: facebook-button-plugin.php:452
+msgid "Support"
+msgstr "پشتیبانی"
+
+#, fuzzy
+#~ msgid "Memory usage"
+#~ msgstr "صفحه من"
+
+#, fuzzy
+#~ msgid "Pro plugins"
+#~ msgstr "پلاگین BWS"
+#~ msgid "Activated plugins"
+#~ msgstr "پلاگین های فعال شده "
+#~ msgid "Read more"
+#~ msgstr "بیشتر بخوانید"
+#~ msgid "Installed plugins"
+#~ msgstr "پلاگین های نصب شده "
+#~ msgid "Recommended plugins"
+#~ msgstr "پلاگین های پیشنهادی"
+
+#, fuzzy
+#~ msgid "Free plugins"
+#~ msgstr "پلاگین های پیشنهادی"
+#~ msgid "Download"
+#~ msgstr "دانلود"
+#~ msgid "Install %s"
+#~ msgstr "نصب %s"
+#~ msgid "Install now from wordpress.org"
+#~ msgstr "نصب از  wordpress.org"
+
+#, fuzzy
+#~ msgid "Active Plugins"
+#~ msgstr "پلاگین های فعال شده "
+
+#, fuzzy
+#~ msgid "Inactive Plugins"
+#~ msgstr "پلاگین های فعال شده "
+
+#, fuzzy
+#~ msgid "Send to support"
+#~ msgstr "پشتیبانی"
+
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill out the contact form on our website"
+#~ msgstr ""
+#~ "در صورتی که سوالی دارید لطفا با ایمیل plugin@bestwebsoft.com مکاتبه "
+#~ "فرمایید یا از طریق سایت اقدام نمایید"
+#~ msgid "Options saved."
+#~ msgstr "اختیارات ذخیره شد"
+#~ msgid "Install Now"
+#~ msgstr "حالا نصب شود"
+
