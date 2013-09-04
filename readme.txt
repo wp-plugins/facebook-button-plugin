@@ -2,9 +2,9 @@
 Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
-Requires at least: 2.9
-Tested up to: 3.5.2
-Stable tag: 2.21
+Requires at least: 3.0
+Tested up to: 3.6
+Stable tag: 2.22
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -90,6 +90,10 @@ In WordPress admin panel go to "Settings", find the Facebook Button Plugin setti
 
 == Changelog ==
 
+= V2.22 - 04.09.2013 =
+* Update : We updated all functionality for wordpress 3.6.
+* Update : Function for displaying BWS plugins section placed in a separate file and has own language files.
+
 = V2.21 - 18.07.2013 =
 * NEW : Added an ability to view and send system information by mail.
 * Update : We updated all functionality for wordpress 3.5.2.
@@ -171,6 +175,9 @@ In WordPress admin panel go to "Settings", find the Facebook Button Plugin setti
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.22 =
+We updated all functionality for wordpress 3.6. Function for displaying BWS plugins section placed in a separate file and has own language files.
 
 = V2.21 =
 Added an ability to view and send system information by mail. We updated all functionality for wordpress 3.5.2.
