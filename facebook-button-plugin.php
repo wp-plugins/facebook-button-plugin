@@ -4,7 +4,7 @@ Plugin Name: Facebook Button Plugin
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.22
+Version: 2.23
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -39,7 +39,7 @@ if ( ! function_exists( 'fcbk_bttn_plgn_add_pages' ) ) {
 
 if ( ! function_exists( 'fcbk_bttn_plgn_settings' ) ) {
 	function fcbk_bttn_plgn_settings() {
-		global $fcbk_bttn_plgn_options_array;
+		global $wpmu, $fcbk_bttn_plgn_options_array;
 
 		$fcbk_bttn_plgn_options_array_default = array(
 			'fcbk_bttn_plgn_link'					=> '',
@@ -52,10 +52,23 @@ if ( ! function_exists( 'fcbk_bttn_plgn_settings' ) ) {
 			'fcbk_bttn_plgn_locale' 				=> 'en_US'
 		);
 
-		if ( ! get_option( 'fcbk_bttn_plgn_options_array' ) )
-			add_option( 'fcbk_bttn_plgn_options_array', $fcbk_bttn_plgn_options_array_default, '', 'yes' );
 
-		$fcbk_bttn_plgn_options_array = get_option( 'fcbk_bttn_plgn_options_array' );
+		// install the option defaults
+		if ( 1 == $wpmu ) {
+			if ( !get_site_option( 'fcbk_bttn_plgn_options_array' ) ) {
+				add_site_option( 'fcbk_bttn_plgn_options_array', $fcbk_bttn_plgn_options_array_default, '', 'yes' );
+			}
+		} else {
+			if( !get_option( 'fcbk_bttn_plgn_options_array' ) )
+				add_option( 'fcbk_bttn_plgn_options_array', $fcbk_bttn_plgn_options_array_default, '', 'yes' );
+		}
+
+		// get options from the database
+		if ( 1 == $wpmu )
+			$fcbk_bttn_plgn_options_array = get_site_option( 'fcbk_bttn_plgn_options_array' );
+		else
+			$fcbk_bttn_plgn_options_array = get_option( 'fcbk_bttn_plgn_options_array' );
+
 
 		$fcbk_bttn_plgn_options_array = array_merge( $fcbk_bttn_plgn_options_array_default, $fcbk_bttn_plgn_options_array );
 		update_option( 'fcbk_bttn_plgn_options_array', $fcbk_bttn_plgn_options_array );

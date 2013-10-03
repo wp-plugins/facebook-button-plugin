@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
 Requires at least: 3.0
-Tested up to: 3.6
-Stable tag: 2.22
+Tested up to: 3.6.1
+Stable tag: 2.23
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,7 +33,7 @@ Facebook Like Button Plugin allows you to add a Follow button the easiest way.
 * Serbian (sr_RS) (thanks to Georgijevic Team, www.georgijevic.info)
 * Spanish (es_ES) (thanks to Jesús Parra)
 * Turkish (tr_TR) (thanks to Can Atasever, www.candanblog.com)
-* Ukrainian (uk) (thanks to Cmd Soft, www.cmd-soft.com)
+* Ukrainian (uk)
 
 If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
@@ -89,6 +89,10 @@ In WordPress admin panel go to "Settings", find the Facebook Button Plugin setti
 5. Displaying Facebook Button ater your post.
 
 == Changelog ==
+
+= V2.23 - 02.10.2013 =
+* Update : We updated all functionality for wordpress 3.6.1.
+* Update : The Ukrainian language file is added to the plugin.
 
 = V2.22 - 04.09.2013 =
 * Update : We updated all functionality for wordpress 3.6.
@@ -175,6 +179,9 @@ In WordPress admin panel go to "Settings", find the Facebook Button Plugin setti
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.23 =
+We updated all functionality for wordpress 3.6.1. The Ukrainian language file is added to the plugin.
 
 = V2.22 =
 We updated all functionality for wordpress 3.6. Function for displaying BWS plugins section placed in a separate file and has own language files.
