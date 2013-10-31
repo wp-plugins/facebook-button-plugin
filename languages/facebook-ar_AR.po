@@ -1,0 +1,216 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: facebook\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-31 16:58+0300\n"
+"PO-Revision-Date: 2013-10-31 16:58+0300\n"
+"Last-Translator: \n"
+"Language-Team: Albayan Design Hani aladoli <info@albayan-design.com>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: facebook-button-plugin.php:33
+#: facebook-button-plugin.php:147
+#, fuzzy
+msgid "Facebook Button Settings"
+msgstr "اعدادات زر الفيس بوك"
+
+#: facebook-button-plugin.php:33
+#, fuzzy
+msgid "Facebook Button"
+msgstr "زر الفيس بوك"
+
+#: facebook-button-plugin.php:99
+#, fuzzy
+msgid "Settings saved"
+msgstr "الاعدادات "
+
+#: facebook-button-plugin.php:121
+msgid "Error: File size > 32K"
+msgstr "خطاء : حجم الملف : > 32К"
+
+#: facebook-button-plugin.php:124
+msgid "Error: Invalid file type"
+msgstr "خطاء : نوع الملف غير صحيح"
+
+#: facebook-button-plugin.php:132
+msgid "Error: moving file failed"
+msgstr "خطاء : فشل في نقل الملف"
+
+#: facebook-button-plugin.php:135
+msgid "Error: check image width or height"
+msgstr "خطاء : تأكد من عرض وطول الصورة"
+
+#: facebook-button-plugin.php:139
+msgid "Uploading Error: check image properties"
+msgstr "خطاء في الرفع : تأكد من خصائص الصورة"
+
+#: facebook-button-plugin.php:154
+#, fuzzy
+msgid "Your Facebook ID:"
+msgstr "اسم حسابك علي الفيس بوك :"
+
+#: facebook-button-plugin.php:160
+msgid "Display button:"
+msgstr "عرض الزر :"
+
+#: facebook-button-plugin.php:162
+msgid "My Page"
+msgstr "صفحتي"
+
+#: facebook-button-plugin.php:163
+msgid "Like"
+msgstr "اعجاب "
+
+#: facebook-button-plugin.php:168
+#, fuzzy
+msgid "Choose display settings:"
+msgstr "اختار خيار العرض :"
+
+#: facebook-button-plugin.php:172
+#, fuzzy
+msgid "Standard Facebook image"
+msgstr "صورة الفيس بوك الافتراضية "
+
+#: facebook-button-plugin.php:174
+#, fuzzy
+msgid "Custom Facebook image"
+msgstr "صورة خاصة للـ فيس بوك"
+
+#: facebook-button-plugin.php:181
+msgid "Current image:"
+msgstr "الصورة الحالية : "
+
+#: facebook-button-plugin.php:194
+#, fuzzy
+msgid "Facebook image:"
+msgstr "صورة الفيس بوك : "
+
+#: facebook-button-plugin.php:198
+msgid "Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:\"jpg\", \"jpeg\"."
+msgstr "Propiedades de la imagen: Ancho máx.: 100px; Alto máx.: 40px; Tamaño máx: 32Kb; Tipo de imagen: \"jpg\", \"jpeg\"."
+
+#: facebook-button-plugin.php:206
+#, fuzzy
+msgid "Facebook Button Position:"
+msgstr "مكان زر الفيس بوك :"
+
+#: facebook-button-plugin.php:210
+msgid "Before"
+msgstr "قبل"
+
+#: facebook-button-plugin.php:211
+msgid "After"
+msgstr "بعد"
+
+#: facebook-button-plugin.php:212
+msgid "Before and After"
+msgstr "قبل و بعد"
+
+#: facebook-button-plugin.php:213
+msgid "Shortcode"
+msgstr "الكود"
+
+#: facebook-button-plugin.php:215
+#, fuzzy
+msgid "If you would like to add a Facebook button to your website, just copy and paste this shortcode into your post or page:"
+msgstr "اذا كنت ترغب في اضافة زر الفيس بوك علي موقعك انسخ هذه الكود وضعه في المكان المراد ظهور الزر فيه"
+
+#: facebook-button-plugin.php:220
+#, fuzzy
+msgid "Facebook Button language:"
+msgstr "للغه زر الفيس بوك :"
+
+#: facebook-button-plugin.php:331
+#, fuzzy
+msgid "Change the language of Facebook Like Button"
+msgstr "اختار اللغه للـ زر الاغحاب"
+
+#: facebook-button-plugin.php:337
+msgid "Save Changes"
+msgstr "حفظ التغييرات"
+
+#: facebook-button-plugin.php:443
+#: facebook-button-plugin.php:455
+msgid "Settings"
+msgstr "الاعدادات "
+
+#: facebook-button-plugin.php:456
+msgid "FAQ"
+msgstr "أسئلة وأجوبة"
+
+#: facebook-button-plugin.php:457
+msgid "Support"
+msgstr "الدعم"
+
+#: facebook-button-plugin.php:481
+msgid "requires"
+msgstr ""
+
+#: facebook-button-plugin.php:481
+msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
+msgstr ""
+
+#: facebook-button-plugin.php:481
+msgid "Back to the WordPress"
+msgstr ""
+
+#: facebook-button-plugin.php:481
+#, fuzzy
+msgid "Plugins page"
+msgstr "Плагины BWS"
+
+#, fuzzy
+#~ msgid "Memory usage"
+#~ msgstr "صفحتي"
+#~ msgid "Activated plugins"
+#~ msgstr "الاضافات المفعله "
+#~ msgid "Read more"
+#~ msgstr "اقراء المزيد"
+#~ msgid "Installed plugins"
+#~ msgstr "الاضافات المنزلة "
+#~ msgid "Recommended plugins"
+#~ msgstr "اضافات موصي بها"
+
+#, fuzzy
+#~ msgid "Free plugins"
+#~ msgstr "اضافات موصي بها"
+#~ msgid "Download"
+#~ msgstr "تحميل"
+#~ msgid "Install %s"
+#~ msgstr "تنزيل %s"
+#~ msgid "Install now from wordpress.org"
+#~ msgstr "حملها الا من  wordpress.org"
+
+#, fuzzy
+#~ msgid "Active Plugins"
+#~ msgstr "الاضافات المفعله "
+
+#, fuzzy
+#~ msgid "Inactive Plugins"
+#~ msgstr "الاضافات المفعله "
+
+#, fuzzy
+#~ msgid "Send to support"
+#~ msgstr "الدعم"
+
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill out the contact form on our website"
+#~ msgstr ""
+#~ "اذا كان لديك اي استفسار او سؤال الرجاء الاتصال بنا عبر بريدنا "
+#~ "الالكتروني :  contact us via plugin@bestwebsoft.com  , او المراسلة "
+#~ "الفورية من واجهة الاتصال بنا علي موقعنا الخاص"
+#~ msgid "Options saved."
+#~ msgstr "تم حفظ الاعدادات"
+#~ msgid "Install Now"
+#~ msgstr "Установить сейчас"
+
