@@ -1,10 +1,10 @@
-﻿=== Facebook Like Button Plugin ===
+﻿=== Facebook Like Button ===
 Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
 Requires at least: 3.0
-Tested up to: 3.6.1
-Stable tag: 2.23
+Tested up to: 3.7.1
+Stable tag: 2.24
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,7 @@ Add Facebook button to your WordPress website.
 
 Facebook Like Button Plugin allows you to add a Follow button the easiest way.
 
-<a href="http://wordpress.org/extend/plugins/facebook-button-plugin/faq/" target="_blank">FAQ</a>
+<a href="http://wordpress.org/plugins/facebook-button-plugin/faq/" target="_blank">FAQ</a>
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
 
 = Features =
@@ -23,6 +23,13 @@ Facebook Like Button Plugin allows you to add a Follow button the easiest way.
 * Actions: Add Facebook Like button easily.
 * Display: Select the button position: before the content, after, before and after or using a shortcode.
 * Display: Use a standard image or replace it with some other image.
+
+= Recommended Plugins =
+
+The author of the Facebook Like Button also recommends the following plugins:
+
+* <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
+There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=5019f1216fc048f1419fe4645da69381">Updater Pro</a> with more useful features available. It allows to update plugins and WordPress core on several websites. It can make backup of all your files and database before updating.
 
 = Translation =
 
@@ -90,6 +97,12 @@ In WordPress admin panel go to "Settings", find the Facebook Button Plugin setti
 
 == Changelog ==
 
+= V2.24 - 31.10.2013 =
+* NEW : Add checking installed wordpress version.
+* Update : Activation of radio button or checkbox by clicking on its label.
+* Update : We updated all functionality for wordpress 3.7.1.
+* Bugfix : Problem with undefined variable post_ID for multisite fixed.
+
 = V2.23 - 02.10.2013 =
 * Update : We updated all functionality for wordpress 3.6.1.
 * Update : The Ukrainian language file is added to the plugin.
@@ -103,7 +116,7 @@ In WordPress admin panel go to "Settings", find the Facebook Button Plugin setti
 * Update : We updated all functionality for wordpress 3.5.2.
 
 = V2.20 - 27.05.2013 =
-* Bugfix : The error related to creation the path to the Facebook button image is fixed. 
+* Bugfix : The error related to creation the path to the Facebook button image is fixed.
 * Update : BWS plugins section is updated.
 
 = V2.19 - 17.04.2013 =
@@ -163,6 +176,7 @@ In WordPress admin panel go to "Settings", find the Facebook Button Plugin setti
 = V2.04 - 22.08.2011 =
 * Bugfix : BWS Plugin's menu section was fixed and right now it is consisted of 3 parts: activated, installed and recommended plugins. 
 * Bugfix : The bug of positioning in admin menu is fixed. 
+
 * Changed : Facebook button plugin functionality was changed in connection with the change of Facebook API.
 
 = V2.03 - 14.07.2011 =
@@ -179,6 +193,9 @@ In WordPress admin panel go to "Settings", find the Facebook Button Plugin setti
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.24 =
+Add checking installed wordpress version. Activation of radio button or checkbox by clicking on its label. We updated all functionality for wordpress 3.7.1. Problem with undefined variable post_ID for multisite fixed.
 
 = V2.23 =
 We updated all functionality for wordpress 3.6.1. The Ukrainian language file is added to the plugin.
