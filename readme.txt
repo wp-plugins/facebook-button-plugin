@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
 Requires at least: 3.0
 Tested up to: 3.7.1
-Stable tag: 2.24
+Stable tag: 2.25
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -97,6 +97,9 @@ In WordPress admin panel go to "Settings", find the Facebook Button Plugin setti
 
 == Changelog ==
 
+= V2.25 - 06.11.2013 =
+* Bugfix : Problem with styles is fixed.
+
 = V2.24 - 31.10.2013 =
 * NEW : Add checking installed wordpress version.
 * Update : Activation of radio button or checkbox by clicking on its label.
@@ -176,7 +179,6 @@ In WordPress admin panel go to "Settings", find the Facebook Button Plugin setti
 = V2.04 - 22.08.2011 =
 * Bugfix : BWS Plugin's menu section was fixed and right now it is consisted of 3 parts: activated, installed and recommended plugins. 
 * Bugfix : The bug of positioning in admin menu is fixed. 
-
 * Changed : Facebook button plugin functionality was changed in connection with the change of Facebook API.
 
 = V2.03 - 14.07.2011 =
@@ -193,6 +195,9 @@ In WordPress admin panel go to "Settings", find the Facebook Button Plugin setti
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.25 =
+Problem with styles is fixed.
 
 = V2.24 =
 Add checking installed wordpress version. Activation of radio button or checkbox by clicking on its label. We updated all functionality for wordpress 3.7.1. Problem with undefined variable post_ID for multisite fixed.

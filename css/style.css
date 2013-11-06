@@ -38,17 +38,20 @@
 
 #fcbk_share {
 	clear: both;
+	height: 40px;
 }
 .fcbk_button {
 	float: left;
-	padding: 2px 10px 2px 0;
+	margin-right: 10px;
 }
 .fcbk_button a {
+	height: 40px;
 	display: block;
-	line-height: 0;
 }
 .fcbk_like {
 	float: left;
+	position: relative;
+	top: -3px;
 }
 .fb_edge_widget_with_comment span {
 	width: 450px !important;
