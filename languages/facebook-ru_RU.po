@@ -1,0 +1,158 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: facebook\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-31 16:56+0300\n"
+"PO-Revision-Date: 2013-10-31 16:57+0300\n"
+"Last-Translator: \n"
+"Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: RUSSIAN FEDERATION\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: facebook-button-plugin.php:33
+#: facebook-button-plugin.php:147
+msgid "Facebook Button Settings"
+msgstr "Настройки Facebook Кнопки"
+
+#: facebook-button-plugin.php:33
+msgid "Facebook Button"
+msgstr "Facebook кнопка"
+
+#: facebook-button-plugin.php:99
+msgid "Settings saved"
+msgstr "Настройки сохранены"
+
+#: facebook-button-plugin.php:121
+msgid "Error: File size > 32K"
+msgstr "Ошибка: Размер файла больше 32К"
+
+#: facebook-button-plugin.php:124
+msgid "Error: Invalid file type"
+msgstr "Ошибка: Некорректный тип файла"
+
+#: facebook-button-plugin.php:132
+msgid "Error: moving file failed"
+msgstr "Ошибка: При перемещении произошла ошибка"
+
+#: facebook-button-plugin.php:135
+msgid "Error: check image width or height"
+msgstr "Ошибка: Проверьте ширину и высоту изображения"
+
+#: facebook-button-plugin.php:139
+msgid "Uploading Error: check image properties"
+msgstr "Ошибка загрузки: Проверьте опции изображения"
+
+#: facebook-button-plugin.php:154
+msgid "Your Facebook ID:"
+msgstr "Ваш Facebook ID:"
+
+#: facebook-button-plugin.php:160
+msgid "Display button:"
+msgstr "Отображение кнопок:"
+
+#: facebook-button-plugin.php:162
+msgid "My Page"
+msgstr "My Page"
+
+#: facebook-button-plugin.php:163
+msgid "Like"
+msgstr "Like"
+
+#: facebook-button-plugin.php:168
+msgid "Choose display settings:"
+msgstr "Выбор опций отображения:"
+
+#: facebook-button-plugin.php:172
+msgid "Standard Facebook image"
+msgstr "Стандартная картинка Facebook"
+
+#: facebook-button-plugin.php:174
+msgid "Custom Facebook image"
+msgstr "Пользовательская картинка Facebook"
+
+#: facebook-button-plugin.php:181
+msgid "Current image:"
+msgstr "Текущее изображение:"
+
+#: facebook-button-plugin.php:194
+msgid "Facebook image:"
+msgstr "Facebook изображение:"
+
+#: facebook-button-plugin.php:198
+msgid "Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:\"jpg\", \"jpeg\"."
+msgstr "Опции изображения для загрузки: максимальная ширина:100px; максимальная высота:40px; максимальный размер:32Kb; тип файла:\"jpg\", \"jpeg\"."
+
+#: facebook-button-plugin.php:206
+msgid "Facebook Button Position:"
+msgstr "Позиции Facebook кнопки:"
+
+#: facebook-button-plugin.php:210
+msgid "Before"
+msgstr "Перед"
+
+#: facebook-button-plugin.php:211
+msgid "After"
+msgstr "После"
+
+#: facebook-button-plugin.php:212
+msgid "Before and After"
+msgstr "Перед и после"
+
+#: facebook-button-plugin.php:213
+msgid "Shortcode"
+msgstr "Шорткод"
+
+#: facebook-button-plugin.php:215
+msgid "If you would like to add a Facebook button to your website, just copy and paste this shortcode into your post or page:"
+msgstr "Если вы хотите добавить Facebook кнопку на свой сайт, вам надо только скопировать и вставить шорткод в контент страницы или поста"
+
+#: facebook-button-plugin.php:220
+msgid "Facebook Button language:"
+msgstr "Язык для Facebook кнопки:"
+
+#: facebook-button-plugin.php:331
+msgid "Change the language of Facebook Like Button"
+msgstr "Выберите язык для Like кнопки"
+
+#: facebook-button-plugin.php:337
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: facebook-button-plugin.php:443
+#: facebook-button-plugin.php:455
+msgid "Settings"
+msgstr "Настройки"
+
+#: facebook-button-plugin.php:456
+msgid "FAQ"
+msgstr "FAQ"
+
+#: facebook-button-plugin.php:457
+msgid "Support"
+msgstr "Поддержка"
+
+#: facebook-button-plugin.php:481
+msgid "requires"
+msgstr "требует"
+
+#: facebook-button-plugin.php:481
+msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
+msgstr "или выше, поэтому он был деактивирован! Пожалуйста обновить WordPress и попробуйте еще раз."
+
+#: facebook-button-plugin.php:481
+msgid "Back to the WordPress"
+msgstr "Вернуться к WordPress на"
+
+#: facebook-button-plugin.php:481
+msgid "Plugins page"
+msgstr "Страницу плагинов"
+
