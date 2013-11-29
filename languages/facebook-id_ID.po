@@ -1,0 +1,201 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: facebook\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-11-29 14:37+0300\n"
+"PO-Revision-Date: 2013-11-29 14:37+0300\n"
+"Last-Translator: \n"
+"Language-Team: nasrulhaq <nasrulhaq81@gmail.com>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-Language: Indonesian\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: facebook-button-plugin.php:33
+#: facebook-button-plugin.php:169
+msgid "Facebook Button Settings"
+msgstr "Pengaturan Facebook Button"
+
+#: facebook-button-plugin.php:33
+msgid "Facebook Button"
+msgstr "Tombol Facebook"
+
+#: facebook-button-plugin.php:121
+msgid "Settings saved"
+msgstr "Simpan Pengaturan"
+
+#: facebook-button-plugin.php:143
+msgid "Error: File size > 32K"
+msgstr "SALAH: Ukuran file lebih besar dari 32KB"
+
+#: facebook-button-plugin.php:146
+msgid "Error: Invalid file type"
+msgstr "SALAH: Tipe data tidak benar"
+
+#: facebook-button-plugin.php:154
+msgid "Error: moving file failed"
+msgstr "Salah: gagal memindahkan data"
+
+#: facebook-button-plugin.php:157
+msgid "Error: check image width or height"
+msgstr "Salah: periksa lebar atau panjang gambar"
+
+#: facebook-button-plugin.php:161
+msgid "Uploading Error: check image properties"
+msgstr "Gagal Mengunggah: periksa properti gambar"
+
+#: facebook-button-plugin.php:176
+msgid "Your Facebook ID:"
+msgstr " ID Facebook:"
+
+#: facebook-button-plugin.php:182
+msgid "Display button:"
+msgstr "Tampilan tombol:"
+
+#: facebook-button-plugin.php:184
+msgid "My Page"
+msgstr "Halamanku"
+
+#: facebook-button-plugin.php:185
+msgid "Like"
+msgstr "Suka"
+
+#: facebook-button-plugin.php:190
+msgid "Choose display settings:"
+msgstr "Ubah pengaturan tampilan"
+
+#: facebook-button-plugin.php:194
+msgid "Standard Facebook image"
+msgstr "Standar gambar Facebook "
+
+#: facebook-button-plugin.php:196
+msgid "Custom Facebook image"
+msgstr "Kustom Gambar Facebook "
+
+#: facebook-button-plugin.php:203
+msgid "Current image:"
+msgstr "Gambar tertentu:"
+
+#: facebook-button-plugin.php:216
+msgid "Facebook image:"
+msgstr "Gambar Facebook:"
+
+#: facebook-button-plugin.php:220
+msgid "Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:\"jpg\", \"jpeg\", \"png\"."
+msgstr "properti gambar: lebar gambar maks:100px; panjang gambar maks:40px; ukuran gambar maks:32Kb; tipe gambar:\"jpg\",\"jpeg\", \"png\"."
+
+#: facebook-button-plugin.php:228
+msgid "Facebook Button Position:"
+msgstr "Posisi Tombol Facebook"
+
+#: facebook-button-plugin.php:232
+msgid "Before"
+msgstr "Sebelum"
+
+#: facebook-button-plugin.php:233
+msgid "After"
+msgstr "Setelah"
+
+#: facebook-button-plugin.php:234
+msgid "Before and After"
+msgstr "Sebelum dan Setelah"
+
+#: facebook-button-plugin.php:235
+msgid "Shortcode"
+msgstr "Kode Pendek"
+
+#: facebook-button-plugin.php:237
+msgid "If you would like to add a Facebook button to your website, just copy and paste this shortcode into your post or page:"
+msgstr "Jika anda ingin menambahkan tombol Facebook di website anda, cukup salin kode singkat kedalam posting atau page anda:"
+
+#: facebook-button-plugin.php:242
+msgid "Facebook Button language:"
+msgstr "Bahasa Facebook Button:"
+
+#: facebook-button-plugin.php:353
+msgid "Change the language of Facebook Like Button"
+msgstr "Ubah bahasa Facebook Like Button"
+
+#: facebook-button-plugin.php:359
+msgid "Save Changes"
+msgstr "Simpan Perubahan"
+
+#: facebook-button-plugin.php:465
+#: facebook-button-plugin.php:477
+msgid "Settings"
+msgstr "Pengaturan"
+
+#: facebook-button-plugin.php:478
+msgid "FAQ"
+msgstr "SSS (SÄ±k Sorulan Sorular)"
+
+#: facebook-button-plugin.php:479
+msgid "Support"
+msgstr "Dukungan"
+
+#: facebook-button-plugin.php:503
+msgid "requires"
+msgstr "membutuhkan"
+
+#: facebook-button-plugin.php:503
+msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
+msgstr "atau lebih tinggi, itulah mengapa di nonaktifkan! Harap tingkatkan versi Wordpress dan coba lagi"
+
+#: facebook-button-plugin.php:503
+msgid "Back to the WordPress"
+msgstr "Kembali ke Wordpress"
+
+#: facebook-button-plugin.php:503
+msgid "Plugins page"
+msgstr "Halaman Plugin"
+
+#~ msgid "Activated plugins"
+#~ msgstr "Aktif Eklentiler"
+#~ msgid "Read more"
+#~ msgstr "DevamÄ±nÄ± Oku"
+#~ msgid "Installed plugins"
+#~ msgstr "YÃ¼klÃ¼ eklentiler"
+#~ msgid "Recommended plugins"
+#~ msgstr "Eklenti Ã–nerileri"
+
+#, fuzzy
+#~ msgid "Free plugins"
+#~ msgstr "Eklenti Ã–nerileri"
+#~ msgid "Download"
+#~ msgstr "Ä°ndir"
+#~ msgid "Install %s"
+#~ msgstr "%s 'i yÃ¼kle"
+#~ msgid "Install now from wordpress.org"
+#~ msgstr "wordpress.org'dan yÃ¼kle"
+
+#, fuzzy
+#~ msgid "Active Plugins"
+#~ msgstr "Aktif Eklentiler"
+
+#, fuzzy
+#~ msgid "Inactive Plugins"
+#~ msgstr "Aktif Eklentiler"
+
+#, fuzzy
+#~ msgid "Send to support"
+#~ msgstr "Destek"
+
+#, fuzzy
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill out the contact form on our website"
+#~ msgstr ""
+#~ "Sormak istediÄŸiniz herhangi bir sorunuz varsa bize plugin@bestwebsoft."
+#~ "com adresine e-posta atarak ya da sitemizdeki iletiÅŸim formunu "
+#~ "kullanarak ulaÅŸabilirsiniz."
+#~ msgid "Options saved."
+#~ msgstr "DeÄŸiÅŸiklikler Kaydedildi."
+#~ msgid "Install Now"
+#~ msgstr "Ð£ÑÑ‚Ð°Ð½Ð¾Ð²Ð¸Ñ‚ÑŒ ÑÐµÐ¹Ñ‡Ð°Ñ"
+
