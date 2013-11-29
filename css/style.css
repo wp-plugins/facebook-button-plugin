@@ -48,6 +48,9 @@
 	height: 40px;
 	display: block;
 }
+.fcbk_button a:hover {
+	opacity: 0.9;
+}
 .fcbk_like {
 	float: left;
 	position: relative;

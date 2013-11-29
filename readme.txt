@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
 Requires at least: 3.0
 Tested up to: 3.7.1
-Stable tag: 2.25
+Stable tag: 2.26
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,12 +29,13 @@ Facebook Like Button Plugin allows you to add a Follow button the easiest way.
 The author of the Facebook Like Button also recommends the following plugins:
 
 * <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
-There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=5019f1216fc048f1419fe4645da69381">Updater Pro</a> with more useful features available. It allows to update plugins and WordPress core on several websites. It can make backup of all your files and database before updating.
+There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=5019f1216fc048f1419fe4645da69381">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
 
 = Translation =
 
 * Arabic (ar_AR) (thanks to Albayan Design Hani Aladoli)
 * Hebrew (he_IL) (thanks to Sagive SEO)
+* Indonesian (id_ID) (thanks to Nasrulhaq, www.al-badar.net)
 * Persian (fa_IR) (thanks to Einolah Kiamehr)
 * Russian (ru_RU)
 * Serbian (sr_RS) (thanks to Georgijevic Team, www.georgijevic.info)
@@ -96,6 +97,12 @@ In WordPress admin panel go to "Settings", find the Facebook Button Plugin setti
 5. Displaying Facebook Button ater your post.
 
 == Changelog ==
+
+= V2.26 - 28.11.2013 =
+* NEW : We added posibility to add images with png extension as custom image for My Page button.
+* Update : New default image for the My Page button.
+* Update : The Indonesian language file is added to the plugin.
+* Update : We updated our screenshots.
 
 = V2.25 - 06.11.2013 =
 * Bugfix : Problem with styles is fixed.
@@ -195,6 +202,9 @@ In WordPress admin panel go to "Settings", find the Facebook Button Plugin setti
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.26 =
+We added posibility to add images with png extension as custom image for My Page button. New default image for the My Page button. The Indonesian language file is added to the plugin. We updated our screenshots.
 
 = V2.25 =
 Problem with styles is fixed.

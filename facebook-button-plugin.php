@@ -4,7 +4,7 @@ Plugin Name: Facebook Button
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.25
+Version: 2.26
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -39,7 +39,13 @@ if ( ! function_exists( 'fcbk_bttn_plgn_add_pages' ) ) {
 
 if ( ! function_exists( 'fcbk_bttn_plgn_settings' ) ) {
 	function fcbk_bttn_plgn_settings() {
-		global $wpmu, $fcbk_bttn_plgn_options;
+		global $wpmu, $fcbk_bttn_plgn_options, $bws_plugin_info;
+
+		if ( function_exists( 'get_plugin_data' ) && ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) ) ) {
+			$plugin_info = get_plugin_data( __FILE__ );	
+			$bws_plugin_info = array( 'id' => '78', 'version' => $plugin_info["Version"] );
+		}
+
 		$fcbk_bttn_plgn_options_default = array(
 			'link'				=> '',
 			'my_page'			=> 1,
@@ -47,7 +53,8 @@ if ( ! function_exists( 'fcbk_bttn_plgn_settings' ) ) {
 			'where'				=> '',
 			'display_option'	=> '',
 			'count_icon'		=> 1,
-			'fb_img_link'		=>  plugins_url( "img/standart-facebook-ico.jpg", __FILE__ ),
+			'extention'			=> 'png',
+			'fb_img_link'		=>  plugins_url( "img/standart-facebook-ico.png", __FILE__ ),
 			'locale' 			=> 'en_US'
 		);
 		/* Install the option defaults */
@@ -81,8 +88,11 @@ if ( ! function_exists( 'fcbk_bttn_plgn_settings' ) ) {
 		/* Get options from the database */
 		if ( 1 == $wpmu )
 			$fcbk_bttn_plgn_options = get_site_option( 'fcbk_bttn_plgn_options' );
-		else
+		else {
 			$fcbk_bttn_plgn_options = get_option( 'fcbk_bttn_plgn_options' );
+			if ( stristr($fcbk_bttn_plgn_options['fb_img_link'], 'standart-facebook-ico.jpg') )
+				$fcbk_bttn_plgn_options['fb_img_link'] = plugins_url( "img/standart-facebook-ico.png", __FILE__ );
+		}
 		$fcbk_bttn_plgn_options = array_merge( $fcbk_bttn_plgn_options_default, $fcbk_bttn_plgn_options );
 		update_option( 'fcbk_bttn_plgn_options', $fcbk_bttn_plgn_options );
 	}
@@ -94,7 +104,7 @@ if ( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 		global $fcbk_bttn_plgn_options;
 		$copy = false;
 		
-		if ( false !== @copy( plugin_dir_path( __FILE__ ) . "img/facebook-ico.jpg", plugin_dir_path( __FILE__ ) . "img/facebook-ico3.jpg" ) )
+		if ( false !== @copy( plugin_dir_path( __FILE__ ) . "img/facebook-ico." . $fcbk_bttn_plgn_options['extention'], plugin_dir_path( __FILE__ ) . "img/facebook-ico3." . $fcbk_bttn_plgn_options['extention'] ) )
 			$copy = true;
 
 		$message	=	"";
@@ -110,6 +120,8 @@ if ( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 				$fcbk_bttn_plgn_options['locale']			=	$_REQUEST['fcbk_bttn_plgn_locale'];
 				if ( isset( $_FILES['uploadfile']['tmp_name'] ) &&  $_FILES['uploadfile']['tmp_name'] != "" ) {
 					$fcbk_bttn_plgn_options['count_icon']	=	$fcbk_bttn_plgn_options['count_icon'] + 1;
+					$file_ext = wp_check_filetype($_FILES['uploadfile']['name']);
+					$fcbk_bttn_plgn_options['extention'] = $file_ext['ext'];
 				}
 
 				if ( 2 < $fcbk_bttn_plgn_options['count_icon'] )
@@ -122,11 +134,11 @@ if ( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 				$max_image_width	=	100;
 				$max_image_height	=	40;
 				$max_image_size		=	32 * 1024;
-				$valid_types 		=	array( 'jpg', 'jpeg' );
+				$valid_types 		=	array( 'jpg', 'jpeg', 'png' );
 				/* Construction to rename downloading file */
 				$new_name			=	'facebook-ico' . $fcbk_bttn_plgn_options['count_icon'];
-				$new_ext			=	'.jpg';
-				$namefile			=	$new_name . $new_ext;
+				$new_ext			=	wp_check_filetype($_FILES['uploadfile']['name']);
+				$namefile			=	$new_name . '.' . $new_ext['ext'];
 				$uploaddir			=	$_REQUEST['home'] . 'wp-content/plugins/facebook-button-plugin/img/'; /* The directory in which we will take the file: */
 				$uploadfile			=	$uploaddir . $namefile;
 
@@ -214,7 +226,7 @@ if ( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 										</th>
 										<td>
 											<input name="uploadfile" type="file" style="width:196px;" /><br />
-											<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php echo __( 'Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:"jpg", "jpeg".', 'facebook' ); ?></span>
+											<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php echo __( 'Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:"jpg", "jpeg", "png".', 'facebook' ); ?></span>
 										</td>
 									</table>
 								</div>
@@ -369,9 +381,9 @@ if ( ! function_exists( 'fcbk_bttn_plgn_update_option' ) ) {
 	function fcbk_bttn_plgn_update_option() {
 		global $fcbk_bttn_plgn_options;
 		if ( 'standart' == $fcbk_bttn_plgn_options['display_option'] ) {
-			$fb_img_link = plugins_url( 'img/standart-facebook-ico.jpg', __FILE__ );
+			$fb_img_link = plugins_url( 'img/standart-facebook-ico.png', __FILE__ );
 		} else if ( 'custom' == $fcbk_bttn_plgn_options['display_option'] ) {
-			$fb_img_link = plugins_url( 'img/facebook-ico' . $fcbk_bttn_plgn_options['count_icon'] . '.jpg', __FILE__ );
+			$fb_img_link = plugins_url( 'img/facebook-ico' . $fcbk_bttn_plgn_options['count_icon'] . '.' . $fcbk_bttn_plgn_options['extention'], __FILE__ );
 		}
 		$fcbk_bttn_plgn_options['fb_img_link'] = $fb_img_link ;
 		update_option( 'fcbk_bttn_plgn_options', $fcbk_bttn_plgn_options );

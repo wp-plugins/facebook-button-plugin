@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: facebook\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-31 16:58+0300\n"
-"PO-Revision-Date: 2013-10-31 16:58+0300\n"
+"POT-Creation-Date: 2013-11-29 14:35+0300\n"
+"PO-Revision-Date: 2013-11-29 14:35+0300\n"
 "Last-Translator: \n"
 "Language-Team: Milad Ahmadipour <milad.contact@gmail.com>\n"
 "Language: fa\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: facebook-button-plugin.php:33
-#: facebook-button-plugin.php:147
+#: facebook-button-plugin.php:169
 #, fuzzy
 msgid "Facebook Button Settings"
 msgstr "اختیارات دکمه فیسبوک"
@@ -27,142 +27,143 @@ msgstr "اختیارات دکمه فیسبوک"
 msgid "Facebook Button"
 msgstr "دکمه فیسبوک"
 
-#: facebook-button-plugin.php:99
+#: facebook-button-plugin.php:121
 #, fuzzy
 msgid "Settings saved"
 msgstr "تنظیمات "
 
-#: facebook-button-plugin.php:121
+#: facebook-button-plugin.php:143
 msgid "Error: File size > 32K"
 msgstr "خطا : حجم فایل بیشتر از  : > 32К"
 
-#: facebook-button-plugin.php:124
+#: facebook-button-plugin.php:146
 msgid "Error: Invalid file type"
 msgstr "خطا : نوع فایل صحیح نیست"
 
-#: facebook-button-plugin.php:132
+#: facebook-button-plugin.php:154
 msgid "Error: moving file failed"
 msgstr "خطا : حرکت فایل شکست خورد"
 
-#: facebook-button-plugin.php:135
+#: facebook-button-plugin.php:157
 msgid "Error: check image width or height"
 msgstr "خطا : لطفا طول و عرض تصویر را چک کنید"
 
-#: facebook-button-plugin.php:139
+#: facebook-button-plugin.php:161
 msgid "Uploading Error: check image properties"
 msgstr "خطای آپلود : لطفا خصوصیات تصویر را چک کنید"
 
-#: facebook-button-plugin.php:154
+#: facebook-button-plugin.php:176
 #, fuzzy
 msgid "Your Facebook ID:"
 msgstr "نام کاربری فیسبوک شما (کوتاه شده، برای نمونه این را ببینید : http://facebook.com/yourname)"
 
-#: facebook-button-plugin.php:160
+#: facebook-button-plugin.php:182
 msgid "Display button:"
 msgstr "نمایش دکمه های :"
 
-#: facebook-button-plugin.php:162
+#: facebook-button-plugin.php:184
 msgid "My Page"
 msgstr "صفحه من"
 
-#: facebook-button-plugin.php:163
+#: facebook-button-plugin.php:185
 msgid "Like"
 msgstr "پسندیدم "
 
-#: facebook-button-plugin.php:168
+#: facebook-button-plugin.php:190
 #, fuzzy
 msgid "Choose display settings:"
 msgstr "لطفا نحوه نمایش را انتخاب کنید"
 
-#: facebook-button-plugin.php:172
+#: facebook-button-plugin.php:194
 #, fuzzy
 msgid "Standard Facebook image"
 msgstr " تصویر استاندارد فیسبوک "
 
-#: facebook-button-plugin.php:174
+#: facebook-button-plugin.php:196
 #, fuzzy
 msgid "Custom Facebook image"
 msgstr "آپلود از کامپیوتر شما"
 
-#: facebook-button-plugin.php:181
+#: facebook-button-plugin.php:203
 msgid "Current image:"
 msgstr "تصویر کنونی :"
 
-#: facebook-button-plugin.php:194
+#: facebook-button-plugin.php:216
 #, fuzzy
 msgid "Facebook image:"
 msgstr "تصویر فیسبوک : "
 
-#: facebook-button-plugin.php:198
-msgid "Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:\"jpg\", \"jpeg\"."
+#: facebook-button-plugin.php:220
+#, fuzzy
+msgid "Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:\"jpg\", \"jpeg\", \"png\"."
 msgstr "خصوصیات عکس: حداکثر طول عکس:100px; حد اکثر عرض عکس:40px; حد اکثر حجم فایل:32Kb; نوع فایل: \"jpg\", \"jpeg\"."
 
-#: facebook-button-plugin.php:206
+#: facebook-button-plugin.php:228
 #, fuzzy
 msgid "Facebook Button Position:"
 msgstr "محل دکمه فیسبوک :"
 
-#: facebook-button-plugin.php:210
+#: facebook-button-plugin.php:232
 msgid "Before"
 msgstr "قبل"
 
-#: facebook-button-plugin.php:211
+#: facebook-button-plugin.php:233
 msgid "After"
 msgstr "بعد"
 
-#: facebook-button-plugin.php:212
+#: facebook-button-plugin.php:234
 msgid "Before and After"
 msgstr "قبل و بعد"
 
-#: facebook-button-plugin.php:213
+#: facebook-button-plugin.php:235
 msgid "Shortcode"
 msgstr "کد کوتاه"
 
-#: facebook-button-plugin.php:215
+#: facebook-button-plugin.php:237
 #, fuzzy
 msgid "If you would like to add a Facebook button to your website, just copy and paste this shortcode into your post or page:"
 msgstr "در صورتی که میخواهید دکمه لایک به سایت شما اظافه شود، کد کوتاه را در صفحه پست و ... کپی کنید"
 
-#: facebook-button-plugin.php:220
+#: facebook-button-plugin.php:242
 #, fuzzy
 msgid "Facebook Button language:"
 msgstr "زبان دکمه فیسبوک :"
 
-#: facebook-button-plugin.php:331
+#: facebook-button-plugin.php:353
 #, fuzzy
 msgid "Change the language of Facebook Like Button"
 msgstr "زبان دکمه فیسبوک را انتخاب کنید"
 
-#: facebook-button-plugin.php:337
+#: facebook-button-plugin.php:359
 msgid "Save Changes"
 msgstr "ذخیره تغییرات"
 
-#: facebook-button-plugin.php:443
-#: facebook-button-plugin.php:455
+#: facebook-button-plugin.php:465
+#: facebook-button-plugin.php:477
 msgid "Settings"
 msgstr "تنظیمات "
 
-#: facebook-button-plugin.php:456
+#: facebook-button-plugin.php:478
 msgid "FAQ"
 msgstr "سوال و جواب های متداول"
 
-#: facebook-button-plugin.php:457
+#: facebook-button-plugin.php:479
 msgid "Support"
 msgstr "پشتیبانی"
 
-#: facebook-button-plugin.php:481
+#: facebook-button-plugin.php:503
 msgid "requires"
 msgstr ""
 
-#: facebook-button-plugin.php:481
+#: facebook-button-plugin.php:503
 msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
 msgstr ""
 
-#: facebook-button-plugin.php:481
+#: facebook-button-plugin.php:503
 msgid "Back to the WordPress"
 msgstr ""
 
-#: facebook-button-plugin.php:481
+#: facebook-button-plugin.php:503
 #, fuzzy
 msgid "Plugins page"
 msgstr "پلاگین BWS"

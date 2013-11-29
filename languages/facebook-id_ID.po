@@ -2,214 +2,200 @@ msgid ""
 msgstr ""
 "Project-Id-Version: facebook\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-29 14:36+0300\n"
-"PO-Revision-Date: 2013-11-29 14:36+0300\n"
+"POT-Creation-Date: 2013-11-29 14:37+0300\n"
+"PO-Revision-Date: 2013-11-29 14:37+0300\n"
 "Last-Translator: \n"
-"Language-Team: Georgijevic Team <http://www.georgijevic.info>\n"
-"Language: \n"
+"Language-Team: nasrulhaq <nasrulhaq81@gmail.com>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-Language: Indonesian\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: facebook-button-plugin.php:33
 #: facebook-button-plugin.php:169
-#, fuzzy
 msgid "Facebook Button Settings"
-msgstr "Taster Facebook Opcija"
+msgstr "Pengaturan Facebook Button"
 
 #: facebook-button-plugin.php:33
-#, fuzzy
 msgid "Facebook Button"
-msgstr "Facebook taster"
+msgstr "Tombol Facebook"
 
 #: facebook-button-plugin.php:121
-#, fuzzy
 msgid "Settings saved"
-msgstr "Podešavanja"
+msgstr "Simpan Pengaturan"
 
 #: facebook-button-plugin.php:143
 msgid "Error: File size > 32K"
-msgstr "Greška: Veličina fajla prevazilazi 32К"
+msgstr "SALAH: Ukuran file lebih besar dari 32KB"
 
 #: facebook-button-plugin.php:146
 msgid "Error: Invalid file type"
-msgstr "Greška: Neispravan tip fajla"
+msgstr "SALAH: Tipe data tidak benar"
 
 #: facebook-button-plugin.php:154
 msgid "Error: moving file failed"
-msgstr "Greška: premeštanje fajla nije uspelo"
+msgstr "Salah: gagal memindahkan data"
 
 #: facebook-button-plugin.php:157
 msgid "Error: check image width or height"
-msgstr "Greška: Proverite širinu i visinu slike"
+msgstr "Salah: periksa lebar atau panjang gambar"
 
 #: facebook-button-plugin.php:161
 msgid "Uploading Error: check image properties"
-msgstr "Greška unosa: Proverite svojstva slike"
+msgstr "Gagal Mengunggah: periksa properti gambar"
 
 #: facebook-button-plugin.php:176
-#, fuzzy
 msgid "Your Facebook ID:"
-msgstr "Vaš Facebook Id:"
+msgstr " ID Facebook:"
 
 #: facebook-button-plugin.php:182
 msgid "Display button:"
-msgstr "Prikaži taster:"
+msgstr "Tampilan tombol:"
 
 #: facebook-button-plugin.php:184
 msgid "My Page"
-msgstr "Moja Strana"
+msgstr "Halamanku"
 
 #: facebook-button-plugin.php:185
 msgid "Like"
-msgstr "Like"
+msgstr "Suka"
 
 #: facebook-button-plugin.php:190
-#, fuzzy
 msgid "Choose display settings:"
-msgstr "Izaberi opcije prikaza:"
+msgstr "Ubah pengaturan tampilan"
 
 #: facebook-button-plugin.php:194
-#, fuzzy
 msgid "Standard Facebook image"
-msgstr "Standardna Facebook slika"
+msgstr "Standar gambar Facebook "
 
 #: facebook-button-plugin.php:196
-#, fuzzy
 msgid "Custom Facebook image"
-msgstr "Proizvoljna Facebook slika"
+msgstr "Kustom Gambar Facebook "
 
 #: facebook-button-plugin.php:203
 msgid "Current image:"
-msgstr "Aktuelna slika:"
+msgstr "Gambar tertentu:"
 
 #: facebook-button-plugin.php:216
-#, fuzzy
 msgid "Facebook image:"
-msgstr "Facebook slika:"
+msgstr "Gambar Facebook:"
 
 #: facebook-button-plugin.php:220
 msgid "Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:\"jpg\", \"jpeg\", \"png\"."
-msgstr "Svojstva slike: maksimalna širina:100px; maksimalna visina:40px; maksimalna veličina:32Kb; tip fajla:\"jpg\", \"jpeg\", \"png\"."
+msgstr "properti gambar: lebar gambar maks:100px; panjang gambar maks:40px; ukuran gambar maks:32Kb; tipe gambar:\"jpg\",\"jpeg\", \"png\"."
 
 #: facebook-button-plugin.php:228
-#, fuzzy
 msgid "Facebook Button Position:"
-msgstr "Pozicija Facebook Tastera:"
+msgstr "Posisi Tombol Facebook"
 
 #: facebook-button-plugin.php:232
 msgid "Before"
-msgstr "Pre"
+msgstr "Sebelum"
 
 #: facebook-button-plugin.php:233
 msgid "After"
-msgstr "Posle"
+msgstr "Setelah"
 
 #: facebook-button-plugin.php:234
 msgid "Before and After"
-msgstr "Pre i posle"
+msgstr "Sebelum dan Setelah"
 
 #: facebook-button-plugin.php:235
 msgid "Shortcode"
-msgstr "Kratki kod"
+msgstr "Kode Pendek"
 
 #: facebook-button-plugin.php:237
-#, fuzzy
 msgid "If you would like to add a Facebook button to your website, just copy and paste this shortcode into your post or page:"
-msgstr "Ako želite da dodate Facebook taster na vaš vebsajt, jednostavno iskopirajte ovaj kratak kod na vašu stranu ili članak:"
+msgstr "Jika anda ingin menambahkan tombol Facebook di website anda, cukup salin kode singkat kedalam posting atau page anda:"
 
 #: facebook-button-plugin.php:242
-#, fuzzy
 msgid "Facebook Button language:"
-msgstr "Jezik Facebook tastera"
+msgstr "Bahasa Facebook Button:"
 
 #: facebook-button-plugin.php:353
-#, fuzzy
 msgid "Change the language of Facebook Like Button"
-msgstr "Izaberite jezik za Like taster"
+msgstr "Ubah bahasa Facebook Like Button"
 
 #: facebook-button-plugin.php:359
 msgid "Save Changes"
-msgstr "Sačuvaj Izmene"
+msgstr "Simpan Perubahan"
 
 #: facebook-button-plugin.php:465
 #: facebook-button-plugin.php:477
 msgid "Settings"
-msgstr "Podešavanja"
+msgstr "Pengaturan"
 
 #: facebook-button-plugin.php:478
 msgid "FAQ"
-msgstr "FAQ"
+msgstr "SSS (SÄ±k Sorulan Sorular)"
 
 #: facebook-button-plugin.php:479
 msgid "Support"
-msgstr "Podrška"
+msgstr "Dukungan"
 
 #: facebook-button-plugin.php:503
 msgid "requires"
-msgstr ""
+msgstr "membutuhkan"
 
 #: facebook-button-plugin.php:503
 msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
-msgstr ""
+msgstr "atau lebih tinggi, itulah mengapa di nonaktifkan! Harap tingkatkan versi Wordpress dan coba lagi"
 
 #: facebook-button-plugin.php:503
 msgid "Back to the WordPress"
-msgstr ""
+msgstr "Kembali ke Wordpress"
 
 #: facebook-button-plugin.php:503
-#, fuzzy
 msgid "Plugins page"
-msgstr "BWS Dodaci"
+msgstr "Halaman Plugin"
 
-#, fuzzy
-#~ msgid "Memory usage"
-#~ msgstr "Moja Strana"
 #~ msgid "Activated plugins"
-#~ msgstr "Aktivni dodaci"
+#~ msgstr "Aktif Eklentiler"
 #~ msgid "Read more"
-#~ msgstr "Čitaj više..."
+#~ msgstr "DevamÄ±nÄ± Oku"
 #~ msgid "Installed plugins"
-#~ msgstr "Instalirani dodaci"
+#~ msgstr "YÃ¼klÃ¼ eklentiler"
 #~ msgid "Recommended plugins"
-#~ msgstr "Preporučeni dodaci"
+#~ msgstr "Eklenti Ã–nerileri"
 
 #, fuzzy
 #~ msgid "Free plugins"
-#~ msgstr "Preporučeni dodaci"
+#~ msgstr "Eklenti Ã–nerileri"
 #~ msgid "Download"
-#~ msgstr "Preuzmi"
+#~ msgstr "Ä°ndir"
 #~ msgid "Install %s"
-#~ msgstr "Instaliraj %s"
+#~ msgstr "%s 'i yÃ¼kle"
 #~ msgid "Install now from wordpress.org"
-#~ msgstr "Instaliraj sa wordpress.org"
+#~ msgstr "wordpress.org'dan yÃ¼kle"
 
 #, fuzzy
 #~ msgid "Active Plugins"
-#~ msgstr "Aktivni dodaci"
+#~ msgstr "Aktif Eklentiler"
 
 #, fuzzy
 #~ msgid "Inactive Plugins"
-#~ msgstr "Aktivni dodaci"
+#~ msgstr "Aktif Eklentiler"
 
 #, fuzzy
 #~ msgid "Send to support"
-#~ msgstr "Podrška"
+#~ msgstr "Destek"
 
 #, fuzzy
 #~ msgid ""
 #~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
 #~ "or fill out the contact form on our website"
 #~ msgstr ""
-#~ "Ako imate bilo kakva pitanja, kontaktirajte nas putem maila "
-#~ "plugin@bestwebsoft.com ili popubite kontakt formu na našem sajtu"
+#~ "Sormak istediÄŸiniz herhangi bir sorunuz varsa bize plugin@bestwebsoft."
+#~ "com adresine e-posta atarak ya da sitemizdeki iletiÅŸim formunu "
+#~ "kullanarak ulaÅŸabilirsiniz."
 #~ msgid "Options saved."
-#~ msgstr "Opcije sačuvane"
+#~ msgstr "DeÄŸiÅŸiklikler Kaydedildi."
 #~ msgid "Install Now"
-#~ msgstr "Instaliraj Odmah"
+#~ msgstr "Ð£ÑÑ‚Ð°Ð½Ð¾Ð²Ð¸Ñ‚ÑŒ ÑÐµÐ¹Ñ‡Ð°Ñ"
 
