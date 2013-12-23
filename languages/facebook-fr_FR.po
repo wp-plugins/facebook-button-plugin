@@ -2,54 +2,52 @@ msgid ""
 msgstr ""
 "Project-Id-Version: facebook\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-20 20:36+0300\n"
-"PO-Revision-Date: 2013-12-20 20:36+0300\n"
+"POT-Creation-Date: 2013-12-20 20:37+0300\n"
+"PO-Revision-Date: 2013-12-20 20:37+0300\n"
 "Last-Translator: \n"
-"Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
-"Language: es_ES\n"
+"Language-Team: http://wptheme.fr/\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 1.5.4\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: facebook-button-plugin.php:33 facebook-button-plugin.php:178
-#, fuzzy
 msgid "Facebook Button Settings"
-msgstr "Opciones del botón de Facebook"
+msgstr "Réglages du bouton Facebook"
 
 #: facebook-button-plugin.php:33
-#, fuzzy
 msgid "Facebook Button"
-msgstr "Botón FaceBook"
+msgstr "Bouton Facebook"
 
 #: facebook-button-plugin.php:130
-#, fuzzy
 msgid "Settings saved"
-msgstr "Opciones"
+msgstr "Réglages sauvegardés "
 
 #: facebook-button-plugin.php:152
 msgid "Error: File size > 32K"
-msgstr "Error: Archivo > 32К"
+msgstr "Erreur : Poids du fichier > 32K"
 
 #: facebook-button-plugin.php:155
 msgid "Error: Invalid file type"
-msgstr "error: Tipo de archivo no válido"
+msgstr "Erreur : Type de fichier invalide"
 
 #: facebook-button-plugin.php:163
 msgid "Error: moving file failed"
-msgstr "Error: Fallo moviendo el archivo"
+msgstr "Erreur : le déplacement du fichier a echoué"
 
 #: facebook-button-plugin.php:166
 msgid "Error: check image width or height"
-msgstr "Error: Revisa el alto o ancho de la imagen"
+msgstr "Erreur : Vérifiez la taille et la largeur de l'image"
 
 #: facebook-button-plugin.php:170
 msgid "Uploading Error: check image properties"
-msgstr "Error de subida: Revisa las propiedades de la imagen"
+msgstr "Erreur d'upload : vérifiez les propriétés de l'image"
 
 #: facebook-button-plugin.php:180
 msgid "Notice:"
@@ -62,105 +60,96 @@ msgid ""
 msgstr ""
 
 #: facebook-button-plugin.php:186
-#, fuzzy
 msgid "Your Facebook ID:"
-msgstr "Su FaceBook Id:"
+msgstr "Votre identifiant Facebook"
 
 #: facebook-button-plugin.php:192
 msgid "Display button:"
-msgstr ""
+msgstr "Afficher le bouton"
 
 #: facebook-button-plugin.php:194
 msgid "My Page"
-msgstr ""
+msgstr "Ma page"
 
 #: facebook-button-plugin.php:195
 msgid "Like"
-msgstr ""
+msgstr "Like"
 
 #: facebook-button-plugin.php:200
-#, fuzzy
 msgid "Choose display settings:"
-msgstr "Seleccione opciones de visualización:"
+msgstr "Choisir les réglages d'affichage"
 
 #: facebook-button-plugin.php:204
-#, fuzzy
 msgid "Standard Facebook image"
-msgstr "Imagen estandar de FaceBook"
+msgstr "Image Facebook par défaut"
 
 #: facebook-button-plugin.php:206
-#, fuzzy
 msgid "Custom Facebook image"
-msgstr "Imagen personalizada de FaceBook"
+msgstr "Image Facebook personnalisée"
 
 #: facebook-button-plugin.php:213
 msgid "Current image:"
-msgstr "Imagen actual:"
+msgstr "Image actuelle"
 
 #: facebook-button-plugin.php:221
-#, fuzzy
 msgid "Facebook image:"
-msgstr "Imagen de FaceBook:"
+msgstr "Image Facebook"
 
 #: facebook-button-plugin.php:227
 msgid ""
 "Image properties: max image width:100px; max image height:40px; max image "
 "size:32Kb; image types:\"jpg\", \"jpeg\", \"png\"."
 msgstr ""
-"Propiedades de la imagen: Ancho máx.: 100px; Alto máx.: 40px; Tamaño máx: "
-"32Kb; Tipo de imagen: \"jpg\", \"jpeg\", \"png\"."
+"Propriétés de l'image : largeur max:100px; hauteur max: 40px; poids max : "
+"32kb; type d'image :\"jpg\", \"jpeg\", \"png\"."
 
 #: facebook-button-plugin.php:232
-#, fuzzy
 msgid "Facebook Button Position:"
-msgstr "Posición del botón Facebook:"
+msgstr "Position du bouton Facebook"
 
 #: facebook-button-plugin.php:236
 msgid "Before"
-msgstr "Antes"
+msgstr "Avant"
 
 #: facebook-button-plugin.php:237
 msgid "After"
-msgstr "Después"
+msgstr "Après"
 
 #: facebook-button-plugin.php:238
 msgid "Before and After"
-msgstr "Antes y después"
+msgstr "Avant et après"
 
 #: facebook-button-plugin.php:239
 msgid "Shortcode"
 msgstr "Shortcode"
 
 #: facebook-button-plugin.php:241
-#, fuzzy
 msgid ""
 "If you would like to add a Facebook button to your website, just copy and "
 "paste this shortcode into your post or page:"
 msgstr ""
-"Si desea agregar un botón de Facebook para su sitio web, sólo tiene que "
-"copiar y pegar el código en su web o la página:"
+"Si vous souhaitez ajouter un bouton Facebook sur votre site internet, copier-"
+"collez ce Shortcodedans votre page ou votre article"
 
 #: facebook-button-plugin.php:246
-#, fuzzy
 msgid "Facebook Button language:"
-msgstr "Botón FaceBook"
+msgstr "Langue du bouton Facebook"
 
 #: facebook-button-plugin.php:357
 msgid "Change the language of Facebook Like Button"
-msgstr ""
+msgstr "Changer la langue du bouton Facebook"
 
 #: facebook-button-plugin.php:363
 msgid "Save Changes"
-msgstr ""
+msgstr "Sauvegarder les changements"
 
 #: facebook-button-plugin.php:373
 msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
 msgstr ""
 
 #: facebook-button-plugin.php:374
-#, fuzzy
 msgid "Rate the plugin"
-msgstr "Plugins recomendados"
+msgstr ""
 
 #: facebook-button-plugin.php:377
 msgid "If there is something wrong about it, please contact us"
@@ -168,7 +157,7 @@ msgstr ""
 
 #: facebook-button-plugin.php:480 facebook-button-plugin.php:492
 msgid "Settings"
-msgstr "Opciones"
+msgstr "Réglages"
 
 #: facebook-button-plugin.php:493
 msgid "FAQ"
@@ -176,71 +165,24 @@ msgstr "FAQ"
 
 #: facebook-button-plugin.php:494
 msgid "Support"
-msgstr "Soporte"
+msgstr "Support"
 
 #: facebook-button-plugin.php:518
 msgid "requires"
-msgstr ""
+msgstr "Nécessite"
 
 #: facebook-button-plugin.php:518
 msgid ""
 "or higher, that is why it has been deactivated! Please upgrade WordPress and "
 "try again."
 msgstr ""
+"ou supérieur, c'est la raison pour la laquelle il a été desactivé. Veuillez "
+"mettre à jour votre Wordpress et essayer à nouveau "
 
 #: facebook-button-plugin.php:518
 msgid "Back to the WordPress"
-msgstr ""
+msgstr "Retour à Wordpress"
 
 #: facebook-button-plugin.php:518
-#, fuzzy
 msgid "Plugins page"
-msgstr "Плагины BWS"
-
-#~ msgid "Activated plugins"
-#~ msgstr "Plugins activados"
-
-#~ msgid "Read more"
-#~ msgstr "Leer mas"
-
-#~ msgid "Installed plugins"
-#~ msgstr "Plugins instalados"
-
-#~ msgid "Recommended plugins"
-#~ msgstr "Plugins recomendados"
-
-#~ msgid "Download"
-#~ msgstr "Descargar"
-
-#~ msgid "Install %s"
-#~ msgstr "Instalar %s"
-
-#~ msgid "Install now from wordpress.org"
-#~ msgstr "Instalar ahora desde wordpress.org"
-
-#, fuzzy
-#~ msgid "Active Plugins"
-#~ msgstr "Plugins activados"
-
-#, fuzzy
-#~ msgid "Inactive Plugins"
-#~ msgstr "Plugins activados"
-
-#, fuzzy
-#~ msgid "Send to support"
-#~ msgstr "Soporte"
-
-#, fuzzy
-#~ msgid ""
-#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
-#~ "or fill out the contact form on our website"
-#~ msgstr ""
-#~ "Si tiene alguna pregunta, por favor contacte con nosotros via "
-#~ "plugin@bestwebsoft.com o rellenando el formulariod e contacto de nuestra "
-#~ "web"
-
-#~ msgid "Options saved."
-#~ msgstr "Opciones guardadas"
-
-#~ msgid "Install Now"
-#~ msgstr "Установить сейчас"
+msgstr "Page Plugin"

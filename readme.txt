@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
 Requires at least: 3.0
-Tested up to: 3.7.1
-Stable tag: 2.26
+Tested up to: 3.8
+Stable tag: 2.27
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,6 +34,7 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pl
 = Translation =
 
 * Arabic (ar_AR) (thanks to Albayan Design Hani Aladoli)
+* French (fr_FR) (thanks to <a href="mailto:wpthemefr@gmail.com">Murat</a>)
 * Hebrew (he_IL) (thanks to Sagive SEO)
 * Indonesian (id_ID) (thanks to Nasrulhaq, www.al-badar.net)
 * Persian (fa_IR) (thanks to Einolah Kiamehr)
@@ -97,6 +98,11 @@ In WordPress admin panel go to "Settings", find the Facebook Button Plugin setti
 5. Displaying Facebook Button ater your post.
 
 == Changelog ==
+
+= V2.27 - 23.12.2013 =
+* NEW : The French language file is added to the plugin.
+* Update : We updated all functionality for wordpress 3.8.
+* Update : BWS plugins section is updated.
 
 = V2.26 - 28.11.2013 =
 * NEW : We added posibility to add images with png extension as custom image for My Page button.
@@ -202,6 +208,9 @@ In WordPress admin panel go to "Settings", find the Facebook Button Plugin setti
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.27 =
+The French language file is added to the plugin. We updated all functionality for wordpress 3.8. BWS plugins section is updated.
 
 = V2.26 =
 We added posibility to add images with png extension as custom image for My Page button. New default image for the My Page button. The Indonesian language file is added to the plugin. We updated our screenshots.
