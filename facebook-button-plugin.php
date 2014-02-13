@@ -4,12 +4,12 @@ Plugin Name: Facebook Button
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.27
+Version: 2.28
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
 
-/*  Copyright 2013  BestWebSoft  ( http://support.bestwebsoft.com )
+/*  Copyright 2014  BestWebSoft  ( http://support.bestwebsoft.com )
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -47,15 +47,16 @@ if ( ! function_exists( 'fcbk_bttn_plgn_settings' ) ) {
 		}
 
 		$fcbk_bttn_plgn_options_default = array(
-			'link'				=> '',
-			'my_page'			=> 1,
-			'like'				=> 1,
-			'where'				=> '',
-			'display_option'	=> '',
-			'count_icon'		=> 1,
-			'extention'			=> 'png',
-			'fb_img_link'		=>  plugins_url( "img/standart-facebook-ico.png", __FILE__ ),
-			'locale' 			=> 'en_US'
+			'link'				=>	'',
+			'my_page'			=>	1,
+			'like'				=>	1,
+			'where'				=>	'',
+			'display_option'	=>	'',
+			'count_icon'		=>	1,
+			'extention'			=>	'png',
+			'fb_img_link'		=>	plugins_url( "img/standart-facebook-ico.png", __FILE__ ),
+			'locale' 			=>	'en_US',
+			'html5'				=>	0
 		);
 		/* Install the option defaults */
 		if ( 1 == $wpmu ) {
@@ -94,6 +95,8 @@ if ( ! function_exists( 'fcbk_bttn_plgn_settings' ) ) {
 				$fcbk_bttn_plgn_options['fb_img_link'] = plugins_url( "img/standart-facebook-ico.png", __FILE__ );
 		}
 		$fcbk_bttn_plgn_options = array_merge( $fcbk_bttn_plgn_options_default, $fcbk_bttn_plgn_options );
+		if ( ! array_key_exists( 'html5', $fcbk_bttn_plgn_options ) )
+			$fcbk_bttn_plgn_options['html5'] = 0;
 		update_option( 'fcbk_bttn_plgn_options', $fcbk_bttn_plgn_options );
 	}
 }
@@ -118,6 +121,7 @@ if ( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 				$fcbk_bttn_plgn_options['my_page']			=	isset( $_REQUEST['fcbk_bttn_plgn_my_page'] ) ? 1 : 0 ;
 				$fcbk_bttn_plgn_options['like']				=	isset( $_REQUEST['fcbk_bttn_plgn_like'] ) ? 1 : 0 ;
 				$fcbk_bttn_plgn_options['locale']			=	$_REQUEST['fcbk_bttn_plgn_locale'];
+				$fcbk_bttn_plgn_options['html5']			= 	$_REQUEST['fcbk_bttn_plgn_html5'];
 				if ( isset( $_FILES['uploadfile']['tmp_name'] ) &&  $_FILES['uploadfile']['tmp_name'] != "" ) {
 					$fcbk_bttn_plgn_options['count_icon']	=	$fcbk_bttn_plgn_options['count_icon'] + 1;
 					$file_ext = wp_check_filetype($_FILES['uploadfile']['name']);
@@ -191,8 +195,8 @@ if ( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 						<tr valign="top">
 							<th scope="row"><?php _e( "Display button:", 'facebook' ); ?></th>
 							<td>
-								<label><input name='fcbk_bttn_plgn_my_page' type='checkbox' value='1' <?php if ( 1 == $fcbk_bttn_plgn_options['my_page'] ) echo 'checked="checked "'; ?>/> <?php echo __( "My Page", 'captcha' ); ?></label><br />
-								<label><input name='fcbk_bttn_plgn_like' type='checkbox' value='1' <?php if ( 1 == $fcbk_bttn_plgn_options['like'] ) echo 'checked="checked "'; ?>/> <?php echo __( "Like", 'captcha' ); ?></label><br />
+								<label><input name='fcbk_bttn_plgn_my_page' type='checkbox' value='1' <?php if ( 1 == $fcbk_bttn_plgn_options['my_page'] ) echo 'checked="checked "'; ?>/> <?php echo __( "My Page", 'facebook' ); ?></label><br />
+								<label><input name='fcbk_bttn_plgn_like' type='checkbox' value='1' <?php if ( 1 == $fcbk_bttn_plgn_options['like'] ) echo 'checked="checked "'; ?>/> <?php echo __( "Like", 'facebook' ); ?></label><br />
 							</td>
 						</tr>
 						<tr>
@@ -357,6 +361,14 @@ if ( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 									<span id="shortcode" style="color: rgb(136, 136, 136); font-size: 10px; display:inline"><?php echo __( "Change the language of Facebook Like Button", 'facebook' ); ?></span>
 							</td>
 						</tr>
+						<tr valign="top">
+							<th scope="row"><?php _e( "Html tag for Like Button:", 'facebook' ); ?></th>
+							<td>
+								<label><input name='fcbk_bttn_plgn_html5' type='radio' value='0' <?php if ( 0 == $fcbk_bttn_plgn_options['html5'] ) echo 'checked="checked "'; ?> /><?php echo "<code>&lt;fb:like&gt;</code>"; ?></label><br />
+								<label><input name='fcbk_bttn_plgn_html5' type='radio' value='1' <?php if ( 1 == $fcbk_bttn_plgn_options['html5'] ) echo 'checked="checked "'; ?> /><?php echo "<code>&lt;div&gt;</code>"; ?></label>
+								<span style="color: rgb(136, 136, 136); font-size: 10px; display:inline">(<?php echo __( "Use this tag to improve validation of your site", 'facebook' ); ?>)</span>
+							</td>
+						</tr>
 						<tr>
 							<td colspan="2">
 								<input type="hidden" name="fcbk_bttn_plgn_form_submit" value="submit" />
@@ -370,11 +382,11 @@ if ( ! function_exists( 'fcbk_bttn_plgn_settings_page' ) ) {
 			<br />
 			<div class="bws-plugin-reviews">
 				<div class="bws-plugin-reviews-rate">
-				<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'facebook' ); ?>:<br/>
+				<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'facebook' ); ?>: 
 				<a href="http://wordpress.org/support/view/plugin-reviews/facebook-button-plugin" target="_blank" title="Facebook Button reviews"><?php _e( 'Rate the plugin', 'facebook' ); ?></a><br/>
 				</div>
 				<div class="bws-plugin-reviews-support">
-				<?php _e( 'If there is something wrong about it, please contact us', 'facebook' ); ?>:<br/>
+				<?php _e( 'If there is something wrong about it, please contact us', 'facebook' ); ?>: 
 				<a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a>
 				</div>
 			</div>
@@ -417,10 +429,11 @@ if ( ! function_exists( 'fcbk_bttn_plgn_display_button' ) ) {
 		}
 		if ( 1 == $fcbk_bttn_plgn_options['like'] ) {
 			$button .= '<div class="fcbk_like">
-							<div id="fb-root"></div>
-							<script src="http://connect.facebook.net/' . $fcbk_bttn_plgn_options['locale'] . '/all.js#appId=224313110927811&amp;xfbml=1"></script>
-							<fb:like href="' . $permalink_post . '" send="false" layout="button_count" width="450" show_faces="false" font=""></fb:like>
-						</div>';
+							<div id="fb-root"></div>';
+			if ( 1 == $fcbk_bttn_plgn_options['html5'] )
+				$button .=	'<div class="fb-like" data-href="' . $permalink_post . '" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></div>';
+			else
+				$button .= '<fb:like href="' . $permalink_post . '" send="false" layout="button_count" width="450" show_faces="false" font=""></fb:like></div>';
 		}
 		
 		$button .= '</div>';
@@ -459,13 +472,36 @@ if ( ! function_exists( 'fcbk_bttn_plgn_shortcode' ) ) {
 		if ( 1 == $fcbk_bttn_plgn_options['like'] ) {
 			$button .=	'<div class="fcbk_like">
 							<div id="fb-root"></div>
-							<script src="http://connect.facebook.net/en_US/all.js#appId=224313110927811&amp;xfbml=1"></script>
-							<fb:like href="' . $permalink_post . '" send="false" layout="button_count" width="450" show_faces="false" font=""></fb:like>
-						</div>';
+							<script src="//connect.facebook.net/' . $fcbk_bttn_plgn_options['locale'] . '/all.js#appId=224313110927811&amp;xfbml=1"></script>';
+							if ( 1 == $fcbk_bttn_plgn_options['html5'] )
+								$button .=	'<div class="fb-like" data-href="' . $permalink_post . '" data-layout="button_count" data-width="450" data-action="like" data-show-faces="false"></div></div>';
+							else
+								$button .= '<fb:like href="' . $permalink_post . '" send="false" layout="button_count" width="450" show_faces="false" font=""></fb:like></div>';
 		}
 
 		$button .= '</div>';
 		return $button;
+	}
+}
+
+/* Functions adds some right meta for Facebook */
+if ( ! function_exists( 'fcbk_bttn_plgn_meta' ) ) {
+	function fcbk_bttn_plgn_meta() {
+		$fcbk_bttn_plgn_options	=	get_option( 'fcbk_bttn_plgn_options' );
+		if ( 1 == $fcbk_bttn_plgn_options['like'] ) {
+			if ( is_singular() ) {
+				$image = '';
+				if ( has_post_thumbnail( get_the_ID() ) ) {
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumbnail');
+					$image = $image[0];
+				}
+				print "\n" . '<meta property="og:title" content="' . esc_attr( get_the_title() ) . '"/>';
+				print "\n" . '<meta property="og:site_name" content="' . esc_attr( get_bloginfo() ) . '"/>';
+				if ( ! empty( $image ) ) {
+					print "\n" . '<meta property="og:image" content="' . esc_url( $image ) . '"/>';
+				}
+			}
+		}
 	}
 }
 
@@ -501,7 +537,6 @@ if ( ! function_exists ( 'fcbk_bttn_plgn_links' ) ) {
 if ( ! function_exists( 'fcbk_plugin_init' ) ) {
 	function fcbk_plugin_init() {
 		load_plugin_textdomain( 'facebook', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-		load_plugin_textdomain( 'bestwebsoft', false, dirname( plugin_basename( __FILE__ ) ) . '/bws_menu/languages/' );
 	}
 } /* End function fcbk_plugin_init */
 
@@ -521,6 +556,21 @@ if ( ! function_exists ( 'fcbk_bttn_plgn_version_check' ) ) {
 	}
 }
 
+if ( ! function_exists( 'fcbk_front_end_head' ) ) {
+	function fcbk_front_end_head() {
+		global $wpmu;
+
+		if ( 1 == $wpmu )
+			$fcbk_bttn_plgn_options = get_site_option( 'fcbk_bttn_plgn_options' );
+		else
+			$fcbk_bttn_plgn_options = get_option( 'fcbk_bttn_plgn_options' );
+
+		if ( 1 == $fcbk_bttn_plgn_options['like'] && 'shortcode' != $fcbk_bttn_plgn_options['where'] ) {
+			wp_enqueue_script( 'fcbk_fron_end_script', '//connect.facebook.net/' . $fcbk_bttn_plgn_options['locale'] . '/all.js#appId=224313110927811&amp;xfbml=1' );
+		}
+	}
+}
+
 if ( ! function_exists( 'fcbk_admin_head' ) ) {
 	function fcbk_admin_head() {
 		global $wp_version;
@@ -528,10 +578,6 @@ if ( ! function_exists( 'fcbk_admin_head' ) ) {
 			wp_enqueue_style( 'fcbkStylesheet', plugins_url( 'css/style_wp_before_3.8.css', __FILE__ ) );	
 		else
 			wp_enqueue_style( 'fcbkStylesheet', plugins_url( 'css/style.css', __FILE__ ) );
-
-		wp_enqueue_style( 'fcbkStylesheet' );
-		if ( isset( $_GET['page'] ) && $_GET['page'] == "bws_plugins" )
-			wp_enqueue_script( 'bws_menu_script', plugins_url( 'js/bws_menu.js' , __FILE__ ) );
 	}
 }
 
@@ -576,6 +622,9 @@ add_action( 'admin_init', 'fcbk_bttn_plgn_version_check' );
 add_action( 'wp_enqueue_scripts', 'fcbk_admin_head' );
 add_action( 'admin_enqueue_scripts', 'fcbk_admin_head' );
 add_action( 'admin_head', 'fcbk_admin_js' );
+add_action( 'wp_head', 'fcbk_bttn_plgn_meta' );
+add_action( 'wp_enqueue_scripts', 'fcbk_front_end_head' );
+
 /* Add shortcode. */
 add_shortcode( 'fb_button', 'fcbk_bttn_plgn_shortcode' );
 

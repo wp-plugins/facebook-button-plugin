@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: facebook\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-20 20:36+0300\n"
-"PO-Revision-Date: 2013-12-20 20:36+0300\n"
+"POT-Creation-Date: 2014-02-13 15:05+0300\n"
+"PO-Revision-Date: 2014-02-13 15:05+0300\n"
 "Last-Translator: \n"
 "Language-Team: Albayan Design Hani aladoli <info@albayan-design.com>\n"
 "Language: ar\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: facebook-button-plugin.php:33 facebook-button-plugin.php:178
+#: facebook-button-plugin.php:33 facebook-button-plugin.php:182
 #, fuzzy
 msgid "Facebook Button Settings"
 msgstr "اعدادات زر الفيس بوك"
@@ -26,83 +26,83 @@ msgstr "اعدادات زر الفيس بوك"
 msgid "Facebook Button"
 msgstr "زر الفيس بوك"
 
-#: facebook-button-plugin.php:130
+#: facebook-button-plugin.php:134
 #, fuzzy
 msgid "Settings saved"
 msgstr "الاعدادات "
 
-#: facebook-button-plugin.php:152
+#: facebook-button-plugin.php:156
 msgid "Error: File size > 32K"
 msgstr "خطاء : حجم الملف : > 32К"
 
-#: facebook-button-plugin.php:155
+#: facebook-button-plugin.php:159
 msgid "Error: Invalid file type"
 msgstr "خطاء : نوع الملف غير صحيح"
 
-#: facebook-button-plugin.php:163
+#: facebook-button-plugin.php:167
 msgid "Error: moving file failed"
 msgstr "خطاء : فشل في نقل الملف"
 
-#: facebook-button-plugin.php:166
+#: facebook-button-plugin.php:170
 msgid "Error: check image width or height"
 msgstr "خطاء : تأكد من عرض وطول الصورة"
 
-#: facebook-button-plugin.php:170
+#: facebook-button-plugin.php:174
 msgid "Uploading Error: check image properties"
 msgstr "خطاء في الرفع : تأكد من خصائص الصورة"
 
-#: facebook-button-plugin.php:180
+#: facebook-button-plugin.php:184
 msgid "Notice:"
 msgstr ""
 
-#: facebook-button-plugin.php:180
+#: facebook-button-plugin.php:184
 msgid ""
 "The plugin's settings have been changed. In order to save them please don't "
 "forget to click the 'Save Changes' button."
 msgstr ""
 
-#: facebook-button-plugin.php:186
+#: facebook-button-plugin.php:190
 #, fuzzy
 msgid "Your Facebook ID:"
 msgstr "اسم حسابك علي الفيس بوك :"
 
-#: facebook-button-plugin.php:192
+#: facebook-button-plugin.php:196
 msgid "Display button:"
 msgstr "عرض الزر :"
 
-#: facebook-button-plugin.php:194
+#: facebook-button-plugin.php:198
 msgid "My Page"
 msgstr "صفحتي"
 
-#: facebook-button-plugin.php:195
+#: facebook-button-plugin.php:199
 msgid "Like"
 msgstr "اعجاب "
 
-#: facebook-button-plugin.php:200
+#: facebook-button-plugin.php:204
 #, fuzzy
 msgid "Choose display settings:"
 msgstr "اختار خيار العرض :"
 
-#: facebook-button-plugin.php:204
+#: facebook-button-plugin.php:208
 #, fuzzy
 msgid "Standard Facebook image"
 msgstr "صورة الفيس بوك الافتراضية "
 
-#: facebook-button-plugin.php:206
+#: facebook-button-plugin.php:210
 #, fuzzy
 msgid "Custom Facebook image"
 msgstr "صورة خاصة للـ فيس بوك"
 
-#: facebook-button-plugin.php:213
+#: facebook-button-plugin.php:217
 msgid "Current image:"
 msgstr "الصورة الحالية : "
 
-#: facebook-button-plugin.php:221
+#: facebook-button-plugin.php:225
 #, fuzzy
 msgid "Facebook image:"
 msgstr "صورة الفيس بوك : "
 
-#: facebook-button-plugin.php:227
+#: facebook-button-plugin.php:231
 #, fuzzy
 msgid ""
 "Image properties: max image width:100px; max image height:40px; max image "
@@ -111,28 +111,28 @@ msgstr ""
 "Propiedades de la imagen: Ancho máx.: 100px; Alto máx.: 40px; Tamaño máx: "
 "32Kb; Tipo de imagen: \"jpg\", \"jpeg\"."
 
-#: facebook-button-plugin.php:232
+#: facebook-button-plugin.php:236
 #, fuzzy
 msgid "Facebook Button Position:"
 msgstr "مكان زر الفيس بوك :"
 
-#: facebook-button-plugin.php:236
+#: facebook-button-plugin.php:240
 msgid "Before"
 msgstr "قبل"
 
-#: facebook-button-plugin.php:237
+#: facebook-button-plugin.php:241
 msgid "After"
 msgstr "بعد"
 
-#: facebook-button-plugin.php:238
+#: facebook-button-plugin.php:242
 msgid "Before and After"
 msgstr "قبل و بعد"
 
-#: facebook-button-plugin.php:239
+#: facebook-button-plugin.php:243
 msgid "Shortcode"
 msgstr "الكود"
 
-#: facebook-button-plugin.php:241
+#: facebook-button-plugin.php:245
 #, fuzzy
 msgid ""
 "If you would like to add a Facebook button to your website, just copy and "
@@ -141,60 +141,68 @@ msgstr ""
 "اذا كنت ترغب في اضافة زر الفيس بوك علي موقعك انسخ هذه الكود وضعه في المكان "
 "المراد ظهور الزر فيه"
 
-#: facebook-button-plugin.php:246
+#: facebook-button-plugin.php:250
 #, fuzzy
 msgid "Facebook Button language:"
 msgstr "للغه زر الفيس بوك :"
 
-#: facebook-button-plugin.php:357
+#: facebook-button-plugin.php:361
 #, fuzzy
 msgid "Change the language of Facebook Like Button"
 msgstr "اختار اللغه للـ زر الاغحاب"
 
-#: facebook-button-plugin.php:363
+#: facebook-button-plugin.php:365
+msgid "Html tag for Like Button:"
+msgstr ""
+
+#: facebook-button-plugin.php:369
+msgid "Use this tag to improve validation of your site"
+msgstr ""
+
+#: facebook-button-plugin.php:375
 msgid "Save Changes"
 msgstr "حفظ التغييرات"
 
-#: facebook-button-plugin.php:373
+#: facebook-button-plugin.php:385
 msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
 msgstr ""
 
-#: facebook-button-plugin.php:374
+#: facebook-button-plugin.php:386
 #, fuzzy
 msgid "Rate the plugin"
 msgstr "اضافات موصي بها"
 
-#: facebook-button-plugin.php:377
+#: facebook-button-plugin.php:389
 msgid "If there is something wrong about it, please contact us"
 msgstr ""
 
-#: facebook-button-plugin.php:480 facebook-button-plugin.php:492
+#: facebook-button-plugin.php:516 facebook-button-plugin.php:528
 msgid "Settings"
 msgstr "الاعدادات "
 
-#: facebook-button-plugin.php:493
+#: facebook-button-plugin.php:529
 msgid "FAQ"
 msgstr "أسئلة وأجوبة"
 
-#: facebook-button-plugin.php:494
+#: facebook-button-plugin.php:530
 msgid "Support"
 msgstr "الدعم"
 
-#: facebook-button-plugin.php:518
+#: facebook-button-plugin.php:553
 msgid "requires"
 msgstr ""
 
-#: facebook-button-plugin.php:518
+#: facebook-button-plugin.php:553
 msgid ""
 "or higher, that is why it has been deactivated! Please upgrade WordPress and "
 "try again."
 msgstr ""
 
-#: facebook-button-plugin.php:518
+#: facebook-button-plugin.php:553
 msgid "Back to the WordPress"
 msgstr ""
 
-#: facebook-button-plugin.php:518
+#: facebook-button-plugin.php:553
 #, fuzzy
 msgid "Plugins page"
 msgstr "Плагины BWS"
