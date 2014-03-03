@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10
 Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
 Requires at least: 3.0
 Tested up to: 3.8.1
-Stable tag: 2.28
+Stable tag: 2.29
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,7 +15,10 @@ Add Facebook button to your WordPress website.
 Facebook Like Button Plugin allows you to add a Follow button the easiest way.
 
 <a href="http://wordpress.org/plugins/facebook-button-plugin/faq/" target="_blank">FAQ</a>
+
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
+
+<a href="http://bestwebsoft.com/plugin/facebook-like-button-pro/?k=4caab51af6593e97ad1e329fe0f53072" target="_blank">Upgrade to Pro Version</a>
 
 = Features =
 
@@ -101,11 +104,14 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 1. Plugin admin page.
 2. Plugin admin page: select display option.
-3. Plugin admin page: select Facebook Button position.
+3. Displaying Facebook Button ater your post.
 4. Displaying Facebook Button in your post via the shortcode.
-5. Displaying Facebook Button ater your post.
 
 == Changelog ==
+
+= V2.29 - 03.02.2014 =
+* Budfix : Plugin optimization is done.
+* Update : Plugin tabs is added.
 
 = V2.28 - 13.02.2014 =
 * New : Html5 version of Like button is added.
@@ -225,6 +231,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.29 =
+Plugin optimization is done. Plugin tabs is added.
 
 = V2.28 =
 Html5 version of Like button is added. Screenshots are updated. BWS plugins section is updated. We updated all functionality for wordpress 3.8.1. Problem with blink of Like button is fixed. Problem with wrong thumbnails when putting Like is fixed. Problem with language of Like button when using shortcode is fixed.
