@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
 Requires at least: 3.0
-Tested up to: 3.8.1
-Stable tag: 2.29
+Tested up to: 3.8.2
+Stable tag: 2.30
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,8 @@ Add Facebook button to your WordPress website.
 == Description ==
 
 Facebook Like Button Plugin allows you to add a Follow button the easiest way.
+
+http://www.youtube.com/watch?v=QGv04uHVl5c
 
 <a href="http://wordpress.org/plugins/facebook-button-plugin/faq/" target="_blank">FAQ</a>
 
@@ -98,7 +100,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: <a href="http://bestwebsoft.com/wp-content/uploads/manual/wp_plugin/general/System_Status.pdf" target="_blank">System_Status.pdf</a>
+4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">Instuction on System Status</a>
 
 == Screenshots ==
 
@@ -109,7 +111,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Changelog ==
 
-= V2.29 - 03.02.2014 =
+= V2.30 - 14.04.2014 =
+* Update : We updated all functionality for wordpress 3.8.2.
+
+= V2.29 - 03.03.2014 =
 * Budfix : Plugin optimization is done.
 * Update : Plugin tabs is added.
 
@@ -231,6 +236,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.30 =
+We updated all functionality for wordpress 3.8.2.
 
 = V2.29 =
 Plugin optimization is done. Plugin tabs is added.
