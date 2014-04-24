@@ -1,6 +1,6 @@
 ﻿=== Facebook Like Button ===
 Contributors: bestwebsoft
-Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
+Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
 Requires at least: 3.0
 Tested up to: 3.8.2
@@ -64,6 +64,8 @@ We can fix some things for free for the users who provide translation of our plu
 1. Upload the folder `facebook-button-plugin` to the directory `/wp-content/plugins/`.
 2. Activate the plugin via the 'Plugins' menu in your WordPress admin panel.
 3. You can adjust the necessary settings in your WordPress admin panel - "Settings" > "Facebook Button".
+
+<a href="https://docs.google.com/document/d/1LDmKKxLHq0GavaGcevj4g-8SjLcYPruSKg5Kos9plxM/edit" target="_blank">View a Step-by-step Instruction on Facebook Button Installation</a>.
 
 == Frequently Asked Questions ==
 
