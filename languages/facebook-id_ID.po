@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: facebook\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-14 12:42+0300\n"
-"PO-Revision-Date: 2014-04-14 12:42+0300\n"
+"POT-Creation-Date: 2014-06-11 16:16+0300\n"
+"PO-Revision-Date: 2014-06-11 16:16+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: nasrulhaq <nasrulhaq81@gmail.com>\n"
 "Language: es_ES\n"
@@ -16,298 +16,332 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: facebook-button-plugin.php:72
-#: facebook-button-plugin.php:397
+#: facebook-button-plugin.php:73 facebook-button-plugin.php:405
 msgid "Facebook Button Settings"
 msgstr "Pengaturan Facebook Button"
 
-#: facebook-button-plugin.php:72
+#: facebook-button-plugin.php:73
 msgid "Facebook Button"
 msgstr "Tombol Facebook"
 
-#: facebook-button-plugin.php:188
+#: facebook-button-plugin.php:195
 msgid "requires"
 msgstr "membutuhkan"
 
-#: facebook-button-plugin.php:188
-msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
-msgstr "atau lebih tinggi, itulah mengapa di nonaktifkan! Harap tingkatkan versi Wordpress dan coba lagi"
+#: facebook-button-plugin.php:195
+msgid ""
+"or higher, that is why it has been deactivated! Please upgrade WordPress and "
+"try again."
+msgstr ""
+"atau lebih tinggi, itulah mengapa di nonaktifkan! Harap tingkatkan versi "
+"Wordpress dan coba lagi"
 
-#: facebook-button-plugin.php:188
+#: facebook-button-plugin.php:195
 msgid "Back to the WordPress"
 msgstr "Kembali ke Wordpress"
 
-#: facebook-button-plugin.php:188
+#: facebook-button-plugin.php:195
 msgid "Plugins page"
 msgstr "Halaman Plugin"
 
-#: facebook-button-plugin.php:223
+#: facebook-button-plugin.php:231
 msgid "Settings saved"
 msgstr "Simpan Pengaturan"
 
-#: facebook-button-plugin.php:245
+#: facebook-button-plugin.php:253
 msgid "Error: File size > 32K"
 msgstr "SALAH: Ukuran file lebih besar dari 32KB"
 
-#: facebook-button-plugin.php:248
+#: facebook-button-plugin.php:256
 msgid "Error: Invalid file type"
 msgstr "SALAH: Tipe data tidak benar"
 
-#: facebook-button-plugin.php:256
+#: facebook-button-plugin.php:264
 msgid "Error: moving file failed"
 msgstr "Salah: gagal memindahkan data"
 
-#: facebook-button-plugin.php:259
+#: facebook-button-plugin.php:267
 msgid "Error: check image width or height"
 msgstr "Salah: periksa lebar atau panjang gambar"
 
-#: facebook-button-plugin.php:263
+#: facebook-button-plugin.php:271
 msgid "Uploading Error: check image properties"
 msgstr "Gagal Mengunggah: periksa properti gambar"
 
-#: facebook-button-plugin.php:288
-#: facebook-button-plugin.php:327
+#: facebook-button-plugin.php:296 facebook-button-plugin.php:335
 msgid "Wrong license key"
 msgstr ""
 
-#: facebook-button-plugin.php:320
-msgid "Something went wrong. Try again later. If the error will appear again, please, contact us <a href=http://support.bestwebsoft.com>BestWebSoft</a>. We are sorry for inconvenience."
+#: facebook-button-plugin.php:328
+msgid ""
+"Something went wrong. Try again later. If the error will appear again, "
+"please, contact us <a href=http://support.bestwebsoft.com>BestWebSoft</a>. "
+"We are sorry for inconvenience."
 msgstr ""
 
-#: facebook-button-plugin.php:329
+#: facebook-button-plugin.php:337
 msgid "This license key is bind to another site"
 msgstr ""
 
-#: facebook-button-plugin.php:331
-msgid "Unfortunately, you have exceeded the number of available tries. Please, upload the plugin manually."
+#: facebook-button-plugin.php:339
+msgid ""
+"Unfortunately, you have exceeded the number of available tries. Please, "
+"upload the plugin manually."
 msgstr ""
 
-#: facebook-button-plugin.php:349
+#: facebook-button-plugin.php:357
 msgid "Failed to open the zip archive. Please, upload the plugin manually"
 msgstr ""
 
-#: facebook-button-plugin.php:355
-msgid "Your server does not support either ZipArchive or Phar. Please, upload the plugin manually"
+#: facebook-button-plugin.php:363
+msgid ""
+"Your server does not support either ZipArchive or Phar. Please, upload the "
+"plugin manually"
 msgstr ""
 
-#: facebook-button-plugin.php:359
-#: facebook-button-plugin.php:368
+#: facebook-button-plugin.php:367 facebook-button-plugin.php:376
 msgid "Failed to download the zip archive. Please, upload the plugin manually"
 msgstr ""
 
-#: facebook-button-plugin.php:372
-msgid "Something went wrong. Try again later or upload the plugin manually. We are sorry for inconvienience."
+#: facebook-button-plugin.php:380
+msgid ""
+"Something went wrong. Try again later or upload the plugin manually. We are "
+"sorry for inconvienience."
 msgstr ""
 
-#: facebook-button-plugin.php:387
+#: facebook-button-plugin.php:395
 msgid "Please, enter Your license key"
 msgstr ""
 
-#: facebook-button-plugin.php:399
-#: facebook-button-plugin.php:720
-#: facebook-button-plugin.php:732
+#: facebook-button-plugin.php:407 facebook-button-plugin.php:773
+#: facebook-button-plugin.php:785
 msgid "Settings"
 msgstr "Pengaturan"
 
-#: facebook-button-plugin.php:400
+#: facebook-button-plugin.php:408
 #, fuzzy
 msgid "Extra settings"
 msgstr "Pengaturan"
 
-#: facebook-button-plugin.php:401
+#: facebook-button-plugin.php:409 facebook-button-plugin.php:786
+msgid "FAQ"
+msgstr "SSS (SÄ±k Sorulan Sorular)"
+
+#: facebook-button-plugin.php:410
 msgid "Go PRO"
 msgstr ""
 
-#: facebook-button-plugin.php:404
+#: facebook-button-plugin.php:413
 msgid "Notice:"
 msgstr ""
 
-#: facebook-button-plugin.php:404
-msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
+#: facebook-button-plugin.php:413
+msgid ""
+"The plugin's settings have been changed. In order to save them please don't "
+"forget to click the 'Save Changes' button."
 msgstr ""
 
-#: facebook-button-plugin.php:410
+#: facebook-button-plugin.php:419
 msgid "Your Facebook ID:"
 msgstr " ID Facebook:"
 
-#: facebook-button-plugin.php:416
+#: facebook-button-plugin.php:425
 msgid "Display button:"
 msgstr "Tampilan tombol:"
 
-#: facebook-button-plugin.php:418
+#: facebook-button-plugin.php:427
 msgid "My Page"
 msgstr "Halamanku"
 
-#: facebook-button-plugin.php:419
+#: facebook-button-plugin.php:428
 msgid "Like"
 msgstr "Suka"
 
-#: facebook-button-plugin.php:424
+#: facebook-button-plugin.php:429
+msgid "Share"
+msgstr ""
+
+#: facebook-button-plugin.php:434
 msgid "Choose display settings:"
 msgstr "Ubah pengaturan tampilan"
 
-#: facebook-button-plugin.php:428
+#: facebook-button-plugin.php:438
 msgid "Standard Facebook image"
 msgstr "Standar gambar Facebook "
 
-#: facebook-button-plugin.php:430
+#: facebook-button-plugin.php:440
 msgid "Custom Facebook image"
 msgstr "Kustom Gambar Facebook "
 
-#: facebook-button-plugin.php:437
+#: facebook-button-plugin.php:447
 msgid "Current image:"
 msgstr "Gambar tertentu:"
 
-#: facebook-button-plugin.php:445
+#: facebook-button-plugin.php:455
 msgid "Facebook image:"
 msgstr "Gambar Facebook:"
 
-#: facebook-button-plugin.php:451
-msgid "Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:\"jpg\", \"jpeg\", \"png\"."
-msgstr "properti gambar: lebar gambar maks:100px; panjang gambar maks:40px; ukuran gambar maks:32Kb; tipe gambar:\"jpg\",\"jpeg\", \"png\"."
+#: facebook-button-plugin.php:461
+msgid ""
+"Image properties: max image width:100px; max image height:40px; max image "
+"size:32Kb; image types:\"jpg\", \"jpeg\", \"png\"."
+msgstr ""
+"properti gambar: lebar gambar maks:100px; panjang gambar maks:40px; ukuran "
+"gambar maks:32Kb; tipe gambar:\"jpg\",\"jpeg\", \"png\"."
 
-#: facebook-button-plugin.php:456
+#: facebook-button-plugin.php:466
 msgid "Facebook Button Position:"
 msgstr "Posisi Tombol Facebook"
 
-#: facebook-button-plugin.php:460
+#: facebook-button-plugin.php:470
 msgid "Before"
 msgstr "Sebelum"
 
-#: facebook-button-plugin.php:461
+#: facebook-button-plugin.php:471
 msgid "After"
 msgstr "Setelah"
 
-#: facebook-button-plugin.php:462
+#: facebook-button-plugin.php:472
 msgid "Before and After"
 msgstr "Sebelum dan Setelah"
 
-#: facebook-button-plugin.php:463
+#: facebook-button-plugin.php:473
 msgid "Shortcode"
 msgstr "Kode Pendek"
 
-#: facebook-button-plugin.php:465
-msgid "If you would like to add a Facebook button to your website, just copy and paste this shortcode into your post or page:"
-msgstr "Jika anda ingin menambahkan tombol Facebook di website anda, cukup salin kode singkat kedalam posting atau page anda:"
+#: facebook-button-plugin.php:475
+msgid ""
+"If you would like to add a Facebook button to your website, just copy and "
+"paste this shortcode into your post or page:"
+msgstr ""
+"Jika anda ingin menambahkan tombol Facebook di website anda, cukup salin "
+"kode singkat kedalam posting atau page anda:"
 
-#: facebook-button-plugin.php:470
+#: facebook-button-plugin.php:480
 msgid "Facebook Button language:"
 msgstr "Bahasa Facebook Button:"
 
-#: facebook-button-plugin.php:481
+#: facebook-button-plugin.php:491
 msgid "Change the language of Facebook Like Button"
 msgstr "Ubah bahasa Facebook Like Button"
 
-#: facebook-button-plugin.php:485
+#: facebook-button-plugin.php:495
 msgid "Html tag for Like Button:"
 msgstr ""
 
-#: facebook-button-plugin.php:489
+#: facebook-button-plugin.php:499
 msgid "Use this tag to improve validation of your site"
 msgstr ""
 
-#: facebook-button-plugin.php:495
-#: facebook-button-plugin.php:534
+#: facebook-button-plugin.php:505 facebook-button-plugin.php:544
 msgid "Save Changes"
 msgstr "Simpan Perubahan"
 
-#: facebook-button-plugin.php:501
+#: facebook-button-plugin.php:511
 msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
 msgstr ""
 
-#: facebook-button-plugin.php:502
+#: facebook-button-plugin.php:512
 #, fuzzy
 msgid "Rate the plugin"
 msgstr "Eklenti Ã–nerileri"
 
-#: facebook-button-plugin.php:505
+#: facebook-button-plugin.php:515
 msgid "If there is something wrong about it, please contact us"
 msgstr ""
 
-#: facebook-button-plugin.php:516
-msgid "Please choose the necessary post types (or single pages) where Facebook button will be displayed:"
+#: facebook-button-plugin.php:526
+msgid ""
+"Please choose the necessary post types (or single pages) where Facebook "
+"button will be displayed:"
 msgstr ""
 
-#: facebook-button-plugin.php:523
+#: facebook-button-plugin.php:533
 msgid "Show URL for pages"
 msgstr ""
 
-#: facebook-button-plugin.php:529
-msgid "Example of site pages' tree"
+#: facebook-button-plugin.php:539
+msgid "Example of the site's pages tree"
 msgstr ""
 
 #: facebook-button-plugin.php:539
+msgid "Example of site pages' tree"
+msgstr ""
+
+#: facebook-button-plugin.php:549
 msgid "If you upgrade to Pro version all your settings will be saved."
 msgstr ""
 
-#: facebook-button-plugin.php:546
+#: facebook-button-plugin.php:556
 msgid "Unlock premium options by upgrading to a PRO version."
 msgstr ""
 
-#: facebook-button-plugin.php:547
-#: facebook-button-plugin.php:813
+#: facebook-button-plugin.php:557 facebook-button-plugin.php:863
 msgid "Learn More"
 msgstr ""
 
-#: facebook-button-plugin.php:550
+#: facebook-button-plugin.php:560
 msgid "Go"
 msgstr ""
 
-#: facebook-button-plugin.php:562
-msgid "Congratulations! The PRO version of the plugin is successfully download and activated."
+#: facebook-button-plugin.php:572
+msgid ""
+"Congratulations! The PRO version of the plugin is successfully download and "
+"activated."
 msgstr ""
 
-#: facebook-button-plugin.php:564
+#: facebook-button-plugin.php:574
 msgid "Please, go to"
 msgstr ""
 
-#: facebook-button-plugin.php:564
+#: facebook-button-plugin.php:574
 #, fuzzy
 msgid "the setting page"
 msgstr "Simpan Pengaturan"
 
-#: facebook-button-plugin.php:565
+#: facebook-button-plugin.php:575
 msgid "You will be redirected automatically in 5 seconds."
 msgstr ""
 
-#: facebook-button-plugin.php:570
+#: facebook-button-plugin.php:580
 msgid "You can download and activate"
 msgstr ""
 
-#: facebook-button-plugin.php:572
+#: facebook-button-plugin.php:582
 msgid "version of this plugin by entering Your license key."
 msgstr ""
 
-#: facebook-button-plugin.php:574
-msgid "You can find your license key on your personal page Client area, by clicking on the link"
+#: facebook-button-plugin.php:584
+msgid ""
+"You can find your license key on your personal page Client area, by clicking "
+"on the link"
 msgstr ""
 
-#: facebook-button-plugin.php:576
+#: facebook-button-plugin.php:586
 msgid "(your username is the email you specify when purchasing the product)."
 msgstr ""
 
-#: facebook-button-plugin.php:584
-#: facebook-button-plugin.php:594
+#: facebook-button-plugin.php:594 facebook-button-plugin.php:604
 msgid "Go!"
 msgstr ""
 
-#: facebook-button-plugin.php:587
-msgid "Unfortunately, you have exceeded the number of available tries per day. Please, upload the plugin manually."
+#: facebook-button-plugin.php:597
+msgid ""
+"Unfortunately, you have exceeded the number of available tries per day. "
+"Please, upload the plugin manually."
 msgstr ""
 
-#: facebook-button-plugin.php:733
-msgid "FAQ"
-msgstr "SSS (SÄ±k Sorulan Sorular)"
-
-#: facebook-button-plugin.php:734
+#: facebook-button-plugin.php:787
 msgid "Support"
 msgstr "Dukungan"
 
-#: facebook-button-plugin.php:816
-msgid "It's time to upgrade your <strong>Facebook Like Button</strong> to <strong>PRO</strong> version"
+#: facebook-button-plugin.php:866
+msgid ""
+"It's time to upgrade your <strong>Facebook Like Button</strong> to "
+"<strong>PRO</strong> version"
 msgstr ""
 
-#: facebook-button-plugin.php:817
+#: facebook-button-plugin.php:867
 msgid "Extend standard plugin functionality with new great options"
 msgstr ""
 

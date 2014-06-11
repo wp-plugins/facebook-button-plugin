@@ -9,7 +9,7 @@
 #fcbk_settings_form label code {
 	background: none;
 }
-#fcbk_share {
+.fcbk_share {
 	clear: both;
 	height: 40px;
 }

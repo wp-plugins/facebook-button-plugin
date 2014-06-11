@@ -4,7 +4,7 @@ Plugin Name: Facebook Button
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.30
+Version: 2.31
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -28,7 +28,8 @@ License: GPLv2 or later
 if ( ! function_exists( 'fcbkbttn_add_pages' ) ) {
 	function fcbkbttn_add_pages() {
 		global $bstwbsftwppdtplgns_options, $wpmu, $bstwbsftwppdtplgns_added_menu;
-		$bws_menu_version = '1.2.6';
+		$bws_menu_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "bws_menu/bws_menu.php" );
+		$bws_menu_version = $bws_menu_info["Version"];
 		$base = plugin_basename(__FILE__);
 
 		if ( ! isset( $bstwbsftwppdtplgns_options ) ) {
@@ -120,6 +121,7 @@ if ( ! function_exists( 'fcbkbttn_settings' ) ) {
 			'link'					=>	'',
 			'my_page'				=>	1,
 			'like'					=>	1,
+			'share'					=>	0,
 			'where'					=>	'',
 			'display_option'		=>	'',
 			'count_icon'			=>	1,
@@ -209,6 +211,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 				$fcbkbttn_options['display_option']	=	$_REQUEST['fcbkbttn_display_option'];
 				$fcbkbttn_options['my_page']			=	isset( $_REQUEST['fcbkbttn_my_page'] ) ? 1 : 0 ;
 				$fcbkbttn_options['like']				=	isset( $_REQUEST['fcbkbttn_like'] ) ? 1 : 0 ;
+				$fcbkbttn_options['share']				=	isset( $_REQUEST['fcbkbttn_share'] ) ? 1 : 0 ;
 				$fcbkbttn_options['locale']			=	$_REQUEST['fcbkbttn_locale'];
 				$fcbkbttn_options['html5']			= 	$_REQUEST['fcbkbttn_html5'];
 				if ( isset( $_FILES['uploadfile']['tmp_name'] ) &&  $_FILES['uploadfile']['tmp_name'] != "" ) {
@@ -394,10 +397,11 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 		?>
 		<div class="wrap">
 			<div class="icon32 icon32-bws" id="icon-options-general"></div>
-			<h2><?php echo __( "Facebook Button Settings", 'facebook' ); ?></h2>
+			<h2><?php _e( "Facebook Button Settings", 'facebook' ); ?></h2>
 			<h2 class="nav-tab-wrapper">
 				<a class="nav-tab<?php if ( ! isset( $_GET['action'] ) ) echo ' nav-tab-active'; ?>" href="admin.php?page=facebook-button-plugin.php"><?php _e( 'Settings', 'facebook' ); ?></a>
 				<a class="nav-tab<?php if ( isset( $_GET['action'] ) && 'extra' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=facebook-button-plugin.php&amp;action=extra"><?php _e( 'Extra settings', 'facebook' ); ?></a>
+				<a class="nav-tab" href="http://bestwebsoft.com/plugin/facebook-like-button-plugin/#faq" target="_blank" ><?php _e( 'FAQ', 'facebook' ); ?></a>
 				<a class="nav-tab bws_go_pro_tab<?php if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=facebook-button-plugin.php&amp;action=go_pro"><?php _e( 'Go PRO', 'facebook' ); ?></a>
 			</h2>
 			<div class="updated fade" <?php if ( empty( $message ) || "" != $error ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
@@ -415,26 +419,27 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 						<tr valign="top">
 							<th scope="row"><?php _e( "Display button:", 'facebook' ); ?></th>
 							<td>
-								<label><input name='fcbkbttn_my_page' type='checkbox' value='1' <?php if ( 1 == $fcbkbttn_options['my_page'] ) echo 'checked="checked "'; ?>/> <?php echo __( "My Page", 'facebook' ); ?></label><br />
-								<label><input name='fcbkbttn_like' type='checkbox' value='1' <?php if ( 1 == $fcbkbttn_options['like'] ) echo 'checked="checked "'; ?>/> <?php echo __( "Like", 'facebook' ); ?></label><br />
+								<label><input name='fcbkbttn_my_page' type='checkbox' value='1' <?php if ( 1 == $fcbkbttn_options['my_page'] ) echo 'checked="checked "'; ?>/> <?php _e( "My Page", 'facebook' ); ?></label><br />
+								<label><input name='fcbkbttn_like' type='checkbox' value='1' <?php if ( 1 == $fcbkbttn_options['like'] ) echo 'checked="checked "'; ?>/> <?php _e( "Like", 'facebook' ); ?></label><br />
+								<label><input name='fcbkbttn_share' type='checkbox' value='1' <?php if ( 1 == $fcbkbttn_options['share'] ) echo 'checked="checked "'; ?>/> <?php _e( "Share", 'facebook' ); ?></label>
 							</td>
 						</tr>
 						<tr>
 							<th>
-								<?php echo __( "Choose display settings:", 'facebook' ); ?>
+								<?php _e( "Choose display settings:", 'facebook' ); ?>
 							</th>
 							<td>
 								<select name="fcbkbttn_display_option" onchange="if ( this . value == 'custom' ) { getElementById ( 'fcbkbttn_display_option_custom' ) . style.display = 'table-row'; } else { getElementById ( 'fcbkbttn_display_option_custom' ) . style.display = 'none'; }">
-									<option <?php if ( 'standart' == $fcbkbttn_options['display_option'] ) echo 'selected="selected"'; ?> value="standart"><?php echo __( "Standard Facebook image", 'facebook' ); ?></option>
+									<option <?php if ( 'standart' == $fcbkbttn_options['display_option'] ) echo 'selected="selected"'; ?> value="standart"><?php _e( "Standard Facebook image", 'facebook' ); ?></option>
 									<?php if ( $copy || 'custom' == $fcbkbttn_options['display_option'] ) { ?>
-										<option <?php if ( 'custom' == $fcbkbttn_options['display_option'] ) echo 'selected="selected"'; ?> value="custom"><?php echo __( "Custom Facebook image", 'facebook' ); ?></option>
+										<option <?php if ( 'custom' == $fcbkbttn_options['display_option'] ) echo 'selected="selected"'; ?> value="custom"><?php _e( "Custom Facebook image", 'facebook' ); ?></option>
 									<?php } ?>
 								</select>
 							</td>
 						</tr>
 						<tr>
 							<th>
-								<?php echo __( "Current image:", 'facebook' ); ?>
+								<?php _e( "Current image:", 'facebook' ); ?>
 							</th>
 							<td>
 								<img src="<?php echo $fcbkbttn_options['fb_img_link']; ?>" style="margin-left:2px;" />
@@ -442,32 +447,32 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 						</tr>
 						<tr id="fcbkbttn_display_option_custom" <?php if ( 'custom' == $fcbkbttn_options['display_option'] ) { echo ( 'style="display:table-row"' ); } else { echo ( 'style="display:none"' ); } ?>>
 							<th scope="row">
-								<?php echo __( "Facebook image:", 'facebook' ); ?>
+								<?php _e( "Facebook image:", 'facebook' ); ?>
 							</th>
 							<td>
 								<input type="hidden" name="MAX_FILE_SIZE" value="64000"/>
 								<input type="hidden" name="home" value="<?php echo ABSPATH ; ?>"/>
 								<input name="uploadfile" type="file" /><br />
-								<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php echo __( 'Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:"jpg", "jpeg", "png".', 'facebook' ); ?></span>
+								<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php _e( 'Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:"jpg", "jpeg", "png".', 'facebook' ); ?></span>
 							</td>
 						</tr>
 						<tr>
 							<th>
-								<?php echo __( "Facebook Button Position:", 'facebook' ); ?>
+								<?php _e( "Facebook Button Position:", 'facebook' ); ?>
 							</th>
 							<td>
 								<select name="fcbkbttn_where" onchange="if ( this . value == 'shortcode' ) { getElementById ( 'shortcode' ) . style.display = 'inline'; } else { getElementById ( 'shortcode' ) . style.display = 'none'; }">
-									<option <?php if ( 'before' == $fcbkbttn_options['where']  ) echo 'selected="selected"'; ?> value="before"><?php echo __( "Before", 'facebook' ); ?></option>
-									<option <?php if ( 'after' == $fcbkbttn_options['where']  ) echo 'selected="selected"'; ?> value="after"><?php echo __( "After", 'facebook' ); ?></option>
-									<option <?php if ( 'beforeandafter' == $fcbkbttn_options['where']  ) echo 'selected="selected"'; ?> value="beforeandafter"><?php echo __( "Before and After", 'facebook' ); ?></option>
-									<option <?php if ( 'shortcode' == $fcbkbttn_options['where'] ) echo 'selected="selected"'; ?> value="shortcode"><?php echo __( "Shortcode", 'facebook' ); ?></option>
+									<option <?php if ( 'before' == $fcbkbttn_options['where']  ) echo 'selected="selected"'; ?> value="before"><?php _e( "Before", 'facebook' ); ?></option>
+									<option <?php if ( 'after' == $fcbkbttn_options['where']  ) echo 'selected="selected"'; ?> value="after"><?php _e( "After", 'facebook' ); ?></option>
+									<option <?php if ( 'beforeandafter' == $fcbkbttn_options['where']  ) echo 'selected="selected"'; ?> value="beforeandafter"><?php _e( "Before and After", 'facebook' ); ?></option>
+									<option <?php if ( 'shortcode' == $fcbkbttn_options['where'] ) echo 'selected="selected"'; ?> value="shortcode"><?php _e( "Shortcode", 'facebook' ); ?></option>
 								</select>
-								<span id="shortcode" style="color: rgb(136, 136, 136); font-size: 10px; <?php if ( $fcbkbttn_options['where'] == 'shortcode' ) { echo ( 'display:inline' ); } else { echo ( 'display:none' ); }?>"><?php echo __( "If you would like to add a Facebook button to your website, just copy and paste this shortcode into your post or page:", 'facebook' ); ?> [fb_button].</span>
+								<span id="shortcode" style="color: rgb(136, 136, 136); font-size: 10px; <?php if ( $fcbkbttn_options['where'] == 'shortcode' ) { echo ( 'display:inline' ); } else { echo ( 'display:none' ); }?>"><?php _e( "If you would like to add a Facebook button to your website, just copy and paste this shortcode into your post or page:", 'facebook' ); ?> [fb_button].</span>
 							</td>
 						</tr>
 						<tr>
 							<th>
-								<?php echo __( "Facebook Button language:", 'facebook' ); ?>
+								<?php _e( "Facebook Button language:", 'facebook' ); ?>
 							</th>
 							<td>
 								<select name="fcbkbttn_locale">
@@ -478,7 +483,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 									echo '>' . esc_html ( $val ) . '</option>';
 								} ?>
 								</select>
-								<span id="shortcode" style="color: rgb(136, 136, 136); font-size: 10px; display:inline"><?php echo __( "Change the language of Facebook Like Button", 'facebook' ); ?></span>
+								<span id="shortcode" style="color: rgb(136, 136, 136); font-size: 10px; display:inline"><?php _e( "Change the language of Facebook Like Button", 'facebook' ); ?></span>
 							</td>
 						</tr>
 						<tr valign="top">
@@ -486,7 +491,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 							<td>
 								<label><input name='fcbkbttn_html5' type='radio' value='0' <?php if ( 0 == $fcbkbttn_options['html5'] ) echo 'checked="checked "'; ?> /><?php echo "<code>&lt;fb:like&gt;</code>"; ?></label><br />
 								<label><input name='fcbkbttn_html5' type='radio' value='1' <?php if ( 1 == $fcbkbttn_options['html5'] ) echo 'checked="checked "'; ?> /><?php echo "<code>&lt;div&gt;</code>"; ?></label>
-								<span style="color: rgb(136, 136, 136); font-size: 10px; display:inline">(<?php echo __( "Use this tag to improve validation of your site", 'facebook' ); ?>)</span>
+								<span style="color: rgb(136, 136, 136); font-size: 10px; display:inline">(<?php _e( "Use this tag to improve validation of your site", 'facebook' ); ?>)</span>
 							</td>
 						</tr>
 					</table>
@@ -526,7 +531,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 							</tr>
 							<tr valign="top">
 								<td colspan="2">
-									<img src="<?php echo plugins_url( 'images/pro_screen_1.png', __FILE__ ); ?>" alt="<?php _e( "Example of site pages' tree", 'facebook' ); ?>" title="<?php _e( "Example of site pages' tree", 'facebook' ); ?>" />
+									<img src="<?php echo plugins_url( 'images/pro_screen_1.png', __FILE__ ); ?>" alt="<?php _e( "Example of the site's pages tree", 'facebook' ); ?>" title="<?php _e( "Example of site pages' tree", 'facebook' ); ?>" />
 								</td>
 							</tr>
 							<tr valign="top">
@@ -624,7 +629,7 @@ if ( ! function_exists( 'fcbkbttn_display_button' ) ) {
 		$fcbkbttn_where	=	$fcbkbttn_options['where'];
 		$permalink_post	=	get_permalink( $post->ID );
 		/* Button */
-		$button			=	'<div id="fcbk_share">';
+		$button			=	'<div class="fcbk_share">';
 		$img			=	$fcbkbttn_options['fb_img_link'];
 		$url			=	$fcbkbttn_options['link'];
 		if ( 1 == $fcbkbttn_options['my_page'] ) {
@@ -635,12 +640,22 @@ if ( ! function_exists( 'fcbkbttn_display_button' ) ) {
 						</div>';
 		}
 		if ( 1 == $fcbkbttn_options['like'] ) {
-			$button .= '<div class="fcbk_like">
-							<div id="fb-root"></div>';
-			if ( 1 == $fcbkbttn_options['html5'] )
-				$button .=	'<div class="fb-like" data-href="' . $permalink_post . '" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></div>';
-			else
-				$button .= '<fb:like href="' . $permalink_post . '" send="false" layout="button_count" width="450" show_faces="false" font=""></fb:like></div>';
+			$button .= '<div class="fcbk_like">';
+			if ( 1 == $fcbkbttn_options['html5'] ) {
+				$button .=	'<div class="fb-like" data-href="' . $permalink_post . '" data-layout="button_count" data-action="like" data-show-faces="false"';
+					if ( 1 == $fcbkbttn_options['share'] )
+						$button .= ' data-share="true"></div></div>';
+					else
+						$button .= ' data-share="false"></div></div>';
+			} else {
+				$button .= '<fb:like href="' . $permalink_post . '" layout="button_count" width="450" show_faces="false"';
+				if ( 1 == $fcbkbttn_options['share'] )
+					$button .= ' share="true"></fb:like></div>';
+				else
+					$button .= ' share="false"></fb:like></div>';
+			}
+		} else if ( 1 != $fcbkbttn_options['like'] && 1 == $fcbkbttn_options['share'] ) {
+			$button .=	'<div class="fb-share-button" data-href="' . $permalink_post . '" data-type="button_count"></div>';
 		}		
 		$button .= '</div>';
 		/* Indication where show Facebook Button depending on selected item in admin page. */
@@ -664,7 +679,7 @@ if ( ! function_exists( 'fcbkbttn_shortcode' ) ) {
 		global $post, $fcbkbttn_options;
 		$fcbkbttn_where	=	$fcbkbttn_options['where'];
 		$permalink_post	=	get_permalink( $post->ID );
-		$button			=	'<div id="fcbk_share">';
+		$button			=	'<div class="fcbk_share">';
 		$img			=	$fcbkbttn_options['fb_img_link'];
 		$url			=	$fcbkbttn_options['link'];
 		if ( 1 == $fcbkbttn_options['my_page'] ) {
@@ -677,11 +692,28 @@ if ( ! function_exists( 'fcbkbttn_shortcode' ) ) {
 		if ( 1 == $fcbkbttn_options['like'] ) {
 			$button .=	'<div class="fcbk_like">
 							<div id="fb-root"></div>
-							<script src="//connect.facebook.net/' . $fcbkbttn_options['locale'] . '/all.js#appId=224313110927811&amp;xfbml=1"></script>';
-							if ( 1 == $fcbkbttn_options['html5'] )
-								$button .=	'<div class="fb-like" data-href="' . $permalink_post . '" data-layout="button_count" data-width="450" data-action="like" data-show-faces="false"></div></div>';
-							else
-								$button .= '<fb:like href="' . $permalink_post . '" send="false" layout="button_count" width="450" show_faces="false" font=""></fb:like></div>';
+							<script>(function(d, s, id) {
+								var js, fjs = d.getElementsByTagName(s)[0];
+								if (d.getElementById(id)) return;
+								js = d.createElement(s); js.id = id;
+								js.src = "//connect.facebook.net/' . $fcbkbttn_options['locale'] . '/sdk.js#xfbml=1&appId=1443946719181573&version=v2.0";
+								fjs.parentNode.insertBefore(js, fjs);
+							}(document, "script", "facebook-jssdk"));</script>';
+			if ( 1 == $fcbkbttn_options['html5'] ) {
+				$button .=	'<div class="fb-like" data-href="' . $permalink_post . '" data-layout="button_count" data-action="like" data-show-faces="false"';
+					if ( 1 == $fcbkbttn_options['share'] )
+						$button .= ' data-share="true"></div></div>';
+					else
+						$button .= ' data-share="false"></div></div>';
+			} else {
+				$button .= '<fb:like href="' . $permalink_post . '" layout="button_count" width="450" show_faces="false"';
+				if ( 1 == $fcbkbttn_options['share'] )
+					$button .= ' share="true"></fb:like></div>';
+				else
+					$button .= ' share="false"></fb:like></div>';
+			}
+		} else if ( 1 != $fcbkbttn_options['like'] && 1 == $fcbkbttn_options['share'] ) {
+			$button .=	'<div class="fb-share-button" data-href="' . $permalink_post . '" data-type="button_count"></div>';
 		}
 		$button .= '</div>';
 		return $button;
@@ -705,6 +737,22 @@ if ( ! function_exists( 'fcbkbttn_meta' ) ) {
 					print "\n" . '<meta property="og:image" content="' . esc_url( $image ) . '"/>';
 				}
 			}
+		}
+	}
+}
+
+if ( ! function_exists( 'fcbkbttn_footer_script' ) ) {
+	function fcbkbttn_footer_script () {
+		global $fcbkbttn_options;
+		if ( ( 1 == $fcbkbttn_options['like'] || 1 == $fcbkbttn_options['share'] ) && 'shortcode' != $fcbkbttn_options['where'] ) {
+			echo '<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/' . $fcbkbttn_options['locale'] . '/sdk.js#xfbml=1&appId=1443946719181573&version=v2.0";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, "script", "facebook-jssdk"));</script>';
 		}
 	}
 }
@@ -738,20 +786,14 @@ if ( ! function_exists ( 'fcbkbttn_links' ) ) {
 }
 /* End function fcbkbttn_links */
 
-if ( ! function_exists( 'fcbkbttn_front_end_head' ) ) {
-	function fcbkbttn_front_end_head() {
-		global $fcbkbttn_options;
-		if ( 1 == $fcbkbttn_options['like'] && 'shortcode' != $fcbkbttn_options['where'] ) {
-			wp_enqueue_script( 'fcbk_fron_end_script', '//connect.facebook.net/' . $fcbkbttn_options['locale'] . '/all.js#appId=224313110927811&amp;xfbml=1' );
-		}
-	}
-}
-
 if ( ! function_exists( 'fcbkbttn_admin_head' ) ) {
 	function fcbkbttn_admin_head() {
-		if ( isset( $_GET['page'] ) && "facebook-button-plugin.php" == $_GET['page'] ) {
+		global $fcbkbttn_options;
+		if ( ! is_admin() || ( isset( $_GET['page'] ) && "facebook-button-plugin.php" == $_GET['page'] ) ) {
 			wp_enqueue_style( 'fcbk_stylesheet', plugins_url( 'css/style.css', __FILE__ ) );
-			wp_enqueue_script( 'fcbk_script', plugins_url( 'js/script.js', __FILE__ ) );
+			wp_enqueue_script( 'fcbk_script', plugins_url( 'js/script.js', __FILE__ ), array( 'jquery' ) );
+			if ( 1 == $fcbkbttn_options['like'] || 1 == $fcbkbttn_options['share'] )
+				wp_enqueue_script( 'fcbk_connect', '//connect.facebook.net/' . $fcbkbttn_options['locale'] . '/all.js' );
 		}
 	}
 }
@@ -762,8 +804,11 @@ if ( ! function_exists ( 'fcbkbttn_plugin_banner' ) ) {
 		if ( 'plugins.php' == $hook_suffix ) {
 			global $fcbkbttn_plugin_info;
 			$banner_array = array(
+				array( 'sndr_hide_banner_on_plugin_page', 'sender/sender.php', '0.5' ),
+				array( 'srrl_hide_banner_on_plugin_page', 'user-role/user-role.php', '1.4' ),
 				array( 'pdtr_hide_banner_on_plugin_page', 'updater/updater.php', '1.12' ),
-				array( 'cntctfrmtdb_hide_banner_on_plugin_page', 'contact-form-to-db/contact_form_to_db.php', '1.2' ),		
+				array( 'cntctfrmtdb_hide_banner_on_plugin_page', 'contact-form-to-db/contact_form_to_db.php', '1.2' ),
+				array( 'cntctfrmmlt_hide_banner_on_plugin_page', 'contact-form-multi/contact-form-multi.php', '1.0.7' ),		
 				array( 'gglmps_hide_banner_on_plugin_page', 'bws-google-maps/bws-google-maps.php', '1.2' ),		
 				array( 'fcbkbttn_hide_banner_on_plugin_page', 'facebook-button-plugin/facebook-button-plugin.php', '2.29' ),
 				array( 'twttr_hide_banner_on_plugin_page', 'twitter-plugin/twitter.php', '2.34' ),
@@ -839,8 +884,6 @@ if ( ! function_exists( 'fcbkbttn_delete_options' ) ) {
 	}
 }
 
-register_activation_hook( __FILE__, 'pdprdcts_activation_hook');
-
 /* Calling a function add administrative menu. */
 add_action( 'admin_menu', 'fcbkbttn_add_pages' );
 /* Initialization */
@@ -851,7 +894,7 @@ add_action( 'wp_enqueue_scripts', 'fcbkbttn_admin_head' );
 add_action( 'admin_enqueue_scripts', 'fcbkbttn_admin_head' );
 /* Adding front-end stylesheets */
 add_action( 'wp_head', 'fcbkbttn_meta' );
-add_action( 'wp_enqueue_scripts', 'fcbkbttn_front_end_head' );
+add_action( 'wp_footer', 'fcbkbttn_footer_script' );
 /* Add shortcode and plugin buttons */
 add_shortcode( 'fb_button', 'fcbkbttn_shortcode' );
 add_filter( 'the_content', 'fcbkbttn_display_button' );

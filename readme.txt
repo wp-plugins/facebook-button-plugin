@@ -1,9 +1,9 @@
 ﻿=== Facebook Like Button ===
 Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
-Tags: Facebook, Facebook Button, Like, Like button, Share, Share button, Facebook like, Facebook like button, Facebook button like, Button like, Facebook share, Facebook share button, Facebook button share
+Tags: button, buton, batton, button image, button position, Button like, Facebook, Facebook account button, facebook button, facebook button language, Facebook button icon, Facebook button like, Facebook button share, Facebook ID, Facebook page, facebook like, facebook like button, facebook share, facebook share button, follow, Follow button, icon, Like, like button, My Page button, Share, share button, social, social button, social account
 Requires at least: 3.0
-Tested up to: 3.8.2
+Tested up to: 3.9.1
 Stable tag: 2.30
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -38,15 +38,9 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pl
 
 = Translation =
 
-* Arabic (ar_AR) (thanks to Albayan Design Hani Aladoli)
 * French (fr_FR) (thanks to <a href="mailto:wpthemefr@gmail.com">Murat</a>)
-* Hebrew (he_IL) (thanks to Sagive SEO)
 * Indonesian (id_ID) (thanks to Nasrulhaq, www.al-badar.net)
-* Persian (fa_IR) (thanks to Einolah Kiamehr)
 * Russian (ru_RU)
-* Serbian (sr_RS) (thanks to Georgijevic Team, www.georgijevic.info)
-* Spanish (es_ES) (thanks to Jesús Parra)
-* Turkish (tr_TR) (thanks to Can Atasever, www.candanblog.com)
 * Ukrainian (uk)
 
 If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
@@ -112,6 +106,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 4. Displaying Facebook Button in your post via the shortcode.
 
 == Changelog ==
+
+= V2.31 - 11.06.2014 =
+* New : Share button was added.
+* Update : We updated all functionality for wordpress 3.9.1.
+* Bugfix : Problem with switching user was fixed.
 
 = V2.30 - 14.04.2014 =
 * Update : We updated all functionality for wordpress 3.8.2.
@@ -238,6 +237,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.31 =
+Share button was added. We updated all functionality for wordpress 3.9.1. Problem with switching user was fixed.
 
 = V2.30 =
 We updated all functionality for wordpress 3.8.2.
