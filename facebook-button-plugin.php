@@ -4,7 +4,7 @@ Plugin Name: Facebook Button
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.31
+Version: 2.32
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -792,8 +792,8 @@ if ( ! function_exists( 'fcbkbttn_admin_head' ) ) {
 		if ( ! is_admin() || ( isset( $_GET['page'] ) && "facebook-button-plugin.php" == $_GET['page'] ) ) {
 			wp_enqueue_style( 'fcbk_stylesheet', plugins_url( 'css/style.css', __FILE__ ) );
 			wp_enqueue_script( 'fcbk_script', plugins_url( 'js/script.js', __FILE__ ), array( 'jquery' ) );
-			if ( 1 == $fcbkbttn_options['like'] || 1 == $fcbkbttn_options['share'] )
-				wp_enqueue_script( 'fcbk_connect', '//connect.facebook.net/' . $fcbkbttn_options['locale'] . '/all.js' );
+			if ( ( 1 == $fcbkbttn_options['like'] || 1 == $fcbkbttn_options['share'] ) && 'en_US' != $fcbkbttn_options['locale'] )
+				wp_enqueue_script( 'fcbk_connect', '//connect.facebook.net/' . $fcbkbttn_options['locale'] . '/all.js#xfbml=1&appId=1443946719181573' );
 		}
 	}
 }
