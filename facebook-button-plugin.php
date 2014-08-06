@@ -4,7 +4,7 @@ Plugin Name: Facebook Button
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.32
+Version: 2.33
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -199,24 +199,25 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 		global $fcbkbttn_options, $wp_version, $fcbkbttn_plugin_info;
 		$copy = false;
 		$message = $error = "";
-
-		if ( false !== @copy( plugin_dir_path( __FILE__ ) . "images/facebook-ico." . $fcbkbttn_options['extention'], plugin_dir_path( __FILE__ ) . "images/facebook-ico3." . $fcbkbttn_options['extention'] ) )
-			$copy = true;
+		$upload_dir = wp_upload_dir();
 
 		if ( isset( $_REQUEST['fcbkbttn_form_submit'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'fcbkbttn_nonce_name' ) ) {
 			/* Takes all the changed settings on the plugin's admin page and saves them in array 'fcbk_bttn_plgn_options'. */
 			if ( isset( $_REQUEST['fcbkbttn_where'] ) && isset( $_REQUEST['fcbkbttn_link'] ) && isset( $_REQUEST['fcbkbttn_display_option'] ) ) {
-				$fcbkbttn_options['link']				=	$_REQUEST['fcbkbttn_link'];
+				$fcbkbttn_options['link']			=	$_REQUEST['fcbkbttn_link'];
 				$fcbkbttn_options['where']			=	$_REQUEST['fcbkbttn_where'];
 				$fcbkbttn_options['display_option']	=	$_REQUEST['fcbkbttn_display_option'];
-				$fcbkbttn_options['my_page']			=	isset( $_REQUEST['fcbkbttn_my_page'] ) ? 1 : 0 ;
-				$fcbkbttn_options['like']				=	isset( $_REQUEST['fcbkbttn_like'] ) ? 1 : 0 ;
-				$fcbkbttn_options['share']				=	isset( $_REQUEST['fcbkbttn_share'] ) ? 1 : 0 ;
+				if ( 'standart' == $fcbkbttn_options['display_option'] ) {
+					$fcbkbttn_options['fb_img_link'] = plugins_url( 'images/standart-facebook-ico.png', __FILE__ );
+				}				
+				$fcbkbttn_options['my_page']		=	isset( $_REQUEST['fcbkbttn_my_page'] ) ? 1 : 0 ;
+				$fcbkbttn_options['like']			=	isset( $_REQUEST['fcbkbttn_like'] ) ? 1 : 0 ;
+				$fcbkbttn_options['share']			=	isset( $_REQUEST['fcbkbttn_share'] ) ? 1 : 0 ;
 				$fcbkbttn_options['locale']			=	$_REQUEST['fcbkbttn_locale'];
 				$fcbkbttn_options['html5']			= 	$_REQUEST['fcbkbttn_html5'];
 				if ( isset( $_FILES['uploadfile']['tmp_name'] ) &&  $_FILES['uploadfile']['tmp_name'] != "" ) {
 					$fcbkbttn_options['count_icon']	=	$fcbkbttn_options['count_icon'] + 1;
-					$file_ext = wp_check_filetype($_FILES['uploadfile']['name']);
+					$file_ext = wp_check_filetype( $_FILES['uploadfile']['name'] );
 					$fcbkbttn_options['extention'] = $file_ext['ext'];
 				}
 
@@ -227,16 +228,22 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 			}
 			/* Form options */
 			if ( isset( $_FILES['uploadfile']['tmp_name'] ) &&  "" != $_FILES['uploadfile']['tmp_name'] ) {
+				if ( ! $upload_dir["error"] ) {
+					$fcbkbttn_cstm_mg_folder = $upload_dir['basedir'] . '/facebook-image';
+					if ( ! is_dir( $fcbkbttn_cstm_mg_folder ) ) {
+						wp_mkdir_p( $fcbkbttn_cstm_mg_folder, 0755 );
+					}
+				}				
 				$max_image_width	=	100;
 				$max_image_height	=	40;
 				$max_image_size		=	32 * 1024;
 				$valid_types 		=	array( 'jpg', 'jpeg', 'png' );
 				/* Construction to rename downloading file */
 				$new_name			=	'facebook-ico' . $fcbkbttn_options['count_icon'];
-				$new_ext			=	wp_check_filetype($_FILES['uploadfile']['name']);
+				$new_ext			=	wp_check_filetype( $_FILES['uploadfile']['name'] );
 				$namefile			=	$new_name . '.' . $new_ext['ext'];
-				$uploaddir			=	$_REQUEST['home'] . 'wp-content/plugins/facebook-button-plugin/images/'; /* The directory in which we will take the file: */
-				$uploadfile			=	$uploaddir . $namefile;
+				/* $uploaddir			=	$_REQUEST['home'] . 'wp-content/plugins/facebook-button-plugin/images/'; The directory in which we will take the file: */
+				$uploadfile			=	$fcbkbttn_cstm_mg_folder . '/' . $namefile;
 
 				/* Checks is file download initiated by user */
 				if ( isset( $_FILES['uploadfile'] ) && 'custom' == $_REQUEST['fcbkbttn_display_option'] ) {
@@ -254,7 +261,8 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 							if ( ( $size ) && ( $size[0] <= $max_image_width ) && ( $size[1] <= $max_image_height ) ) {
 								/* If file satisfies requirements, we will move them from temp to your plugin folder and rename to 'facebook_ico.jpg' */
 								if ( move_uploaded_file( $_FILES['uploadfile']['tmp_name'], $uploadfile ) ) {
-									$message .= " Upload successful.";
+									$message .= '. ' . __( "Upload successful.", 'facebook' );
+									fcbkbttn_update_option();
 								} else {
 									$error = __( "Error: moving file failed", 'facebook' );
 								}
@@ -267,7 +275,6 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 					}
 				}
 			}
-			fcbkbttn_update_option();
 		}
 		/* GO PRO */
 		if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) {
@@ -299,7 +306,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 						}	
 
 						/* download Pro */
-						if ( !function_exists( 'get_plugins' ) )
+						if ( ! function_exists( 'get_plugins' ) )
 							require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 						if ( ! function_exists( 'is_plugin_active_for_network' ) )
 							require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
@@ -324,7 +331,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 								} else {
 									$response = maybe_unserialize( wp_remote_retrieve_body( $raw_response ) );
 									
-									if ( is_array( $response ) && !empty( $response ) ) {
+									if ( is_array( $response ) && ! empty( $response ) ) {
 										foreach ( $response as $key => $value ) {
 											if ( "wrong_license_key" == $value->package ) {
 												$error = __( "Wrong license key", 'facebook' ); 
@@ -429,12 +436,14 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 								<?php _e( "Choose display settings:", 'facebook' ); ?>
 							</th>
 							<td>
-								<select name="fcbkbttn_display_option" onchange="if ( this . value == 'custom' ) { getElementById ( 'fcbkbttn_display_option_custom' ) . style.display = 'table-row'; } else { getElementById ( 'fcbkbttn_display_option_custom' ) . style.display = 'none'; }">
-									<option <?php if ( 'standart' == $fcbkbttn_options['display_option'] ) echo 'selected="selected"'; ?> value="standart"><?php _e( "Standard Facebook image", 'facebook' ); ?></option>
-									<?php if ( $copy || 'custom' == $fcbkbttn_options['display_option'] ) { ?>
+								<?php if ( scandir( $upload_dir['basedir'] ) && is_writable( $upload_dir['basedir'] ) ) { ?>
+									<select name="fcbkbttn_display_option" onchange="if ( this . value == 'custom' ) { getElementById ( 'fcbkbttn_display_option_custom' ) . style.display = 'table-row'; } else { getElementById ( 'fcbkbttn_display_option_custom' ) . style.display = 'none'; }">
+										<option <?php if ( 'standart' == $fcbkbttn_options['display_option'] ) echo 'selected="selected"'; ?> value="standart"><?php _e( "Standard Facebook image", 'facebook' ); ?></option>
 										<option <?php if ( 'custom' == $fcbkbttn_options['display_option'] ) echo 'selected="selected"'; ?> value="custom"><?php _e( "Custom Facebook image", 'facebook' ); ?></option>
-									<?php } ?>
-								</select>
+									</select>
+								<?php } else {
+									echo __( "To use custom image you need to setup permissions to upload directory of your site", 'facebook' ) . " - " .$upload_dir['basedir'];
+								} ?>
 							</td>
 						</tr>
 						<tr>
@@ -450,8 +459,8 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 								<?php _e( "Facebook image:", 'facebook' ); ?>
 							</th>
 							<td>
-								<input type="hidden" name="MAX_FILE_SIZE" value="64000"/>
-								<input type="hidden" name="home" value="<?php echo ABSPATH ; ?>"/>
+								<!-- <input type="hidden" name="MAX_FILE_SIZE" value="64000"/>
+								<input type="hidden" name="home" value="<?php echo ABSPATH ; ?>"/> -->
 								<input name="uploadfile" type="file" /><br />
 								<span style="color: rgb(136, 136, 136); font-size: 10px;"><?php _e( 'Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:"jpg", "jpeg", "png".', 'facebook' ); ?></span>
 							</td>
@@ -614,7 +623,8 @@ if ( ! function_exists( 'fcbkbttn_update_option' ) ) {
 		if ( 'standart' == $fcbkbttn_options['display_option'] ) {
 			$fb_img_link = plugins_url( 'images/standart-facebook-ico.png', __FILE__ );
 		} else if ( 'custom' == $fcbkbttn_options['display_option'] ) {
-			$fb_img_link = plugins_url( 'images/facebook-ico' . $fcbkbttn_options['count_icon'] . '.' . $fcbkbttn_options['extention'], __FILE__ );
+			$upload_dir = wp_upload_dir();
+			$fb_img_link = $upload_dir['baseurl'] . '/facebook-image/facebook-ico' . $fcbkbttn_options['count_icon'] . '.' . $fcbkbttn_options['extention'];
 		}
 		$fcbkbttn_options['fb_img_link'] = $fb_img_link ;
 		update_option( 'fcbk_bttn_plgn_options', $fcbkbttn_options );
@@ -804,6 +814,7 @@ if ( ! function_exists ( 'fcbkbttn_plugin_banner' ) ) {
 		if ( 'plugins.php' == $hook_suffix ) {
 			global $fcbkbttn_plugin_info;
 			$banner_array = array(
+				array( 'lmtttmpts_hide_banner_on_plugin_page', 'limit-attempts/limit-attempts.php', '1.0.2' ),
 				array( 'sndr_hide_banner_on_plugin_page', 'sender/sender.php', '0.5' ),
 				array( 'srrl_hide_banner_on_plugin_page', 'user-role/user-role.php', '1.4' ),
 				array( 'pdtr_hide_banner_on_plugin_page', 'updater/updater.php', '1.12' ),
@@ -879,6 +890,21 @@ if ( ! function_exists ( 'fcbkbttn_plugin_banner' ) ) {
 /* Function for delete options */
 if ( ! function_exists( 'fcbkbttn_delete_options' ) ) {
 	function fcbkbttn_delete_options() {
+		if ( ! function_exists( 'get_plugins' ) )
+			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+		$all_plugins = get_plugins();
+		if ( ! array_key_exists( 'facebook-button-pro/facebook-button-pro.php', $all_plugins ) ) {
+			/* delete custom images if no PRO version */
+			$upload_dir = wp_upload_dir();
+			$fcbkbttn_cstm_mg_folder = $upload_dir['basedir'] . '/facebook-image/';
+			if ( is_dir( $fcbkbttn_cstm_mg_folder ) ) {
+				$fcbkbttn_cstm_mg_files = scandir( $fcbkbttn_cstm_mg_folder );
+				foreach ( $fcbkbttn_cstm_mg_files as $value ) {
+					@unlink ( $fcbkbttn_cstm_mg_folder . $value );
+				}
+				@rmdir( $fcbkbttn_cstm_mg_folder );
+			}
+		}
 		delete_option( 'fcbk_bttn_plgn_options' );
 		delete_site_option( 'fcbk_bttn_plgn_options' );
 	}
