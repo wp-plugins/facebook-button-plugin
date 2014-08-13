@@ -4,7 +4,7 @@ Plugin Name: Facebook Button
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.33
+Version: 2.34
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -123,10 +123,10 @@ if ( ! function_exists( 'fcbkbttn_settings' ) ) {
 			'like'					=>	1,
 			'share'					=>	0,
 			'where'					=>	'',
-			'display_option'		=>	'',
+			'display_option'		=>	'standard',
 			'count_icon'			=>	1,
 			'extention'				=>	'png',
-			'fb_img_link'			=>	plugins_url( "images/standart-facebook-ico.png", __FILE__ ),
+			'fb_img_link'			=>	plugins_url( "images/standard-facebook-ico.png", __FILE__ ),
 			'locale' 				=>	'en_US',
 			'html5'					=>	0
 		);
@@ -159,14 +159,14 @@ if ( ! function_exists( 'fcbkbttn_settings' ) ) {
 			}
 		}
 		/* Get options from the database */
-		if ( 1 == $wpmu )
-			$fcbkbttn_options = get_site_option( 'fcbk_bttn_plgn_options' );
-		else
-			$fcbkbttn_options = get_option( 'fcbk_bttn_plgn_options' );
+		$fcbkbttn_options = ( 1 == $wpmu ) ? get_site_option( 'fcbk_bttn_plgn_options' ) : get_option( 'fcbk_bttn_plgn_options' );
 
 		if ( ! isset( $fcbkbttn_options['plugin_option_version'] ) || $fcbkbttn_options['plugin_option_version'] != $fcbkbttn_plugin_info["Version"] ) {
-			if ( stristr( $fcbkbttn_options['fb_img_link'], 'standart-facebook-ico.jpg' ) )
-				$fcbkbttn_options['fb_img_link'] = plugins_url( "images/standart-facebook-ico.png", __FILE__ );	
+			if ( stristr( $fcbkbttn_options['fb_img_link'], 'standart-facebook-ico.jpg' ) || stristr( $fcbkbttn_options['fb_img_link'], 'standart-facebook-ico.png' ) )
+				$fcbkbttn_options['fb_img_link'] = plugins_url( "images/standard-facebook-ico.png", __FILE__ );	
+
+			if ( 'standart' == $fcbkbttn_options['display_option'] )
+				$fcbkbttn_options['display_option'] = 'standard';
 
 			if ( stristr( $fcbkbttn_options['fb_img_link'], 'img/' ) )
 				$fcbkbttn_options['fb_img_link'] = plugins_url( str_replace( 'img/', 'images/', $fcbkbttn_options['fb_img_link'] ), __FILE__ );	
@@ -204,11 +204,11 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 		if ( isset( $_REQUEST['fcbkbttn_form_submit'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'fcbkbttn_nonce_name' ) ) {
 			/* Takes all the changed settings on the plugin's admin page and saves them in array 'fcbk_bttn_plgn_options'. */
 			if ( isset( $_REQUEST['fcbkbttn_where'] ) && isset( $_REQUEST['fcbkbttn_link'] ) && isset( $_REQUEST['fcbkbttn_display_option'] ) ) {
-				$fcbkbttn_options['link']			=	$_REQUEST['fcbkbttn_link'];
+				$fcbkbttn_options['link']			=	stripslashes( esc_html( $_REQUEST['fcbkbttn_link'] ) );
 				$fcbkbttn_options['where']			=	$_REQUEST['fcbkbttn_where'];
 				$fcbkbttn_options['display_option']	=	$_REQUEST['fcbkbttn_display_option'];
-				if ( 'standart' == $fcbkbttn_options['display_option'] ) {
-					$fcbkbttn_options['fb_img_link'] = plugins_url( 'images/standart-facebook-ico.png', __FILE__ );
+				if ( 'standard' == $fcbkbttn_options['display_option'] ) {
+					$fcbkbttn_options['fb_img_link'] = plugins_url( 'images/standard-facebook-ico.png', __FILE__ );
 				}				
 				$fcbkbttn_options['my_page']		=	isset( $_REQUEST['fcbkbttn_my_page'] ) ? 1 : 0 ;
 				$fcbkbttn_options['like']			=	isset( $_REQUEST['fcbkbttn_like'] ) ? 1 : 0 ;
@@ -280,7 +280,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 		if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) {
 			global $wpmu;
 
-			$bws_license_key = ( isset( $_POST['bws_license_key'] ) ) ? trim( $_POST['bws_license_key'] ) : "";
+			$bws_license_key = ( isset( $_POST['bws_license_key'] ) ) ? stripslashes( esc_html( trim( $_POST['bws_license_key'] ) ) ) : "";
 			$bstwbsftwppdtplgns_options_defaults = array();
 			if ( 1 == $wpmu ) {
 				if ( !get_site_option( 'bstwbsftwppdtplgns_options' ) )
@@ -297,7 +297,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 					if ( strlen( $bws_license_key ) != 18 ) {
 						$error = __( "Wrong license key", 'facebook' );
 					} else {
-						$bws_license_plugin = trim( $_POST['bws_license_plugin'] );	
+						$bws_license_plugin = stripslashes( esc_html( $_POST['bws_license_plugin'] ) );	
 						if ( isset( $bstwbsftwppdtplgns_options['go_pro'][ $bws_license_plugin ]['count'] ) && $bstwbsftwppdtplgns_options['go_pro'][ $bws_license_plugin ]['time'] < ( time() + (24 * 60 * 60) ) ) {
 							$bstwbsftwppdtplgns_options['go_pro'][ $bws_license_plugin ]['count'] = $bstwbsftwppdtplgns_options['go_pro'][ $bws_license_plugin ]['count'] + 1;
 						} else {
@@ -438,7 +438,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 							<td>
 								<?php if ( scandir( $upload_dir['basedir'] ) && is_writable( $upload_dir['basedir'] ) ) { ?>
 									<select name="fcbkbttn_display_option" onchange="if ( this . value == 'custom' ) { getElementById ( 'fcbkbttn_display_option_custom' ) . style.display = 'table-row'; } else { getElementById ( 'fcbkbttn_display_option_custom' ) . style.display = 'none'; }">
-										<option <?php if ( 'standart' == $fcbkbttn_options['display_option'] ) echo 'selected="selected"'; ?> value="standart"><?php _e( "Standard Facebook image", 'facebook' ); ?></option>
+										<option <?php if ( 'standard' == $fcbkbttn_options['display_option'] ) echo 'selected="selected"'; ?> value="standard"><?php _e( "Standard Facebook image", 'facebook' ); ?></option>
 										<option <?php if ( 'custom' == $fcbkbttn_options['display_option'] ) echo 'selected="selected"'; ?> value="custom"><?php _e( "Custom Facebook image", 'facebook' ); ?></option>
 									</select>
 								<?php } else {
@@ -620,8 +620,8 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 if ( ! function_exists( 'fcbkbttn_update_option' ) ) {
 	function fcbkbttn_update_option() {
 		global $fcbkbttn_options;
-		if ( 'standart' == $fcbkbttn_options['display_option'] ) {
-			$fb_img_link = plugins_url( 'images/standart-facebook-ico.png', __FILE__ );
+		if ( 'standard' == $fcbkbttn_options['display_option'] ) {
+			$fb_img_link = plugins_url( 'images/standard-facebook-ico.png', __FILE__ );
 		} else if ( 'custom' == $fcbkbttn_options['display_option'] ) {
 			$upload_dir = wp_upload_dir();
 			$fb_img_link = $upload_dir['baseurl'] . '/facebook-image/facebook-ico' . $fcbkbttn_options['count_icon'] . '.' . $fcbkbttn_options['extention'];
