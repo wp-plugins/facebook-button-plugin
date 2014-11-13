@@ -4,7 +4,7 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&
 Tags: button, buton, batton, button image, button position, Button like, Facebook, Facebook account button, facebook button, facebook button language, Facebook button icon, Facebook button like, Facebook button share, Facebook ID, Facebook page, facebook like, facebook like button, facebook share, facebook share button, follow, Follow button, icon, Like, like button, My Page button, Share, share button, social, social button, social account
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 2.34
+Stable tag: 2.35
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,7 +20,7 @@ http://www.youtube.com/watch?v=QGv04uHVl5c
 
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
 
-<a href="http://bestwebsoft.com/plugin/facebook-like-button-pro/?k=4caab51af6593e97ad1e329fe0f53072" target="_blank">Upgrade to Pro Version</a>
+<a href="http://bestwebsoft.com/products/facebook-like-button/?k=4caab51af6593e97ad1e329fe0f53072" target="_blank">Upgrade to Pro Version</a>
 
 = Features =
 
@@ -34,7 +34,7 @@ http://www.youtube.com/watch?v=QGv04uHVl5c
 The author of the Facebook Like Button also recommends the following plugins:
 
 * <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
-There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=5019f1216fc048f1419fe4645da69381">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
+There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/updater/?k=5019f1216fc048f1419fe4645da69381">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
 
 = Translation =
 
@@ -106,6 +106,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 4. Displaying Facebook Button in your post via the shortcode.
 
 == Changelog ==
+
+= V2.35 - 13.11.2014 =
+* Bugfix : Plugin optimization is done.
+* Update : BWS plugins section is updated.
 
 = V2.34 - 13.08.2014 =
 * Budfix : Security Exploit was fixed.
@@ -247,6 +251,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.35 =
+Plugin optimization is done. BWS plugins section is updated.
 
 = V2.34 =
 Security Exploit was fixed.

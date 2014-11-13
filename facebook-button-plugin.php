@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: Facebook Button
-Plugin URI: http://bestwebsoft.com/plugin/
+Plugin URI: http://bestwebsoft.com/products/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.34
+Version: 2.35
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -27,21 +27,15 @@ License: GPLv2 or later
 
 if ( ! function_exists( 'fcbkbttn_add_pages' ) ) {
 	function fcbkbttn_add_pages() {
-		global $bstwbsftwppdtplgns_options, $wpmu, $bstwbsftwppdtplgns_added_menu;
+		global $bstwbsftwppdtplgns_options, $bstwbsftwppdtplgns_added_menu;
 		$bws_menu_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "bws_menu/bws_menu.php" );
 		$bws_menu_version = $bws_menu_info["Version"];
 		$base = plugin_basename(__FILE__);
 
 		if ( ! isset( $bstwbsftwppdtplgns_options ) ) {
-			if ( 1 == $wpmu ) {
-				if ( ! get_site_option( 'bstwbsftwppdtplgns_options' ) )
-					add_site_option( 'bstwbsftwppdtplgns_options', array(), '', 'yes' );
-				$bstwbsftwppdtplgns_options = get_site_option( 'bstwbsftwppdtplgns_options' );
-			} else {
-				if ( ! get_option( 'bstwbsftwppdtplgns_options' ) )
-					add_option( 'bstwbsftwppdtplgns_options', array(), '', 'yes' );
-				$bstwbsftwppdtplgns_options = get_option( 'bstwbsftwppdtplgns_options' );
-			}
+			if ( ! get_option( 'bstwbsftwppdtplgns_options' ) )
+				add_option( 'bstwbsftwppdtplgns_options', array(), '', 'yes' );
+			$bstwbsftwppdtplgns_options = get_option( 'bstwbsftwppdtplgns_options' );
 		}
 
 		if ( isset( $bstwbsftwppdtplgns_options['bws_menu_version'] ) ) {
@@ -77,9 +71,11 @@ if ( ! function_exists( 'fcbkbttn_add_pages' ) ) {
 /* Initialization */
 if ( ! function_exists( 'fcbkbttn_init' ) ) {
 	function fcbkbttn_init() {
-		global $wpmu, $fcbkbttn_options;
+		global $fcbkbttn_options;
 		/* Internationalization, first(!) */
 		load_plugin_textdomain( 'facebook', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+		/* Function check if plugin is compatible with current WP version  */
+		fcbkbttn_version_check();
 		/* Get options from the database */
 		if ( ! is_admin() || ( isset( $_GET['page'] ) && "facebook-button-plugin.php" == $_GET['page'] ) ) {
 			/* Get/Register and check settings for plugin */
@@ -100,14 +96,12 @@ if ( ! function_exists( 'fcbkbttn_admin_init' ) ) {
 		if ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) )	{		
 			$bws_plugin_info = array( 'id' => '78', 'version' => $fcbkbttn_plugin_info["Version"] );
 		}
-		/* Function check if plugin is compatible with current WP version  */
-		fcbkbttn_version_check();
 	}
 }
 
 if ( ! function_exists( 'fcbkbttn_settings' ) ) {
 	function fcbkbttn_settings() {
-		global $wpmu, $fcbkbttn_options, $fcbkbttn_plugin_info;
+		global $fcbkbttn_options, $fcbkbttn_plugin_info;
 
 		if ( ! $fcbkbttn_plugin_info ) {
 			if ( ! function_exists( 'get_plugin_data' ) )
@@ -131,35 +125,20 @@ if ( ! function_exists( 'fcbkbttn_settings' ) ) {
 			'html5'					=>	0
 		);
 		/* Install the option defaults */
-		if ( 1 == $wpmu ) {
-			if ( ! get_site_option( 'fcbk_bttn_plgn_options' ) ) {
-				if ( false !== get_site_option( 'fcbk_bttn_plgn_options_array' ) ) {
-					$old_options = get_site_option( 'fcbk_bttn_plgn_options_array' );
-					foreach ( $fcbkbttn_options_default as $key => $value ) {
-						if ( isset( $old_options['fcbk_bttn_plgn_' . $key] ) )
-						$fcbkbttn_options_default[$key] = $old_options['fcbk_bttn_plgn_' . $key];
-					}
-					update_site_option( 'fcbk_bttn_plgn_options', $fcbkbttn_options_default );
-					delete_site_option( 'fcbk_bttn_plgn_options_array' );
+		if ( ! get_option( 'fcbk_bttn_plgn_options' ) ) {
+			if ( false !== get_option( 'fcbk_bttn_plgn_options_array' ) ) {
+				$old_options = get_option( 'fcbk_bttn_plgn_options_array' );
+				foreach ( $fcbkbttn_options_default as $key => $value ) {
+					if ( isset( $old_options['fcbk_bttn_plgn_' . $key] ) )
+					$fcbkbttn_options_default[$key] = $old_options['fcbk_bttn_plgn_' . $key];
 				}
-				add_site_option( 'fcbk_bttn_plgn_options', $fcbkbttn_options_default, '', 'yes' );
+				update_option( 'fcbk_bttn_plgn_options', $fcbkbttn_options_default );
+				delete_option( 'fcbk_bttn_plgn_options_array' );
 			}
-		} else {
-			if ( ! get_option( 'fcbk_bttn_plgn_options' ) ) {
-				if ( false !== get_option( 'fcbk_bttn_plgn_options_array' ) ) {
-					$old_options = get_option( 'fcbk_bttn_plgn_options_array' );
-					foreach ( $fcbkbttn_options_default as $key => $value ) {
-						if ( isset( $old_options['fcbk_bttn_plgn_' . $key] ) )
-						$fcbkbttn_options_default[$key] = $old_options['fcbk_bttn_plgn_' . $key];
-					}
-					update_option( 'fcbk_bttn_plgn_options', $fcbkbttn_options_default );
-					delete_option( 'fcbk_bttn_plgn_options_array' );
-				}
-				add_option( 'fcbk_bttn_plgn_options', $fcbkbttn_options_default, '', 'yes' );
-			}
+			add_option( 'fcbk_bttn_plgn_options', $fcbkbttn_options_default, '', 'yes' );
 		}
 		/* Get options from the database */
-		$fcbkbttn_options = ( 1 == $wpmu ) ? get_site_option( 'fcbk_bttn_plgn_options' ) : get_option( 'fcbk_bttn_plgn_options' );
+		$fcbkbttn_options = get_option( 'fcbk_bttn_plgn_options' );
 
 		if ( ! isset( $fcbkbttn_options['plugin_option_version'] ) || $fcbkbttn_options['plugin_option_version'] != $fcbkbttn_plugin_info["Version"] ) {
 			if ( stristr( $fcbkbttn_options['fb_img_link'], 'standart-facebook-ico.jpg' ) || stristr( $fcbkbttn_options['fb_img_link'], 'standart-facebook-ico.png' ) )
@@ -185,9 +164,13 @@ if ( ! function_exists ( 'fcbkbttn_version_check' ) ) {
 		$require_wp		=	"3.0"; /* Wordpress at least requires version */
 		$plugin			=	plugin_basename( __FILE__ );
 	 	if ( version_compare( $wp_version, $require_wp, "<" ) ) {
+	 		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 			if ( is_plugin_active( $plugin ) ) {
 				deactivate_plugins( $plugin );
-				wp_die( "<strong>" . $fcbkbttn_plugin_info['Name'] . " </strong> " . __( 'requires', 'facebook' ) . " <strong>WordPress " . $require_wp . "</strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'facebook') . "<br /><br />" . __( 'Back to the WordPress', 'facebook') . " <a href='" . get_admin_url( null, 'plugins.php' ) . "'>" . __( 'Plugins page', 'facebook') . "</a>." );
+				$admin_url = ( function_exists( 'get_admin_url' ) ) ? get_admin_url( null, 'plugins.php' ) : esc_url( '/wp-admin/plugins.php' );
+				if ( ! $fcbkbttn_plugin_info )
+					$fcbkbttn_plugin_info = get_plugin_data( __FILE__, false );
+				wp_die( "<strong>" . $fcbkbttn_plugin_info['Name'] . " </strong> " . __( 'requires', 'facebook' ) . " <strong>WordPress " . $require_wp . "</strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'facebook') . "<br /><br />" . __( 'Back to the WordPress', 'facebook') . " <a href='" . $admin_url . "'>" . __( 'Plugins page', 'facebook') . "</a>." );
 			}
 		}
 	}
@@ -278,19 +261,12 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 		}
 		/* GO PRO */
 		if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) {
-			global $wpmu;
 
 			$bws_license_key = ( isset( $_POST['bws_license_key'] ) ) ? stripslashes( esc_html( trim( $_POST['bws_license_key'] ) ) ) : "";
 			$bstwbsftwppdtplgns_options_defaults = array();
-			if ( 1 == $wpmu ) {
-				if ( !get_site_option( 'bstwbsftwppdtplgns_options' ) )
-					add_site_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options_defaults, '', 'yes' );
-				$bstwbsftwppdtplgns_options = get_site_option( 'bstwbsftwppdtplgns_options' );
-			} else {
-				if ( !get_option( 'bstwbsftwppdtplgns_options' ) )
-					add_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options_defaults, '', 'yes' );
-				$bstwbsftwppdtplgns_options = get_option( 'bstwbsftwppdtplgns_options' );
-			}
+			if ( !get_option( 'bstwbsftwppdtplgns_options' ) )
+				add_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options_defaults, '', 'yes' );
+			$bstwbsftwppdtplgns_options = get_option( 'bstwbsftwppdtplgns_options' );
 
 			if ( isset( $_POST['bws_license_submit'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'bws_license_nonce_name' ) ) {
 				if ( '' != $bws_license_key ) { 
@@ -341,8 +317,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 												$error = __( "Unfortunately, you have exceeded the number of available tries. Please, upload the plugin manually.", 'facebook' );
 											}
 										}
-										if ( '' == $error ) {
-											global $wpmu;																					
+										if ( '' == $error ) {																			
 											$bstwbsftwppdtplgns_options[ $bws_license_plugin ] = $bws_license_key;
 
 											$url = 'http://bestwebsoft.com/wp-content/plugins/paid-products/plugins/downloads/?bws_first_download=' . $bws_license_plugin . '&bws_license_key=' . $bws_license_key . '&download_from=5';
@@ -408,7 +383,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 			<h2 class="nav-tab-wrapper">
 				<a class="nav-tab<?php if ( ! isset( $_GET['action'] ) ) echo ' nav-tab-active'; ?>" href="admin.php?page=facebook-button-plugin.php"><?php _e( 'Settings', 'facebook' ); ?></a>
 				<a class="nav-tab<?php if ( isset( $_GET['action'] ) && 'extra' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=facebook-button-plugin.php&amp;action=extra"><?php _e( 'Extra settings', 'facebook' ); ?></a>
-				<a class="nav-tab" href="http://bestwebsoft.com/plugin/facebook-like-button-plugin/#faq" target="_blank" ><?php _e( 'FAQ', 'facebook' ); ?></a>
+				<a class="nav-tab" href="http://bestwebsoft.com/products/facebook-like-button/faq/" target="_blank" ><?php _e( 'FAQ', 'facebook' ); ?></a>
 				<a class="nav-tab bws_go_pro_tab<?php if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=facebook-button-plugin.php&amp;action=go_pro"><?php _e( 'Go PRO', 'facebook' ); ?></a>
 			</h2>
 			<div class="updated fade" <?php if ( empty( $message ) || "" != $error ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
@@ -558,9 +533,9 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 					<div class="bws_pro_version_tooltip">
 						<div class="bws_info">
 							<?php _e( 'Unlock premium options by upgrading to a PRO version.', 'facebook' ); ?> 
-							<a href="http://bestwebsoft.com/plugin/facebook-like-button-pro/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Facebook Like Button Pro"><?php _e( 'Learn More', 'facebook' ); ?></a>				
+							<a href="http://bestwebsoft.com/products/facebook-like-button/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Facebook Like Button Pro"><?php _e( 'Learn More', 'facebook' ); ?></a>				
 						</div>
-						<a class="bws_button" href="http://bestwebsoft.com/plugin/facebook-like-button-pro/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>#purchase" target="_blank" title="Facebook Like Button Pro">
+						<a class="bws_button" href="http://bestwebsoft.com/products/facebook-like-button/buy/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Facebook Like Button Pro">
 							<?php _e( 'Go', 'facebook' ); ?> <strong>PRO</strong>
 						</a>	
 						<div class="clear"></div>					
@@ -582,7 +557,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 					<form method="post" action="admin.php?page=facebook-button-plugin.php&amp;action=go_pro">
 						<p>
 							<?php _e( 'You can download and activate', 'facebook' ); ?> 
-							<a href="http://bestwebsoft.com/plugin/facebook-like-button-pro/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Facebook Like Button Pro">PRO</a> 
+							<a href="http://bestwebsoft.com/products/facebook-like-button/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Facebook Like Button Pro">PRO</a> 
 							<?php _e( 'version of this plugin by entering Your license key.', 'facebook' ); ?><br />
 							<span style="color: #888888;font-size: 10px;">
 								<?php _e( 'You can find your license key on your personal page Client area, by clicking on the link', 'facebook' ); ?> 
@@ -866,7 +841,7 @@ if ( ! function_exists ( 'fcbkbttn_plugin_banner' ) ) {
 						<div class="fcbkbttn_message bws_banner_on_plugin_page" style="display: none;">
 							<img class="fcbkbttn_close_icon close_icon" title="" src="<?php echo plugins_url( 'images/close_banner.png', __FILE__ ); ?>" alt=""/>
 							<div class="button_div">
-								<a class="button" target="_blank" href="http://bestwebsoft.com/plugin/facebook-like-button-pro/?k=45862a4b3cd7a03768666310fbdb19db&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>"><?php _e( "Learn More", 'facebook' ); ?></a>				
+								<a class="button" target="_blank" href="http://bestwebsoft.com/products/facebook-like-button/?k=45862a4b3cd7a03768666310fbdb19db&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>"><?php _e( "Learn More", 'facebook' ); ?></a>				
 							</div>
 							<div class="text">
 								<?php _e( "It's time to upgrade your <strong>Facebook Like Button</strong> to <strong>PRO</strong> version", 'facebook' ); ?>!<br />
