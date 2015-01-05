@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2015-01-05 14:59+0300\n"
 "PO-Revision-Date: 2015-01-05 14:59+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
-"Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
-"Language: ua_UA\n"
+"Language-Team: Can Atasever <webmaster@canatasever.com>\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,214 +14,215 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 1.5.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: facebook-button-plugin.php:79
 #: facebook-button-plugin.php:395
 msgid "Facebook Button Settings"
-msgstr "Установки кнопки Facebook"
+msgstr "Facebook Buton Ayarları"
 
 #: facebook-button-plugin.php:79
 msgid "Facebook Button"
-msgstr "кнопка Facebook"
+msgstr "Facebook Butonu"
 
 #: facebook-button-plugin.php:185
 msgid "requires"
-msgstr "потребує"
+msgstr "eklentisi"
 
 #: facebook-button-plugin.php:185
 msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
-msgstr "чи вище, тому він був деактивований! Будь ласка оновіть WordPress та спробуйте ще раз."
+msgstr "ya da daha üst versiyon gerektirir, eklenti bu yüzden etkisizleştirildi! Lütfen Wordpress&#39;i güncelleyin ve tekrar deneyin."
 
 #: facebook-button-plugin.php:185
 msgid "Back to the WordPress"
-msgstr "Повернутися до WordPress на"
+msgstr "Wordpress&#39;e geri dön"
 
 #: facebook-button-plugin.php:185
 msgid "Plugins page"
-msgstr "Сторінку плагинів"
+msgstr "Eklentiler sayfası"
 
 #: facebook-button-plugin.php:225
 msgid "Settings saved"
-msgstr "Установки збережені"
+msgstr "Ayarlar kaydedildi"
 
 #: facebook-button-plugin.php:253
 msgid "Error: File size > 32K"
-msgstr "Помилка: Розмір файлу> 32K"
+msgstr "HATA: Dosya boyutu > 32K"
 
 #: facebook-button-plugin.php:256
 msgid "Error: Invalid file type"
-msgstr "Помилка: Невірний тип файлу"
+msgstr "HATA: Geçersiz dosya türü"
 
 #: facebook-button-plugin.php:262
 msgid "Upload successful."
-msgstr "Файл був завантажений успішно"
+msgstr "Yükleme başarılı"
 
 #: facebook-button-plugin.php:265
 msgid "Error: moving file failed"
-msgstr "Помилка: не вдалося Переміщення файлів"
+msgstr "HATA: dosya taşıma başarısız."
 
 #: facebook-button-plugin.php:268
 msgid "Error: check image width or height"
-msgstr "Помилка: Перевірте ширину або висоту зображення"
+msgstr "HATA: görselin genişliğini ya da yüksekliğini kontrol edin."
 
 #: facebook-button-plugin.php:272
 msgid "Uploading Error: check image properties"
-msgstr "Помилка Завантаження: Перевірте властивості зображення"
+msgstr "Yükleme Hatası: görselin özelliklerini kontrol edin."
 
 #: facebook-button-plugin.php:284
 #: facebook-button-plugin.php:323
 msgid "Wrong license key"
-msgstr "Невірний ліцензійний ключ!"
+msgstr "Hatalı lisans anahtarı"
 
 #: facebook-button-plugin.php:316
 msgid "Something went wrong. Try again later. If the error will appear again, please, contact us <a href=http://support.bestwebsoft.com>BestWebSoft</a>. We are sorry for inconvenience."
-msgstr "Виникли певні проблеми. Спробуйте ще раз пізніше. Якщо помилка виникатиме знову, будь ласка, зверніться до нашої служби підтримки href=http://support.bestwebsoft.com>BestWebSoft</a>. Просимо вибачення за незручності."
+msgstr "Bir şeyler ters gitti, lütfen daha sonra tekrar deneyin. Eğer hata tekrar görünürse, lütfen <a href=http://support.bestwebsoft.com>BestWebSoft</a> üzerinden bizimle iletişime geçin. Yaşadığınız rahatsızlık için üzgünüz."
 
 #: facebook-button-plugin.php:325
 msgid "This license key is bind to another site"
-msgstr "Ліцензійний ключ прив'язано до іншого сайту"
+msgstr "Lisans anahtarı başka bir siteyle eşleştirilmiş."
 
 #: facebook-button-plugin.php:327
 msgid "Unfortunately, you have exceeded the number of available tries. Please, upload the plugin manually."
-msgstr "На жаль, Ви перевищили кількість доступних спроб на день. Будь ласка, завантажте плагін вручну."
+msgstr "Üzgünüz, günlük deneme limitini aştınız. Lütfen eklentiyi manuel olarak yükleyin."
 
 #: facebook-button-plugin.php:344
 msgid "Failed to open the zip archive. Please, upload the plugin manually"
-msgstr "Виникли проблеми під чаз розпакування zip-архіву. Будь ласка, завантажте плагін вручну."
+msgstr "ZIP arşivi açılamadı. Lütfen eklentiyi manuel olarak yükleyin."
 
 #: facebook-button-plugin.php:350
 msgid "Your server does not support either ZipArchive or Phar. Please, upload the plugin manually"
-msgstr "Ваш сервер не підтримує ані ZipArchive, ані Phar. Будь ласка, завантажте плагін вручну"
+msgstr "Sunucunuz ZipArchive ya da Phar desteklemiyor. Lütfen eklentiyi manuel olarak yükleyin."
 
 #: facebook-button-plugin.php:354
 #: facebook-button-plugin.php:363
 msgid "Failed to download the zip archive. Please, upload the plugin manually"
-msgstr "Виникли проблеми під час завантаження zip-архіву. Будь ласка, завантажте архів вручну."
+msgstr "ZIParşivi indirilemedi. Lütfen eklentiyi manuel olarak yükleyin."
 
 #: facebook-button-plugin.php:367
 msgid "Something went wrong. Try again later or upload the plugin manually. We are sorry for inconvienience."
-msgstr "Виникли певні проблеми. Спробуйте ще раз пізніше або завантажте плагін вручну. Просимо вібачення за незручності."
+msgstr "Bir şeyler ters gitti. Lütfen daha sonra tekrar deneyin ya da eklentiyi manuel olarak yükleyin. Yaşadığınız rahatsızlık için üzgünüz."
 
 #: facebook-button-plugin.php:385
 msgid "Please, enter Your license key"
-msgstr "Будь ласка, впишіть ваш ліцензійний ключ"
+msgstr "Lütfen Lisans Anahtarı&#39;nızı girin"
 
 #: facebook-button-plugin.php:397
 #: facebook-button-plugin.php:785
 #: facebook-button-plugin.php:797
 msgid "Settings"
-msgstr "Установки"
+msgstr "Ayarlar"
 
 #: facebook-button-plugin.php:398
 msgid "Extra settings"
-msgstr "Додаткові налаштування"
+msgstr "Ekstra Ayarlar"
 
 #: facebook-button-plugin.php:399
 #: facebook-button-plugin.php:798
 msgid "FAQ"
-msgstr "Часті питання"
+msgstr "SSS"
 
 #: facebook-button-plugin.php:400
 msgid "Go PRO"
-msgstr "Перейти на Pro версію"
+msgstr "PRO&#39;ya geçin"
 
 #: facebook-button-plugin.php:403
 msgid "Notice:"
-msgstr "Нагадування:"
+msgstr "Uyarı:"
 
 #: facebook-button-plugin.php:403
 msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
-msgstr "Налаштування плагіну було змінено. Для того, щоб зберегти ці зміни, не забудьте нажати кнопку \"Зберегти зміни\"."
+msgstr "eklentinin ayarları değiştirildi. Değişiklikleri kaydetmek için &#39;Değişiklikleri Kaydet&#39; butonuna basmayı unutmayın."
 
 #: facebook-button-plugin.php:409
 #, fuzzy
 msgid "Your Facebook ID or username:"
-msgstr "ID вашого Facebook акаунту"
+msgstr "Facebook ID&#39;niz:"
 
 #: facebook-button-plugin.php:415
 msgid "Display button:"
-msgstr "Відображати кнопку:"
+msgstr "Butonu Göster:"
 
 #: facebook-button-plugin.php:417
 msgid "My Page"
-msgstr "Моя сторінка"
+msgstr "Benim Sayfam"
 
 #: facebook-button-plugin.php:418
 msgid "Like"
-msgstr "Like"
+msgstr "Beğen"
 
 #: facebook-button-plugin.php:419
 msgid "Share"
-msgstr "Share"
+msgstr "Paylaş"
 
 #: facebook-button-plugin.php:424
 msgid "Choose display settings:"
-msgstr "Виберіть відображати установки:"
+msgstr "Gösterim ayarlarını seçin:"
 
 #: facebook-button-plugin.php:429
 msgid "Standard Facebook image"
-msgstr "Стандартне зображення FaceBook "
+msgstr "Standart Facebook görseli"
 
 #: facebook-button-plugin.php:430
 msgid "Custom Facebook image"
-msgstr "Кастомне м FaceBook"
+msgstr "Özel Facebook görseli"
 
 #: facebook-button-plugin.php:433
 msgid "To use custom image you need to setup permissions to upload directory of your site"
-msgstr "Для використання кастомного зображення Вам необхідно видати права доступу на папку завантажень на вашому сайті"
+msgstr "Özel görsel kullanmak için sitenizin dizinine yükleme yapılmasına izin vermelisiniz."
 
 #: facebook-button-plugin.php:439
 msgid "Current image:"
-msgstr "Поточне зображення:"
+msgstr "Şu anki görsel:"
 
 #: facebook-button-plugin.php:447
 msgid "Facebook image:"
-msgstr "Зображення Facebook :"
+msgstr "Facebook görseli:"
 
 #: facebook-button-plugin.php:451
 msgid "Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:\"jpg\", \"jpeg\", \"png\"."
-msgstr "Властивості зображення: максимальна ширина зображення:1 00px; Максимальна висота зображення: 40px; максимальний розмір зображення: 32Kb; Зображення типів:\"jpg\", \"jpeg\", \"png\"."
+msgstr "Görsel özellikleri: maksimum görsel genişliği: 100px; maksimum görsel yüksekliği: 40px; maksimum görsel boyutu: 32 KB; uzantılar: \"jpg\", \"jpeg\", \"png\"."
 
 #: facebook-button-plugin.php:456
 msgid "Facebook Button Position:"
-msgstr "Розташування кнопки Facebook:"
+msgstr "Facebook Butonu pozisyonu"
 
 #: facebook-button-plugin.php:460
 msgid "Before"
-msgstr "Перш ніж"
+msgstr "Önce"
 
 #: facebook-button-plugin.php:461
 msgid "After"
-msgstr "Після того як"
+msgstr "Sonra"
 
 #: facebook-button-plugin.php:462
 msgid "Before and After"
-msgstr "До і після"
+msgstr "Önce ve Sonra"
 
 #: facebook-button-plugin.php:463
 msgid "Shortcode"
-msgstr "Шорткод"
+msgstr "Kısa kod"
 
 #: facebook-button-plugin.php:465
 msgid "If you would like to add a Facebook button to your website, just copy and paste this shortcode into your post or page:"
-msgstr "Якщо ви хочете додати кнопку FaceBook на ваш сайт, просто скопіюйте і помістіть цей шорткод на у пост або на сторінку:"
+msgstr "eğer web sitenize Facebook butonu eklemek isterseniz, verilen kısa kodu sayfanıza ya da yazınıza eklemeniz yeterlidir."
 
 #: facebook-button-plugin.php:470
 msgid "Facebook Button language:"
-msgstr "Мова кнопки FaceBook:"
+msgstr "Facebook Butonu dili"
 
 #: facebook-button-plugin.php:481
 msgid "Change the language of Facebook Like Button"
-msgstr "Змінити мову для конпки Like Facebook"
+msgstr "Facebook Beğen butonunun dilini değiştirin"
 
 #: facebook-button-plugin.php:485
 msgid "Html tag for Like Button:"
-msgstr "Html тег для кнопки Like:"
+msgstr "Beğen butonu için HTML etiketi:"
 
 #: facebook-button-plugin.php:489
 msgid "Use this tag to improve validation of your site"
-msgstr "Використовуйте цей тег для поліпшення валідації вашого сайту"
+msgstr "Sitenizin doğrulamasını geliştirmek için bu etiketi kullanın"
 
 #: facebook-button-plugin.php:498
 msgid "\"Like\" for an entire site on every page:"
@@ -230,106 +231,112 @@ msgstr ""
 #: facebook-button-plugin.php:505
 #: facebook-button-plugin.php:567
 msgid "Unlock premium options by upgrading to a PRO version."
-msgstr "Зробити доступними преміум-опції, перейшовши на PRO версію."
+msgstr "PRO versiyonuna geçerek premium özellikleri aktifleştirin."
 
 #: facebook-button-plugin.php:506
 #: facebook-button-plugin.php:568
 #: facebook-button-plugin.php:876
 msgid "Learn More"
-msgstr "Докладніше"
+msgstr "Detaylı Bilgi"
 
 #: facebook-button-plugin.php:509
 #: facebook-button-plugin.php:571
 msgid "Go"
-msgstr "Перейти"
+msgstr "Git"
 
 #: facebook-button-plugin.php:516
 #: facebook-button-plugin.php:555
 msgid "Save Changes"
-msgstr "Зберегти зміни"
+msgstr "Değişiklikleri Kaydet"
 
 #: facebook-button-plugin.php:522
 msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
-msgstr "Якщо Вам сподобався наш плагін, ми будемо раді, якщо Ви оціните його у п'ять зірочок на WordPress"
+msgstr "Eklentiyi beğendiyseniz, Wordpress&#39;te 5 yıldız verin"
 
 #: facebook-button-plugin.php:523
 msgid "Rate the plugin"
-msgstr "Оцініти плагін"
+msgstr "Eklentiyi değerlendir"
 
 #: facebook-button-plugin.php:526
 msgid "If there is something wrong about it, please contact us"
-msgstr "Якщо у вас є запитання, будь ласка, звертайтесь до нас"
+msgstr "Eğer bir hata görürseniz lütfen bizimle iletişime geçin."
 
 #: facebook-button-plugin.php:537
 msgid "Please choose the necessary post types (or single pages) where Facebook button will be displayed:"
-msgstr "Будь ласка, оберіть необхідні типи постів (чи сторінок), де буде відображатися кнопка Facebook"
+msgstr "Lütfen Facebook butonunun gösterileceği yazı türlerini (ya da tek sayfaları) seçin."
 
 #: facebook-button-plugin.php:544
 msgid "Show URL for pages"
-msgstr "Відображати URL сторінок"
+msgstr "Sayfalar için URL göster"
 
 #: facebook-button-plugin.php:550
 msgid "Example of the site's pages tree"
-msgstr "Приклад дерева сторінок сайту"
+msgstr "Sitenin sayfalar izi için örnek"
 
 #: facebook-button-plugin.php:550
 msgid "Example of site pages' tree"
-msgstr "Приклад дерева сторінок сайту"
+msgstr "Site sayfaları izi için örnek"
 
 #: facebook-button-plugin.php:560
 msgid "If you upgrade to Pro version all your settings will be saved."
-msgstr "Якщо ви перейдете на Pro версію, усі установки будуть збережені."
+msgstr "Aboneliğinizi PRO versiyonuna yükseltirseniz tüm değişiklikleriniz kaydedilecek."
 
 #: facebook-button-plugin.php:583
 msgid "Congratulations! The PRO version of the plugin is successfully download and activated."
-msgstr "Вітаємо! PRO версію плагіну успішно завантажено та активовано."
+msgstr "Tebrikler! Eklentinin PRO versiyonu başarıyla indirildi ve aktifleştirildi."
 
 #: facebook-button-plugin.php:585
 msgid "Please, go to"
-msgstr "Будь ласка, перейдіть"
+msgstr "Lütfen şuraya gidin:"
 
 #: facebook-button-plugin.php:585
 msgid "the setting page"
-msgstr "сторінку установок"
+msgstr "ayarlar sayfası"
 
 #: facebook-button-plugin.php:586
 msgid "You will be redirected automatically in 5 seconds."
-msgstr "Вас буде перенаправлено автоматично через 5 секунд."
+msgstr "5 saniye içinde otomatik olarak yönlendirileceksiniz."
 
 #: facebook-button-plugin.php:591
 msgid "You can download and activate"
-msgstr "Ви можете завантажити та активувати"
+msgstr "Eklentinin"
 
 #: facebook-button-plugin.php:593
 msgid "version of this plugin by entering Your license key."
-msgstr "версію уього плагіну, якщо впишете ваш ліцензійний ключ."
+msgstr "versiyonunu lisans anahtarınızı girerek yükleyebilir ve aktifleştirebilirsiniz."
 
 #: facebook-button-plugin.php:595
 msgid "You can find your license key on your personal page Client area, by clicking on the link"
-msgstr "Ви можете знайти ваш ліцензійний ключ на вашій персональній сторінці у  Client area, перейшовши за посиланням"
+msgstr "Lisans anahtarınızı kişisel müşteri sayfanızda bulabilirsiniz, tıklayın"
 
 #: facebook-button-plugin.php:597
 msgid "(your username is the email you specify when purchasing the product)."
-msgstr "(ім'я користувача - це електронна адреса, яку ви вказуєте при купівлі продукту)."
+msgstr "(kullanıcı adınız, ürün için ödeme yaparken belirttiğiniz e-posta adresinizdir)"
 
 #: facebook-button-plugin.php:605
 #: facebook-button-plugin.php:615
 msgid "Go!"
-msgstr "Перейти!"
+msgstr "Git!"
 
 #: facebook-button-plugin.php:608
 msgid "Unfortunately, you have exceeded the number of available tries per day. Please, upload the plugin manually."
-msgstr "На жаль, Ви перевищили кількість доступних спроб на день. Будь ласка, завантажте плагін вручну."
+msgstr "Üzgünüz, günlük deneme limitini aştınız. Lütfen eklentiyi manuel olarak yükleyin."
 
 #: facebook-button-plugin.php:799
 msgid "Support"
-msgstr "Підтримка"
+msgstr "Destek"
 
 #: facebook-button-plugin.php:879
 msgid "It's time to upgrade your <strong>Facebook Like Button</strong> to <strong>PRO</strong> version"
-msgstr "Час оновити ваш <strong>Facebook Like Button</strong> до <strong>PRO</strong> версії!"
+msgstr "<strong>Captcha eklentisini</strong> <strong>PRO</strong> versiyonuna yükseltmenizin zamanı geldi!"
 
 #: facebook-button-plugin.php:880
 msgid "Extend standard plugin functionality with new great options"
-msgstr "Розширити стандартний функціонал плагіну новими опціями."
+msgstr "Eklentinin standart özelliklerini yeni ve harika özelliklerle zenginleştirin."
 
+#~ msgid ""
+#~ "This functionality is available in the Pro version of the plugin. For "
+#~ "more details, please follow the link"
+#~ msgstr ""
+#~ "Данный функционал доступен в Про версии плагина. Для более детальной "
+#~ "информации смотрите"

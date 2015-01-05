@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: button, buton, batton, button image, button position, Button like, Facebook, Facebook account button, facebook button, facebook button language, Facebook button icon, Facebook button like, Facebook button share, Facebook ID, Facebook page, facebook like, facebook like button, facebook share, facebook share button, follow, Follow button, icon, Like, like button, My Page button, Share, share button, social, social button, social account
 Requires at least: 3.0
-Tested up to: 4.0
-Stable tag: 2.35
+Tested up to: 4.1
+Stable tag: 2.36
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,7 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pr
 * French (fr_FR) (thanks to <a href="mailto:wpthemefr@gmail.com">Murat</a>)
 * Indonesian (id_ID) (thanks to Nasrulhaq, www.al-badar.net)
 * Russian (ru_RU)
+* Turkish (tr_TR) (thanks to <a href="mailto:webmaster@canatasever.com">Can Atasever</a>)
 * Ukrainian (uk)
 
 If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
@@ -106,6 +107,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 4. Displaying Facebook Button in your post via the shortcode.
 
 == Changelog ==
+
+= V2.36 - 05.01.2015 =
+* NEW : Ability to "Like" an entire site, with this "Like" displayed on each page.
+* Update : We updated all functionality for wordpress 4.1.
 
 = V2.35 - 13.11.2014 =
 * Bugfix : Plugin optimization is done.
@@ -251,6 +256,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.36 =
+Ability to "Like" an entire site, with this "Like" displayed on each page. We updated all functionality for wordpress 4.1.
 
 = V2.35 =
 Plugin optimization is done. BWS plugins section is updated.

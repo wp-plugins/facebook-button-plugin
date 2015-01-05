@@ -12,6 +12,7 @@
 .fcbk_share {
 	clear: both;
 	height: 40px;
+	line-height: 1;
 }
 .fcbk_button {
 	float: left;
@@ -20,6 +21,7 @@
 .fcbk_button a {
 	height: 40px;
 	display: block;
+	border-bottom: 0px !important;
 }
 .fcbk_button a:hover {
 	opacity: 0.9;
@@ -27,7 +29,6 @@
 .fcbk_like {
 	float: left;
 	position: relative;
-	top: -3px;
 }
 .fb_edge_widget_with_comment span {
 	width: 450px !important;
