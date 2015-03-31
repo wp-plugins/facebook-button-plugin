@@ -1,10 +1,10 @@
-﻿=== Facebook Like Button ===
+﻿=== Facebook Like Button by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: button, buton, batton, button image, button position, Button like, Facebook, Facebook account button, facebook button, facebook button language, Facebook button icon, Facebook button like, Facebook button share, Facebook ID, Facebook page, facebook like, facebook like button, facebook share, facebook share button, follow, Follow button, icon, Like, like button, My Page button, Share, share button, social, social button, social account
 Requires at least: 3.0
-Tested up to: 4.1
-Stable tag: 2.36
+Tested up to: 4.1.1
+Stable tag: 2.37
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,6 @@ Facebook Like Button Plugin allows you to add a Follow button the easiest way. I
 http://www.youtube.com/watch?v=QGv04uHVl5c
 
 <a href="http://wordpress.org/plugins/facebook-button-plugin/faq/" target="_blank">FAQ</a>
-
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
 
 <a href="http://bestwebsoft.com/products/facebook-like-button/?k=4caab51af6593e97ad1e329fe0f53072" target="_blank">Upgrade to Pro Version</a>
@@ -108,8 +107,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Changelog ==
 
+= V2.37 - 31.03.2015 =
+* Update : We updated all functionality for wordpress 4.1.1.
+* Update : BWS plugins section is updated.
+
 = V2.36 - 05.01.2015 =
-* NEW : Ability to "Like" an entire site, with this "Like" displayed on each page.
 * Update : We updated all functionality for wordpress 4.1.
 
 = V2.35 - 13.11.2014 =
@@ -257,8 +259,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Upgrade Notice ==
 
+= V2.37 =
+We updated all functionality for wordpress 4.1.1. BWS plugins section is updated.
+
 = V2.36 =
-Ability to "Like" an entire site, with this "Like" displayed on each page. We updated all functionality for wordpress 4.1.
+We updated all functionality for wordpress 4.1.
 
 = V2.35 =
 Plugin optimization is done. BWS plugins section is updated.
