@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: button, buton, batton, button image, button position, Button like, Facebook, Facebook account button, facebook button, facebook button language, Facebook button icon, Facebook button like, Facebook button share, Facebook ID, Facebook page, facebook like, facebook like button, facebook share, facebook share button, follow, Follow button, icon, Like, like button, My Page button, Share, share button, social, social button, social account
 Requires at least: 3.0
-Tested up to: 4.1.1
-Stable tag: 2.37
+Tested up to: 4.2-RC3
+Stable tag: 2.38
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,7 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pr
 
 = Translation =
 
+* Finnish (fi_FI) (thanks to <a href="mailto:juhani.honkanen@dnainternet.net">Juhani Honkanen</a>)
 * French (fr_FR) (thanks to <a href="mailto:wpthemefr@gmail.com">Murat</a>)
 * Indonesian (id_ID) (thanks to Nasrulhaq, www.al-badar.net)
 * Russian (ru_RU)
@@ -106,6 +107,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 4. Displaying Facebook Button in your post via the shortcode.
 
 == Changelog ==
+
+= V2.38 - 23.04.2015 =
+* Update : Button styles are updated.
+* New : The Finnish language file is added to the plugin.
 
 = V2.37 - 31.03.2015 =
 * Update : We updated all functionality for wordpress 4.1.1.
@@ -258,6 +263,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.38 =
+Button styles are updated. The Finnish language file is added to the plugin.
 
 = V2.37 =
 We updated all functionality for wordpress 4.1.1. BWS plugins section is updated.

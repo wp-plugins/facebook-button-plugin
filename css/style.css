@@ -11,15 +11,13 @@
 }
 .fcbk_share {
 	clear: both;
-	height: 40px;
 	line-height: 1;
 }
 .fcbk_button {
-	float: left;
+	display: inline-block;
 	margin-right: 10px;
 }
 .fcbk_button a {
-	height: 40px;
 	display: block;
 	border-bottom: 0px !important;
 }
@@ -27,7 +25,7 @@
 	opacity: 0.9;
 }
 .fcbk_like {
-	float: left;
+	display: inline-block;
 	position: relative;
 }
 .fb_edge_widget_with_comment span {
@@ -35,4 +33,7 @@
 }
 .fcbk_like iframe {
 	max-width: 450px;
+}
+.fcbk_button a img {
+	display: inline-block !important;
 }

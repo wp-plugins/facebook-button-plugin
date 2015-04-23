@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: facebook\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-31 10:59+0300\n"
-"PO-Revision-Date: 2015-03-31 10:59+0300\n"
+"PO-Revision-Date: 2015-04-20 19:38+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: ua_UA\n"
@@ -127,11 +127,11 @@ msgstr "Розташування кнопки Facebook:"
 
 #: facebook-button-plugin.php:295
 msgid "Before"
-msgstr "Перш ніж"
+msgstr "До"
 
 #: facebook-button-plugin.php:296
 msgid "After"
-msgstr "Після того як"
+msgstr "Після"
 
 #: facebook-button-plugin.php:297
 msgid "Before and After"

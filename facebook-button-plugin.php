@@ -1,10 +1,10 @@
 <?php
-/*
+/*##
 Plugin Name: Facebook Button by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.37
+Version: 2.38
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -25,21 +25,21 @@ License: GPLv2 or later
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+/* Add BWS menu */
 if ( ! function_exists( 'fcbkbttn_add_pages' ) ) {
 	function fcbkbttn_add_pages() {
 		bws_add_general_menu( plugin_basename( __FILE__ ) );
 		add_submenu_page( 'bws_plugins', 'Facebook Button ' .  __( 'Settings', 'facebook' ), 'Facebook Button', 'manage_options', "facebook-button-plugin.php", 'fcbkbttn_settings_page' );
 	}
 }
+/* end fcbkbttn_add_pages ##*/
 
 /* Initialization */
 if ( ! function_exists( 'fcbkbttn_init' ) ) {
 	function fcbkbttn_init() {
-		global $fcbkbttn_options, $fcbkbttn_plugin_info;
+		global $fcbkbttn_plugin_info;
 		/* Internationalization, first(!) */
 		load_plugin_textdomain( 'facebook', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-		
-		require_once( dirname( __FILE__ ) . '/bws_menu/bws_functions.php' );
 
 		if ( empty( $fcbkbttn_plugin_info ) ) {
 			if ( ! function_exists( 'get_plugin_data' ) )
@@ -47,11 +47,13 @@ if ( ! function_exists( 'fcbkbttn_init' ) ) {
 			$fcbkbttn_plugin_info = get_plugin_data( __FILE__ );
 		}
 
-		/* Function check if plugin is compatible with current WP version  */
-		bws_wp_version_check( plugin_basename( __FILE__ ), $fcbkbttn_plugin_info, "3.0" );
+		/*## add general functions */
+		require_once( dirname( __FILE__ ) . '/bws_menu/bws_functions.php' );
+		
+		bws_wp_version_check( plugin_basename( __FILE__ ), $fcbkbttn_plugin_info, "3.0" ); /* check compatible with current WP version ##*/
 
 		/* Get options from the database */
-		if ( ! is_admin() || ( isset( $_GET['page'] ) && "facebook-button-plugin.php" == $_GET['page'] ) ) {
+		if ( ! is_admin() || ( isset( $_GET['page'] ) && ( "facebook-button-plugin.php" == $_GET['page'] || "social-buttons.php" == $_GET['page'] ) ) ) {
 			/* Get/Register and check settings for plugin */
 			fcbkbttn_settings();
 		}
@@ -59,6 +61,7 @@ if ( ! function_exists( 'fcbkbttn_init' ) ) {
 }
 /* End function init */
 
+/*## Function for admin_init */
 if ( ! function_exists( 'fcbkbttn_admin_init' ) ) {
 	function fcbkbttn_admin_init() {
 		/* Add variable for bws_menu */
@@ -69,6 +72,7 @@ if ( ! function_exists( 'fcbkbttn_admin_init' ) ) {
 		}
 	}
 }
+/* end fcbkbttn_admin_init ##*/
 
 if ( ! function_exists( 'fcbkbttn_settings' ) ) {
 	function fcbkbttn_settings() {
@@ -121,12 +125,10 @@ if ( ! function_exists( 'fcbkbttn_settings' ) ) {
 	}
 }
 
-
 /* Function formed content of the plugin's admin page. */
 if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 	function fcbkbttn_settings_page() {
 		global $fcbkbttn_options, $wp_version, $fcbkbttn_plugin_info;
-		$copy = false;
 		$message = $error = "";
 		$upload_dir = wp_upload_dir();
 		$plugin_basename = plugin_basename( __FILE__ );
@@ -215,16 +217,18 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 				}
 			}
 		}
-		/* GO PRO */
+
+		$lang_codes = array(
+			"af_ZA" => 'Afrikaans', "ar_AR" => 'العربية', "ay_BO" => 'Aymar aru', "az_AZ" => 'Azərbaycan dili', "be_BY" => 'Беларуская', "bg_BG" => 'Български', "bn_IN" => 'বাংলা', "bs_BA" => 'Bosanski', "ca_ES" => 'Català', "ck_US" => 'Cherokee', "cs_CZ" => 'Čeština', "cy_GB" => 'Cymraeg', "da_DK" => 'Dansk', "de_DE" => 'Deutsch', "el_GR" => 'Ελληνικά', "en_US" => 'English', "en_PI" => 'English (Pirate)', "eo_EO" => 'Esperanto', "es_CL" => 'Español (Chile)', "es_CO" => 'Español (Colombia)', "es_ES" => 'Español (España)', "es_LA" => 'Español', "es_MX" => 'Español (México)', "es_VE" => 'Español (Venezuela)', "et_EE" => 'Eesti', "eu_ES" => 'Euskara', "fa_IR" => 'فارسی', "fb_LT" => 'Leet Speak', "fi_FI" => 'Suomi', "fo_FO" => 'Føroyskt', "fr_CA" => 'Français (Canada)', "fr_FR" => 'Français (France)', "fy_NL" => 'Frysk', "ga_IE" => 'Gaeilge', "gl_ES" => 'Galego', "gn_PY" => "Avañe'ẽ", "gu_IN" => 'ગુજરાતી', "gx_GR" => 'Ἑλληνική ἀρχαία', "he_IL" => 'עברית', "hi_IN" => 'हिन्दी', "hr_HR" => 'Hrvatski', "hu_HU" => 'Magyar', "hy_AM" => 'Հայերեն', "id_ID" => 'Bahasa Indonesia', "is_IS" => 'Íslenska', "it_IT" => 'Italiano', "ja_JP" => '日本語', "jv_ID" => 'Basa Jawa', "ka_GE" => 'ქართული', "kk_KZ" => 'Қазақша', "km_KH" => 'ភាសាខ្មែរ', "kn_IN" => 'ಕನ್ನಡ', "ko_KR" => '한국어', "ku_TR" => 'Kurdî', "la_VA" => 'lingua latina', "li_NL" => 'Limburgs', "lt_LT" => 'Lietuvių', "lv_LV" => 'Latviešu', "mg_MG" => 'Malagasy', "mk_MK" => 'Македонски', "ml_IN" => 'മലയാളം', "mn_MN" => 'Монгол', "mr_IN" => 'मराठी', "ms_MY" => 'Bahasa Melayu', "mt_MT" => 'Malti', "nb_NO" => 'Norsk (bokmål)', "ne_NP" => 'नेपाली', "nl_BE" => 'Nederlands (België)', "nl_NL" => 'Nederlands', "nn_NO" => 'Norsk (nynorsk)', "pa_IN" => 'ਪੰਜਾਬੀ', "pl_PL" => 'Polski', "ps_AF" => 'پښتو', "pt_BR" => 'Português (Brasil)', "pt_PT" => 'Português (Portugal)', "qu_PE" => 'Qhichwa', "rm_CH" => 'Rumantsch', "ro_RO" => 'Română', "ru_RU" => 'Русский', "sa_IN" => 'संस्कृतम्', "se_NO" => 'Davvisámegiella', "sk_SK" => 'Slovenčina', "sl_SI" => 'Slovenščina', "so_SO" => 'Soomaaliga', "sq_AL" => 'Shqip', "sr_RS" => 'Српски', "sv_SE" => 'Svenska', "sw_KE" => 'Kiswahili', "sy_SY" => 'ܐܪܡܝܐ', "ta_IN" => 'தமிழ்', "te_IN" => 'తెలుగు', "tg_TJ" => 'тоҷикӣ', "th_TH" => 'ภาษาไทย', "tl_PH" => 'Filipino', "tl_ST" => 'tlhIngan-Hol', "tr_TR" => 'Türkçe', "tt_RU" => 'Татарча', "uk_UA" => 'Українська', "ur_PK" => 'اردو', "uz_UZ" => "O'zbek", "vi_VN" => 'Tiếng Việt', "yi_DE" => 'ייִדיש', "zh_CN" => '中文(简体)', "zh_HK" => '中文(香港)', "zh_TW" => '中文(台灣)', "zu_ZA" => 'isiZulu' 											
+		);
+
+		/*## GO PRO */
 		if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) {
 			$go_pro_result = bws_go_pro_tab_check( $plugin_basename );
 			if ( ! empty( $go_pro_result['error'] ) )
 				$error = $go_pro_result['error'];
-		}
-		$lang_codes = array(
-			"af_ZA" => 'Afrikaans', "ar_AR" => 'العربية', "ay_BO" => 'Aymar aru', "az_AZ" => 'Azərbaycan dili', "be_BY" => 'Беларуская', "bg_BG" => 'Български', "bn_IN" => 'বাংলা', "bs_BA" => 'Bosanski', "ca_ES" => 'Català', "ck_US" => 'Cherokee', "cs_CZ" => 'Čeština', "cy_GB" => 'Cymraeg', "da_DK" => 'Dansk', "de_DE" => 'Deutsch', "el_GR" => 'Ελληνικά', "en_US" => 'English', "en_PI" => 'English (Pirate)', "eo_EO" => 'Esperanto', "es_CL" => 'Español (Chile)', "es_CO" => 'Español (Colombia)', "es_ES" => 'Español (España)', "es_LA" => 'Español', "es_MX" => 'Español (México)', "es_VE" => 'Español (Venezuela)', "et_EE" => 'Eesti', "eu_ES" => 'Euskara', "fa_IR" => 'فارسی', "fb_LT" => 'Leet Speak', "fi_FI" => 'Suomi', "fo_FO" => 'Føroyskt', "fr_CA" => 'Français (Canada)', "fr_FR" => 'Français (France)', "fy_NL" => 'Frysk', "ga_IE" => 'Gaeilge', "gl_ES" => 'Galego', "gn_PY" => "Avañe'ẽ", "gu_IN" => 'ગુજરાતી', "gx_GR" => 'Ἑλληνική ἀρχαία', "he_IL" => 'עברית', "hi_IN" => 'हिन्दी', "hr_HR" => 'Hrvatski', "hu_HU" => 'Magyar', "hy_AM" => 'Հայերեն', "id_ID" => 'Bahasa Indonesia', "is_IS" => 'Íslenska', "it_IT" => 'Italiano', "ja_JP" => '日本語', "jv_ID" => 'Basa Jawa', "ka_GE" => 'ქართული', "kk_KZ" => 'Қазақша', "km_KH" => 'ភាសាខ្មែរ', "kn_IN" => 'ಕನ್ನಡ', "ko_KR" => '한국어', "ku_TR" => 'Kurdî', "la_VA" => 'lingua latina', "li_NL" => 'Limburgs', "lt_LT" => 'Lietuvių', "lv_LV" => 'Latviešu', "mg_MG" => 'Malagasy', "mk_MK" => 'Македонски', "ml_IN" => 'മലയാളം', "mn_MN" => 'Монгол', "mr_IN" => 'मराठी', "ms_MY" => 'Bahasa Melayu', "mt_MT" => 'Malti', "nb_NO" => 'Norsk (bokmål)', "ne_NP" => 'नेपाली', "nl_BE" => 'Nederlands (België)', "nl_NL" => 'Nederlands', "nn_NO" => 'Norsk (nynorsk)', "pa_IN" => 'ਪੰਜਾਬੀ', "pl_PL" => 'Polski', "ps_AF" => 'پښتو', "pt_BR" => 'Português (Brasil)', "pt_PT" => 'Português (Portugal)', "qu_PE" => 'Qhichwa', "rm_CH" => 'Rumantsch', "ro_RO" => 'Română', "ru_RU" => 'Русский', "sa_IN" => 'संस्कृतम्', "se_NO" => 'Davvisámegiella', "sk_SK" => 'Slovenčina', "sl_SI" => 'Slovenščina', "so_SO" => 'Soomaaliga', "sq_AL" => 'Shqip', "sr_RS" => 'Српски', "sv_SE" => 'Svenska', "sw_KE" => 'Kiswahili', "sy_SY" => 'ܐܪܡܝܐ', "ta_IN" => 'தமிழ்', "te_IN" => 'తెలుగు', "tg_TJ" => 'тоҷикӣ', "th_TH" => 'ภาษาไทย', "tl_PH" => 'Filipino', "tl_ST" => 'tlhIngan-Hol', "tr_TR" => 'Türkçe', "tt_RU" => 'Татарча', "uk_UA" => 'Українська', "ur_PK" => 'اردو', "uz_UZ" => "O'zbek", "vi_VN" => 'Tiếng Việt', "yi_DE" => 'ייִדיש', "zh_CN" => '中文(简体)', "zh_HK" => '中文(香港)', "zh_TW" => '中文(台灣)', "zu_ZA" => 'isiZulu' 											
-			);
-		?>
+		}/* end GO PRO ##*/ ?>
+		<!-- general -->
 		<div class="wrap">
 			<div class="icon32 icon32-bws" id="icon-options-general"></div>
 			<h2>Facebook Button <?php _e( "Settings", 'facebook' ); ?></h2>
@@ -234,11 +238,12 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 				<a class="nav-tab" href="http://bestwebsoft.com/products/facebook-like-button/faq/" target="_blank" ><?php _e( 'FAQ', 'facebook' ); ?></a>
 				<a class="nav-tab bws_go_pro_tab<?php if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=facebook-button-plugin.php&amp;action=go_pro"><?php _e( 'Go PRO', 'facebook' ); ?></a>
 			</h2>
+			<!-- end general -->
 			<div class="updated fade" <?php if ( empty( $message ) || "" != $error ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
-			<div id="fcbkbttn_settings_notice" class="updated fade" style="display:none"><p><strong><?php _e( "Notice:", 'facebook' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'facebook' ); ?></p></div>
+			<div id="fcbkbttn_settings_notice" class="updated fade bws_settings_form_notice" style="display:none"><p><strong><?php _e( "Notice:", 'facebook' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'facebook' ); ?></p></div>
 			<div class="error" <?php if ( "" == $error ) echo "style=\"display:none\""; ?>><p><strong><?php echo $error; ?></strong></p></div>
-			<?php if ( ! isset( $_GET['action'] ) ) { ?>
-				<form name="form1" method="post" action="admin.php?page=facebook-button-plugin.php" enctype="multipart/form-data" id="fcbkbttn_settings_form">
+			<?php /*## check action */ if ( ! isset( $_GET['action'] ) ) { /* check action ##*/ ?>
+				<form method="post" action="" enctype="multipart/form-data" id="fcbkbttn_settings_form" class="bws_settings_form">
 					<table class="form-table">
 						<tr valign="top">
 							<th scope="row"><?php _e( "Your Facebook ID or username:", 'facebook' ); ?></th>
@@ -325,6 +330,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 							</td>
 						</tr>
 					</table>
+					<!-- general -->
 					<div class="bws_pro_version_bloc">
 						<div class="bws_pro_version_table_bloc">	
 							<div class="bws_table_bg"></div>											
@@ -353,12 +359,14 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 							<div class="clear"></div>					
 						</div>
 					</div>
+					<!-- end general -->
 					<input type="hidden" name="fcbkbttn_form_submit" value="submit" />
 					<p class="submit">
 						<input type="submit" class="button-primary" value="<?php _e( 'Save Changes', 'facebook' ); ?>" />
 					</p>
 					<?php wp_nonce_field( $plugin_basename, 'fcbkbttn_nonce_name' ); ?>
 				</form>
+				<!-- general -->
 				<?php bws_plugin_reviews_block( $fcbkbttn_plugin_info['Name'], 'facebook-button-plugin' ); 
 			} elseif ( 'extra' == $_GET['action'] ) { ?>
 				<div class="bws_pro_version_bloc">
@@ -410,6 +418,7 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 				bws_go_pro_tab( $fcbkbttn_plugin_info, $plugin_basename, 'facebook-button-plugin.php', 'facebook-button-pro.php', 'facebook-button-pro/facebook-button-pro.php', 'facebook-like-button', '427287ceae749cbd015b4bba6041c4b8', '78', isset( $go_pro_result['pro_plugin_is_activated'] ) ); 
 			} ?>
 		</div>
+		<!-- end general -->
 	<?php }
 }
 
@@ -549,7 +558,21 @@ if ( ! function_exists( 'fcbkbttn_footer_script' ) ) {
 	}
 }
 
-/* Function is using to create action links on admin page. */
+if ( ! function_exists( 'fcbkbttn_admin_head' ) ) {
+	function fcbkbttn_admin_head() {
+		global $fcbkbttn_options;
+		if ( isset( $_GET['page'] ) && "facebook-button-plugin.php" == $_GET['page'] ) {
+			wp_enqueue_script( 'fcbk_script', plugins_url( 'js/script.js', __FILE__ ), array( 'jquery' ) );
+			wp_enqueue_style( 'fcbk_stylesheet', plugins_url( 'css/style.css', __FILE__ ) );
+		} elseif ( ! is_admin() ) {
+			wp_enqueue_style( 'fcbk_stylesheet', plugins_url( 'css/style.css', __FILE__ ) );			
+			if ( ( 1 == $fcbkbttn_options['like'] || 1 == $fcbkbttn_options['share'] ) && 'en_US' != $fcbkbttn_options['locale'] )
+				wp_enqueue_script( 'fcbk_connect', '//connect.facebook.net/' . $fcbkbttn_options['locale'] . '/all.js#xfbml=1&appId=1443946719181573' );
+		}
+	}
+}
+
+/*## Functions creates other links on plugins page. */
 if ( ! function_exists( 'fcbkbttn_action_links' ) ) {
 	function fcbkbttn_action_links( $links, $file ) {	
 		if ( ! is_network_admin() ) {
@@ -564,9 +587,9 @@ if ( ! function_exists( 'fcbkbttn_action_links' ) ) {
 		}
 		return $links;
 	}
-} /* End function fcbkbttn_action_links */
+}
+/* End function fcbkbttn_action_links */
 
-/* Function are using to create other links on admin page. */
 if ( ! function_exists ( 'fcbkbttn_links' ) ) {
 	function fcbkbttn_links( $links, $file ) {
 		$base = plugin_basename( __FILE__ );
@@ -581,24 +604,12 @@ if ( ! function_exists ( 'fcbkbttn_links' ) ) {
 }
 /* End function fcbkbttn_links */
 
-if ( ! function_exists( 'fcbkbttn_admin_head' ) ) {
-	function fcbkbttn_admin_head() {
-		global $fcbkbttn_options;
-		if ( ! is_admin() || ( isset( $_GET['page'] ) && "facebook-button-plugin.php" == $_GET['page'] ) ) {
-			wp_enqueue_style( 'fcbk_stylesheet', plugins_url( 'css/style.css', __FILE__ ) );
-			wp_enqueue_script( 'fcbk_script', plugins_url( 'js/script.js', __FILE__ ), array( 'jquery' ) );
-			if ( ( 1 == $fcbkbttn_options['like'] || 1 == $fcbkbttn_options['share'] ) && 'en_US' != $fcbkbttn_options['locale'] )
-				wp_enqueue_script( 'fcbk_connect', '//connect.facebook.net/' . $fcbkbttn_options['locale'] . '/all.js#xfbml=1&appId=1443946719181573' );
-		}
-	}
-}
-
 if ( ! function_exists ( 'fcbkbttn_plugin_banner' ) ) {
 	function fcbkbttn_plugin_banner() {
 		global $hook_suffix;	
 		if ( 'plugins.php' == $hook_suffix ) {
 			global $fcbkbttn_plugin_info;
-			bws_plugin_banner( $fcbkbttn_plugin_info, 'fcbkbttn', 'facebook-like-button', '45862a4b3cd7a03768666310fbdb19db', '78', plugins_url( 'images/banner.png', __FILE__ ) );   		  
+			bws_plugin_banner( $fcbkbttn_plugin_info, 'fcbkbttn', 'facebook-like-button', '45862a4b3cd7a03768666310fbdb19db', '78', 'http://ps.w.org/facebook-button-plugin/assets/icon-128x128.png' );   		  
 		}
 	}
 }
@@ -609,29 +620,32 @@ if ( ! function_exists( 'fcbkbttn_delete_options' ) ) {
 		if ( ! function_exists( 'get_plugins' ) )
 			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 		$all_plugins = get_plugins();
-		if ( ! array_key_exists( 'facebook-button-pro/facebook-button-pro.php', $all_plugins ) ) {
-			/* delete custom images if no PRO version */
-			$upload_dir = wp_upload_dir();
-			$fcbkbttn_cstm_mg_folder = $upload_dir['basedir'] . '/facebook-image/';
-			if ( is_dir( $fcbkbttn_cstm_mg_folder ) ) {
-				$fcbkbttn_cstm_mg_files = scandir( $fcbkbttn_cstm_mg_folder );
-				foreach ( $fcbkbttn_cstm_mg_files as $value ) {
-					@unlink ( $fcbkbttn_cstm_mg_folder . $value );
+
+		if ( ! array_key_exists( 'bws-social-buttons/bws-social-buttons.php', $all_plugins ) ) {
+			if ( ! array_key_exists( 'facebook-button-pro/facebook-button-pro.php', $all_plugins ) ) {
+				/* delete custom images if no PRO version */
+				$upload_dir = wp_upload_dir();
+				$fcbkbttn_cstm_mg_folder = $upload_dir['basedir'] . '/facebook-image/';
+				if ( is_dir( $fcbkbttn_cstm_mg_folder ) ) {
+					$fcbkbttn_cstm_mg_files = scandir( $fcbkbttn_cstm_mg_folder );
+					foreach ( $fcbkbttn_cstm_mg_files as $value ) {
+						@unlink ( $fcbkbttn_cstm_mg_folder . $value );
+					}
+					@rmdir( $fcbkbttn_cstm_mg_folder );
 				}
-				@rmdir( $fcbkbttn_cstm_mg_folder );
 			}
+			delete_option( 'fcbk_bttn_plgn_options' );
 		}
-		delete_option( 'fcbk_bttn_plgn_options' );
-		delete_site_option( 'fcbk_bttn_plgn_options' );
 	}
 }
 
 /* Calling a function add administrative menu. */
 add_action( 'admin_menu', 'fcbkbttn_add_pages' );
-/* Initialization */
+/* Initialization ##*/
 add_action( 'init', 'fcbkbttn_init' );
+/*## admin_init */
 add_action( 'admin_init', 'fcbkbttn_admin_init' );
-/* Adding stylesheets */
+/* Adding stylesheets ##*/
 add_action( 'wp_enqueue_scripts', 'fcbkbttn_admin_head' );
 add_action( 'admin_enqueue_scripts', 'fcbkbttn_admin_head' );
 /* Adding front-end stylesheets */
@@ -640,11 +654,11 @@ add_action( 'wp_footer', 'fcbkbttn_footer_script' );
 /* Add shortcode and plugin buttons */
 add_shortcode( 'fb_button', 'fcbkbttn_shortcode' );
 add_filter( 'the_content', 'fcbkbttn_display_button' );
-/* Additional links on the plugin page */
+/*## Additional links on the plugin page */
 add_filter( 'plugin_action_links', 'fcbkbttn_action_links', 10, 2 );
 add_filter( 'plugin_row_meta', 'fcbkbttn_links', 10, 2 );
 /* Adding banner */
 add_action( 'admin_notices', 'fcbkbttn_plugin_banner' );
 /* Plugin uninstall function */
 register_uninstall_hook( __FILE__, 'fcbkbttn_delete_options' );
-?>
+/* end ##*/
