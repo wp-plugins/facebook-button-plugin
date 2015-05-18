@@ -1,10 +1,10 @@
 ﻿=== Facebook Like Button by BestWebSoft ===
 Contributors: bestwebsoft
-Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
+Donate link: http://bestwebsoft.com/donate/
 Tags: button, buton, batton, button image, button position, Button like, Facebook, Facebook account button, facebook button, facebook button language, Facebook button icon, Facebook button like, Facebook button share, Facebook ID, Facebook page, facebook like, facebook like button, facebook share, facebook share button, follow, Follow button, icon, Like, like button, My Page button, Share, share button, social, social button, social account
 Requires at least: 3.0
-Tested up to: 4.2.1
-Stable tag: 2.38
+Tested up to: 4.2.2
+Stable tag: 2.39
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -94,6 +94,7 @@ In WordPress admin panel go to "Settings", find the Facebook Button Plugin setti
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
 Please make sure that the problem hasn't been discussed yet on our forum (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If no, please provide the following data along with your problem's description:
+
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
@@ -102,11 +103,15 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 == Screenshots ==
 
 1. Plugin admin page.
-2. Plugin admin page: select display option.
-3. Displaying Facebook Button ater your post.
-4. Displaying Facebook Button in your post via the shortcode.
+2. Displaying Facebook Button ater your post.
+3. Displaying Facebook Button in your post via the shortcode.
 
 == Changelog ==
+
+= V2.39 - 18.05.2015 =
+* Update : We updated option titles on the Settings page for the convenience of users.
+* Update : Scripts were placed into a separate js file.
+* Update : We updated all functionality for wordpress 4.2.2.
 
 = V2.38 - 23.04.2015 =
 * Update : Button styles are updated.
@@ -263,6 +268,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.39 =
+We updated option titles on the Settings page for the convenience of users. Scripts were placed into a separate js file. We updated all functionality for wordpress 4.2.2.
 
 = V2.38 =
 Button styles are updated. The Finnish language file is added to the plugin.
