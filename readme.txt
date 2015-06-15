@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/donate/
 Tags: button, buton, batton, button image, button position, Button like, Facebook, Facebook account button, facebook button, facebook button language, Facebook button icon, Facebook button like, Facebook button share, Facebook ID, Facebook page, facebook like, facebook like button, facebook share, facebook share button, follow, Follow button, icon, Like, like button, My Page button, Share, share button, social, social button, social account
 Requires at least: 3.0
 Tested up to: 4.2.2
-Stable tag: 2.39
+Stable tag: 2.40
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -107,6 +107,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 3. Displaying Facebook Button in your post via the shortcode.
 
 == Changelog ==
+
+= V2.40 - 15.06.2015 =
+* New : Ability to restore settings to defaults.
 
 = V2.39 - 18.05.2015 =
 * Update : We updated option titles on the Settings page for the convenience of users.
@@ -268,6 +271,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.40 =
+Ability to restore settings to defaults.
 
 = V2.39 =
 We updated option titles on the Settings page for the convenience of users. Scripts were placed into a separate js file. We updated all functionality for wordpress 4.2.2.
