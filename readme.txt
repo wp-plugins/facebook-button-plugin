@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/donate/
 Tags: button, buton, batton, button image, button position, Button like, Facebook, Facebook account button, facebook button, facebook button language, Facebook button icon, Facebook button like, Facebook button share, Facebook ID, Facebook page, facebook like, facebook like button, facebook share, facebook share button, follow, Follow button, icon, Like, like button, My Page button, Share, share button, social, social button, social account
 Requires at least: 3.0
 Tested up to: 4.2.2
-Stable tag: 2.40
+Stable tag: 2.41
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,6 +15,8 @@ Add Facebook button to your WordPress website.
 Facebook Like Button Plugin allows you to add a Follow button the easiest way. If your life is tightly connected with your Facebook account, our plugin is the best solution for you. It contains minimum settings. Just a few clicks and voila - the Facebook button is on your site.
 
 http://www.youtube.com/watch?v=QGv04uHVl5c
+
+<a href="http://www.youtube.com/watch?v=pAKsQPz3RZc" target="_blank">Video instruction on Installation</a>
 
 <a href="http://wordpress.org/plugins/facebook-button-plugin/faq/" target="_blank">FAQ</a>
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
@@ -27,6 +29,7 @@ http://www.youtube.com/watch?v=QGv04uHVl5c
 * Actions: Add Facebook Like button easily.
 * Display: Select the button position: before the content, after, before and after or using a shortcode.
 * Display: Use a standard image or replace it with some other image.
+* Display: Ability to use the current site language for Facebook buttons (Using Multilanguage by BestWebSoft)
 
 = Recommended Plugins =
 
@@ -62,33 +65,35 @@ We can fix some things for free for the users who provide translation of our plu
 
 <a href="https://docs.google.com/document/d/1LDmKKxLHq0GavaGcevj4g-8SjLcYPruSKg5Kos9plxM/edit" target="_blank">View a Step-by-step Instruction on Facebook Button Installation</a>.
 
+http://www.youtube.com/watch?v=pAKsQPz3RZc
+
 == Frequently Asked Questions ==
 
 = I cannot see the Facebook Button icon in the post after the plugin installation =
 
-In WordPress admin panel go to "Plugins", find "Facebook Button Plugin" and click "Activate".
+In WordPress admin panel, please go to "BWS Plugins", find the Facebook Button Plugin and click "Activate".
 
 = How can I deactivate the plugin? =
 
-In WordPress admin panel go to "Plugins", find the Facebook Button Plugin and click "Deactivate".
+In WordPress admin panel, please go to "BWS Plugins", find the Facebook Button Plugin and click "Deactivate".
 
 =  After clicking the Facebook Button icon I see the Facebook Home page instead of the necessary account page =
 
-1. In WordPress admin panel go to "Settings", find the Facebook Button Plugin settings page and enter your Facebook login. Then click "Update Changes".
+1. In WordPress admin panel, please go to "BWS Plugins", find the Facebook Button Plugin settings page and enter your Facebook login. Then click "Save Changes".
 2. If you do not have Facebook account yet, you should create it using this link: http://www.facebook.com . After the account is created please follow the instructions above.
 
 = How to adjust Facebook Button position on the page =
 
-In WordPress admin panel go to "Settings", find the Facebook Button Plugin settings page and choose one of the listed positions: Before, After, Before and After or Shortcode. Then click "Update Changes".
+In WordPress admin panel, please go to "BWS Plugins", find the Facebook Button Plugin settings page and choose one of the listed positions: Before, After, Before and After or Shortcode. Then click "Save Changes".
 
-= How to change a Facebook Button icon =
+= How to change a Facebook Button icon("My page") =
 
-1. In WordPress admin panel go to "Settings", find the Facebook Button Plugin settings page and choose one of the listed positions: Standard Facebook image or Custom Facebook image. Then click "Update Changes".
-2. If you choose Custom Facebook image, you can upload your own picture. You should click "Choose file" and choose an image in your folder. Then click "Update Changes".
+1. In WordPress admin panel, please go to "BWS Plugins", find the Facebook Button Plugin settings page and choose one of the listed positions: Standard Facebook image or Custom Facebook image. Then click "Save Changes".
+2. If you choose Custom Facebook image, you can upload your own picture. You should click "Choose file" and choose an image in your folder. Then click "Save Changes".
 
 = After the plugin installation and settings adjustment on the settings page it is still not working =
 
-1. You should click "Update Changes". Make sure that you got the message "Options Saved".
+1. You should click "Save Changes". Make sure that you got the message "Settings saved".
 2. After saving your settings you should refresh your web page where the Facebook Button icon should be placed.
 
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
@@ -103,10 +108,14 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 == Screenshots ==
 
 1. Plugin admin page.
-2. Displaying Facebook Button ater your post.
+2. Displaying Facebook Button after your post.
 3. Displaying Facebook Button in your post via the shortcode.
 
 == Changelog ==
+
+= V2.41 - 16.07.2015 =
+* Update : Ability to use the current site language for Facebook buttons (Using Multilanguage by BestWebSoft).
+* Bugfix : We fixed the 'share' button displaying bug (when the shortcode is used).
 
 = V2.40 - 15.06.2015 =
 * New : Ability to restore settings to defaults.
@@ -271,6 +280,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Ability to install Facebook Button icon with a link to the account page, including settings adjustment functionality via WordPress admin panel.
 
 == Upgrade Notice ==
+
+= V2.41 =
+Ability to use the current site language for Facebook buttons (Using Multilanguage by BestWebSoft). We fixed the 'share' button displaying bug (when the shortcode is used).
 
 = V2.40 =
 Ability to restore settings to defaults.
