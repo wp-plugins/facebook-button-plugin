@@ -4,7 +4,7 @@ Plugin Name: Facebook Button by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
 Description: Put Facebook Button in to your post.
 Author: BestWebSoft
-Version: 2.41
+Version: 2.42
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -50,15 +50,15 @@ if ( ! function_exists( 'fcbkbttn_init' ) ) {
 		/*## add general functions */
 		require_once( dirname( __FILE__ ) . '/bws_menu/bws_functions.php' );
 		
-		bws_wp_version_check( plugin_basename( __FILE__ ), $fcbkbttn_plugin_info, "3.0" ); /* check compatible with current WP version ##*/
+		bws_wp_version_check( plugin_basename( __FILE__ ), $fcbkbttn_plugin_info, '3.1' ); /* check compatible with current WP version ##*/
 
 		/* Get options from the database */
 		if ( ! is_admin() || ( isset( $_GET['page'] ) && ( "facebook-button-plugin.php" == $_GET['page'] || "social-buttons.php" == $_GET['page'] ) ) ) {
 			/* Get/Register and check settings for plugin */
 			fcbkbttn_settings();
-
+			
 			$fcbkbttn_lang_codes = array(
-				"af_ZA" => 'Afrikaans', "ar_AR" => 'العربية', "ay_BO" => 'Aymar aru', "az_AZ" => 'Azərbaycan dili', "be_BY" => 'Беларуская', "bg_BG" => 'Български', "bn_IN" => 'বাংলা', "bs_BA" => 'Bosanski', "ca_ES" => 'Català', "ck_US" => 'Cherokee', "cs_CZ" => 'Čeština', "cy_GB" => 'Cymraeg', "da_DK" => 'Dansk', "de_DE" => 'Deutsch', "el_GR" => 'Ελληνικά', "en_US" => 'English', "en_PI" => 'English (Pirate)', "eo_EO" => 'Esperanto', "es_CL" => 'Español (Chile)', "es_CO" => 'Español (Colombia)', "es_ES" => 'Español (España)', "es_LA" => 'Español', "es_MX" => 'Español (México)', "es_VE" => 'Español (Venezuela)', "et_EE" => 'Eesti', "eu_ES" => 'Euskara', "fa_IR" => 'فارسی', "fb_LT" => 'Leet Speak', "fi_FI" => 'Suomi', "fo_FO" => 'Føroyskt', "fr_CA" => 'Français (Canada)', "fr_FR" => 'Français (France)', "fy_NL" => 'Frysk', "ga_IE" => 'Gaeilge', "gl_ES" => 'Galego', "gn_PY" => "Avañe'ẽ", "gu_IN" => 'ગુજરાતી', "gx_GR" => 'Ἑλληνική ἀρχαία', "he_IL" => 'עברית', "hi_IN" => 'हिन्दी', "hr_HR" => 'Hrvatski', "hu_HU" => 'Magyar', "hy_AM" => 'Հայերեն', "id_ID" => 'Bahasa Indonesia', "is_IS" => 'Íslenska', "it_IT" => 'Italiano', "ja_JP" => '日本語', "jv_ID" => 'Basa Jawa', "ka_GE" => 'ქართული', "kk_KZ" => 'Қазақша', "km_KH" => 'ភាសាខ្មែរ', "kn_IN" => 'ಕನ್ನಡ', "ko_KR" => '한국어', "ku_TR" => 'Kurdî', "la_VA" => 'lingua latina', "li_NL" => 'Limburgs', "lt_LT" => 'Lietuvių', "lv_LV" => 'Latviešu', "mg_MG" => 'Malagasy', "mk_MK" => 'Македонски', "ml_IN" => 'മലയാളം', "mn_MN" => 'Монгол', "mr_IN" => 'मराठी', "ms_MY" => 'Bahasa Melayu', "mt_MT" => 'Malti', "nb_NO" => 'Norsk (bokmål)', "ne_NP" => 'नेपाली', "nl_BE" => 'Nederlands (België)', "nl_NL" => 'Nederlands', "nn_NO" => 'Norsk (nynorsk)', "pa_IN" => 'ਪੰਜਾਬੀ', "pl_PL" => 'Polski', "ps_AF" => 'پښتو', "pt_BR" => 'Português (Brasil)', "pt_PT" => 'Português (Portugal)', "qu_PE" => 'Qhichwa', "rm_CH" => 'Rumantsch', "ro_RO" => 'Română', "ru_RU" => 'Русский', "sa_IN" => 'संस्कृतम्', "se_NO" => 'Davvisámegiella', "sk_SK" => 'Slovenčina', "sl_SI" => 'Slovenščina', "so_SO" => 'Soomaaliga', "sq_AL" => 'Shqip', "sr_RS" => 'Српски', "sv_SE" => 'Svenska', "sw_KE" => 'Kiswahili', "sy_SY" => 'ܐܪܡܝܐ', "ta_IN" => 'தமிழ்', "te_IN" => 'తెలుగు', "tg_TJ" => 'тоҷикӣ', "th_TH" => 'ภาษาไทย', "tl_PH" => 'Filipino', "tl_ST" => 'tlhIngan-Hol', "tr_TR" => 'Türkçe', "tt_RU" => 'Татарча', "uk_UA" => 'Українська', "ur_PK" => 'اردو', "uz_UZ" => "O'zbek", "vi_VN" => 'Tiếng Việt', "yi_DE" => 'ייִדיש', "zh_CN" => '中文(简体)', "zh_HK" => '中文(香港)', "zh_TW" => '中文(台灣)', "zu_ZA" => 'isiZulu' 											
+				"af_ZA" => 'Afrikaans', "ar_AR" => 'العربية', "az_AZ" => 'Azərbaycan dili', "be_BY" => 'Беларуская', "bg_BG" => 'Български', "bn_IN" => 'বাংলা', "bs_BA" => 'Bosanski', "ca_ES" => 'Català', "cs_CZ" => 'Čeština', "cy_GB" => 'Cymraeg', "da_DK" => 'Dansk', "de_DE" => 'Deutsch', "el_GR" => 'Ελληνικά', "en_US" => 'English', "en_PI" => 'English (Pirate)', "eo_EO" => 'Esperanto', "es_CO" => 'Español (Colombia)', "es_ES" => 'Español (España)', "es_LA" => 'Español', "et_EE" => 'Eesti', "eu_ES" => 'Euskara', "fa_IR" => 'فارسی', "fb_LT" => 'Leet Speak', "fi_FI" => 'Suomi', "fo_FO" => 'Føroyskt', "fr_CA" => 'Français (Canada)', "fr_FR" => 'Français (France)', "fy_NL" => 'Frysk', "ga_IE" => 'Gaeilge', "gl_ES" => 'Galego', "gn_PY" => "Avañe'ẽ", "gu_IN" => 'ગુજરાતી', "he_IL" => 'עברית', "hi_IN" => 'हिन्दी', "hr_HR" => 'Hrvatski', "hu_HU" => 'Magyar', "hy_AM" => 'Հայերեն', "id_ID" => 'Bahasa Indonesia', "is_IS" => 'Íslenska', "it_IT" => 'Italiano', "ja_JP" => '日本語', "jv_ID" => 'Basa Jawa', "ka_GE" => 'ქართული', "kk_KZ" => 'Қазақша', "km_KH" => 'ភាសាខ្មែរ', "kn_IN" => 'ಕನ್ನಡ', "ko_KR" => '한국어', "ku_TR" => 'Kurdî', "la_VA" => 'lingua latina', "lt_LT" => 'Lietuvių', "lv_LV" => 'Latviešu', "mk_MK" => 'Македонски', "ml_IN" => 'മലയാളം', "mn_MN" => 'Монгол', "mr_IN" => 'मराठी', "ms_MY" => 'Bahasa Melayu', "nb_NO" => 'Norsk (bokmål)', "ne_NP" => 'नेपाली', "nl_BE" => 'Nederlands (België)', "nl_NL" => 'Nederlands', "nn_NO" => 'Norsk (nynorsk)', "pa_IN" => 'ਪੰਜਾਬੀ', "pl_PL" => 'Polski', "ps_AF" => 'پښتو', "pt_BR" => 'Português (Brasil)', "pt_PT" => 'Português (Portugal)', "ro_RO" => 'Română', "ru_RU" => 'Русский', "sk_SK" => 'Slovenčina', "sl_SI" => 'Slovenščina', "sq_AL" => 'Shqip', "sr_RS" => 'Српски', "sv_SE" => 'Svenska', "sw_KE" => 'Kiswahili', "ta_IN" => 'தமிழ்', "te_IN" => 'తెలుగు', "tg_TJ" => 'тоҷикӣ', "th_TH" => 'ภาษาไทย', "tl_PH" => 'Filipino', "tr_TR" => 'Türkçe', "uk_UA" => 'Українська', "ur_PK" => 'اردو', "uz_UZ" => "O'zbek", "vi_VN" => 'Tiếng Việt', "zh_CN" => '中文(简体)', "zh_HK" => '中文(香港)', "zh_TW" => '中文(台灣)' 											
 			);
 		}
 	}
@@ -273,9 +273,11 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 							<tr valign="top">
 								<th scope="row"><?php _e( 'Display button', 'facebook' ); ?></th>
 								<td>
-									<label><input name='fcbkbttn_my_page' type='checkbox' value='1' <?php if ( 1 == $fcbkbttn_options['my_page'] ) echo 'checked="checked "'; ?>/> <?php _e( "My Page", 'facebook' ); ?></label><br />
-									<label><input name='fcbkbttn_like' type='checkbox' value='1' <?php if ( 1 == $fcbkbttn_options['like'] ) echo 'checked="checked "'; ?>/> <?php _e( "Like", 'facebook' ); ?></label><br />
-									<label><input name='fcbkbttn_share' type='checkbox' value='1' <?php if ( 1 == $fcbkbttn_options['share'] ) echo 'checked="checked "'; ?>/> <?php _e( "Share", 'facebook' ); ?></label>
+									<fieldset>
+										<label><input name='fcbkbttn_my_page' type='checkbox' value='1' <?php if ( 1 == $fcbkbttn_options['my_page'] ) echo 'checked="checked "'; ?>/> <?php _e( "My Page", 'facebook' ); ?></label><br />
+										<label><input name='fcbkbttn_like' type='checkbox' value='1' <?php if ( 1 == $fcbkbttn_options['like'] ) echo 'checked="checked "'; ?>/> <?php _e( "Like", 'facebook' ); ?></label><br />
+										<label><input name='fcbkbttn_share' type='checkbox' value='1' <?php if ( 1 == $fcbkbttn_options['share'] ) echo 'checked="checked "'; ?>/> <?php _e( "Share", 'facebook' ); ?></label>
+									</fieldset>
 								</td>
 							</tr>
 							<tr class="fcbkbttn_my_page" <?php if ( 1 != $fcbkbttn_options['my_page'] ) echo 'style="display:none"'; ?>>
@@ -358,9 +360,11 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 							<tr valign="top">
 								<th scope="row"><?php _e( 'Html tag for "Like" button', 'facebook' ); ?></th>
 								<td>
-									<label><input name='fcbkbttn_html5' type='radio' value='0' <?php if ( 0 == $fcbkbttn_options['html5'] ) echo 'checked="checked "'; ?> /><?php echo "<code>&lt;fb:like&gt;</code>"; ?></label><br />
-									<label><input name='fcbkbttn_html5' type='radio' value='1' <?php if ( 1 == $fcbkbttn_options['html5'] ) echo 'checked="checked "'; ?> /><?php echo "<code>&lt;div&gt;</code>"; ?></label>
-									<span class="bws_info">(<?php _e( "Use this tag to improve validation of your site", 'facebook' ); ?>)</span>
+									<fieldset>
+										<label><input name='fcbkbttn_html5' type='radio' value='0' <?php if ( 0 == $fcbkbttn_options['html5'] ) echo 'checked="checked "'; ?> /><?php echo "<code>&lt;fb:like&gt;</code>"; ?></label><br />
+										<label><input name='fcbkbttn_html5' type='radio' value='1' <?php if ( 1 == $fcbkbttn_options['html5'] ) echo 'checked="checked "'; ?> /><?php echo "<code>&lt;div&gt;</code>"; ?></label>
+										<span class="bws_info">(<?php _e( "Use this tag to improve validation of your site", 'facebook' ); ?>)</span>
+									</fieldset>
 								</td>
 							</tr>
 						</table>
@@ -384,12 +388,9 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 							</div>
 							<div class="bws_pro_version_tooltip">
 								<div class="bws_info">
-									<?php _e( 'Unlock premium options by upgrading to a PRO version.', 'facebook' ); ?> 
-									<a href="http://bestwebsoft.com/products/facebook-like-button/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Facebook Like Button Pro"><?php _e( 'Learn More', 'facebook' ); ?></a>				
+									<?php _e( 'Unlock premium options by upgrading to Pro version', 'facebook' ); ?> 
 								</div>
-								<a class="bws_button" href="http://bestwebsoft.com/products/facebook-like-button/buy/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Facebook Like Button Pro">
-									<?php _e( 'Go', 'facebook' ); ?> <strong>PRO</strong>
-								</a>	
+								<a class="bws_button" href="http://bestwebsoft.com/products/facebook-like-button/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Facebook Like Button Pro"><?php _e( 'Learn More', 'facebook' ); ?></a>	
 								<div class="clear"></div>					
 							</div>
 						</div>
@@ -402,7 +403,6 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 					</form>				
 					<!-- general -->					
 					<?php bws_form_restore_default_settings( $plugin_basename );
-					bws_plugin_reviews_block( $fcbkbttn_plugin_info['Name'], 'facebook-button-plugin' );
 				}
 			} elseif ( 'extra' == $_GET['action'] ) { ?>
 				<div class="bws_pro_version_bloc">
@@ -441,18 +441,16 @@ if ( ! function_exists( 'fcbkbttn_settings_page' ) ) {
 					</div>
 					<div class="bws_pro_version_tooltip">
 						<div class="bws_info">
-							<?php _e( 'Unlock premium options by upgrading to a PRO version.', 'facebook' ); ?> 
-							<a href="http://bestwebsoft.com/products/facebook-like-button/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Facebook Like Button Pro"><?php _e( 'Learn More', 'facebook' ); ?></a>				
+							<?php _e( 'Unlock premium options by upgrading to Pro version', 'facebook' ); ?> 
 						</div>
-						<a class="bws_button" href="http://bestwebsoft.com/products/facebook-like-button/buy/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Facebook Like Button Pro">
-							<?php _e( 'Go', 'facebook' ); ?> <strong>PRO</strong>
-						</a>	
+						<a class="bws_button" href="http://bestwebsoft.com/products/facebook-like-button/?k=427287ceae749cbd015b4bba6041c4b8&pn=78&v=<?php echo $fcbkbttn_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>" target="_blank" title="Facebook Like Button Pro"><?php _e( 'Learn More', 'facebook' ); ?></a>	
 						<div class="clear"></div>					
 					</div>
 				</div>
 			<?php } elseif ( 'go_pro' == $_GET['action'] ) { 
 				bws_go_pro_tab( $fcbkbttn_plugin_info, $plugin_basename, 'facebook-button-plugin.php', 'facebook-button-pro.php', 'facebook-button-pro/facebook-button-pro.php', 'facebook-like-button', '427287ceae749cbd015b4bba6041c4b8', '78', isset( $go_pro_result['pro_plugin_is_activated'] ) ); 
-			} ?>
+			}
+			bws_plugin_reviews_block( $fcbkbttn_plugin_info['Name'], 'facebook-button-plugin' ); ?>
 		</div>
 		<!-- end general -->
 	<?php }
@@ -514,20 +512,23 @@ if ( ! function_exists( 'fcbkbttn_display_button' ) ) {
 if ( ! function_exists( 'fcbkbttn_shortcode' ) ) {
 	function fcbkbttn_shortcode( $content ) {
 		global $post, $fcbkbttn_options, $fcbkbttn_locale;
-		$fcbkbttn_where	=	$fcbkbttn_options['where'];
-		$permalink_post	=	get_permalink( $post->ID );
-		$button			=	'<div class="fcbk_share">';
-		$img			=	$fcbkbttn_options['fb_img_link'];
-		$url			=	$fcbkbttn_options['link'];
+
+		if ( isset( $post->ID ) )
+			$permalink_post	=	get_permalink( $post->ID );
+		
+		$button	= '<div class="fcbk_share">';		
 
 		if ( 1 == $fcbkbttn_options['my_page'] ) {
+			$url = $fcbkbttn_options['link'];
+			$img = $fcbkbttn_options['fb_img_link'];
+
 			$button .=	'<div class="fcbk_button">
 							<a href="http://www.facebook.com/' . $url . '"	target="_blank">
 								<img src="' . $img . '" alt="Fb-Button" />
 							</a>
 						</div>';
 		}
-		if ( 1 == $fcbkbttn_options['like'] ) {
+		if ( 1 == $fcbkbttn_options['like'] && isset( $permalink_post ) ) {
 			$button .=	'<div class="fcbk_like">
 							<div id="fb-root"></div>
 							<script>(function(d, s, id) {
@@ -550,7 +551,7 @@ if ( ! function_exists( 'fcbkbttn_shortcode' ) ) {
 				else
 					$button .= ' share="false"></fb:like></div>';
 			}
-		} else if ( 1 != $fcbkbttn_options['like'] && 1 == $fcbkbttn_options['share'] ) {
+		} else if ( 1 != $fcbkbttn_options['like'] && 1 == $fcbkbttn_options['share'] && isset( $permalink_post ) ) {
 			$button .=	'<script>(function(d, s, id) {
 								var js, fjs = d.getElementsByTagName(s)[0];
 								if (d.getElementById(id)) return;
@@ -589,16 +590,17 @@ if ( ! function_exists( 'fcbkbttn_meta' ) ) {
 if ( ! function_exists( 'fcbkbttn_footer_script' ) ) {
 	function fcbkbttn_footer_script () {
 		global $fcbkbttn_options, $fcbkbttn_locale;
-		if ( ( 1 == $fcbkbttn_options['like'] || 1 == $fcbkbttn_options['share'] ) && 'shortcode' != $fcbkbttn_options['where'] ) {
-			echo '<div id="fb-root"></div>
+		if ( ( 1 == $fcbkbttn_options['like'] || 1 == $fcbkbttn_options['share'] ) && 'shortcode' != $fcbkbttn_options['where'] ) { ?>
+			<div id="fb-root"></div>
 			<script>(function(d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0];
 				if (d.getElementById(id)) return;
 				js = d.createElement(s); js.id = id;
-				js.src = "//connect.facebook.net/' . $fcbkbttn_locale . '/sdk.js#xfbml=1&appId=1443946719181573&version=v2.0";
+				js.src = "//connect.facebook.net/<?php echo $fcbkbttn_locale; ?>/sdk.js#xfbml=1&appId=1443946719181573&version=v2.0";
 				fjs.parentNode.insertBefore(js, fjs);
-			}(document, "script", "facebook-jssdk"));</script>';
-		}
+				}(document, 'script', 'facebook-jssdk'));
+			</script>
+		<?php }
 	}
 }
 
@@ -703,7 +705,20 @@ if ( ! function_exists( 'fcbkbttn_delete_options' ) ) {
 					@rmdir( $fcbkbttn_cstm_mg_folder );
 				}
 			}
-			delete_option( 'fcbk_bttn_plgn_options' );
+
+			if ( function_exists( 'is_multisite' ) && is_multisite() ) {
+				global $wpdb;
+				$old_blog = $wpdb->blogid;
+				/* Get all blog ids */
+				$blogids = $wpdb->get_col( "SELECT `blog_id` FROM $wpdb->blogs" );
+				foreach ( $blogids as $blog_id ) {
+					switch_to_blog( $blog_id );
+					delete_option( 'fcbk_bttn_plgn_options' );
+				}
+				switch_to_blog( $old_blog );
+			} else {
+				delete_option( 'fcbk_bttn_plgn_options' );
+			}
 		}
 	}
 }
@@ -723,6 +738,7 @@ add_action( 'wp_footer', 'fcbkbttn_footer_script' );
 /* Add shortcode and plugin buttons */
 add_shortcode( 'fb_button', 'fcbkbttn_shortcode' );
 add_filter( 'the_content', 'fcbkbttn_display_button' );
+add_filter( 'the_excerpt', 'fcbkbttn_display_button' );
 /*## Additional links on the plugin page */
 add_filter( 'plugin_action_links', 'fcbkbttn_action_links', 10, 2 );
 add_filter( 'plugin_row_meta', 'fcbkbttn_links', 10, 2 );

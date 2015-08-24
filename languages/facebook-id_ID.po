@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: facebook\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-15 16:01+0300\n"
-"PO-Revision-Date: 2015-07-15 16:01+0300\n"
+"POT-Creation-Date: 2015-08-24 11:35+0300\n"
+"PO-Revision-Date: 2015-08-24 11:35+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: nasrulhaq <nasrulhaq81@gmail.com>\n"
 "Language: es_ES\n"
@@ -54,8 +54,8 @@ msgid "All plugin settings were restored."
 msgstr ""
 
 #: facebook-button-plugin.php:252
-#: facebook-button-plugin.php:653
-#: facebook-button-plugin.php:667
+#: facebook-button-plugin.php:655
+#: facebook-button-plugin.php:669
 msgid "Settings"
 msgstr "Pengaturan"
 
@@ -65,7 +65,7 @@ msgid "Extra settings"
 msgstr "Pengaturan"
 
 #: facebook-button-plugin.php:254
-#: facebook-button-plugin.php:668
+#: facebook-button-plugin.php:670
 msgid "FAQ"
 msgstr "SSS (SÄ±k Sorulan Sorular)"
 
@@ -91,135 +91,130 @@ msgstr " ID Facebook:"
 msgid "Display button"
 msgstr "Tampilan tombol:"
 
-#: facebook-button-plugin.php:276
+#: facebook-button-plugin.php:277
 msgid "My Page"
 msgstr "Halamanku"
 
-#: facebook-button-plugin.php:277
+#: facebook-button-plugin.php:278
 msgid "Like"
 msgstr "Suka"
 
-#: facebook-button-plugin.php:278
+#: facebook-button-plugin.php:279
 msgid "Share"
 msgstr ""
 
-#: facebook-button-plugin.php:283
+#: facebook-button-plugin.php:285
 msgid "\"My page\" button image"
 msgstr ""
 
-#: facebook-button-plugin.php:288
+#: facebook-button-plugin.php:290
 msgid "Standard Facebook image"
 msgstr "Standar gambar Facebook "
 
-#: facebook-button-plugin.php:289
+#: facebook-button-plugin.php:291
 msgid "Custom Facebook image"
 msgstr "Kustom Gambar Facebook "
 
-#: facebook-button-plugin.php:292
+#: facebook-button-plugin.php:294
 msgid "To use custom image you need to setup permissions to upload directory of your site"
 msgstr ""
 
-#: facebook-button-plugin.php:299
+#: facebook-button-plugin.php:301
 #, fuzzy
 msgid "Current image"
 msgstr "Gambar tertentu:"
 
-#: facebook-button-plugin.php:307
+#: facebook-button-plugin.php:309
 msgid "Image properties: max image width:100px; max image height:40px; max image size:32Kb; image types:\"jpg\", \"jpeg\", \"png\"."
 msgstr "properti gambar: lebar gambar maks:100px; panjang gambar maks:40px; ukuran gambar maks:32Kb; tipe gambar:\"jpg\",\"jpeg\", \"png\"."
 
-#: facebook-button-plugin.php:312
+#: facebook-button-plugin.php:314
 #, fuzzy
 msgid "Facebook buttons position"
 msgstr "Posisi Tombol Facebook"
 
-#: facebook-button-plugin.php:316
+#: facebook-button-plugin.php:318
 msgid "Before"
 msgstr "Sebelum"
 
-#: facebook-button-plugin.php:317
+#: facebook-button-plugin.php:319
 msgid "After"
 msgstr "Setelah"
 
-#: facebook-button-plugin.php:318
+#: facebook-button-plugin.php:320
 msgid "Before and After"
 msgstr "Sebelum dan Setelah"
 
-#: facebook-button-plugin.php:319
+#: facebook-button-plugin.php:321
 msgid "Shortcode"
 msgstr "Kode Pendek"
 
-#: facebook-button-plugin.php:321
+#: facebook-button-plugin.php:323
 msgid "If you would like to add a Facebook button to your website, just copy and paste this shortcode into your post or page:"
 msgstr "Jika anda ingin menambahkan tombol Facebook di website anda, cukup salin kode singkat kedalam posting atau page anda:"
 
-#: facebook-button-plugin.php:326
+#: facebook-button-plugin.php:328
 #, fuzzy
 msgid "Facebook buttons language"
 msgstr "Bahasa Facebook Button:"
 
-#: facebook-button-plugin.php:338
+#: facebook-button-plugin.php:340
 msgid "Change the language of Facebook Like Button"
 msgstr "Ubah bahasa Facebook Like Button"
 
-#: facebook-button-plugin.php:343
-#: facebook-button-plugin.php:346
-#: facebook-button-plugin.php:351
+#: facebook-button-plugin.php:345
+#: facebook-button-plugin.php:348
+#: facebook-button-plugin.php:353
 msgid "Use the current site language"
 msgstr ""
 
-#: facebook-button-plugin.php:343
-#: facebook-button-plugin.php:347
-#: facebook-button-plugin.php:352
+#: facebook-button-plugin.php:345
+#: facebook-button-plugin.php:349
+#: facebook-button-plugin.php:354
 msgid "Using"
 msgstr ""
 
-#: facebook-button-plugin.php:347
+#: facebook-button-plugin.php:349
 #, fuzzy
 msgid "Activate"
 msgstr "Aktif Eklentiler"
 
-#: facebook-button-plugin.php:352
+#: facebook-button-plugin.php:354
 msgid "Download"
 msgstr "Ä°ndir"
 
-#: facebook-button-plugin.php:359
+#: facebook-button-plugin.php:361
 msgid "Html tag for \"Like\" button"
 msgstr ""
 
-#: facebook-button-plugin.php:363
+#: facebook-button-plugin.php:366
 msgid "Use this tag to improve validation of your site"
 msgstr ""
 
-#: facebook-button-plugin.php:373
+#: facebook-button-plugin.php:377
 msgid "\"Like\" for an entire site on every page:"
 msgstr ""
 
-#: facebook-button-plugin.php:375
+#: facebook-button-plugin.php:379
 msgid "Notice: \"Like for the entire site\" option does not create an extra button. This option merely allows your users to like the entire website when this option is enabled, or a single post when this option is disabled, when clicking the regular \"Like\" button."
 msgstr ""
 
-#: facebook-button-plugin.php:380
+#: facebook-button-plugin.php:384
 #: facebook-button-plugin.php:437
 msgid "If you upgrade to Pro version all your settings will be saved."
 msgstr ""
 
-#: facebook-button-plugin.php:387
+#: facebook-button-plugin.php:391
 #: facebook-button-plugin.php:444
-msgid "Unlock premium options by upgrading to a PRO version."
+msgid "Unlock premium options by upgrading to Pro version"
 msgstr ""
 
-#: facebook-button-plugin.php:388
-#: facebook-button-plugin.php:445
+#: facebook-button-plugin.php:393
+#: facebook-button-plugin.php:446
 msgid "Learn More"
 msgstr ""
 
-#: facebook-button-plugin.php:391
-#: facebook-button-plugin.php:448
-msgid "Go"
-msgstr ""
-
-#: facebook-button-plugin.php:399
+#: facebook-button-plugin.php:400
 #: facebook-button-plugin.php:432
 msgid "Save Changes"
 msgstr "Simpan Perubahan"
@@ -240,7 +235,7 @@ msgstr ""
 msgid "Example of site pages' tree"
 msgstr ""
 
-#: facebook-button-plugin.php:669
+#: facebook-button-plugin.php:671
 msgid "Support"
 msgstr "Dukungan"
 
